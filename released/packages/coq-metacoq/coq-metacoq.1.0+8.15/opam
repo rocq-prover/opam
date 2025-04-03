@@ -42,5 +42,5 @@ See individual packages for more detailed descriptions.
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.0-8.15/metacoq-1.0-8.15.tar.gz"
-  checksum: "sha512=8bf61d638afcefa661f65a3e7384fdffef358bed4985a9df8d60dc200603172d1931ad94cbc028e82ba9b44778f59428e240e02642111765a4470a1202264224"
+  checksum: "sha512=4747d378d91bef1b248f137be6851a5acddb34968d913daeda923ca6a3a009c3dcccdcf497c33d94f113636e469ef5046e71a23115dc22ea2e6069b7de72f5fc"
 }

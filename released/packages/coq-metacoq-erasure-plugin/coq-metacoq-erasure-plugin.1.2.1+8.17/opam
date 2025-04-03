@@ -44,5 +44,5 @@ thesis.
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.2.1-8.17/metacoq-1.2.1-8.17.tar.gz"
-  checksum: "sha512=c02f106aafa1082bb6c2be5bb1c972840cd23d94c85541996767855e1a3080bc00405f463d275285847385680aa69b3798d067ed73e4712d8a137024cc256cab"
+  checksum: "sha512=c19536c0907711c28287844dcc469cb61ebda02c154c62174419b41fffc72ea58f8ac5a84711c6273b68b1d01f20741cc5c762501eddb8a1185befb6c4d15294"
 }

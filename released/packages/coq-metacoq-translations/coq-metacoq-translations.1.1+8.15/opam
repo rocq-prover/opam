@@ -38,5 +38,5 @@ translation that invalidates functional extensionality.
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.1-8.15/metacoq-1.1-8.15.tar.gz"
-  checksum: "sha512=ebb88e267033fc6167f41d51ccb233c171eb70775ba3b04aa3c7517ff073be31dcdf331e9901897d6c3e5893f6d12ec48d5851d44c23b1ec8c7e7d3d505eb360"
+  checksum: "sha512=12ea0aff460c7eee07b5341ebcbf231c0f8aed9346842ad53c2244ab5ed865a0ecf6764116fbb26ecd3558f3de29c6054b8769d0c084b6d291a6b0e9a751c69a"
 }

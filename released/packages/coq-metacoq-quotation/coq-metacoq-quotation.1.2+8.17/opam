@@ -49,5 +49,5 @@ and `×`), which is sufficient for proving Löb's theorem.
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.2-8.17/metacoq-1.2-8.17.tar.gz"
-  checksum: "sha512=ef36dfe0e7864c67e223484f400f38531b41059c6e6e206a329b4dfa2c29e36ee133a711656fec3edcb37b046e5602d1a81c9989c399729f4547f19e854ccdbd"
+  checksum: "sha512=17add66108aadc1f8d9d513c92c94e94265cd10ad73d7999dd0ee2e53666094af7ec8aa9d93f089389576f2efc5fb4b23faad663319f814fbbc73aaf8e2bf999"
 }
