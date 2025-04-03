@@ -1,7 +1,7 @@
 opam-version: "2.0"
 synopsis: "OL libraries"
 description: """
-  Add-ons for the Coq standard library
+  Add-ons for the Rocq standard library
 """
 
 homepage: "https://github.com/olaure01/ollibs"
@@ -15,7 +15,8 @@ authors: [
 license: "LGPL-3.0-or-later"
 
 depends: [
-  "coq" { >= "8.19" & < "8.20~" }
+  "rocq-core"
+  "rocq-stdlib" { >= "9.0" & < "9.1~" }
 ]
 
 build: [
@@ -27,8 +28,8 @@ install: [
 ]
 
 url {
-  src: "https://github.com/olaure01/ollibs/archive/v2.0.6.tar.gz"
-  checksum: "sha256=87fe8219581cf13ab0670fb012327b60495e04b5935b8b864d67db898dfa8cfc"
+  src: "https://github.com/olaure01/ollibs/archive/v2.0.8.tar.gz"
+  checksum: "sha256=4db50ba3f2cc2e8997c3564739d1856823b4ed8284dd1f5ab3aff8cfa65e701d"
 }
 
 tags: [
@@ -38,6 +39,6 @@ tags: [
   "keyword:decidable equality"
   "keyword:finite multisets"
   "category:Mathematics/Combinatorics and Graph Theory"
-  "date:2024-09-15"
+  "date:2025-04-03"
   "logpath:OLlibs"
 ]
