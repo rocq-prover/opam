@@ -5,20 +5,9 @@ maintainer: "Mathematical Components <mathcomp-dev@sympa.inria.fr>"
 homepage: "https://math-comp.github.io/"
 bug-reports: "https://github.com/math-comp/math-comp/issues"
 dev-repo: "git+https://github.com/math-comp/math-comp.git"
-license: "CeCILL-B"
+license: "CECILL-B"
 
-build: [ make "-C" "solvable" "-j" "%{jobs}%" ]
-install: [ make "-C" "solvable"  "install" ]
-depends: [ "coq-mathcomp-algebra" { = version } ]
-
-tags: [ "keyword:finite groups" "keyword:Feit Thompson theorem" "keyword:small scale reflection" "keyword:mathematical components" "keyword:odd order theorem" "logpath:mathcomp.solvable" ]
+depends: [ "rocq-mathcomp-solvable" { = version } ]
 authors: [ "The Mathematical Components team" ]
 
-synopsis: "Mathematical Components Library on finite groups (II)"
-description:"""
-This library contains more definitions and theorems about finite groups.
-"""
-
-url {
-  src: "git+https://github.com/math-comp/math-comp.git"
-}
+synopsis: "Compatibility package for rocq-mathcomp-solvable"
