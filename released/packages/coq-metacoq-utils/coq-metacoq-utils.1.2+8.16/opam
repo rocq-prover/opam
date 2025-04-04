@@ -37,5 +37,5 @@ MetaCoq is a meta-programming framework for Coq.
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.2-8.16/metacoq-1.2-8.16.tar.gz"
-  checksum: "sha512=80739c1424f5c28afadfcc581fa7016bc26f28f3a8b79597abc52ba5cc404cbe3728cccb260ab5ff7ed71ecb9a66690bcaa8d9cc6c0b79d2d1b5e660c34d5008"
+  checksum: "sha512=ff42d9391a01c2cd37f98766cb430c2740161f3dc34c7588e471476b05293b5eb7d4e392c3b42e9f24604edfe251d403516047188012beca90d8f3601898d6af"
 }

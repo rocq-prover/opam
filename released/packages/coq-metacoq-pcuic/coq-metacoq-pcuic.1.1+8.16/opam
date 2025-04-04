@@ -38,5 +38,5 @@ PCUIC: Weakening, Substitution, Confluence and Subject Reduction are proven here
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.1-8.16/metacoq-1.1-8.16.tar.gz"
-  checksum: "sha512=aa984b616d5e91a264e765973ef02d8c180da282d7c87017fc2ca7f783ed819f0f62f5f96c1cab7f11fc2993cbb424f48c4a00a0bcdf0c98f19460cd7dcce5aa"
+  checksum: "sha512=89e9c6a2aaaf0512d981c1e2272bafc0a20a226a1e8834bf67a1054906f28aa1ce343da725e5e74e929d83c8685cd5222c879d6e6eb19124b26d3a3aea70d811"
 }

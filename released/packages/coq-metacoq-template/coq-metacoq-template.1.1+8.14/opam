@@ -50,5 +50,5 @@ Template Coq includes:
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.1-8.14/metacoq-1.1-8.14.tar.gz"
-  checksum: "sha512=e5cc8a540c7a7bb2a783c41ed6f6808362bf27c781fbb1f609e2b8da881065eba7adb74cf99132aa40329f88fec7547e79a6fdef268e609604cf35e82dc7ee6a"
+  checksum: "sha512=48edab0cfa08c45e2c691d2c01abce1b97a0d15d2d957e90ca8f08dbc0f20d7d8019fb4fb85cf968439cb991f3297e9c2abf0a113a518a2a46fa54814a7d4aea"
 }

@@ -36,5 +36,5 @@ See individual packages for more detailed descriptions.
 """
 url {
   src: "https://github.com/MetaRocq/metarocq/releases/download/v1.0-8.16/metacoq-1.0-8.16.tar.gz"
-  checksum: "sha512=44f9364cfb0a2995e0adadbdb181e53a1dccd98781ab1b9abdde7942ee4b15ea233bca97c28e3185c8492a8af7db7cfe57e34d535b94d5465b9f3c3c5eb3f4e7"
+  checksum: "sha512=7e36b16d5de8952c92046971c0bc57f80da3a4d88f39aa6cdfa13756c19513738374f2ab725c2bce7ceb87402e3026a76c79d2ee4dfcdd3fc4ffc8cd4f1f00c8"
 }
