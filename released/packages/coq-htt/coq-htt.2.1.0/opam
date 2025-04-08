@@ -30,7 +30,7 @@ that HTT implements Separation logic as a shallow embedding in Coq."""
 build: [make "-C" "examples" "-j%{jobs}%"]
 install: [make "-C" "examples" "install"]
 depends: [
-  "coq" {>= "8.19" & < "9.1~"}
+  "coq" { (>= "8.19" & < "9.1~") | (= "dev") }
   "coq-mathcomp-ssreflect" { (>= "2.2.0" & < "2.4~") | (= "dev") }
   "coq-mathcomp-algebra" 
   "coq-mathcomp-fingroup" 
