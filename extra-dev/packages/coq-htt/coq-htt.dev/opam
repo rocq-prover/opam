@@ -30,11 +30,12 @@ that HTT implements Separation logic as a shallow embedding in Coq."""
 build: [make "-C" "examples" "-j%{jobs}%"]
 install: [make "-C" "examples" "install"]
 depends: [
-  "coq" {>= "8.19" & < "9.1~"}
-  "coq-mathcomp-ssreflect" {>= "2.2.0" & < "2.4~"}
+  "coq" {>= "8.19"}
+  "coq-mathcomp-ssreflect" {>= "2.2.0"}
+  "coq-hierarchy-builder" {>= "1.7.0"}
   "coq-mathcomp-algebra" 
   "coq-mathcomp-fingroup" 
-  "coq-fcsl-pcm" {>= "2.1.0" & < "2.2~"}
+  "coq-fcsl-pcm" {>= "2.1.0"}
   "coq-htt-core" {= version}
 ]
 
@@ -53,7 +54,7 @@ authors: [
 ]
 
 url {
-  src: "https://github.com/imdea-software/htt/archive/refs/tags/v2.1.0.tar.gz"
+  src: "https://github.com/imdea-software/htt.git#master"
   checksum: "sha256=e2819211c05a011f8101d006865c642a513c3e581810f590d8d8d7a651046b05"
 }
 
