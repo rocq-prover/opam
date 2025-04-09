@@ -54,7 +54,6 @@ authors: [
 ]
 
 url {
-  src: "https://github.com/imdea-software/htt.git#master"
-  checksum: "sha256=e2819211c05a011f8101d006865c642a513c3e581810f590d8d8d7a651046b05"
+  src: "git+https://github.com/imdea-software/htt.git#master"
 }
 
