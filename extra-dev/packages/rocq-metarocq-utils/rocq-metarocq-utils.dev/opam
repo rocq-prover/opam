@@ -30,7 +30,7 @@ depends: [
   "stdlib-shims"
   "rocq-core" { = "dev" }
   "rocq-stdlib" { = "dev" }
-  "coq-equations" { = "dev" }
+  "rocq-equations" { = "dev" }
 ]
 synopsis: "The utility library of Template Rocq and PCUIC"
 description: """
