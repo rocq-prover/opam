@@ -9,7 +9,7 @@ depends: [
   "ocaml"
   "coq" {>= "8.6" & < "8.7~"}
 ]
-tags: [ "keyword: correctness" "keyword: real numbers" "keyword: arithmetic" "category: Mathematics/Arithmetic and Number Theory/Real numbers" ]
+tags: [ "keyword: correctness" "keyword: real numbers" "keyword: arithmetic" "category: Mathematics/Real Numbers" ]
 authors: [ "Jérôme Creci" ]
 bug-reports: "https://github.com/coq-contribs/exact-real-arithmetic/issues"
 dev-repo: "git+https://github.com/coq-contribs/exact-real-arithmetic.git"

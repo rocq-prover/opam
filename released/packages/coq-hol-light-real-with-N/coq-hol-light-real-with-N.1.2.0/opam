@@ -20,8 +20,8 @@ install: [make "install"]
 tags: [
   "logpath:HOLLight_Real_With_N"
   "date:2025-02-19"
-  "category:Math/Arith/Misc"
-  "category:Math/Arith/Real numbers"
+  "category:Mathematics/Arithmetic and Number Theory/Miscellaneous"
+  "category:Mathematics/Real Numbers"
   "keyword:HOL-Light"
 ]
 url {

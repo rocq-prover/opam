@@ -50,7 +50,6 @@ tags: [
   "keyword:floating-point arithmetic"
   "keyword:Cholesky decomposition"
   "category:Miscellaneous/Coq Extensions"
-  "category:ValidSDP"
   "logpath:ValidSDP"
 ]
 authors: [

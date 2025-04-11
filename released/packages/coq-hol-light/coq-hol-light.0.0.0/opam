@@ -16,7 +16,7 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 tags: [
   "keyword:HOL-Light"
-  "category:Math/Arith/Misc"
+  "category:Mathematics/Arithmetic and Number Theory/Miscellaneous"
   "date:2023-11-06"
   "logpath:HOLLight"
 ]

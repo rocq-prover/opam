@@ -20,8 +20,8 @@ conflicts: [
 tags: [
   "keyword:multinomials"
   "keyword:monoid algebra"
-  "category:Math/Algebra/Multinomials"
-  "category:Math/Algebra/Monoid algebra"
+  "category:Mathematics/Algebra/Multinomials"
+  "category:Mathematics/Algebra/Monoid algebra"
   "logpath:SsrMultinomials"
 ]
 synopsis: "A Multivariate polynomial Library for the Mathematical Components Library"
