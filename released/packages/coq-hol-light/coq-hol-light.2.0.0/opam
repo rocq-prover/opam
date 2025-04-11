@@ -20,9 +20,8 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 tags: [
   "keyword:HOL-Light"
-  "category:Math/Arith/Misc"
-  "category:Math/Arith/Real Numbers"
-  "category:Math/Real Numbers"
+  "category:Mathematics/Arithmetic and Number Theory/Miscellaneous"
+  "category:Mathematics/Real Numbers"
   "date:2024-12-17"
   "logpath:HOLLight"
 ]

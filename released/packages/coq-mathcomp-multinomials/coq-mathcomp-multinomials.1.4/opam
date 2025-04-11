@@ -23,8 +23,8 @@ depends: [
 tags: [
   "keyword:multinomials"
   "keyword:monoid algebra"
-  "category:Math/Algebra/Multinomials"
-  "category:Math/Algebra/Monoid algebra"
+  "category:Mathematics/Algebra/Multinomials"
+  "category:Mathematics/Algebra/Monoid algebra"
   "date:2019-11-28"
   "logpath:SsrMultinomials"
 ]
