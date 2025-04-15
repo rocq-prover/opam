@@ -25,6 +25,7 @@ depends: [
   "odoc" {with-doc}
   "rocq-stdlib" {with-doc}
 ]
+conflicts: [ "coq-elpi" {< "2.5~"} ]
 build: [
   ["dune" "subst"] {dev}
   [make "dune-files"]
