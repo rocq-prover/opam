@@ -1,8 +1,7 @@
 opam-version: "2.0"
 synopsis: "HOL-Light library in Coq"
 description: """
-This library contains an automatic translation in Coq of (for the moment) some
-small part the HOL-Light library using https://github.com/Deducteam/hol2dk.
+This library contains an automatic translation in Coq of the Multivariate library of HOL-Light. It contains more than 20,000 theorems on arithmetic, wellfounded relations, lists, real numbers, integers, basic set theory, permutations, group theory, matroids, metric spaces, homology, vectors, determinants, topology, convex sets and functions, paths, polytopes, Brouwer degree, derivatives, Clifford algebra, integration, measure theory, complex numbers and analysis, transcendental numbers, real analysis, complex line integrals, etc.
 """
 homepage: "https://github.com/Deducteam/coq-hol-light"
 dev-repo: "git+https://github.com/Deducteam/coq-hol-light.git"
