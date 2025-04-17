@@ -14,7 +14,7 @@ license: "MIT"
 
 depends: [
   "ocaml" { >= "4.09" & < "4.15" }
-  "rocq-prover" { >= "9.0" & < "9.1" }
+  "rocq-core" { >= "9.0" & < "9.1" }
   "angstrom" { >= "0.15.0" }
   "dune" { >= "2.5" }
   "ocamlgraph" { >= "2.0.0" }
