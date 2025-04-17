@@ -26,5 +26,5 @@ build: [ "dune" "build" "-p" name "-j" jobs ]
 
 url {
   src: "https://github.com/uds-psl/autosubst-ocaml/archive/refs/tags/1.1+9.0.tar.gz"
-  checksum: "sha256=fd760ab900a669c06269422fe64fbb4332dd7d504aabb1b97f1f213786839af7"
+  checksum: "sha256=2edc772eda733f4c48c49f8255ba932b5e1b27c9d17001672bccb6672c7b519b"
 }
