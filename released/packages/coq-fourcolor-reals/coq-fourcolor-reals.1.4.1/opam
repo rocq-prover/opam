@@ -14,7 +14,7 @@ with proofs of properties such as categoricity."""
 build: [make "-C" "theories/reals" "-j%{jobs}%"]
 install: [make "-C" "theories/reals" "install"]
 depends: [
-  ("coq" {(>= "9.0" & < "9.1~") | (= "dev")} )
+  ("coq" {(>= "8.18" & < "9.1~") | (= "dev")} )
   "coq-mathcomp-ssreflect" {(>= "2.1.0" & < "2.5~") | (= "dev")}
   "coq-mathcomp-algebra" 
 ]
