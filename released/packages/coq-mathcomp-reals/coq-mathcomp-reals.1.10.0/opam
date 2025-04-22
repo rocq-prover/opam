@@ -1,0 +1,45 @@
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+
+homepage: "https://github.com/math-comp/analysis"
+dev-repo: "git+https://github.com/math-comp/analysis.git"
+bug-reports: "https://github.com/math-comp/analysis/issues"
+license: "CECILL-C"
+
+synopsis: "A library for real numbers for mathematical components"
+description: """
+This package contains a library for real numbers for
+the Coq proof-assistant and using the Mathematical Components library."""
+
+build: [make "-C" "reals" "-j%{jobs}%"]
+install: [make "-C" "reals" "install"]
+depends: [
+  "coq-mathcomp-classical" { = version}
+]
+
+tags: [
+  "category:Mathematics/Real Numbers"
+  "keyword:real numbers"
+  "keyword:reals"
+  "keyword:extended real numbers"
+  "logpath:mathcomp.reals"
+]
+authors: [
+  "Reynald Affeldt"
+  "Alessandro Bruni"
+  "Yves Bertot"
+  "Cyril Cohen"
+  "Marie Kerjean"
+  "Assia Mahboubi"
+  "Damien Rouhling"
+  "Pierre Roux"
+  "Kazuhiko Sakaguchi"
+  "Zachary Stone"
+  "Pierre-Yves Strub"
+  "Laurent Théry"
+]
+
+url {
+src: "https://github.com/math-comp/analysis/releases/download/1.10.0/analysis-1.10.0.tar.gz"
+checksum: "sha512=7be39db1aca5a3c49b2d38167bc1c55c35b64fbe0de69ab22181228aee0366fe039cda21446802d5f8def0190d9bef3fbd9dc0c616505c0c6345372cc94b9ce7"
+}
