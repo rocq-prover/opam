@@ -15,6 +15,7 @@ install: [
   [make "-j%{jobs}%" "install"]
 ]
 depends: [
+  "ocaml" { >= "4.13" }
   "rocq-core" { >= "9.0" }
   "rocq-stdlib" { >= "9.0" }
   "coq-ceres" { >= "0.4.1"}
