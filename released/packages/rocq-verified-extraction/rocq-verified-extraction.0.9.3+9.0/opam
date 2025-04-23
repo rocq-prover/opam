@@ -12,7 +12,7 @@ build: [
   [make]
 ]
 install: [
-  [make "-j%{jobs}%" install]
+  [make "-j%{jobs}%" "install"]
 ]
 depends: [
   "rocq-core" { >= "9.0" }
