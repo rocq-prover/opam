@@ -1,0 +1,27 @@
+opam-version: "2.0"
+maintainer: "yannick.forster@inria.fr"
+homepage: "https://github.com/MetaRocq/rocq-verified-extraction"
+dev-repo: "git+https://github.com/MetaRocq/rocq-verified-extraction"
+bug-reports: "https://github.com/MetaRocq/rocq-verified-extraction/issues"
+synopsis: "Verified extraction from Rocq to OCaml"
+authors: ["Yannick Forster"
+          "Matthieu Sozeau"
+          "Nicolas Tabareau"]
+license: "MIT"
+build: [
+  [make]
+]
+install: [
+  [make "-j%{jobs}%" install]
+]
+depends: [
+  "rocq-core" { >= "9.0" }
+  "rocq-stdlib" { >= "9.0" }
+  "coq-ceres" { >= "0.4.1"}
+  "rocq-metarocq-erasure-plugin" { = "1.4+9.0" }
+  "malfunction" { >= "0.7" }
+]
+url {
+  src: "https://github.com/MetaRocq/rocq-verified-extraction/releases/download/v0.9.3-9.0/rocq-verified-extraction-0.9.3-9.0.tar.gz"
+  checksum: "sha512=4b1ebcf5fb939b1506b265e4f224b16c20f312e13974222c2ebe20fefaee554324660fecdd2a96f05ac326705fc9c6f022effdb97d1eaa1a6896001cf92ce9b5"
+}
