@@ -1,0 +1,39 @@
+opam-version: "2.0"
+maintainer: "Yoshihiro Imai<y.imai@aist.go.jp>"
+
+homepage: "https://github.com/affeldt-aist/rocqnavi"
+dev-repo: "git+https://github.com/yoshihiro503/rocqnavi.git"
+bug-reports: "https://github.com/affeldt-aist/rocqnavi/issues"
+
+license: "GPL-2.0-or-later"
+synopsis: "Extension of coq2html Document Generator"
+
+description: """
+Extension of coq2html Document Generator"""
+
+build: [make]
+install: [make "BINDIR=%{bin}%" "install"]
+depends: [
+  "ocaml" {>= "4.14"}
+]
+
+tags: [
+  "category:Tools/Document Generator"
+  "keyword:document"
+  "keyword:html"
+  "logpath:"
+]
+authors: [
+  "Xavier Leroy <xavier.leroy@college-de-france.fr>"
+  "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+  "Yoshihiro Imai <y.imai@aist.go.jp>"
+]
+
+url {
+  src:
+    "https://github.com/affeldt-aist/rocqnavi/archive/refs/tags/rocqnavi.0.2.1.tar.gz"
+  checksum: [
+    "md5=d0db55b092ffa020bf7a4eeff6dc10a0"
+    "sha512=1207880e8112de224e3447c3f7979975d2dd3f477e24d91a35d24b1480c81c1cd767b1d9b2b4305a6b14ee3c843a2e4c9457734aed091ce7f0fe7cd6e93454de"
+  ]
+}
