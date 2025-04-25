@@ -33,7 +33,7 @@ url {
   src:
     "https://github.com/affeldt-aist/rocqnavi/archive/refs/tags/rocqnavi.0.2.1.tar.gz"
   checksum: [
-    "md5=a13769b44b2ac5f82a1c6aeeeb31bb19"
-    "sha512=dfbae693b4bbd7259ba6c6ae63bfb0275124d4bc2b93c718d9c58c8e15afe687f9808a58e74abcf3f1bfcb8105a7dd189f5bde4af6d9a1973d225ae1a60a2e62"
+    "md5=d0db55b092ffa020bf7a4eeff6dc10a0"
+    "sha512=1207880e8112de224e3447c3f7979975d2dd3f477e24d91a35d24b1480c81c1cd767b1d9b2b4305a6b14ee3c843a2e4c9457734aed091ce7f0fe7cd6e93454de"
   ]
 }
