@@ -1,0 +1,59 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+version: "dev"
+
+homepage: "https://github.com/affeldt-aist/infotheo"
+dev-repo: "git+https://github.com/affeldt-aist/infotheo.git"
+bug-reports: "https://github.com/affeldt-aist/infotheo/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Discrete probabilities and information theory for Coq"
+description: """
+Infotheo is a Coq library for reasoning about discrete probabilities,
+information theory, and linear error-correcting codes."""
+
+build: [
+  [make "-j%{jobs}%" ]
+  [make "-C" "extraction" "tests"] {with-test}
+]
+install: [make "install"]
+depends: [
+  "coq" { (>= "8.19" & < "8.21~") | (= "dev") }
+  "coq-mathcomp-ssreflect" { (= "2.3.0") }
+  "coq-mathcomp-fingroup" { (= "2.3.0") }
+  "coq-mathcomp-algebra" { (= "2.3.0") }
+  "coq-mathcomp-solvable" { (= "2.3.0") }
+  "coq-mathcomp-field" { (= "2.3.0") }
+  "coq-mathcomp-analysis" { (>= "1.10.0") }
+  "coq-mathcomp-reals-stdlib" { (>= "1.10.0") }
+  "coq-hierarchy-builder" { >= "1.7.0" }
+  "coq-mathcomp-algebra-tactics" { >= "1.2.0" }
+  "coq-interval" { >= "4.10.0"}
+]
+
+tags: [
+  "keyword:information theory"
+  "keyword:probability"
+  "keyword:error-correcting codes"
+  "keyword:convexity"
+  "logpath:infotheo"
+  "date:2025-04-28"
+]
+authors: [
+  "Reynald Affeldt, AIST"
+  "Manabu Hagiwara, Chiba U. (previously AIST)"
+  "Jonas Senizergues, ENS Cachan (internship at AIST)"
+  "Jacques Garrigue, Nagoya U."
+  "Kazuhiko Sakaguchi, Tsukuba U."
+  "Taku Asai, Nagoya U. (M2)"
+  "Takafumi Saikawa, Nagoya U."
+  "Naruomi Obata, Titech (M2)"
+  "Alessandro Bruni, IT-University of Copenhagen"
+]
+url {
+  src: "https://github.com/affeldt-aist/infotheo/archive/0.9.2.tar.gz"
+  checksum: "sha512=36f3208d311f57f50a4e288efba79f1c7099c8e448c195d1ca5a5444908f02eca2d04c0a2a50644b62fef094da22400dda7b8cc7cff6d0cd5a4417fc74726219"
+}
