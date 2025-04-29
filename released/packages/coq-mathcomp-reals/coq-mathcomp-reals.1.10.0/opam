@@ -14,6 +14,9 @@ the Coq proof-assistant and using the Mathematical Components library."""
 build: [make "-C" "reals" "-j%{jobs}%"]
 install: [make "-C" "reals" "install"]
 depends: [
+  # This package doesn't work on Coq <= 8.20 and MC >= 2.4
+  (("coq" { < "8.21~" } & "coq-mathcomp-ssreflect" { < "2.4~" })
+   | "coq-core" { >= "9.0" })
   "coq-mathcomp-classical" { = version}
 ]
 
