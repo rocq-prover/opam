@@ -17,7 +17,7 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
   "coq" {>= "8.16" & < "9.1~"}
-  "coq-mathcomp-ssreflect" {>= "2.0" & < "2.4~"}
+  "coq-mathcomp-ssreflect" {>= "2.0" & < "2.5~"}
   "coq-mathcomp-fingroup"
   "coq-hierarchy-builder" {>= "1.4.0"}
 ]
@@ -41,6 +41,6 @@ authors: [
 ]
 
 url {
-  src: "https://github.com/coq-community/tarjan/archive/1.0.2.tar.gz"
-  checksum: "sha256=804d912cf8c30d63378a31df72349d83f3ef4e434c0adca7c34a25280d16ba49"
+  src: "https://github.com/coq-community/tarjan/archive/1.0.3.tar.gz"
+  checksum: "sha256=6f24af7801e560c819c48e562785b3145ef33666458cd8e014761e96b8bfced9"
 }

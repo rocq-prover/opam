@@ -1,0 +1,39 @@
+opam-version: "2.0"
+maintainer: "christian.doczkal@mpi-sp.org"
+
+homepage: "https://github.com/coq-community/graph-theory"
+dev-repo: "git+https://github.com/coq-community/graph-theory.git"
+bug-reports: "https://github.com/coq-community/graph-theory/issues"
+license: "CECILL-B"
+
+synopsis: "Graph theory results on planarity in Coq and MathComp"
+description: """
+Formal definitions and results on graph planarity in Coq using the Mathematical Components
+library, including Wagner's Theorem. Relies on hypermaps and other notions developed
+as part of the Coq proof of the Four-Color Theorem."""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "dune" {>= "3.5"}
+  "coq" {>= "8.18" & < "9.1~"}
+  "coq-mathcomp-ssreflect" {>= "2.1" & < "2.5~"}
+  "coq-graph-theory" {= version}
+  "coq-fourcolor"
+]
+
+tags: [
+  "category:Computer Science/Graph Theory"
+  "keyword:graph theory"
+  "keyword:planarity"
+  "logpath:GraphTheory.planar"
+  "date:2024-06-30"
+]
+authors: [
+  "Christian Doczkal"
+  "Damien Pous"
+]
+
+url {
+  src: "https://github.com/coq-community/graph-theory/releases/download/v0.9.6/graph-theory-0.9.6.tar.gz"
+  checksum: "sha512=61bd37facc9341c45cb8393b6be5885a424208c74c09eb8366fc263bd7f0904bd6b4c5bd419add4fcdc01d244d6a261701ec33469b6e645b54f8a89c95bb5485"
+}
