@@ -1,0 +1,33 @@
+opam-version: "2.0"
+version: "dev"
+maintainer: "Mathematical Components <mathcomp-dev@sympa.inria.fr>"
+
+homepage: "https://math-comp.github.io/"
+bug-reports: "https://github.com/math-comp/math-comp/issues"
+dev-repo: "git+https://github.com/math-comp/math-comp.git"
+license: "CECILL-B"
+
+build: [ make "-C" "order" "-j" "%{jobs}%" ]
+install: [ make "-C" "order" "install" ]
+depends: [ "rocq-mathcomp-boot" { = version } ]
+
+tags: [
+  "keyword:small scale reflection"
+  "keyword:mathematical components"
+  "keyword:order theory"
+  "keyword:partial order"
+  "keyword:lattices"
+  "keyword:total order"
+  "logpath:mathcomp.order"
+]
+authors: [ "The Mathematical Components team" ]
+
+synopsis: "Mathematical Components Library on order theory"
+description: """
+This library contains definitions and theorems about partial orders,
+lattices, total orders...
+"""
+
+url {
+  src: "git+https://github.com/math-comp/math-comp.git#master"
+}
