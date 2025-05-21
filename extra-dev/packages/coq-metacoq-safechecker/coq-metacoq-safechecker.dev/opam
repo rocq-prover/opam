@@ -19,23 +19,13 @@ authors: ["Abhishek Anand <aa755@cs.cornell.edu>"
           "Théo Winterhalter <theo.winterhalter@inria.fr>"
 ]
 license: "MIT"
-build: [
-  ["bash" "./configure.sh"]
-  [make "-j" "%{jobs}%" "-C" "safechecker"]
-]
-install: [
-  [make "-C" "safechecker" "install"]
-]
 depends: [
-  "coq-metacoq-pcuic" {= version}
+  "rocq-metarocq-safechecker" {= version}
 ]
-synopsis: "Implementation and verification of safe conversion and typechecking algorithms for Coq"
+synopsis: "Implementation and verification of safe conversion and typechecking algorithms for Coq (compat package)"
 description: """
 MetaCoq is a meta-programming framework for Coq.
 
 The SafeChecker modules provides a correct implementation of
 weak-head reduction, conversion and typechecking of Coq definitions and global environments.
 """
-url {
-  src: "git+https:///github.com/metacoq/metacoq.git#main"
-}

@@ -19,17 +19,10 @@ authors: ["Abhishek Anand <aa755@cs.cornell.edu>"
           "Théo Winterhalter <theo.winterhalter@inria.fr>"
 ]
 license: "MIT"
-build: [
-  ["bash" "./configure.sh"]
-  [make "-j" "%{jobs}%" "-C" "pcuic"]
-]
-install: [
-  [make "-C" "pcuic" "install"]
-]
 depends: [
-  "coq-metacoq-common" {= version}
+  "rocq-metarocq-pcuic" {= version}
 ]
-synopsis: "A type system equivalent to Coq's and its metatheory"
+synopsis: "A type system equivalent to Coq's and its metatheory (compat package)"
 description: """
 MetaCoq is a meta-programming framework for Coq.
 
@@ -37,6 +30,3 @@ The PCUIC module provides a cleaned-up specification of Coq's typing algorithm a
 with a certified typechecker for it. This module includes the standard metatheory of
 PCUIC: Weakening, Substitution, Confluence and Subject Reduction are proven here.
 """
-url {
-  src: "git+https:///github.com/metacoq/metacoq.git#main"
-}

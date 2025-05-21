@@ -20,17 +20,9 @@ authors: ["Abhishek Anand <aa755@cs.cornell.edu>"
 ]
 license: "MIT"
 depends: [
-  "coq-metacoq-safechecker-plugin" {= version}
-  "coq-metacoq-erasure-plugin" {= version}
-  "coq-metacoq-translations" {= version}
-  "coq-metacoq-quotation" {= version}
+  "rocq-metarocq" {= version}
 ]
-build: [
-  ["bash" "./configure.sh" ] {with-test}
-  [make "-C" "examples" ] {with-test}
-  [make "-C" "test-suite" ] {with-test}
-]
-synopsis: "A meta-programming framework for Coq"
+synopsis: "A meta-programming framework for Coq (compat package)"
 description: """
 MetaCoq is a meta-programming framework for Coq.
 
@@ -40,6 +32,3 @@ a safe type checker and verified erasure for PCUIC and example translations.
 
 See individual packages for more detailed descriptions.
 """
-url {
-  src: "git+https:///github.com/metacoq/metacoq.git#main"
-}
