@@ -19,18 +19,10 @@ authors: ["Abhishek Anand <aa755@cs.cornell.edu>"
           "Théo Winterhalter <theo.winterhalter@inria.fr>"
 ]
 license: "MIT"
-build: [
-  ["bash" "./configure.sh"]
-  [make "-j" "%{jobs}%" "-C" "erasure-plugin"]
-]
-install: [
-  [make "-C" "erasure-plugin" "install"]
-]
 depends: [
-  "coq-metacoq-template-pcuic" {= version}
-  "coq-metacoq-erasure" {= version}
+  "rocq-metarocq-erasure-plugin" {= version}
 ]
-synopsis: "Implementation and verification of an erasure procedure for Coq"
+synopsis: "Implementation and verification of an erasure procedure for Coq (compat package)"
 description: """
 MetaCoq is a meta-programming framework for Coq.
 
@@ -42,6 +34,3 @@ The `erasure` function translates types and proofs in well-typed terms
 into a dummy `tBox` constructor, following closely P. Letouzey's PhD
 thesis.
 """
-url {
-  src: "git+https:///github.com/metacoq/metacoq.git#main"
-}

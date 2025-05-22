@@ -19,20 +19,9 @@ authors: ["Abhishek Anand <aa755@cs.cornell.edu>"
           "Théo Winterhalter <theo.winterhalter@inria.fr>"
 ]
 license: "MIT"
-build: [
-  ["bash" "./configure.sh"]
-  [make "-j" "%{jobs}%" "-C" "template-pcuic"]
-]
-install: [
-  [make "-C" "template-pcuic" "install"]
-]
 depends: [
-  "coq-metacoq-template" {= version}
-  "coq-metacoq-pcuic" {= version}
+  "rocq-metarocq-template-pcuic" {= version}
 ]
-synopsis: "Translations between Template Coq and PCUIC and proofs of correctness"
+synopsis: "Translations between Template Coq and PCUIC and proofs of correctness (compat package)"
 description: """
 """
-url {
-  src: "git+https:///github.com/metacoq/metacoq.git#main"
-}
