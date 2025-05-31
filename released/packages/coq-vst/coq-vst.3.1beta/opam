@@ -49,6 +49,6 @@ tags: [
   "date:2025-01-20"
 ]
 url {
-  src: "https://github.com/PrincetonUniversity/VST/archive/refs/tags/3.1beta.tar.gz"
+  src: "https://github.com/PrincetonUniversity/VST/archive/refs/tags/v3.1beta.tar.gz"
   checksum: "sha256=3799946efba90acbefc1fd6988691d24f6554e4a98affa34c4d0023fe4b36b46"
 }
