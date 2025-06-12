@@ -27,8 +27,8 @@ variables). The connection reconciles dependent types with effects of state and 
 establishes Separation logic as a type theory for such effects. In implementation terms, it means
 that HTT implements Separation logic as a shallow embedding in Coq."""
 
-build: [make "-C" "examples" "-j%{jobs}%"]
-install: [make "-C" "examples" "install"]
+build: [make "-C" "htt" "-j%{jobs}%"]
+install: [make "-C" "htt" "install"]
 depends: [
   "coq" {>= "9.0" & < "9.1~"}
   "coq-hierarchy-builder" {>= "1.7.0" & < "1.10~"}
@@ -36,7 +36,6 @@ depends: [
   "coq-mathcomp-algebra" 
   "coq-mathcomp-fingroup" 
   "coq-fcsl-pcm" {>= "2.2.0" & < "2.3~"}
-  "coq-htt-core" {= version}
 ]
 
 tags: [
@@ -54,7 +53,7 @@ authors: [
 ]
 
 url {
-  src: "https://github.com/imdea-software/htt/archive/refs/tags/v2.2.0.tar.gz"
-  checksum: "sha256=1f44e053887735fab5d3d4dec4d07a6e64c155060a3f486e03dda96d56c4743a"
+  src: "https://github.com/imdea-software/htt/archive/refs/tags/v2.2.1.tar.gz"
+  checksum: "sha256=460829d4b6e6212752b4d9621913068e26fc3509498e78e0a5a71e24df5861a3"
 }
 
