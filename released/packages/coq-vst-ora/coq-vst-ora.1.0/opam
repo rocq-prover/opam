@@ -1,6 +1,5 @@
 opam-version: "2.0"
 synopsis: "Ordered Resource Algebras for Iris"
-name: "coq-vst-ora"
 authors: [
   "Robbert Krebbers"
   "Ralf Jung"
@@ -12,7 +11,6 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 description: "The Ordered Resource Algebra (ORA) logic is a variant of the Iris base logic that allows use of both
   linear and affine resources."
-remove: ["rm" "-rf" "'%{lib}%/coq/user-contrib/iris_ora"]
 depends: [
   "coq-iris" { = "4.3.0" }
 ]
