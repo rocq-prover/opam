@@ -1,0 +1,54 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis-fem"
+version: "2.0.0"
+synopsis: "The finite element method"
+description: """
+This library provides support for finite elements, including the simplicial
+Lagrange finite element family. It is based on classical logic.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://lipn.univ-paris13.fr/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.0/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  ("coq" {>= "8.20" & < "8.21~"} | "rocq-prover" {>= "9.0" & < "9.1~"})
+  "rocq-num-analysis-algebra" {= version}
+]
+
+build: [ make "-C" "FEM" "-j%{jobs}%" ]
+install: [ make "-C" "FEM" "install" ]
+remove: [ make "-C" "FEM" "uninstall" ]
+
+url {
+  src: "https://lipn.univ-paris13.fr/rocq-num-analysis-releases/rocq-num-analysis-2.0.0.tar.gz"
+  checksum: "sha512=b2453dc67f2b716ea0a473ca9942eacd3e1eed29493395e35eac5b997e840ec95ed4b028a416b1e92c9a88403cf01812f7744fbc1f0dc8fa8596a2d5c4b8b9b1"
+}
+
+tags: [
+  "category:Math/Real Calculus and Topology"
+
+  "date:2025-06"
+
+  "logpath:NumAnalysis.FEM"
+
+  "keyword:multi-index"
+  "keyword:multi-variate polynomial"
+  "keyword:Lagrange polynomial"
+  "keyword:finite element"
+  "keyword:simplicial Lagrange finite element"
+]
