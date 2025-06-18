@@ -1,0 +1,58 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis-subset"
+version: "2.0.0"
+synopsis: "Subsets for numerical analysis in Rocq"
+description: """
+This library provides support about subsets, functions, homogeneous binary
+relations, and finite families. It is based on classical logic.
+Some complements about logic and natural numbers are also provided.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://lipn.univ-paris13.fr/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.0/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  ("coq" {>= "8.20" & < "8.21~"} | "rocq-prover" {>= "9.0" & < "9.1~"})
+  "coq-mathcomp-ssreflect" {>= "2.3" & < "2.5~"}
+  "coq-mathcomp-classical" {>= "1.8" & < "1.12~"}
+]
+
+build: [ make "-C" "Subset" "-j%{jobs}%" ]
+install: [ make "-C" "Subset" "install" ]
+remove: [ make "-C" "Subset" "uninstall" ]
+
+url {
+  src: "https://lipn.univ-paris13.fr/rocq-num-analysis-releases/rocq-num-analysis-2.0.0.tar.gz"
+  checksum: "sha512=b2453dc67f2b716ea0a473ca9942eacd3e1eed29493395e35eac5b997e840ec95ed4b028a416b1e92c9a88403cf01812f7744fbc1f0dc8fa8596a2d5c4b8b9b1"
+}
+
+tags: [
+  "category:Math/Logic/Set theory"
+
+  "date:2025-06"
+
+  "logpath:NumAnalysis.Requisite"
+  "logpath:NumAnalysis.Logic"
+  "logpath:NumAnalysis.Numbers"
+  "logpath:NumAnalysis.Subsets"
+
+  "keyword:subset"
+  "keyword:function"
+  "keyword:homogeneous binary relation"
+  "keyword:operation on finite families"
+]

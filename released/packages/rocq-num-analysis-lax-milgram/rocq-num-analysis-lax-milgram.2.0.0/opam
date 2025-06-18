@@ -1,0 +1,55 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis-lax-milgram"
+version: "2.0.0"
+synopsis: "Lax-Milgram theorem"
+description: """
+This library provides support for the proof of the Lax-Milgram theorem.
+It is based on classical logic.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://lipn.univ-paris13.fr/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.0/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  ("coq" {>= "8.20" & < "8.21~"} | "rocq-prover" {>= "9.0" & < "9.1~"})
+  "rocq-num-analysis-algebra" {= version}
+]
+
+build: [ make "-C" "LM" "-j%{jobs}%" ]
+install: [ make "-C" "LM" "install" ]
+remove: [ make "-C" "LM" "uninstall" ]
+
+url {
+  src: "https://lipn.univ-paris13.fr/rocq-num-analysis-releases/rocq-num-analysis-2.0.0.tar.gz"
+  checksum: "sha512=b2453dc67f2b716ea0a473ca9942eacd3e1eed29493395e35eac5b997e840ec95ed4b028a416b1e92c9a88403cf01812f7744fbc1f0dc8fa8596a2d5c4b8b9b1"
+}
+
+tags: [
+  "category:Math/Real Calculus and Topology"
+
+  "date:2025-06"
+
+  "logpath:NumAnalysis.LM"
+
+  "keyword:fixed point theorem (in a Banach space)"
+  "keyword:orthogonal projection"
+  "keyword:orthogonal complement"
+  "keyword:Riesz-Fréchet representation theorem"
+  "keyword:Lax-Milgram theorem"
+  "keyword:Céa's lemma"
+]
