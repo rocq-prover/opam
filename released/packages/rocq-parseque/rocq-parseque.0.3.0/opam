@@ -1,0 +1,32 @@
+opam-version: "2.0"
+maintainer: ["G. Allais" "W. Meier"]
+dev-repo: "git+https://github.com/rocq-community/parseque"
+bug-reports: "https://github.com/rocq-community/parseque/issues"
+homepage: "https://github.com/rocq-community/parseque"
+authors: ["G. Allais"]
+license: "MIT"
+
+build: [
+  [make "-j%{jobs}%"]
+]
+
+install: [
+  [make "install"]
+]
+depends: [
+  "rocq-core" {>= "9.0" & < "9.1~"}
+  "rocq-stdlib"
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "date:2025-06-24"
+  "logpath:parseque"
+]
+
+synopsis: "Total parser combinators in Rocq/Coq"
+description: "Port of agdarsec to Rocq/Coq"
+url {
+  src: "https://github.com/rocq-community/parseque/archive/refs/tags/v0.3.0.tar.gz"
+  checksum: "sha256=3c14bcd33367599283f67774d8523ab8cb1a887d825fbf3781c83a0ebc6aa145"
+}
