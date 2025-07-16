@@ -7,7 +7,6 @@ homepage: "https://rocq-prover.org/"
 doc: "https://rocq-prover.org/docs/"
 bug-reports: "https://github.com/rocq-prover/rocq/issues"
 depends: [
-  "rocq-prover" {= version}
   "coq-core" {= version}
   "coq-stdlib"
   "coqide-server" {= version}
