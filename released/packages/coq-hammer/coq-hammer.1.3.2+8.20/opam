@@ -20,7 +20,7 @@ install: [
 ]
 depends: [
   "ocaml" { >= "4.09" }
-  "coq" {>= "8.20" & < "9.1.0~"}
+  "coq" {>= "8.20" & < "8.21~"}
   ("conf-g++" {build} | "conf-clang" {build})
   "coq-hammer-tactics" {= version}
 ]
