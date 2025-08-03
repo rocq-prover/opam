@@ -1,0 +1,29 @@
+opam-version: "2.0"
+maintainer: "jaehyung.lee@sf.snu.ac.kr"
+synopsis: "Ordinal Numbers in Coq"
+homepage: "https://github.com/snu-sf/Ordinal"
+dev-repo: "git+https://github.com/snu-sf/Ordinal"
+bug-reports: "https://github.com/snu-sf/Ordinal/issues"
+authors: [
+  "Minki Cho <minki.cho@sf.snu.ac.kr>"
+]
+license: "MIT"
+build: [make "-j%{jobs}%"]
+install: [make "-f" "Makefile.coq" "install"]
+depends: [
+  "coq" {>= "8.15.2" & < "9.1~"}
+]
+tags: [
+  "date:2025-08-03"
+
+  "category:Mathematics/Logic"
+
+  "keyword:ordinal numbers"
+  "keyword:set theory"
+
+  "logpath:Ordinal"
+]
+url {
+  http: "https://github.com/snu-sf/Ordinal/archive/refs/tags/v0.5.6.tar.gz"
+  checksum: "sha512=753507ae5bc2d4bb02bd3e60f704c2631afb3238b1c0aabc6022a81cbc28e783f30f227a3968febe422c07e7279fb435b14911d12f47e72c0ab60ce47d7e8e55"
+}
