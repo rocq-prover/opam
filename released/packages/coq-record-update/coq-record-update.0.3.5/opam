@@ -1,0 +1,38 @@
+opam-version: "2.0"
+maintainer: "tchajed@gmail.com"
+version: "dev"
+
+homepage: "https://github.com/tchajed/coq-record-update"
+dev-repo: "git+https://github.com/tchajed/coq-record-update.git"
+bug-reports: "https://github.com/tchajed/coq-record-update/issues"
+license: "MIT"
+
+synopsis: "Generic support for updating record fields in Coq"
+description: """
+While Coq provides projections for each field of a record, it has no
+convenient way to update a single field of a record. This library provides a
+generic way to update a field by name, where the user only has to implement a
+simple typeclass that lists out the record fields."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {(>= "8.14" & < "9.1") | (= "dev")}
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "keyword:record"
+  "logpath:RecordUpdate"
+  "date:2025-08-23"
+]
+authors: [
+  "Tej Chajed"
+]
+
+url {
+  src:
+    "https://github.com/tchajed/coq-record-update/archive/v0.3.5.tar.gz"
+  checksum:
+    "sha512=79f2e8bfff3fd8738b3fea3f39cb16c0d52addcebcb2dd311787dd2061d81c87cb2e65e1388339762e1a643db5cd346bf638181d1ac94a1bdb34ff4884d0f349"
+}
