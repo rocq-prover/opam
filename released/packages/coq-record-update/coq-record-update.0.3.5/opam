@@ -1,6 +1,5 @@
 opam-version: "2.0"
 maintainer: "tchajed@gmail.com"
-version: "dev"
 
 homepage: "https://github.com/tchajed/coq-record-update"
 dev-repo: "git+https://github.com/tchajed/coq-record-update.git"
