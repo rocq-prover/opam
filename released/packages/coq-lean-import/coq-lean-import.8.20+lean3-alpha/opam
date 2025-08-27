@@ -1,6 +1,5 @@
 opam-version: "2.0"
 maintainer: "gaetan.gilbert@skyskimmer.net"
-version: "8.20+lean3-alpha"
 
 homepage: "https://github.com/rocq-community/rocq-lean-import"
 dev-repo: "git+https://github.com/rocq-community/rocq-lean-import.git"
