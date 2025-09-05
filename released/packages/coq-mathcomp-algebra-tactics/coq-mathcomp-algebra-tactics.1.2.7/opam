@@ -29,7 +29,6 @@ depends: [
   "coq-mathcomp-ssreflect" {>= "2.4" & < "2.5~" | = "dev"}
   "coq-mathcomp-algebra"
   "coq-mathcomp-zify" {>= "1.5.0"}
-  "coq-elpi" {>= "1.15.0" & != "1.17.0" & < "3.1~"}
 ]
 
 tags: [
@@ -40,6 +39,6 @@ authors: [
   "Pierre Roux"
 ]
 url {
-  src: "https://github.com/math-comp/algebra-tactics/archive/refs/tags/1.2.6.tar.gz"
-  checksum: "sha512=5739e6476ff6c6a85fb06163dee90ea813c5034f39286108cb4a53e11c3c1988557016431ea6086664a4dafaf81c0b1ae1e9630e157356bde4ef4426282ab412"
+  src: "https://github.com/math-comp/algebra-tactics/archive/refs/tags/1.2.7.tar.gz"
+  checksum: "sha512=1ca3f967123327b9e49ee6f49acfb0e5be8bd85e990df5f5ec9f7934dddab9f77c014f7f3bedc1387f0dde523a47b5c4df9f437a64138fc6031e45c70090eed7"
 }
