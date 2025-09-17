@@ -1,0 +1,59 @@
+opam-version: "2.0"
+maintainer: [
+  "Érik Martin-Dorel <erik.martin-dorel@irit.fr>"
+  "Pierre Roux <pierre.roux@onera.fr>"
+]
+
+homepage: "https://sourcesup.renater.fr/validsdp/"
+dev-repo: "git+https://github.com/validsdp/validsdp.git"
+bug-reports: "https://github.com/validsdp/validsdp/issues"
+license: "LGPL-2.1-or-later"
+
+build: [
+  [make "-j%{jobs}%"]
+]
+run-test: [make "-j%{jobs}%" "test"]
+install: [make "install"]
+
+depends: [
+  "ocaml"
+  "coq" {>= "9.0" & < "9.2~"}
+  "coq-bignums"
+  "coq-flocq" {>= "3.3.0"}
+  "coq-interval" {>= "4.0.0" & < "5~"}
+  "coq-mathcomp-field" {>= "2.3" & < "2.5~"}
+  "coq-mathcomp-reals-stdlib" {>= "1.8.0"}
+  "coq-libvalidsdp" {= version}
+  "coq-mathcomp-multinomials" {>= "2.0"}
+  "coq-coqeal" {>= "2.1"}
+  "osdp" {>= "1.1.1"}
+  "ocamlfind" {build}
+]
+synopsis: "ValidSDP"
+description: """
+ValidSDP is a library for the Coq formal proof assistant. It provides
+reflexive tactics to prove multivariate inequalities involving
+real-valued variables and rational constants, using SDP solvers as
+untrusted back-ends and verified checkers based on libValidSDP.
+
+Once installed, you can import the following modules:
+From Coq Require Import Reals.
+From ValidSDP Require Import validsdp.
+"""
+
+tags: [
+  "keyword:libValidSDP"
+  "keyword:ValidSDP"
+  "keyword:floating-point arithmetic"
+  "keyword:Cholesky decomposition"
+  "category:Miscellaneous/Coq Extensions"
+  "logpath:ValidSDP"
+]
+authors: [
+  "Érik Martin-Dorel <erik.martin-dorel@irit.fr>"
+  "Pierre Roux <pierre.roux@onera.fr>"
+]
+url {
+  src: "https://github.com/validsdp/validsdp/archive/refs/tags/v1.1.0/validsdp-1.1.0.tar.gz"
+  checksum: "sha512=7ae0d6116dd81633fa5fcdbf3e28e8ba287229d6436350a2d0b13216191e9541e3c9312eb27c106c10f33df9cfcc67ccaf161f620e1a384efbfc98648b99fc7d"
+}
