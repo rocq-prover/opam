@@ -1,0 +1,22 @@
+opam-version: "2.0"
+maintainer: "Damien Pous <Damien.Pous@ens-lyon.fr>"
+
+homepage: "https://github.com/damien-pous/coinduction"
+dev-repo: "git+https://github.com/damien-pous/coinduction.git"
+bug-reports: "https://github.com/damien-pous/coinduction/issues"
+license: "LGPL-3.0-or-later"
+
+depends: [
+  "coq-core"
+  "rocq-coinduction" {= version}
+]
+authors: [
+  "Damien Pous <Damien.Pous@ens-lyon.fr>"
+]
+
+synopsis: "Compatibility package for rocq-coinduction"
+
+url {
+  src: "https://github.com/damien-pous/coinduction/archive/refs/tags/v1.21.tar.gz"
+  checksum: "sha512=00364c5dfe833c732bf4d9facdd2a666bf2d77233f97a4dca37dfceb70aeddd69eaad2f05f1eb8b4b65dba30d4c37c39da9e8a40be9ee1cf72696a37234b6d50"
+}
