@@ -15,8 +15,8 @@ authors: [
 license: "LGPL-3.0-or-later"
 
 depends: [
-  "rocq-core"
-  "rocq-stdlib" { >= "9.0" & < "9.1~" }
+  "rocq-core" { >= "9.0" & < "9.1~" }
+  "rocq-stdlib"
 ]
 
 build: [
