@@ -78,13 +78,6 @@ opam-lint:
     - scripts/opam-coq-list-pr-files | xargs scripts/opam-coq-lint
 
 # Build
-opam-build:4.07.1:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.07.1"
-  except:
-    - web
-
 opam-build:4.11.2:
   extends: .opam-build
   variables:
@@ -115,24 +108,6 @@ opam-build:any:
     - web
 
 # Build without timeout
-opam-build-no-timeout:4.05.0:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.05.0"
-  only:
-    - web
-  tags:
-    - no-timeout
-
-opam-build-no-timeout:4.07.1:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.07.1"
-  only:
-    - web
-  tags:
-    - no-timeout
-
 opam-build-no-timeout:4.09.0:
   extends: .opam-build
   variables:
