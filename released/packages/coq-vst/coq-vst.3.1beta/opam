@@ -26,13 +26,13 @@ license: "BSD-2-Clause"
 flags: avoid-version
 
 build: [
-  [make "-j%{jobs}%" "vst" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
+  [make "-j%{jobs}%" "vst" "IGNORECOQVERSION=true" "COMPCERT=platform" "ZLIST=platform" "BITSIZE=64"]
 ]
 install: [
-  [make "install" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
+  [make "install" "IGNORECOQVERSION=true" "COMPCERT=platform" "ZLIST=platform" "BITSIZE=64"]
 ]
 run-test: [
-  [make "-j%{jobs}%" "test" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
+  [make "-j%{jobs}%" "test" "IGNORECOQVERSION=true" "COMPCERT=platform" "ZLIST=platform" "BITSIZE=64"]
 ]
 depends: [
   "ocaml"

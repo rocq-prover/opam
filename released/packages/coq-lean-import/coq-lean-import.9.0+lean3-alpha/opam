@@ -1,0 +1,30 @@
+opam-version: "2.0"
+maintainer: "gaetan.gilbert@skyskimmer.net"
+
+homepage: "https://github.com/rocq-community/rocq-lean-import"
+dev-repo: "git+https://github.com/rocq-community/rocq-lean-import.git"
+bug-reports: "https://github.com/rocq-community/rocq-lean-import/issues"
+license: "LGPL-2.1-only"
+
+synopsis: "Plugin allowing Coq to import Lean exported files"
+description: """
+Plugin allowing Coq to import Lean exported files."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "ocaml" {>= "4.09.0"}
+  "coq" {>= "9.0" & < "9.1~"}
+]
+
+tags: [
+  "logpath:LeanImport"
+]
+authors: [
+  "Gaëtan Gilbert"
+]
+
+url {
+  src: "https://github.com/rocq-community/rocq-lean-import/archive/refs/tags/v9.0-lean3+alpha.tar.gz"
+  checksum: "sha512=2f49766d0b667d897b5a62b4806db129967c717ad0a15d484da6c29ee77e85a918188ffa4cb0372c320ea6563df1a5e8273f9d2e7c8745c220c5aa2b3f7bf9fa"
+}

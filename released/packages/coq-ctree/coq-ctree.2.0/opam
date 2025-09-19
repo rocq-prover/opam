@@ -1,0 +1,54 @@
+opam-version: "2.0"
+version: "2.0"
+synopsis:
+  "Library for representing recursive, non-deterministic and impure programs with equational reasoning"
+maintainer: ["Yannick Zakowski"]
+authors: [
+  "Nicolas Chappe"
+  "Paul He"
+  "Ludovic Henrio"
+  "Yannick Zakowski"
+  "Steve Zdancewic"
+]
+license: "MIT"
+tags: [
+  "category:CS/Semantics and Compilation/Semantics"
+  "category:CS/Concurrency/Theory of concurrent systems"
+  "keyword:simulation"
+  "keyword:bisimilarity"
+  "keyword:coinduction up-to"
+  "keyword:process algebra"
+  "keyword:cooperative multithreading"
+  "logpath:CTree"
+]
+homepage: "https://github.com/vellvm/ctrees"
+bug-reports: "https://github.com/vellvm/ctrees/issues"
+depends: [
+  "dune" {>= "3.8"}
+  "coq" {>= "8.20"}
+  "coq-ext-lib" {>= "0.11.3"}
+  "coq-coinduction" {= "1.20"}
+  "coq-relation-algebra" {>= "1.7.11"}
+  "coq-equations" {>= "1.2"}
+  "coq-itree" {>= "5.0"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+url {
+  src: "https://github.com/vellvm/ctrees/releases/download/v2.0/ctrees-2.0.tar.gz"
+  checksum: "sha512=546b64620926924e1d2f70177ee07547035d97358e081881955edd3d1a18b3730bf8bdf887d38f292ea36dbafcf191b83baa30d7e0d915d00bd07b841ab6c2f2"
+}
+dev-repo: "git+https://github.com/vellvm/ctrees.git"
