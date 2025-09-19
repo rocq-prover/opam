@@ -1,0 +1,23 @@
+opam-version: "2.0"
+maintainer: "Damien Pous <Damien.Pous@ens-lyon.fr>"
+
+homepage: "http://perso.ens-lyon.fr/damien.pous/ra/"
+dev-repo: "git+https://github.com/damien-pous/relation-algebra.git"
+bug-reports: "https://github.com/damien-pous/relation-algebra/issues"
+license: "LGPL-3.0-or-later"
+
+depends: [
+  "coq-core"
+  "rocq-relation-algebra" {= version}
+]
+authors: [
+  "Damien Pous <Damien.Pous@ens-lyon.fr>"
+]
+
+synopsis: "Compatibility package for rocq-relation-algebra"
+
+url {
+  src:
+    "https://github.com/damien-pous/relation-algebra/archive/refs/tags/v1.8.0.tar.gz"
+    checksum: "sha512=9e2e88d3fa35d7d84c0d16e08e1875a2aae0a66a5012946642c7262f8d96c94eeac9e93dd1045ca8c862ad418133c15a51851d1107b3de1dc8301d91bb0247ce"
+}

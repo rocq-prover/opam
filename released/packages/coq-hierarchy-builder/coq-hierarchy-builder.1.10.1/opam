@@ -1,0 +1,20 @@
+opam-version: "2.0"
+synopsis: "Compatibility package for rocq-hierarchy-builder"
+maintainer: "Enrico Tassi <enrico.tassi@inria.fr>"
+authors: ["Cyril Cohen" "Kazuhiko Sakaguchi" "Enrico Tassi"]
+license: "MIT"
+homepage: "https://github.com/math-comp/hierarchy-builder"
+bug-reports: "https://github.com/math-comp/hierarchy-builder/issues"
+depends: [
+  "coq-core"
+  "rocq-hierarchy-builder" {= version}
+]
+dev-repo: "git+https://github.com/math-comp/hierarchy-builder"
+url {
+  src:
+    "https://github.com/math-comp/hierarchy-builder/releases/download/v1.10.1/hierarchy-builder-1.10.1.tar.gz"
+  checksum: [
+    "md5=d9a624d47d0fc7696a925006765db6b1"
+    "sha512=d10bd1b44b2bd1dcf307aa423877c3ff4b3df24ee1a8330501aefeb75a620264cdc37a932a810d9563297a72f61c47dda8328a20ab196b048f9c4c4bf7e68b29"
+  ]
+}
