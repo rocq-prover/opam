@@ -33,7 +33,7 @@ dev-repo: "git+https://github.com/inQWIRE/QuantumLib.git"
 
 url {
   src: "https://github.com/inQWIRE/QuantumLib/archive/refs/tags/v1.8.0.tar.gz"
-  checksum: "2917f55688a2b6edd31f582a9aaa0da9142bb3f7d874b344241be8f30c4fb4fd"
+  checksum: "sha256=2917f55688a2b6edd31f582a9aaa0da9142bb3f7d874b344241be8f30c4fb4fd"
 }
 
 tags: [
