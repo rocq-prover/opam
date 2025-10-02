@@ -1,0 +1,30 @@
+opam-version: "2.0"
+synopsis: "HOL-Light definition of real numbers in Rocq using N and MathComp"
+description: """
+This library contains an automatic translation in Rocq of the HOL-Light
+definition of real numbers using https://github.com/Deducteam/hol2dk.
+"""
+homepage: "https://github.com/Deducteam/mathcomp-hol-light-real-with-N"
+dev-repo: "git+https://github.com/Deducteam/mathcomp-hol-light-real-with-N.git"
+bug-reports: "https://github.com/Deducteam/mathcomp-hol-light-real-with-N/issues"
+doc: "https://github.com/Deducteam/mathcomp-hol-light-real-with-N"
+maintainer: "frederic.blanqui@inria.fr"
+authors: ["https://github.com/Deducteam/mathcomp-hol-light-real-with-N/blob/main/AUTHORS.md"]
+license: "CeCILL-2.1"
+depends: [
+  "coq-mathcomp-classical" {>= "1.8.0"}
+  "rocq-prover" {>= "9.0"}
+]
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+tags: [
+  "logpath:MathComp_HOLLight_Real_With_N"
+  "date:2025-07-11"
+  "category:Mathematics/Arithmetic and Number Theory/Miscellaneous"
+  "category:Mathematics/Real Numbers"
+  "keyword:HOL-Light"
+]
+url {
+  src: "https://github.com/Deducteam/mathcomp-hollight-real-with-N/archive/refs/tags/0.0.0.tar.gz"
+  checksum: "sha256=e31c68256ee15b2d154217aeea83ff8dfa29a30d6d11073f8807d5cd993b82d0"
+}
