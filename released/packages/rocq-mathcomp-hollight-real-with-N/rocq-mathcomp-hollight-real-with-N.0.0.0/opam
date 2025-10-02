@@ -4,12 +4,12 @@ description: """
 This library contains an automatic translation in Rocq of the HOL-Light
 definition of real numbers using https://github.com/Deducteam/hol2dk.
 """
-homepage: "https://github.com/Deducteam/mathcomp-hol-light-real-with-N"
-dev-repo: "git+https://github.com/Deducteam/mathcomp-hol-light-real-with-N.git"
-bug-reports: "https://github.com/Deducteam/mathcomp-hol-light-real-with-N/issues"
-doc: "https://github.com/Deducteam/mathcomp-hol-light-real-with-N"
+homepage: "https://github.com/Deducteam/mathcomp-hollight-real-with-N"
+dev-repo: "git+https://github.com/Deducteam/mathcomp-hollight-real-with-N.git"
+bug-reports: "https://github.com/Deducteam/mathcomp-hollight-real-with-N/issues"
+doc: "https://github.com/Deducteam/mathcomp-hollight-real-with-N"
 maintainer: "frederic.blanqui@inria.fr"
-authors: ["https://github.com/Deducteam/mathcomp-hol-light-real-with-N/blob/main/AUTHORS.md"]
+authors: ["https://github.com/Deducteam/mathcomp-hollight-real-with-N/blob/main/AUTHORS.md"]
 license: "CeCILL-2.1"
 depends: [
   "coq-mathcomp-classical" {>= "1.8.0"}
