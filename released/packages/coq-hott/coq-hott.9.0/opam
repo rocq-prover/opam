@@ -6,10 +6,9 @@ license: "BSD-2-Clause"
 build: [ "dune" "build" "-p" name "-j" jobs "@install" ]
 install: [ "dune" "install" "-p" name ]
 depends: [
-  "ocaml"
-  "ocamlfind" {build}
   "dune" {>= "3.13"}
-  "coq" {>= "8.19.0" & < "9.1~"}
+  (("rocq-core" {>= "9.0" & < "9.1~"} & "coq-core" {>= "9.0" & < "9.1~"})
+   | "coq" {>= "8.19.0" & < "9~"})
 ]
 authors: ["The HoTT Library Development Team"]
 dev-repo: "git+https://github.com/HoTT/HoTT.git"
