@@ -1,3 +1,5 @@
+
+
 opam-version: "2.0"
 maintainer: "Pierre.Courtieu@lecnam.net"
 synopsis: "Hypotheses manipulation library"
@@ -5,17 +7,24 @@ synopsis: "Hypotheses manipulation library"
 homepage: "https://github.com/Matafou/LibHyps"
 dev-repo: "git+https://github.com/Matafou/LibHyps.git"
 bug-reports: "https://github.com/Matafou/LibHyps/issues"
-doc: "https://github.com/Matafou/LibHyps/blob/master/Demo/demo.v"
+doc: "https://github.com/Matafou/LibHyps/blob/coq-8/tests/demo.v"
 license: "MIT"
 
 build: [
   ["./configure.sh"]
-  [make "-j%{jobs}%"]
+  [make lib "-j%{jobs}%"]
+]
+
+run-test: [
+  ["./configure.sh"]
+  [make lib "-j%{jobs}%"]
+  [make tests ]
 ]
 
 install: [make "install"]
 
 depends: [
+  "ocaml" {>= "4.14"}
   "coq" {(>= "8.11" & <= "8.20~")}
 ]
 
@@ -23,9 +32,9 @@ tags: [
   "keyword:proof environment manipulation"
   "keyword:forward reasoning"
   "keyword:hypothesis naming"
-  "category:Miscellaneous/Coq Extensions"
+  "category:Miscellaneous/Coq Tactics Library"
   "logpath:LibHyps"
-  "date:2024-12-19"
+  "date:2025-10-6"
 ]
 
 authors: [
@@ -39,13 +48,11 @@ each hypothesis of a goal, or only on *new* hypothesis after some
 tactic. Examples of manipulations: automatic renaming, subst, revert,
 or any tactic expecting a hypothesis name as argument.
 
-It DOES NOT provide ANYMORE the especialize tactic to ease forward
-reasoning by instantianting one, several or all premisses of a
-hypothesis. Ths is due to coq's specialize being less permissive about
-evars. This may be fixed in the future.
+It also provides the especialize tactic to ease forward reasoning by
+instantianting one, several or all premisses of a hypothesis.
 "
 
 url {
-  src: "https://github.com/Matafou/LibHyps/archive/refs/tags/3.0.1.tar.gz"
-  checksum: "sha512=d29114cd6ed5a4c88283b7598a0720b693bf978c4e5c42d5451e1bf21e8bfdc7d9b0a274ef34b27f8ab97635240628a1349c175bd52fc3acedb993dd3e816548"
+  src: "https://github.com/Matafou/LibHyps/archive/refs/tags/3.0.2.tar.gz"
+  checksum: "sha512=f1ef69c3fbbc5ff71fa27ac14385c1d74db0532e2596030f94bee1b5852107856ae0571fe5654d5c2b016ce4c0f030e6589d32a2033ec9ae7cc3e64310c17d41"
 }
