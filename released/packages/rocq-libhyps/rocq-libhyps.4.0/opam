@@ -1,5 +1,3 @@
-
-
 opam-version: "2.0"
 maintainer: "Pierre.Courtieu@lecnam.net"
 synopsis: "Hypotheses manipulation library"
@@ -7,25 +5,26 @@ synopsis: "Hypotheses manipulation library"
 homepage: "https://github.com/Matafou/LibHyps"
 dev-repo: "git+https://github.com/Matafou/LibHyps.git"
 bug-reports: "https://github.com/Matafou/LibHyps/issues"
-doc: "https://github.com/Matafou/LibHyps/blob/coq-8/tests/demo.v"
+doc: "https://github.com/Matafou/LibHyps/blob/master/tests/demo.v"
 license: "MIT"
 
 build: [
   ["./configure.sh"]
-  [make lib "-j%{jobs}%"]
+  [make "-j%{jobs}%"]
 ]
 
 run-test: [
   ["./configure.sh"]
-  [make lib "-j%{jobs}%"]
-  [make tests ]
+  [make "-j%{jobs}%"]
+  [make "tests"]
 ]
 
 install: [make "install"]
 
 depends: [
   "ocaml" {>= "4.14"}
-  "coq" {(>= "8.11" & <= "8.20~")}
+  "rocq-core" { (>= "9.0" ) | ( = "dev") }
+  "rocq-stdlib"
 ]
 
 tags: [
@@ -53,6 +52,6 @@ instantianting one, several or all premisses of a hypothesis.
 "
 
 url {
-  src: "https://github.com/Matafou/LibHyps/archive/refs/tags/3.0.2.tar.gz"
-  checksum: "sha512=f1ef69c3fbbc5ff71fa27ac14385c1d74db0532e2596030f94bee1b5852107856ae0571fe5654d5c2b016ce4c0f030e6589d32a2033ec9ae7cc3e64310c17d41"
+  src: "https://github.com/Matafou/LibHyps/archive/refs/tags/4.0.0.tar.gz"
+  checksum: "sha512=2624e96ab3417a5469ffa63d0ec50fa492987ec41b9db7231d6b3eb242f5969720ed7d0c6f3e6755fd35200db553ec483fefa8b9884a38dbf201acd25005d220"
 }
