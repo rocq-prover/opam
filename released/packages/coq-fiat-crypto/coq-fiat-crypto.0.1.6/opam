@@ -25,8 +25,8 @@ depends: [
   "coq" {>= "8.18~"}
   "coq-coqprime" {>= "1.2.0"}
   "coq-rewriter" {>= "0.0.6"}
-  "coq-rupicola" {= "0.0.10"}
-  "coq-bedrock2-compiler" {= "0.0.8"}
+  "coq-rupicola" {= "0.0.11"}
+  "coq-bedrock2-compiler" {= "0.0.9"}
 ]
 conflict-class: [
   "coq-fiat-crypto"

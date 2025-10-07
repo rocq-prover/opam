@@ -14,7 +14,7 @@ build: [
 install: [make "EXTERNAL_DEPENDENCIES=1" "install"]
 depends: [
   "coq" {>= "8.15~"}
-  "coq-riscv" {= "0.0.4"}
+  "coq-riscv" {= "0.0.6"}
 ]
 dev-repo: "git+https://github.com/mit-plv/kami.git"
 synopsis: "A work-in-progress language and compiler for verified low-level programming"
