@@ -53,7 +53,7 @@ json-data:
   tags:
     - medium
   variables:
-    COMPILER: "4.11.2"
+    COMPILER: "4.14.2"
   script: |
     . scripts/opam-coq-setup-root
     mkdir -p log; > log/log.json
@@ -73,98 +73,37 @@ opam-lint:
   tags:
     - medium
   variables:
-    COMPILER: "4.11.2"
+    COMPILER: "4.14.2"
   script:
     - scripts/opam-coq-list-pr-files | xargs scripts/opam-coq-lint
 
 # Build
-opam-build:4.07.1:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.07.1"
-  except:
-    - web
-
-opam-build:4.11.2:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.11.2"
-  except:
-    - web
-
-opam-build:4.14.0:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.14.0"
-  except:
-    - web
-
-opam-build:5.0.0:
-  extends: .opam-build
-  variables:
-    COMPILER: "5.0.0"
-  except:
-    - web
-
-opam-build:any:
+opam-build:4.09.0:
   extends: .opam-build
   variables:
     COMPILER: "4.09.0"
-    EXTRA_OPAM_OPTION: "--update-invariant"
+  except:
+    - web
+
+opam-build:4.14.2:
+  extends: .opam-build
+  variables:
+    COMPILER: "4.14.2"
+  except:
+    - web
+
+opam-build:5.3.0:
+  extends: .opam-build
+  variables:
+    COMPILER: "5.3.0"
   except:
     - web
 
 # Build without timeout
-opam-build-no-timeout:4.05.0:
+opam-build-no-timeout:4.14.2:
   extends: .opam-build
   variables:
-    COMPILER: "4.05.0"
-  only:
-    - web
-  tags:
-    - no-timeout
-
-opam-build-no-timeout:4.07.1:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.07.1"
-  only:
-    - web
-  tags:
-    - no-timeout
-
-opam-build-no-timeout:4.09.0:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.09.0"
-  only:
-    - web
-  tags:
-    - no-timeout
-
-opam-build-no-timeout:4.11.2:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.11.2"
-  only:
-    - web
-  tags:
-    - no-timeout
-
-opam-build-no-timeout:4.13.1:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.13.1"
-  only:
-    - web
-  tags:
-    - no-timeout
-
-opam-build-no-timeout:any:
-  extends: .opam-build
-  variables:
-    COMPILER: "4.09.0"
-    EXTRA_OPAM_OPTION: "--update-invariant"
+    COMPILER: "4.14.2"
   only:
     - web
   tags:
