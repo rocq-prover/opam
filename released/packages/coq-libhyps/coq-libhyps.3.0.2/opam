@@ -25,7 +25,7 @@ install: [make "install"]
 
 depends: [
   "ocaml" {>= "4.14"}
-  "coq" {(>= "8.11" & <= "8.20~")}
+  "coq" {(>= "8.11" & <= "8.21~")}
 ]
 
 tags: [
