@@ -42,8 +42,7 @@ build: [
   ["dune" "subst"] {dev}
   [ "./configure"
     "-release" # -release must be the first command line argument
-    "-prefix" prefix
-    "-libdir" "%{lib}%/coq"
+    "-relocatable"
     "-native-compiler" "yes" {coq-native:installed} "no" {!coq-native:installed}
   ]
   [
