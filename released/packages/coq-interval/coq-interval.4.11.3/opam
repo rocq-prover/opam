@@ -6,6 +6,7 @@ bug-reports: "https://gitlab.inria.fr/coqinterval/interval/issues"
 license: "CeCILL-C"
 build: [
   ["autoconf"] {dev}
+  ["sed" "-i" "-e" "s/@COQDEP@/@COQDEP@ -worker \\\"\\\"/" "Remakefile.in"] {os = "win32"}
   ["./configure"]
   ["./remake" "-j%{jobs}%"]
 ]
