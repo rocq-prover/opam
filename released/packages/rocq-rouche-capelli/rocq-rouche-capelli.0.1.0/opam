@@ -47,7 +47,7 @@ url {
   src:
     "https://github.com/weng-chenghui/rocq-rouche-capelli/archive/refs/tags/v0.1.0.tar.gz"
   checksum: [
-    "md5=cfe8e885b9f6f4d91a431eaed840a787"
-    "sha512=b05bbefb3d40092a75ec0757683f98d63259d82cbd6c58100c27cf5fe605fd03e18d9e1a233e07c5d083fb96a93b0a53e9a27a739b4e907ee32a907e7fd48aa0"
+    "md5=596d3e9af1d4c07bfcefc855c85bd1d5"
+    "sha512=a6aa057ca1d6b81faa45aae0d8a636147290524a10f9fe7749d46f5cf3eaceea47afd13d9ed165c634d4954d55626941fcec7b12c866b8a11d1a5edbdbb09957"
   ]
 }
