@@ -1,0 +1,65 @@
+opam-version: "2.0"
+synopsis:
+  "Support library for Sail, a language for describing the instruction semantics of processors, using stdpp bitvectors"
+description: """
+The support library for instruction-set semantics generated from Sail.
+Sail is a language for describing the instruction-set
+architecture (ISA) semantics of processors. Sail aims to provide a
+engineer-friendly, vendor-pseudocode-like language for describing
+instruction semantics. It is essentially a first-order imperative
+language, but with lightweight dependent typing for numeric types and
+bitvector lengths, which are automatically checked using Z3. It has
+been used for several papers, available from
+http://www.cl.cam.ac.uk/~pes20/sail/.
+The Sail tool can be found in main opam repository."""
+maintainer: ["Sail Devs <cl-sail-dev@lists.cam.ac.uk>"]
+authors: [
+  "Alasdair Armstrong"
+  "Thomas Bauereiss"
+  "Brian Campbell"
+  "Shaked Flur"
+  "Jonathan French"
+  "Kathy Gray"
+  "Robert Norton"
+  "Christopher Pulte"
+  "Peter Sewell"
+  "Mark Wassell"
+]
+license: "BSD-2-Clause"
+tags: [
+  "logpath:Sail"
+  "category:Computer Science/Semantics and Compilation/Semantics"
+]
+homepage: "http://www.cl.cam.ac.uk/~pes20/sail/"
+doc: "https://github.com/rems-project/sail"
+bug-reports: "https://github.com/rems-project/coq-sail/issues"
+depends: [
+  "dune" {>= "3.8"}
+  "coq" {>= "8.18" & < "9.1~"}
+  "coq-stdpp-bitvector" {>= "1.10.0" & <= "1.12.0"}
+  "odoc" {with-doc}
+]
+conflicts: [
+  "sail" {!= version}
+]
+build: [
+  ["dune" "subst"] {dev}
+  ["sh" "-c" "sed 's/theories stdpp/theories Stdlib stdpp/' src-stdpp/dune >src-stdpp/dune.new"] {coq:version >= "9.0"}
+  ["mv" "src-stdpp/dune.new" "src-stdpp/dune"] {coq:version >= "9.0"}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/rems-project/coq-sail.git"
+url {
+  src: "https://github.com/rems-project/coq-sail/archive/refs/tags/0.20.tar.gz"
+  checksum: "sha256=a1d1449539eedefa7b3d88e8455ad8131bb74a3c1a3776fe76270da6777ee0c1"
+}
