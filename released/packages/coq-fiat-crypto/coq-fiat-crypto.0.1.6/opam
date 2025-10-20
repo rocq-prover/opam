@@ -26,7 +26,7 @@ depends: [
   "coq-coqprime" {>= "1.6.0"}
   "coq-rewriter" {>= "0.0.12"}
   "coq-rupicola" {= "0.0.11"}
-  "coq-bedrock2-compiler" {= "0.0.9"}
+  "coq-bedrock2-compiler" {= "0.0.8"}
 ]
 conflict-class: [
   "coq-fiat-crypto"
