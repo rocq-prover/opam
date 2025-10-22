@@ -28,9 +28,9 @@ tags: [
 ]
 url {
   src:
-    "https://github.com/Deducteam/rocq-hollight-fole/archive/refs/tags/0.0.0.tar.gz"
+    "https://github.com/Deducteam/rocq-hollight-logic-unif/archive/refs/tags/0.0.0.tar.gz"
   checksum: [
-    "sha256=49dc914fa6ea7e74ae4ce09d315108b1eef736c08cccd3eb91872a01020a76ac"
-    "sha512=21b754c26006fc863d62f67a9f183082b9105eea897994fb1934f2b35678ba34f939a59f654fa6874cae19545f3b300141b94b78beb2794749f1cd866e503df7"
+    "sha256=3f09cb1836850027bdf5c7e681e299c3c6675e083f99ce846e09b2b72f714cde"
+    "sha512=6567b620d058fe09ce373c2cbcb2e0a08c3f0ecfedf348967dfe3f64568ea6750c298add17901831c94ec39dea5aa93d8d0c62549651744b86e0890a168b7cd5"
   ]
 }
