@@ -1,0 +1,37 @@
+opam-version: "2.0"
+synopsis: "HOL-Light library necessary for translating unify"
+description: """
+This library contains an automatic translation in Rocq of the
+HOL-Light Logic library using https://github.com/Deducteam/hol2dk.
+"""
+homepage: "https://github.com/Deducteam/rocq-hollight-logic"
+dev-repo: "git+https://github.com/Deducteam/rocq-hollight-logic.git"
+bug-reports: "https://github.com/Deducteam/rocq-hollight-logic/issues"
+doc: "https://github.com/Deducteam/rocq-hollight-logic"
+maintainer: "antoine.gontard@inria.fr"
+authors: ["Antoine Gontard"]
+license: "CeCILL-2.1"
+depends: [
+  "rocq-prover" {>= "9.0"}
+  "coq-mathcomp-classical" {>= "1.8.0"}
+  "coq-fourcolor-reals" {>= "1.4.0"}
+  "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
+  "rocq-equations" {>= "1.3.1+9.0"}
+  "rocq-hollight-logic-unif" {>= "0.0.0"}
+]
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+tags: [
+  "logpath:HOLLight_Logic"
+  "date:2025-10-21"
+  "keyword:HOL-Light"
+  "keyword:first order logic"
+]
+url {
+  src:
+    "https://github.com/Deducteam/rocq-hollight-logic/archive/refs/tags/0.0.0.tar.gz"
+  checksum: [
+    "sha256=7a51d9a9df0d42ed997a2c5169d2d0c240b6bfcd980d865fe6849c8a7113e8a0"
+    "sha512=2d865b655172e21c0f74e8c75441ccfe15eef744e6bc6bfbf3988c748929ceaa3ab27f0f4edcce104c929e4a2602afdf01651237748d1b18d51ca01a239ccf88"
+  ]
+}
