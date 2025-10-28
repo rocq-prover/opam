@@ -1,0 +1,46 @@
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+
+homepage: "https://github.com/rocq-community/aac-tactics"
+dev-repo: "git+https://github.com/rocq-community/aac-tactics.git"
+bug-reports: "https://github.com/rocq-community/aac-tactics/issues"
+license: "LGPL-3.0-or-later"
+
+synopsis: "Rocq tactics for rewriting universally quantified equations, modulo associative (and possibly commutative and idempotent) operators"
+description: """
+This Rocq plugin provides tactics for rewriting and proving universally
+quantified equations modulo associativity and commutativity of some operator,
+with idempotent commutative operators enabling additional simplifications.
+The tactics can be applied for custom operators by registering the operators and
+their properties as type class instances. Instances for many commonly used operators,
+such as for binary integer arithmetic and booleans, are provided with the plugin."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "ocaml" {>= "4.09.0"}
+  "rocq-core" {>= "9.0" & < "9.1"}
+  "rocq-stdlib" 
+]
+
+tags: [
+  "category:Miscellaneous/Rocq Extensions"
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "keyword:reflexive tactic"
+  "keyword:rewriting"
+  "keyword:rewriting modulo associativity and commutativity"
+  "keyword:rewriting modulo ac"
+  "keyword:decision procedure"
+  "logpath:AAC_tactics"
+  "date:2025-10-28"
+]
+authors: [
+  "Thomas Braibant"
+  "Damien Pous"
+  "Fabian Kunze"
+]
+
+url {
+  src: "https://github.com/rocq-community/aac-tactics/releases/download/v9.0.0/aac-tactics-9.0.0.tar.gz"
+  checksum: "sha512=dff4a4f731e8f83c04ebde39b972310a223662df66b39fff65409c531e0818b56ec2587e8521abd3ac267175e277c2ce87222d39737da5f3febf7a42fc25096b"
+}
