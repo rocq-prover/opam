@@ -19,7 +19,7 @@ bug-reports: "https://github.com/mattam82/Coq-Equations/issues"
 depends: [
   "dune" {>= "3.13"}
   "ocaml" {>= "4.10.0"}
-  "rocq-runtime" {>= "9.0~" & < "9.1" & != "dev" & != "9.0.dev" }
+  "rocq-runtime" {>= "9.0~" & < "9.1" & != "dev" }
   "rocq-stdlib"
   "coq-core" (* As dune coq lang relies on coq compatibility binaries *)
   "ppx_optcomp" {build}
