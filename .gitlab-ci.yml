@@ -37,7 +37,7 @@ before_script:
   script: |
     PR=${CI_COMMIT_REF_NAME##pr-};
     echo "Github PR number: $PR";
-    SKIP=$(set +o pipefail; curl https://api.github.com/repos/coq/opam/issues/$PR | jq -rc .body | grep ^ci-skip: | cat );
+    SKIP=$(set +o pipefail; curl -L https://api.github.com/repos/coq/opam/issues/$PR | jq -rc .body | grep ^ci-skip: | cat );
     echo "SKIP packages per user request: $SKIP";
     scripts/opam-coq-list-pr-files | xargs scripts/opam-coq-install-remove $OPAM_ROOT_CACHE $SKIP --
   artifacts:
