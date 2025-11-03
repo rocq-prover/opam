@@ -1,0 +1,43 @@
+opam-version: "2.0"
+synopsis: "Refinements of Prosa RTAs used by POET"
+description: """Prosa-specific refinements used by POET, a foundational
+response-time analysis (RTA) tool."""
+
+homepage: "https://prosa.mpi-sws.org/poet.html"
+dev-repo: "git+https://gitlab.mpi-sws.org/RT-PROOFS/rt-proofs.git"
+bug-reports: "https://gitlab.mpi-sws.org/RT-PROOFS/rt-proofs/issues"
+license: "BSD-2-Clause"
+doc: "https://prosa.mpi-sws.org/branches/master/pretty/toc.html"
+maintainer: "Björn Brandenburg <bbb@mpi-sws.org>"
+
+build: [
+  [make "-j%{jobs}%" "refinements"]
+]
+install: [
+  [make "install"]
+]
+
+depends: [
+  "rocq-prosa" { = version }
+  "coq-coqeal" {>= "2.1.0"}
+]
+
+tags: [
+  "keyword:prosa"
+  "keyword:poet"  
+  "keyword:real-time"
+  "keyword:response-time analysis"
+  "keyword:scheduling theory"  
+  "logpath:prosa.refinements"
+]
+
+authors: [
+  "Marco Maida"
+  "Sergey Bozhko"  
+  "Pierre Roux"
+  "Björn Brandenburg"
+]
+
+url {
+  src: "git+https://gitlab.mpi-sws.org/RT-PROOFS/rt-proofs.git"
+}
