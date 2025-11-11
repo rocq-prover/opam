@@ -17,8 +17,8 @@ authors: [
   "Sorin Stratulat"
 ]
 license: "CECILL-2.1"
-homepage: "http://color.inria.fr/"
-bug-reports: "color@inria.fr"
+homepage: "https://github.com/fblanqui/color/"
+bug-reports: "github.com/fblanqui/color"
 build: [
   [make "-j%{jobs}%"]
 ]
@@ -108,6 +108,6 @@ tags: [
 ]
 synopsis: "A library on rewriting theory and termination"
 url {
-  src: "http://files.inria.fr/blanqui/color/color.1.4.0.tar.gz"
+  src: "https://files.inria.fr/blanqui/color/color.1.4.0.tar.gz"
   checksum: "md5=012e9be1fee95f5bea00cd91133302c1"
 }

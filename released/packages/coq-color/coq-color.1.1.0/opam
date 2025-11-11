@@ -1,6 +1,6 @@
 opam-version: "2.0"
 maintainer: "frederic.blanqui@inria.fr"
-homepage: "http://color.inria.fr/"
+homepage: "https://github.com/fblanqui/color/"
 license: "CECILL-2.1"
 build: [
   [make "-j%{jobs}%"]
@@ -28,6 +28,6 @@ authors: [
 ]
 synopsis: "A library on rewriting theory and termination"
 url {
-  src: "http://files.inria.fr/blanqui/color/color.1.1.0.tar.gz"
+  src: "https://files.inria.fr/blanqui/color/color.1.1.0.tar.gz"
   checksum: "md5=d5b795bb8a43c690fce173c0e6131ac6"
 }

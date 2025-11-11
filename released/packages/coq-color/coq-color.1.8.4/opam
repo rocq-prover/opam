@@ -17,7 +17,7 @@ authors: [
   "Sorin Stratulat"
 ]
 license: "CeCILL-2.1"
-homepage: "http://color.inria.fr/"
+homepage: "https://github.com/fblanqui/color/"
 bug-reports: "https://github.com/fblanqui/color/issues"
 build: [make "-j%{jobs}%"]
 install: [make "-f" "Makefile.coq" "install"]
