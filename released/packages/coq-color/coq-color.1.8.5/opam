@@ -24,11 +24,11 @@ install: [make "-f" "Makefile.coq" "install"]
 remove: ["rm" "-R" "%{lib}%/coq/user-contrib/CoLoR"]
 depends: [
   "ocaml"
-  "coq" {>= "8.14" & < "9.1~"}
+  "coq" {>= "8.14" & < "9.2~"}
   "coq-bignums"
 ]
 tags: [
-  "date:2023-06-28"
+  "date:2024-04-16"
 
   "logpath:CoLoR"
 
