@@ -1,0 +1,44 @@
+opam-version: "2.0"
+synopsis: "OL libraries"
+description: """
+  Add-ons for the Rocq standard library
+"""
+
+homepage: "https://github.com/olaure01/ollibs"
+dev-repo: "git+https://github.com/olaure01/ollibs.git"
+bug-reports: "https://github.com/olaure01/ollibs/issues"
+doc: "https://github.com/olaure01/ollibs/blob/master/README.md"
+maintainer: "olivier.laurent@ens-lyon.fr"
+authors: [
+  "Olivier Laurent" "Christophe Lucas"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  "rocq-core" { >= "9.1" & < "9.2~" }
+  "rocq-stdlib"
+]
+
+build: [
+  ["./configure"]
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+url {
+  src: "https://github.com/olaure01/ollibs/releases/download/v2.1.1/v2.1.1.tar.gz"
+  checksum: "sha512=91203f27928ccd1942441bfc83e6d0a30e341af00d8b37abe0ab8138d279818acbe60f1a8324e580efefdda0883bccf2be578e2a460670f49f66701f4198a076"
+}
+
+tags: [
+  "keyword:standard library"
+  "keyword:list"
+  "keyword:permutation"
+  "keyword:decidable equality"
+  "keyword:finite multiset"
+  "category:Mathematics/Combinatorics and Graph Theory"
+  "date:2025-11-11"
+  "logpath:OLlibs"
+]
