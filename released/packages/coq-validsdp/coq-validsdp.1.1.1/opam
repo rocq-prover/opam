@@ -1,0 +1,53 @@
+opam-version: "2.0"
+maintainer: [
+  "Érik Martin-Dorel <erik.martin-dorel@irit.fr>"
+  "Pierre Roux <pierre.roux@onera.fr>"
+]
+
+homepage: "https://sourcesup.renater.fr/validsdp/"
+dev-repo: "git+https://github.com/validsdp/validsdp.git"
+bug-reports: "https://github.com/validsdp/validsdp/issues"
+license: "LGPL-2.1-or-later"
+
+build: [
+  [make "-j%{jobs}%"]
+]
+run-test: [make "-j%{jobs}%" "test"]
+install: [make "install"]
+
+depends: [
+  "ocaml"
+  "coq-libvalidsdp" {= version}
+  "coq-mathcomp-multinomials" {>= "2.0"}
+  "coq-coqeal" {>= "2.1"}
+  "osdp" {>= "1.1.1"}
+  "ocamlfind" {build}
+]
+synopsis: "ValidSDP"
+description: """
+ValidSDP is a library for the Coq formal proof assistant. It provides
+reflexive tactics to prove multivariate inequalities involving
+real-valued variables and rational constants, using SDP solvers as
+untrusted back-ends and verified checkers based on libValidSDP.
+
+Once installed, you can import the following modules:
+From Coq Require Import Reals.
+From ValidSDP Require Import validsdp.
+"""
+
+tags: [
+  "keyword:libValidSDP"
+  "keyword:ValidSDP"
+  "keyword:floating-point arithmetic"
+  "keyword:Cholesky decomposition"
+  "category:Miscellaneous/Coq Extensions"
+  "logpath:ValidSDP"
+]
+authors: [
+  "Érik Martin-Dorel <erik.martin-dorel@irit.fr>"
+  "Pierre Roux <pierre.roux@onera.fr>"
+]
+url {
+  src: "https://github.com/validsdp/validsdp/archive/refs/tags/v1.1.1/validsdp-1.1.1.tar.gz"
+  checksum: "sha512=4329aa04fe97a2c8ac5ffedbc617e5284f436c15e10724036094a4aca52e51aaf21b021d91a7d7c5ff2ed2b70ebcc47527c39cad4def1ad0bbbce825ddff4d34"
+}

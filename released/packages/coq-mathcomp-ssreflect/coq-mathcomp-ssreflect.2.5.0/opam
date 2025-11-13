@@ -1,0 +1,20 @@
+opam-version: "2.0"
+maintainer: "Mathematical Components <mathcomp-dev@sympa.inria.fr>"
+
+homepage: "https://math-comp.github.io/"
+bug-reports: "https://github.com/math-comp/math-comp/issues"
+dev-repo: "git+https://github.com/math-comp/math-comp.git"
+license: "CECILL-B"
+
+depends: [
+  "coq-core"
+  "rocq-mathcomp-ssreflect" {= version}
+]
+authors: [ "The Mathematical Components team" ]
+
+synopsis: "Compatibility package for rocq-mathcomp-ssreflect"
+
+url {
+src: "https://github.com/math-comp/math-comp/archive/mathcomp-2.5.0.tar.gz"
+checksum: "sha256=3db2f4b1b7f9f5a12d3d0c4ba4e325a26a77712074200319660c0e67e25679f1"
+}

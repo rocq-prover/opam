@@ -1,0 +1,52 @@
+opam-version: "2.0"
+maintainer: [
+  "Pierre Roux <pierre.roux@onera.fr>"
+  "Érik Martin-Dorel <erik.martin-dorel@irit.fr>"
+]
+
+homepage: "https://sourcesup.renater.fr/validsdp/"
+dev-repo: "git+https://github.com/validsdp/validsdp.git"
+bug-reports: "https://github.com/validsdp/validsdp/issues"
+license: "LGPL-2.1-or-later"
+
+build: [
+  [make "-C" "libvalidsdp" "-j%{jobs}%"]
+]
+install: [make "-C" "libvalidsdp" "install"]
+depends: [
+  "coq-core" {>= "9.0" & < "9.2~"}
+  "coq-stdlib" {>= "9.0" & < "9.1~"}
+  "coq-bignums"
+  "coq-flocq" {>= "3.3.0"}
+  "coq-coquelicot" {>= "3.0"}
+  "coq-interval" {>= "4.0.0" & < "5~"}
+  "coq-mathcomp-field" {>= "2.3" & < "2.6~"}
+  "coq-mathcomp-reals-stdlib" {>= "1.8.0"}
+]
+synopsis: "LibValidSDP"
+description: """
+LibValidSDP is a library for the Coq formal proof assistant. It provides
+results mostly about rounding errors in the Cholesky decomposition algorithm
+used in the ValidSDP library which itself implements Coq tactics to prove
+multivariate inequalities using SDP solvers.
+
+Once installed, the following modules can be imported :
+From libValidSDP Require Import Rstruct.v misc.v real_matrix.v bounded.v float_spec.v fsum.v fcmsum.v binary64.v cholesky.v float_infnan_spec.v binary64_infnan.v cholesky_infnan.v flx64.v zulp.v coqinterval_infnan.v.
+"""
+
+tags: [
+  "keyword:libValidSDP"
+  "keyword:ValidSDP"
+  "keyword:floating-point arithmetic"
+  "keyword:Cholesky decomposition"
+  "category:Miscellaneous/Coq Extensions"
+  "logpath:libValidSDP"
+]
+authors: [
+  "Pierre Roux <pierre.roux@onera.fr>"
+  "Érik Martin-Dorel <erik.martin-dorel@irit.fr>"
+]
+url {
+  src: "https://github.com/validsdp/validsdp/archive/refs/tags/v1.1.1/validsdp-1.1.1.tar.gz"
+  checksum: "sha512=4329aa04fe97a2c8ac5ffedbc617e5284f436c15e10724036094a4aca52e51aaf21b021d91a7d7c5ff2ed2b70ebcc47527c39cad4def1ad0bbbce825ddff4d34"
+}
