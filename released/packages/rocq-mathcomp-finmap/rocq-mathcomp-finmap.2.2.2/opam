@@ -1,0 +1,43 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://github.com/math-comp/finmap"
+dev-repo: "git+https://github.com/math-comp/finmap.git"
+bug-reports: "https://github.com/math-comp/finmap/issues"
+license: "CECILL-B"
+
+synopsis: "Finite sets, finite maps, finitely supported functions"
+description: """
+This library is an extension of mathematical component in order to
+support finite sets and finite maps on choicetypes (rather that finite
+types). This includes support for functions with finite support and
+multisets. The library also contains a generic order and set libary,
+which will be used to subsume notations for finite sets, eventually."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  ("coq" {>= "8.20" & < "8.21~"}
+  | "rocq-core" { (>= "9.0" & < "9.2~") | = "dev"})
+  ("coq-mathcomp-ssreflect" { >= "2.0" & < "2.4~" }
+  |"rocq-mathcomp-ssreflect" { (>= "2.4" & < "2.6~") | = "dev" })
+]
+
+tags: [
+  "keyword:finmap"
+  "keyword:finset"
+  "keyword:multiset"
+  "logpath:mathcomp.finmap"
+]
+authors: [
+  "Cyril Cohen"
+  "Kazuhiko Sakaguchi"
+]
+
+url {
+  src: "https://github.com/math-comp/finmap/archive/refs/tags/2.2.2.tar.gz"
+  checksum: "sha256=a60819d4fee4415b9e7c49090d648a80378c5a4eeb62f06f8fdd7d96ebaf93ee"
+}
