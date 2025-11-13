@@ -22,7 +22,7 @@ bug-reports: "color@inria.fr"
 build: [
   [make "-j%{jobs}%"]
 ]
-install: [make "-f" "Makefile.coq" "install"]
+install: [make "-f" "rocq.mk" "install"]
 remove: ["rm" "-R" "%{lib}%/coq/user-contrib/CoLoR"]
 depends: [
   "ocaml"
