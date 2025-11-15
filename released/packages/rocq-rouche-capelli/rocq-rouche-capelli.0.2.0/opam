@@ -27,7 +27,6 @@ tags: [
   "date:2025-11-05"
 ]
 depends: [
-  "ocaml" {>= "4.14.0"}
   "rocq-core" {>= "9.0.0" & < "9.1~"}
   "rocq-mathcomp-ssreflect" {= "2.4.0"}
   "rocq-mathcomp-algebra" {= "2.4.0"}
