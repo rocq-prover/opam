@@ -34,6 +34,6 @@ authors: [
 ]
 
 url {
-  src: "https://github.com/math-comp/bigenough/archive/1.0.2.tar.gz"
-  checksum: "sha512=faaa56c7db5b00a3e3b1a60dc0b3623d8ef5bcf7d08a228df2184e79a124f9dbd4917b2c24cef0bd9ad98b3dd7aae331d5fbe6dd2d154b80fdc108d8dc828b29"
+  src: "https://github.com/math-comp/bigenough/archive/1.0.3.tar.gz"
+  checksum: "sha512=8bbe849e4e6331bfed0eacb2e8f7042fb4aedd280232987be5932e9a044be8685b0c9e7136fe07ee80b5918fb8d914ccb9d391ef03b9fffbe8f162bc787e7ef7"
 }
