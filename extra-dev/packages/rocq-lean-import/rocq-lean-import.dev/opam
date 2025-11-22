@@ -18,6 +18,10 @@ depends: [
   "rocq-core" {= "dev"}
   "rocq-stdlib"
 ]
+conflict-class: [
+  "coq-lean-import"
+  "rocq-lean-import"
+]
 
 tags: [
   "logpath:LeanImport"
