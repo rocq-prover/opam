@@ -13,7 +13,7 @@ depends: [
   "ocaml" {>= "4.05.0"}
   "coq" {>= "8.10" < "8.11~"}
   "coq-ext-lib"
-  "coq-mathcomp-ssreflect"
+  "coq-mathcomp-ssreflect" {< "2.5.0"}
   "ocamlbuild"
   "ocamlfind"
   "coq-simple-io" {>= "1.0.0"}

@@ -28,7 +28,7 @@ depends: [
   "cppo" {build & >= "1.6.8"}
   "coq" {>= "8.15~" & < "8.20"}
   "coq-ext-lib"
-  "coq-mathcomp-ssreflect"
+  "coq-mathcomp-ssreflect" {< "2.5.0"}
   "coq-simple-io"
   "ocamlfind"
   "ocamlbuild"

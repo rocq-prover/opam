@@ -26,9 +26,9 @@ depends: [
   "ocaml" {>= "4.07"}
   "menhir" {build}
   "cppo" {build & >= "1.6.8"}
-  "coq" {>= "8.15~"}
+  "coq" {>= "8.15~" & < "9.0"}
   "coq-ext-lib"
-  "coq-mathcomp-ssreflect"
+  "coq-mathcomp-ssreflect" {< "2.5.0"}
   "coq-simple-io" {>= "1.6.0"}
   "ocamlfind"
   "ocamlbuild"
