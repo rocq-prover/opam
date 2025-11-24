@@ -40,5 +40,5 @@ authors: [
 
 url {
   src: "https://github.com/lukaszcz/coqhammer/archive/refs/tags/v1.3.2+9.1.tar.gz"
-  checksum: "sha512=6377fd43e2f93dc29d6dc6bd6c3f36668f9d654a1fbd7b5fed757e51a50d53fe41cc83ccb617d09472fc665818a10030995ba5a1690f277bd823cfcc8b5afaab"
+  checksum: "sha512=2147d2b41d18ea066ce8fb3e6fbe25be4293c4e1f6960e73843e4400b6b865ab6807aaaf098b4b5461a555cb2b7df7ea18db5dad56ce528e624f74e04b6eb64f"
 }
