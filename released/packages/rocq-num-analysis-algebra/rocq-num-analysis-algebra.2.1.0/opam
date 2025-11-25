@@ -1,0 +1,70 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis-algebra"
+version: "2.1.0"
+synopsis: "Algebraic structures for numerical analysis in Rocq"
+description: """
+This library is based on Coquelicot and provides additional support about
+commutative monoids, Abelian groups, rings, module spaces, and affine spaces.
+This includes support for functions to a given algebraic structure, iterated
+operations (sum, linear combination, barycenter), morphisms, algebraic
+substructures, and the specific case of finite dimension.
+It is based on classical logic.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://lipn.univ-paris13.fr/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.1/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  ("coq" {>= "8.20" & < "8.21~"} | "rocq-prover" {>= "9.0" & < "9.2~"})
+  "coq-coquelicot" {>= "3.4" & < "3.5~"}
+  "rocq-num-analysis-subset" {= version}
+]
+
+build: [ make "-C" "Algebra" "-j%{jobs}%" ]
+install: [ make "-C" "Algebra" "install" ]
+remove: [ make "-C" "Algebra" "uninstall" ]
+
+url {
+  src: "https://lipn.univ-paris13.fr/rocq-num-analysis-releases/rocq-num-analysis-2.1.0.tar.gz"
+  checksum: "sha512=f173b7385893bdcbef5accc14b8ceb6fea2a4a21603f7731dea5268d73b7552ec144038499d9e367cfac4587d064045580852f18b6a6da745b5754a6396ddd18"
+}
+
+tags: [
+  "category:Math/Algebra"
+
+  "date:2025-12"
+
+  "logpath:NumAnalysis.Algebra"
+
+  "keyword:algebra"
+  "keyword:algebraic structure hierarchy"
+  "keyword:functions to an algebraic structure"
+  "keyword:algebraic substructure"
+  "keyword:morphism"
+  "keyword:monoid"
+  "keyword:group"
+  "keyword:ring"
+  "keyword:module space"
+  "keyword:affine space"
+  "keyword:dimension theorem"
+  "keyword:incomplete basis theorem"
+  "keyword:dual basis"
+  "keyword:predual basis"
+  "keyword:rank-nullity theorem"
+  "keyword:binomial coefficient"
+]
