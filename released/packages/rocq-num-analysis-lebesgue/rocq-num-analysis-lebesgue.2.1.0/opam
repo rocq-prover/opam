@@ -1,0 +1,66 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis-lebesgue"
+version: "2.1.0"
+synopsis: "Lebesgue integral"
+description: """
+This library provides support for the Lebesgue integral of nonnegative
+measurable functions, and for the Bochner integral for functions to a Banach
+space. It is based on classical logic.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://lipn.univ-paris13.fr/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.1/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  ("coq" {>= "8.20" & < "8.21~"} |
+    ("rocq-core" {>= "9.0" & < "9.2~"} & "rocq-stdlib"))
+  "coq-coquelicot" {>= "3.4" & < "3.5~"}
+  "coq-flocq" {>= "4.2" & < "4.3~"}
+  "rocq-num-analysis-subset" {= version}
+]
+
+build: [ make "-C" "Lebesgue" "-j%{jobs}%" ]
+install: [ make "-C" "Lebesgue" "install" ]
+remove: [ make "-C" "Lebesgue" "uninstall" ]
+
+url {
+  src: "https://lipn.univ-paris13.fr/rocq-num-analysis-releases/rocq-num-analysis-2.1.0.tar.gz"
+  checksum: "sha512=515ad6799b3e8916beaca37c65a9d25e3f0e1b09d38c44afa8809f41ffcc9e39c92f241afff171d08e0c31bd71724bb3f21f4f4ae3294ffa44828203a468cca8"
+}
+
+tags: [
+  "category:Math/Real Calculus and Topology"
+
+  "date:2025-12"
+
+  "logpath:NumAnalysis.Lebesgue"
+
+  "keyword:sigma-algebra"
+  "keyword:monotone class theorem"
+  "keyword:Dynkin pi-lambda theorem"
+  "keyword:measure theory"
+  "keyword:Lebesgue measure"
+  "keyword:simple function"
+  "keyword:adapted sequence"
+  "keyword:Beppo Levi (monotone convergence) theorem"
+  "keyword:Fatou lemma"
+  "keyword:Lebesgue (dominated convergence) theorem"
+  "keyword:Lebesgue induction principle"
+  "keyword:Tonelli theorem"
+  "keyword:Bochner integral"
+]

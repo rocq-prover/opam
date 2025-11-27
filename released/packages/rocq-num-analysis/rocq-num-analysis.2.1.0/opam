@@ -1,0 +1,32 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis"
+version: "2.1.0"
+synopsis: "Numerical analysis in Rocq"
+description: """
+Meta-package grouping rocq-num-analysis-lebesgue,
+rocq-num-analysis-lax-milgram and rocq-num-analysis-fem.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://lipn.univ-paris13.fr/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.1/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  "rocq-num-analysis-lebesgue" {= version}
+  "rocq-num-analysis-lax-milgram" {= version}
+  "rocq-num-analysis-fem" {= version}
+]
