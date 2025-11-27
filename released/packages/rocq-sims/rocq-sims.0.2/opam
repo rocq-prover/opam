@@ -1,0 +1,42 @@
+opam-version: "2.0"
+version: "0.2"
+synopsis: "A library of various strong and weak simulation relations"
+maintainer: ["Nicolas Chappe"]
+authors: ["Nicolas Chappe"]
+license: "LGPL-3.0-or-later"
+tags: [
+  "category:Computer Science/Semantics and Compilation/Semantics"
+  "category:Computer Science/Semantics and Compilation/Compilation"
+  "keyword:simulation"
+  "keyword:coinduction up-to"
+  "logpath:Sims"
+]
+homepage: "https://github.com/rocq-sims/rocq-sims"
+bug-reports: "https://github.com/rocq-sims/rocq-sims/issues"
+depends: [
+  "dune" {>= "3.8"}
+  "coq" {>= "8.20"}
+  "coq-coinduction" {>= "1.9"}
+  "coq-relation-algebra" {>= "1.7"}
+  "coq-ctree" {>= "2.0"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/rocq-sims/rocq-sims.git"
+url {
+  src: "https://github.com/rocq-sims/rocq-sims/releases/download/v0.2/rocq-sims-0.2.tar.gz"
+  checksum: "sha512=ed0b3a0e9a0f893ef8c70ccca2886679c5e3f28a16a9575a62baead6914a6082f8f74a10257a17457359dcbdac4f52270ad88bfd2d464180c74c358e421d99d6"
+}
