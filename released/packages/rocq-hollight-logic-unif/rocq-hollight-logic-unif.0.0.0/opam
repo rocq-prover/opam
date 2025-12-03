@@ -13,8 +13,8 @@ authors: ["Antoine Gontard"]
 license: "CeCILL-2.1"
 depends: [
   "rocq-prover" {>= "9.0"}
-  "coq-mathcomp-classical" {>= "1.8.0"}
-  "coq-fourcolor-reals" {>= "1.4.0"}
+  "coq-mathcomp-classical" {>= "1.8.0" & <= "1.13.0"}
+  "coq-fourcolor-reals" {>= "1.4.0" & <= "1.4.1"}
   "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
   "rocq-equations" {>= "1.3.1+9.0"}
 ]
