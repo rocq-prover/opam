@@ -15,7 +15,7 @@ run-test: [make "-j%{jobs}%" "test"]
 install: [make "install"]
 depends: [
   "ocaml" {>= "4.09.0"}
-  "rocq-core" { ( >= "9.0~" & < "9.2~" ) | = "dev"}
+  "rocq-core" { ( >= "9.1~" & < "9.2~" ) | = "dev"}
   "rocq-stdlib"
 ]
 conflict-class: [
