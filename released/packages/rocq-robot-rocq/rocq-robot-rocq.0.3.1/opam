@@ -1,0 +1,43 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+version: "dev"
+
+homepage: "https://github.com/affeldt-aist/coq-robot"
+dev-repo: "git+https://github.com/affeldt-aist/coq-robot.git"
+bug-reports: "https://github.com/affeldt-aist/coq-robot/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Formal Foundations for Modeling Robot Manipulators"
+description: """
+This repository contains an experimental library for the mathematics
+of rigid body transformations using the Rocq proof-assistant and the
+Mathematical Components library."""
+
+build: [make "-j%{jobs}%" ]
+install: [make "install"]
+depends: [
+  "coq" { (>= "9.0" & < "9.2~") }
+  "coq-hierarchy-builder" { (>= "1.9.1") }
+  "coq-mathcomp-ssreflect" { (>= "2.5.0") }
+  "coq-mathcomp-fingroup" { (>= "2.5.0") }
+  "coq-mathcomp-algebra" { (>= "2.5.0") }
+  "coq-mathcomp-solvable" { (>= "2.5.0") }
+  "coq-mathcomp-field" { (>= "2.5.0") }
+  "coq-mathcomp-analysis" { (>= "1.11.0") }
+  "coq-mathcomp-real-closed" { (>= "2.0.0") }
+  "coq-mathcomp-algebra-tactics" { (>= "1.2.4") }
+]
+
+tags: [
+  "keyword:robotics"
+  "keyword:3D geometry"
+  "logpath:robot-rocq"
+]
+authors: [
+  "Reynald Affeldt, AIST"
+  "Cyril Cohen, Inria"
+  "Laurent Théry, Inria"
+]
