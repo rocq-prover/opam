@@ -35,9 +35,14 @@ tags: [
   "keyword:robotics"
   "keyword:3D geometry"
   "logpath:robot-rocq"
+  "date:2026-01-10"
 ]
 authors: [
   "Reynald Affeldt, AIST"
   "Cyril Cohen, Inria"
   "Laurent Théry, Inria"
 ]
+url {
+  src: "https://github.com/affeldt-aist/coq-robot/releases/download/0.3.1/coq-robot-0.3.1.tar.gz"
+  checksum: "sha512=e70b88e71569c54be8b0b8655d5c3e422e70c770b8d57c3faa8c0bb0b5f2023fd9db511c3b6583d875d09a85654fbe0e1b546196918ed10df39e8b197c40643d"
+}
