@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "Rocq primitive object OCaml library"
+description: """
+This library provides OCaml modules for primitive objects in the Rocq Prover.
+These modules can be used in Rocq-based projects that rely on extraction to OCaml."""
+maintainer: ["Karl Palmskog"]
+authors: ["The Rocq development team, INRIA, CNRS, and contributors"]
+license: "LGPL-2.1-only"
+homepage: "https://rocq-prover.org/"
+doc: "https://rocq-prover.org/docs"
+bug-reports: "https://github.com/peregrine-project/rocq-primitive/issues"
+depends: [
+  "dune" {>= "2.9"}
+  "ocaml" {>= "4.09.0"}
+  "ocamlfind" {>= "1.8.1"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+dev-repo: "git+https://github.com/peregrine-project/rocq-primitive.git"
+
+url {
+  src: "https://github.com/peregrine-project/rocq-primitive/releases/download/9.0.0/rocq-primitive-9.0.0.tar.gz"
+  checksum: "sha512=308c1917bd8b011b4deed84c0fe5912831e4ce72a3ef9c72d89a9d09b68d65eefdd4ca4ded00ffa4db6620e8ba0fb037214ba41e03d9ab129348241e015fbbfb"
+}
