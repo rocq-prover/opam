@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "Coq primitive object OCaml library"
+description: """
+This library provides OCaml modules for primitive objects in Coq.
+These modules can be used in Coq-based projects that rely on extraction to OCaml."""
+maintainer: ["Karl Palmskog"]
+authors: ["The Coq development team, INRIA, CNRS, and contributors"]
+license: "LGPL-2.1-only"
+homepage: "https://coq.inria.fr/"
+doc: "https://coq.github.io/doc/"
+bug-reports: "https://github.com/peregrine-project/rocq-primitive/issues"
+depends: [
+  "dune" {>= "2.9"}
+  "ocaml" {>= "4.09.0"}
+  "ocamlfind" {>= "1.8.1"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+dev-repo: "git+https://github.com/peregrine-project/rocq-primitive.git"
+
+url {
+  src: "https://github.com/peregrine-project/rocq-primitive/releases/download/8.20.0/coq-primitive-8.20.0.tar.gz"
+  checksum: "sha512=3fdf1f51c0cf18ba153a0e2acf5a56b4fd5a793ca6dfd6b879c9ac7055c94412c51e9f9107890cc9ed69b1bfd163c1239b2f901464486473afae1c5cc7da6325"
+}
