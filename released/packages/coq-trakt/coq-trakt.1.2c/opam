@@ -5,12 +5,12 @@ license: "LGPL-3.0-or-later"
 homepage: "https://github.com/rocq-trakt/trakt"
 bug-reports: "https://github.com/rocq-trakt/trakt/issues"
 dev-repo: "git+https://github.com/rocq-trakt/trakt.git"
-doc: "https://ecrancemerce.github.io/trakt/"
+doc: "https://rocq-trakt.github.io/trakt"
 build: [ make "-j%{jobs}%" ]
 install: [ make "install" ]
 depends: [
-  "coq-elpi" {>= "2.0.0"}
-  "coq" {>= "8.15~" }
+  "coq-elpi" {>= "2.0.0" & < "2.2~"}
+  "coq" {>= "8.15~" & < "8.21~" }
 ]
 tags: [ 
   "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
