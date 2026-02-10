@@ -1,10 +1,10 @@
 opam-version: "2.0"
-maintainer: [ "Enzo Crance <enzo.crance@inria.fr>" "Louise Dubois de Prisque <louise.dubois-de-prisque@inria.fr>" "Chantal Keller <ckeller@lmf.cnrs.fr>" "Tomaz Mascarenhas <tomgm1502@gmail.com>" ]
+maintainer: [ "Enzo Crance <ecrancemerce@gmail.com>" "Chantal Keller <ckeller@lmf.cnrs.fr>" ]
 authors: [ "Enzo Crance" ]
 license: "LGPL-3.0-or-later"
-homepage: "https://github.com/ecranceMERCE/trakt"
-bug-reports: "https://github.com/ecranceMERCE/trakt/issues"
-dev-repo: "git+https://github.com/ecranceMERCE/trakt.git"
+homepage: "https://github.com/rocq-trakt/trakt"
+bug-reports: "https://github.com/rocq-trakt/trakt/issues"
+dev-repo: "git+https://github.com/rocq-trakt/trakt.git"
 doc: "https://ecrancemerce.github.io/trakt/"
 build: [ make "-j%{jobs}%" ]
 install: [ make "install" ]
@@ -29,6 +29,6 @@ Drawing inspiration from the zify tactic in the Coq standard library, it acts li
 The translation is implemented in Coq-Elpi. It is certifying (it leaves no proof obligation), generic (the translation does not focus on a precise theory, it is determined by the parameters and user knowledge), and efficient (it tries to make sparse use of Coq conversion).
 """
 url {
-  src: "https://github.com/ecranceMERCE/trakt/archive/refs/tags/1.2c.tar.gz"
+  src: "https://github.com/rocq-trakt/trakt/archive/refs/tags/1.2c.tar.gz"
   checksum: "sha256=a30ba31b8a584f996bf256390a7f4484cda1b02043c2e783d32dc3b3916d9001"
 }
