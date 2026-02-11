@@ -33,7 +33,7 @@ tags: [
 ]
 
 depends: [
-  "coq" { (>= "8.18" & < "8.20~") | (= "dev") }
+  "coq" { (>= "8.18" & < "8.20~") }
 ]
 
 build: ["./make-package" "stdpp" "-j%{jobs}%"]

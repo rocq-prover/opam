@@ -33,7 +33,7 @@ tags: [
 ]
 
 depends: [
-  "coq" { (>= "8.10.2" & < "8.15~") | (= "dev") }
+  "coq" { (>= "8.10.2" & < "8.15~") }
 ]
 
 patches: ["ocamlrunparam.patch"]
