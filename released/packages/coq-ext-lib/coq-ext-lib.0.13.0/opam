@@ -10,7 +10,8 @@ homepage: "https://github.com/coq-community/coq-ext-lib"
 doc: "https://coq-community.github.io/coq-ext-lib/"
 bug-reports: "https://github.com/coq-community/coq-ext-lib/issues"
 depends: [
-  "coq" {>= "8.9" & (< "8.10" | >= "8.11")}
+  ("coq" {>= "8.9" & (< "8.10" | >= "8.11") & < "8.21~"}
+  | "coq-stdlib" {= "9.0.0"})
 ]
 build: [make "-j%{jobs}%" "theories"]
 run-test: [make "-j%{jobs}%" "examples"]

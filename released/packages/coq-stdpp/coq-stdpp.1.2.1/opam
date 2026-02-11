@@ -29,7 +29,7 @@ The key features of this library are as follows:
 - It is entirely dependency- and axiom-free."""
 
 depends: [
-  "coq" {(>= "8.7.2" & < "8.11~") | (= "dev")}
+  "coq" {(>= "8.7.2" & < "8.11~") }
 ]
 build: [make "-j%{jobs}%"]
 install: [make "install"]

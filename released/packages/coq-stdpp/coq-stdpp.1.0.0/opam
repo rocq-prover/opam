@@ -14,7 +14,7 @@ install: [make "install"]
 remove: [ "sh" "-c" "rm -rf '%{lib}%/coq/user-contrib/stdpp'" ]
 depends: [
   "ocaml"
-  "coq" {((>= "8.5.3" & < "8.8~") | (= "dev"))}
+  "coq" {>= "8.5.3" & < "8.8~"}
 ]
 synopsis: "This project contains an extended \"Standard Library\" for Coq called coq-std++"
 description: """
