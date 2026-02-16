@@ -29,6 +29,7 @@ worked with older version of Rocq and Coq
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
+  "rocq-core" {>= "9.0"}
   "rocq-stdlib" {>= "9.0"}
   "ocamlbuild" {build}
 ]
