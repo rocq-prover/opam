@@ -24,7 +24,7 @@ also provided in Coq, but there are no proofs associated.
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "num"
+  "ocaml" {< "5~"}
   "coq" {>= "8.10" & < "8.19" }
   "num"
   "ocamlbuild" {build}
