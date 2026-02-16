@@ -49,4 +49,4 @@ authors: [
 ]
 
 url { src: "https://github.com/rocq-community/semantics/releases/download/v9.0.0/v9.0.0.tgz"
-  checum: "sha512=6041c38453ac6464e38809b1e9c4df4f1884ca5e391a187828f4acc3f25e95e4f1d76d7e94511fd77ada5f9ec7cb1b01eea9a3908b1865986e62b772b1901e3b" }
+  checksum: "sha512=6041c38453ac6464e38809b1e9c4df4f1884ca5e391a187828f4acc3f25e95e4f1d76d7e94511fd77ada5f9ec7cb1b01eea9a3908b1865986e62b772b1901e3b" }
