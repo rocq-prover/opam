@@ -1,8 +1,9 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
 opam-version: "2.0"
-authors: [
-  "Yves Bertot"
-]
-maintainer: "kartiksinghal@gmail.com"
+maintainer: "yves.bertot@inria.fr"
+
 homepage: "https://github.com/coq-community/semantics"
 dev-repo: "git+https://github.com/coq-community/semantics.git"
 bug-reports: "https://github.com/coq-community/semantics/issues"
@@ -24,10 +25,10 @@ also provided in Coq, but there are no proofs associated.
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "ocaml" {< "5~"}
-  "coq" {>= "8.10" & < "8.19" }
-  "num"
-  "ocamlbuild" {build}
+  "coq" {>= "8.19" & < "8.21~"}
+  "zarith" 
+  "ocaml"
+ "ocamlbuild" {build}
 ]
 
 tags: [
@@ -41,10 +42,11 @@ tags: [
   "keyword:intervals"
   "logpath:Semantics"
 ]
+authors: [
+  "Yves Bertot"
+]
+
 url {
-  src: "https://github.com/coq-community/semantics/archive/v8.14.0.tar.gz"
-  checksum: [
-    "md5=1e402d1d24cca934d301ce7be4d2453d"
-    "sha512=480629d301612143a9e9c4c546d48e9b2da0961176093301f1e37be060fa09949b24674727a041deba595b4b08efa180b60d96288eff7835edcb47cb48a99c3a"
-  ]
+  src: "https://github.com/ybertot/semantics/releases/download/v8.19.1/v8.19.1.tgz"
+  checksum: "sha512=8f5a9d0170c42cc57623927ad14d658c8f9989013559e43f9c729267ca37a012accee104c815e3b4f3a5724a793722a941a67d0c97d950a2217b417268a2b85c"
 }

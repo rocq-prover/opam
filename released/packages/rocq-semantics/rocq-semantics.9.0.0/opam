@@ -1,8 +1,9 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
 opam-version: "2.0"
-authors: [
-  "Yves Bertot"
-]
-maintainer: "kartiksinghal@gmail.com"
+maintainer: "yves.bertot@inria.fr"
+
 homepage: "https://github.com/coq-community/semantics"
 dev-repo: "git+https://github.com/coq-community/semantics.git"
 bug-reports: "https://github.com/coq-community/semantics/issues"
@@ -12,21 +13,26 @@ synopsis: "A survey of semantics styles, from natural semantics through structur
 description: """
 This is a survey of programming language semantics styles
 for a miniature example of a programming language, with their encoding
-in Coq, the proofs of equivalence of different styles, and the proof
+in Rocq (Coq), the proofs of equivalence of different styles, and the proof
 of soundess of tools obtained from axiomatic semantics or abstract
-interpretation.  The tools can be run inside Coq, thus making them
+interpretation.  The tools can be run inside Rocq, thus making them
 available for proof by reflection, and the code can also be extracted
 and connected to a yacc-based parser, thanks to the use of a functor
 parameterized by a module type of strings.  A hand-written parser is
-also provided in Coq, but there are no proofs associated.
+also provided in Rocq, but there are no proofs associated.
+
+The current version is only compatible with a recent version of Rocq
+(tested with versions 9.0 to 9.1) but previous versions of this repository
+worked with older version of Rocq and Coq
 """
 
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "ocaml" {< "5~"}
-  "coq" {>= "8.10" & < "8.19" }
-  "num"
+  "rocq-core" {>= "9.0"}
+  "rocq-stdlib" {>= "9.0"}
+  "zarith"
+  "ocaml"
   "ocamlbuild" {build}
 ]
 
@@ -41,10 +47,9 @@ tags: [
   "keyword:intervals"
   "logpath:Semantics"
 ]
-url {
-  src: "https://github.com/coq-community/semantics/archive/v8.14.0.tar.gz"
-  checksum: [
-    "md5=1e402d1d24cca934d301ce7be4d2453d"
-    "sha512=480629d301612143a9e9c4c546d48e9b2da0961176093301f1e37be060fa09949b24674727a041deba595b4b08efa180b60d96288eff7835edcb47cb48a99c3a"
-  ]
-}
+authors: [
+  "Yves Bertot"
+]
+
+url { src: "https://github.com/rocq-community/semantics/releases/download/v9.0.0/v9.0.0.tgz"
+  checksum: "sha512=6041c38453ac6464e38809b1e9c4df4f1884ca5e391a187828f4acc3f25e95e4f1d76d7e94511fd77ada5f9ec7cb1b01eea9a3908b1865986e62b772b1901e3b" }
