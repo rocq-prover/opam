@@ -1,0 +1,34 @@
+opam-version: "2.0"
+maintainer: "guillaume.melquiond@inria.fr"
+homepage: "https://flocq.gitlabpages.inria.fr/"
+dev-repo: "git+https://gitlab.inria.fr/flocq/flocq.git"
+bug-reports: "https://gitlab.inria.fr/flocq/flocq/issues"
+license: "LGPL-3.0-or-later"
+build: [
+  ["autoconf"] {dev}
+  ["./configure"]
+  ["./remake" "-j%{jobs}%"]
+]
+install: ["./remake" "install" "install-glob"]
+depends: [
+  ("coq" {>= "8.15" & < "8.17"} |
+    ("coq-core" {>= "8.17"} &
+      ("coq-stdlib" | "rocq-stdlib")))
+  "conf-autoconf" {build & dev}
+  "ocaml" {build}
+  ("conf-g++" {build} | "conf-clang" {build})
+]
+tags: [
+  "keyword:floating-point arithmetic"
+  "logpath:Flocq"
+  "date:2026-02-19"
+]
+authors: [
+  "Sylvie Boldo <sylvie.boldo@inria.fr>"
+  "Guillaume Melquiond <guillaume.melquiond@inria.fr>"
+]
+synopsis: "A formalization of floating-point arithmetic for the Coq system"
+url {
+  src: "https://flocq.gitlabpages.inria.fr/releases/flocq-4.2.2.tar.gz"
+  checksum: "sha512=8afd91b74133dcce17a78aa923ad7fcedefeb46bf1f71b78e4e4c1900b936ebe5129924c7353c2728b4879601b44686ece98af89e2e779199bd3ccb77139c6f9"
+}
