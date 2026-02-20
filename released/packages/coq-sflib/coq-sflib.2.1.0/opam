@@ -28,7 +28,7 @@ build: [
   ]
 ]
 depends: [
-  "rocq-core" {>= "9.0"}
+  "coq-core" {>= "9.0"}
   "rocq-stdlib"
   "dune" {>= "3.8"}
   "odoc" {with-doc}
