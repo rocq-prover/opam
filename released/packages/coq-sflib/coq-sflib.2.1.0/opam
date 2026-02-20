@@ -43,5 +43,5 @@ tags: [
 ]
 url {
   http: "https://github.com/snu-sf/sflib/archive/refs/tags/2.1.0.tar.gz"
-  checksum: "sha512=a5585680e6c09a041d832eb969516f0aefb439cf4be1f6daa981a4de11c83fe7a6ac26ddbf0208a81770aa2e2fce5f578ac711162868b63b101e4f888752e7e1"
+  checksum: "sha512=cb8af729fd765fae1663a836ebf491251f99aab313372b4d11efbb7f0d4b9e3b087f3c42997a4648114e56a619a1c540a8f2893802f60e1c99664267f8752863"
 }
