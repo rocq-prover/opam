@@ -1,0 +1,47 @@
+opam-version: "2.0"
+maintainer: "yeji.han@sf.snu.ac.kr"
+synopsis: "A collection of useful Rocq lemmas and tactics"
+description: "This package provides useful Rocq lemmas and tactics for proof automation and rewriting."
+homepage: "https://github.com/snu-sf/sflib"
+dev-repo: "git+https://github.com/snu-sf/sflib.git"
+bug-reports: "https://github.com/snu-sf/sflib/issues"
+authors: [
+  "Jeehoon Kang <jeehoon.kang@kaist.ac.kr>"
+  "Minki Cho <minki.cho@sf.snu.ac.kr>"
+  "Jaehyung Lee <jaehyung.lee@sf.snu.ac.kr>"
+  "Yeji Han <yeji.han@sf.snu.ac.kr>"
+  "Gil Hur <gil.hur@sf.snu.ac.kr>"
+]
+license: "BSD-2-Clause"
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+depends: [
+  "coq-core" {>= "9.0"}
+  "rocq-stdlib"
+  "dune" {>= "3.8"}
+  "odoc" {with-doc}
+]
+tags: [
+  "date:2026-02-20"
+  "category:Computer Science/Programming Languages/Formal Definitions and Theory"
+  "keyword:tactics"
+  "keyword:lemmas"
+  "keyword:proof automation"
+  "logpath:sflib"
+]
+url {
+  http: "https://github.com/snu-sf/sflib/archive/refs/tags/2.1.0.tar.gz"
+  checksum: "sha512=cb8af729fd765fae1663a836ebf491251f99aab313372b4d11efbb7f0d4b9e3b087f3c42997a4648114e56a619a1c540a8f2893802f60e1c99664267f8752863"
+}
