@@ -6,7 +6,7 @@ dev-repo: "git+https://github.com/damien-pous/relation-algebra.git"
 bug-reports: "https://github.com/damien-pous/relation-algebra/issues"
 license: "LGPL-3.0-or-later"
 depends: [
-  "rocq-core" {(>= "9.0" & < "9.1~") | = "dev"}
+  "rocq-core" {(>= "9.0" & < "9.2~") | = "dev"}
   "rocq-stdlib"
 ]
 depopts: [ "rocq-mathcomp-ssreflect" "rocq-aac-tactics" ]
