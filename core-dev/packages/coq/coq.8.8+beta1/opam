@@ -9,7 +9,7 @@ license: "LGPL-2.1"
 depends: [
   "ocaml" {>= "4.02.3"}
   "ocamlfind" {build}
-  "camlp5"
+  "camlp5" {< "8"}
   "num"
 ]
 build: [
@@ -60,5 +60,5 @@ flags: light-uninstall
 extra-files: ["coq.install" "md5=6e8ff2905b5508b143a8acb16e3b5150"]
 url {
   src: "https://github.com/coq/coq/archive/V8.8+beta1.tar.gz"
-  checksum: "md5=360772c58050281ed1aa565607626294"
+  checksum: "md5=fd8a0ce4481800f91f8e2ff788de8434"
 }
