@@ -10,7 +10,7 @@ homepage: "https://github.com/coq-community/coq-ext-lib"
 bug-reports: "https://github.com/coq-community/coq-ext-lib/issues"
 depends: [
   "ocaml"
-  "coq" {>= "8.9" & (< "8.10" | >= "8.11")}
+  "coq" {(>= "8.9" & < "8.10") | (>= "8.11" & < "8.18")}
 ]
 build: [make "-j%{jobs}%" "theories"]
 run-test: [make "-j%{jobs}%" "examples"]
