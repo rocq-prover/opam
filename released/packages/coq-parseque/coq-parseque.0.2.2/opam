@@ -14,7 +14,7 @@ install: [
   [make "install"]
 ]
 depends: [
-  "coq" {>= "8.16" & < "9.1"}
+  "coq" {>= "8.16" & < "9.2"}
 ]
 
 tags: [
