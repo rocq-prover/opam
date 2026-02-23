@@ -12,8 +12,7 @@ build: [
 install: ["./remake" "install"]
 depends: [
   "ocaml"
-  ("coq" {>= "8.12" & < "8.17~"} | ("coq-core" {!= "8.19.0" & < "9.2~"} & "coq-stdlib" {< "9.1~"}))
-  "coq" {>= "8.13.1" & != "8.19.0"}
+  ("coq" {>= "8.12" & < "8.17~"} | ("coq-core" {!= "8.19.0"} & "coq-stdlib"))
   "coq-bignums"
   "coq-flocq" {>= "3.2"}
   "coq-mathcomp-ssreflect" {>= "1.12"}
@@ -30,7 +29,7 @@ tags: [
   "category:Mathematics/Real Calculus and Topology"
   "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
   "logpath:Interval"
-  "date:2025-07-31"
+  "date:2026-02-23"
 ]
 authors: [
   "Guillaume Melquiond <guillaume.melquiond@inria.fr>"
@@ -40,6 +39,6 @@ authors: [
 ]
 synopsis: "A Coq tactic for proving bounds on real-valued expressions automatically"
 url {
-  src: "https://coqinterval.gitlabpages.inria.fr/releases/interval-4.11.3.tar.gz"
-  checksum: "sha512=7f9b8f10b8a91095fdab3740f50ffff7c9f0a7e67da9d39df5a0d6ffea53a4bfd456a0c6a9a522bb0939d488e4c4c3b78d2a7b07745cfe88a5cfb0bcb4d01bc0"
+  src: "https://coqinterval.gitlabpages.inria.fr/releases/interval-4.11.4.tar.gz"
+  checksum: "sha512=5b2ccff32c3d6caa9002455dc472d6c4c8f70337581d038ca432dd92ed90b262b203960a2a62896c12992be2ff2436bf7e6a8ffd3aec625859f47088d262ef00"
 }
