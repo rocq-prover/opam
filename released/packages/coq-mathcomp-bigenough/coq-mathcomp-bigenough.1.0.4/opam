@@ -1,0 +1,21 @@
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://github.com/math-comp/bigenough"
+dev-repo: "git+https://github.com/math-comp/bigenough.git"
+bug-reports: "https://github.com/math-comp/bigenough/issues"
+license: "CeCILL-B"
+
+depends: [ "rocq-mathcomp-bigenough" { = version } ]
+tags: [
+  "keyword:bigenough"
+  "keyword:asymptotic reasonning"
+  "keyword:small scale reflection"
+  "keyword:mathematical components"
+  "logpath:mathcomp.bigenough"
+]
+authors: [
+  "Cyril Cohen"
+]
+
+synopsis: "Compatibility package for rocq-mathcomp-bigenough"
