@@ -1,0 +1,20 @@
+opam-version: "2.0"
+synopsis: "Ordered Resource Algebras for Iris"
+authors: [
+  "Robbert Krebbers"
+  "Ralf Jung"
+  "Amin Timany"
+  "William Mansky"
+]
+maintainer: "William Mansky"
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+description: "The Ordered Resource Algebra (ORA) logic is a variant of the Iris base logic that allows use of both
+  linear and affine resources."
+depends: [
+  "coq-iris" { = "4.3.0" }
+]
+url {
+  src: "https://github.com/mansky1/ora/archive/refs/tags/v1.1.tar.gz"
+  checksum: "sha256=90e7164623dc8a67a41868b24a62a4b491d8e2fef03b0f8a6a239af747a37aaa"
+}
