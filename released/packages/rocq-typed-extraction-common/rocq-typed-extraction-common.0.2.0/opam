@@ -1,0 +1,38 @@
+opam-version: "2.0"
+synopsis: "Rocq extraction to Rust and Elm"
+description: """
+A framework for extracting Rocq programs to Rust and Elm
+"""
+maintainer: "Danil Annenkov <danil.v.annenkov@gmail.com>"
+authors: "The COBRA team"
+license: "MIT"
+homepage: "https://github.com/peregrine-project/rocq-typed-extraction"
+dev-repo: "git+https://github.com/peregrine-project/rocq-typed-extraction.git"
+bug-reports: "https://github.com/peregrine-project/rocq-typed-extraction/issues"
+doc: "https://peregrine-project.github.io/rocq-typed-extraction/toc.html"
+depends: [
+  "rocq-core" {>= "9.1" & < "9.2~"}
+  "rocq-stdlib" {>= "9.0" & < "9.2~"}
+  "rocq-metarocq-utils" {>= "1.4"}
+  "rocq-metarocq-common" {>= "1.4"}
+  "rocq-metarocq-template" {>= "1.4"}
+  "rocq-metarocq-template-pcuic" {>= "1.4"}
+  "rocq-metarocq-pcuic" {>= "1.4"}
+  "rocq-metarocq-safechecker" {>= "1.4"}
+  "rocq-metarocq-erasure" {>= "1.4"}
+]
+build: [
+  ["bash" "./configure.sh"]
+  [make "-j" "%{jobs}%" "-C" "common"]
+]
+install: [
+  [make "-C" "common" "install"]
+]
+tags: [
+  "keyword:extraction"
+  "logpath:TypedExtraction"
+]
+url {
+  src: "https://github.com/peregrine-project/rocq-typed-extraction/archive/refs/tags/v0.2.0.tar.gz"
+  checksum: "sha512=cf071a26d3857f82e3a8ece60afbfc18c2fee22f3ae16a5f84117f22f096ca13f867d0d2672f43f0b9e950741487722ef7a3fbff9c4d31a5dd34f35aea3b8c36"
+}
