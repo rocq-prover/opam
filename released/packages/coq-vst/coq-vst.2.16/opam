@@ -34,7 +34,7 @@ run-test: [
 depends: [
   "ocaml"
   "coq" {>= "9.0" & < "9.2~"}
-  "coq-compcert" {= "3.16"}
+  "coq-compcert" {>= "3.16" & < "3.18~"}
   "coq-vst-zlist" {= "2.13"}
   "coq-flocq" {>= "4.2.0" & < "5~"}
 ]
