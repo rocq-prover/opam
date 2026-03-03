@@ -23,18 +23,18 @@ bug-reports: "https://github.com/PrincetonUniversity/VST/issues"
 license: "BSD-2-Clause"
 
 build: [
-  [make "-j%{jobs}%" "vst" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
+  [make "-j%{jobs}%" "vst" "IGNORECOMPCERTVERSION=true" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
 ]
 install: [
-  [make "install" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
+  [make "install" "IGNORECOMPCERTVERSION=true" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
 ]
 run-test: [
-  [make "-j%{jobs}%" "test" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
+  [make "-j%{jobs}%" "test" "IGNORECOMPCERTVERSION=true" "IGNORECOQVERSION=true" "ZLIST=platform" "BITSIZE=64"]
 ]
 depends: [
   "ocaml"
   "coq" {>= "9.0" & < "9.2~"}
-  "coq-compcert" {= "3.16"}
+  "coq-compcert" {>= "3.16" & < "3.18~"}
   "coq-vst-zlist" {= "2.13"}
   "coq-flocq" {>= "4.2.0" & < "5~"}
 ]
