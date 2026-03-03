@@ -19,8 +19,8 @@ install: [
 ]
 
 depends: [
-  "coq-kruskal-trees" {}
-  "coq-kruskal-finite" {}
+  "coq-kruskal-trees"
+  "coq-kruskal-finite"
   "coq-kruskal-almostfull" {>= "2.0"}
 ]
 
