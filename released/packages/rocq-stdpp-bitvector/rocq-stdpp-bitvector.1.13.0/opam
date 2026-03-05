@@ -27,7 +27,7 @@ install: ["./make-package" "stdpp_bitvector" "install"]
 
 url {
   src:
-    "https://gitlab.mpi-sws.org/iris/stdpp/-/archive/coq-stdpp-1.13.0.tar.gz"
+    "https://gitlab.mpi-sws.org/iris/stdpp/-/archive/stdpp-1.13.0.tar.gz"
   checksum:
-    "sha512=49660526abed73d571c489b168af25c201626b2cf7e4032c7af23d4b6c0434ecf7a160f3cc903c40c18521239d49104be81c267d71f7d83dd86e55747884f1b3"
+    "sha512=ba0477e0a7f3adea3baf726133294171724e57de107bd79d397392881ee9093f8055334958fdf9db6c3b72a99763510c8e9b4e6eca51dbe0c5676fd6f5a78a73"
 }
