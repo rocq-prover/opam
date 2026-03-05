@@ -1,0 +1,33 @@
+opam-version: "2.0"
+maintainer: "Ralf Jung <jung@mpi-sws.org>"
+authors: "The std++ team"
+license: "BSD-3-Clause"
+homepage: "https://gitlab.mpi-sws.org/iris/stdpp"
+bug-reports: "https://gitlab.mpi-sws.org/iris/stdpp/issues"
+dev-repo: "git+https://gitlab.mpi-sws.org/iris/stdpp.git"
+
+synopsis: "A library for bitvectors based on std++"
+description: """
+This library provides the `bv n` type for representing n-bit bitvectors (i.e.,
+fixed-size integers with n bits). It comes with definitions for the standard operations
+(e.g., the operations exposed by SMT-LIB) and some basic automation for solving bitvector
+goals based on the lia tactic.
+"""
+tags: [
+  "date:2026-03-05"
+  "logpath:stdpp.bitvector"
+]
+
+depends: [
+  "rocq-stdpp" {= version}
+]
+
+build: ["./make-package" "stdpp_bitvector" "-j%{jobs}%"]
+install: ["./make-package" "stdpp_bitvector" "install"]
+
+url {
+  src:
+    "https://gitlab.mpi-sws.org/iris/stdpp/-/archive/stdpp-1.13.0.tar.gz"
+  checksum:
+    "sha512=ba0477e0a7f3adea3baf726133294171724e57de107bd79d397392881ee9093f8055334958fdf9db6c3b72a99763510c8e9b4e6eca51dbe0c5676fd6f5a78a73"
+}
