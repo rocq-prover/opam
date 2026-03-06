@@ -21,21 +21,21 @@ install: [
 depends: [
   "coq-kruskal-trees"      {>= "2.0"}
   "coq-kruskal-finite"     {>= "2.0"}
-  "coq-kruskal-almostfull" {= "2.0"}
+  "coq-kruskal-almostfull" {>= "2.1"}
   "coq-kruskal-fan"        {>= "2.0"}
   "coq-kruskal-higman"     {>= "2.0"}
 ]
 
 url {
-  src: "https://github.com/DmxLarchey/Kruskal-Veldman/releases/download/2.0/Kruskal-Veldman-2.0.tar.gz"
+  src: "https://github.com/DmxLarchey/Kruskal-Veldman/releases/download/2.1/Kruskal-Veldman-2.1.tar.gz"
   checksum: [
-    "sha256=b11c8c25aab91b1561a726031a4dedbf6dd81f6c083d374d92e7cb971c5ab54d"
+    "sha256=8b86db55b141125027477902c5c6fc13b27f3c2d98867c9599951f9065f5192c"
   ]
 }
 
 tags: [
   "category:Computer Science/Data Types and Data Structures"
-  "date:2025-12-11"
+  "date:2026-03-06"
   "logpath:KruskalVeldmanProp"
   "logpath:KruskalVeldmanType"
 ]
