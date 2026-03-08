@@ -1,0 +1,43 @@
+
+opam-version: "2.0"
+synopsis: "Proof-of-the-Equivalence-of-the-Real-Number-Completeness-Theorems-Based-on-Morse-Kelley-Axiomatic-Set-Theory"
+description: """
+This project is based on Morse-Kelley (MK) axiomatic set theory and strictly follows the method of constructing number systems in Landau's Foundations of Analysis, thus completing a series of formalization work on the fundamentals of mathematical analysis, including the formal definition and verification of the recursion theorem and exponential functions, the formal proof of the Archimedean property of real numbers in various forms, and the completion of a cyclic formal proof of the equivalence of the seven theorems on the completeness of real numbers with Dedekind's fundamental theorem as the logical starting point, which has constructed a comprehensive formal system for the completeness of real numbers. This project is fully based on the formalization of MK axiomatic set theory and the formalization of the real number system in Landau's Foundations of Analysis, without adding any axioms other than those of MK axiomatic set theory.
+"""
+
+homepage: "https://github.com/zhang2036/real-number-completeness"
+dev-repo: "git+https://github.com/zhang2036/real-number-completeness.git"
+bug-reports: "https://github.com/zhang2036/real-number-completeness/issues"
+maintainer: "dgw@bupt.edu.cn"
+authors: [
+  "Ce Zhang"
+  "Guowei Dou"
+  "Wensheng Yu"  
+]
+license: "LGPL-2.1-only"
+
+depends: [
+  "coq" {>= "8.20"}
+]
+
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+url {
+  src: "https://github.com/zhang2036/real-number-completeness/archive/refs/tags/v1.0.0.tar.gz"
+  checksum: "sha512=41a24a8257cc91c2509a4179be608e75021d25f8f8b14a76ba0a648db0005458131d3394c243038cb5d2c2b8a3deacb9135fb0cb7726941bd9ea6b5abcadfe17"
+}
+
+tags: [
+  "keyword:set theory"
+  "keyword:real number completeness"
+  "keyword:Morse-Kelley"
+  "keyword:MK"
+  "category:Mathematics/Logic/Set theory"
+  "date:2026-03-09"
+  "logpath:MKRC"
+]
