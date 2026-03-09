@@ -1,6 +1,5 @@
-
 opam-version: "2.0"
-synopsis: "Proof-of-the-Equivalence-of-the-Real-Number-Completeness-Theorems-Based-on-Morse-Kelley-Axiomatic-Set-Theory"
+synopsis: "Proof of the equivalence of the real number completeness theorems based on Morse-Kelley axiomatic set theory"
 description: """
 This project is based on Morse-Kelley (MK) axiomatic set theory and strictly follows the method of constructing number systems in Landau's Foundations of Analysis, thus completing a series of formalization work on the fundamentals of mathematical analysis, including the formal definition and verification of the recursion theorem and exponential functions, the formal proof of the Archimedean property of real numbers in various forms, and the completion of a cyclic formal proof of the equivalence of the seven theorems on the completeness of real numbers with Dedekind's fundamental theorem as the logical starting point, which has constructed a comprehensive formal system for the completeness of real numbers. This project is fully based on the formalization of MK axiomatic set theory and the formalization of the real number system in Landau's Foundations of Analysis, without adding any axioms other than those of MK axiomatic set theory.
 """
