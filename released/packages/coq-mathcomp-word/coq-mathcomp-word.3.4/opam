@@ -24,6 +24,6 @@ tags: [
 authors: ["Pierre-Yves Strub"]
 
 url {
-  src: "https://github.com/jasmin-lang/coqword/releases/download/v3.3/coq-mathcomp-word-v3.3.tbz"
-  checksum: "sha512=f3069194fcb70831de4b3c7eafa0c2c1c0d108705a563fa0f3de007d02f4b7baebbd0cfe3f0a5737fa722ddcfa1e8124eb8a49e0a122b8cde1f186c14c8760cf"
+  src: "https://github.com/jasmin-lang/coqword/releases/download/v3.4/coq-mathcomp-word-v3.4.tbz"
+  checksum: "sha512=4c12260fb264c4cc30fd5b386a4da2337ee226e174a8ba2759819c1483488cfe87306a1a098523b8a129a661e5cb98af8f85eefcb2d3f2005b78739a979b032e"
 }
