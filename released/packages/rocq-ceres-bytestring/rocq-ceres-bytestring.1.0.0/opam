@@ -1,0 +1,36 @@
+opam-version: "2.0"
+synopsis: "Library for serialization via S-expressions using bytestrings"
+maintainer: ["The Peregrine team"]
+authors: ["Li-yao Xia"
+          "Ekse Nielsen"]
+license: "MIT"
+homepage: "https://github.com/peregrine-project/rocq-ceres-bytestring"
+bug-reports:
+  "https://github.com/peregrine-project/rocq-ceres-bytestring/issues"
+depends: [
+  "dune" {>= "2.8"}
+  "coq" {>= "9.0~"}
+  "rocq-metarocq-utils" {>= "1.4~"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo:
+  "git+https://github.com/peregrine-project/rocq-ceres-bytestring.git"
+run-test: [ "dune" "build" "-p" name "test" "tutorial" ]
+url {
+  src: "https://github.com/peregrine-project/rocq-ceres-bytestring/releases/download/v1.0.0/rocq-ceres-bytestring-1.0.0.tar.gz" 
+  checksum: "sha512=61dd89d44ed179e1820d8f5e87129ca2b02d50e5ba6ded0b3e42b69338e40604ca845d1c0e3bf47c753ad1a10572fdc3898d13841d05b9a47c2083cfc33dcd2e"
+}
