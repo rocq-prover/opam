@@ -1,5 +1,6 @@
 opam-version: "2.0"
 synopsis: "Library for serialization via S-expressions using bytestrings"
+description: "Library for serialization via S-expressions using bytestrings. Alternative to coq-ceres which uses String from standard library."
 maintainer: ["The Peregrine team"]
 authors: ["Li-yao Xia"
           "Ekse Nielsen"]
@@ -34,3 +35,9 @@ url {
   src: "https://github.com/peregrine-project/rocq-ceres-bytestring/releases/download/v1.0.0/rocq-ceres-bytestring-1.0.0.tar.gz" 
   checksum: "sha512=61dd89d44ed179e1820d8f5e87129ca2b02d50e5ba6ded0b3e42b69338e40604ca845d1c0e3bf47c753ad1a10572fdc3898d13841d05b9a47c2083cfc33dcd2e"
 }
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "keyword:serialization"
+  "logpath:CeresBS"
+  "date:2026-03-11"
+]
