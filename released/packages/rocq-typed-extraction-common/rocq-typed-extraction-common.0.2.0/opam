@@ -13,13 +13,13 @@ doc: "https://peregrine-project.github.io/rocq-typed-extraction/toc.html"
 depends: [
   "rocq-core" {>= "9.1" & < "9.2~"}
   "rocq-stdlib" {>= "9.0" & < "9.2~"}
-  "rocq-metarocq-utils" {>= "1.4"}
-  "rocq-metarocq-common" {>= "1.4"}
-  "rocq-metarocq-template" {>= "1.4"}
-  "rocq-metarocq-template-pcuic" {>= "1.4"}
-  "rocq-metarocq-pcuic" {>= "1.4"}
-  "rocq-metarocq-safechecker" {>= "1.4"}
-  "rocq-metarocq-erasure" {>= "1.4"}
+  "rocq-metarocq-utils" {>= "1.4" & <= "1.4.1"}
+  "rocq-metarocq-common" {>= "1.4" & <= "1.4.1"}
+  "rocq-metarocq-template" {>= "1.4" & <= "1.4.1"}
+  "rocq-metarocq-template-pcuic" {>= "1.4" & <= "1.4.1"}
+  "rocq-metarocq-pcuic" {>= "1.4" & <= "1.4.1"}
+  "rocq-metarocq-safechecker" {>= "1.4" & <= "1.4.1"}
+  "rocq-metarocq-erasure" {>= "1.4" & <= "1.4.1"}
 ]
 build: [
   ["bash" "./configure.sh"]
