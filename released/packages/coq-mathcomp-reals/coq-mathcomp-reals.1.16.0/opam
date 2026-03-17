@@ -6,17 +6,8 @@ dev-repo: "git+https://github.com/math-comp/analysis.git"
 bug-reports: "https://github.com/math-comp/analysis/issues"
 license: "CECILL-C"
 
-build: [make "-C" "reals" "-j%{jobs}%"]
-install: [make "-C" "reals" "install"]
 depends: [ "rocq-mathcomp-reals" { = version} ]
 
-tags: [
-  "category:Mathematics/Real Numbers"
-  "keyword:real numbers"
-  "keyword:reals"
-  "keyword:extended real numbers"
-  "logpath:mathcomp.reals"
-]
 authors: [
   "Reynald Affeldt"
   "Alessandro Bruni"
@@ -33,8 +24,3 @@ authors: [
 ]
 
 synopsis: "Compatibility package for rocq-mathcomp-reals"
-
-url {
-src: "https://github.com/math-comp/analysis/releases/download/1.16.0/analysis-1.16.0.tar.gz"
-checksum: "sha256=85aceb6c53f8c659ccee73df15b80c7e466433b1e94b25588af2fd3bf01248f2"
-}
