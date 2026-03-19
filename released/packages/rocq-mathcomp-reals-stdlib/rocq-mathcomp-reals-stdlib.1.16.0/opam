@@ -19,6 +19,8 @@ depends: [
   "rocq-mathcomp-reals" { = version}
 ]
 
+conflicts: [ "coq-mathcomp-reals-stdlib" { < "1.16~" } ]
+
 tags: [
   "category:Mathematics/Real Numbers"
   "keyword:real numbers"

@@ -22,6 +22,8 @@ depends: [
   "rocq-hierarchy-builder" { (>= "1.8.0") }
 ]
 
+conflicts: [ "coq-mathcomp-classical" { < "1.16~" } ]
+
 tags: [
   "category:Mathematics/Logic/Classical logic"
   "keyword:classical logic"
