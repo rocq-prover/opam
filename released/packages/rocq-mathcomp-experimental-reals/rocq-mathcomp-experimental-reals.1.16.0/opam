@@ -21,6 +21,8 @@ depends: [
   "rocq-mathcomp-bigenough" { (>= "1.0.0") }
 ]
 
+conflicts: [ "coq-mathcomp-experimental-reals" { < "1.16~" } ]
+
 tags: [
   "category:Mathematics/Real Numbers"
   "keyword:real numbers"

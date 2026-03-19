@@ -17,6 +17,8 @@ depends: [
   "rocq-mathcomp-classical" { = version}
 ]
 
+conflicts: [ "coq-mathcomp-reals" { < "1.16~" } ]
+
 tags: [
   "category:Mathematics/Real Numbers"
   "keyword:real numbers"

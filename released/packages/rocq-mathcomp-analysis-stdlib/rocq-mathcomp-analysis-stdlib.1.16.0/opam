@@ -18,6 +18,8 @@ depends: [
   "rocq-mathcomp-reals-stdlib"
 ]
 
+conflicts: [ "coq-mathcomp-analysis-stdlib" { < "1.16~" } ]
+
 tags: [
   "category:Mathematics/Real Numbers"
   "category:Mathematics/Real Calculus and Topology"

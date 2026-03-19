@@ -20,6 +20,8 @@ depends: [
   "rocq-mathcomp-bigenough" { (>= "1.0.0") }
 ]
 
+conflicts: [ "coq-mathcomp-analysis" { < "1.16~" } ]
+
 tags: [
   "category:Mathematics/Real Calculus and Topology"
   "keyword:analysis"
