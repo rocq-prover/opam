@@ -1,0 +1,44 @@
+opam-version: "2.0"
+synopsis: "VCFloat: Floating Point Round-off Error Analysis"
+description: "VCFloat is a tool for Coq proofs about floating-point round-off error."
+authors: [
+  "Andrew W. Appel"
+  "Ariel E. Kellison"
+  "Tahina Ramananandro"
+  "Paul Mountcastle"
+  "Benoit Meister"
+  "Richard Lethin"
+]
+homepage: "https://verinum.org/vcfloat/"
+maintainer: "Andrew W. Appel <appel@princeton.edu>"
+dev-repo: "git+https://github.com/VeriNum/vcfloat"
+bug-reports: "https://github.com/VeriNum/vcfloat/issues"
+license: "LGPL-3.0-or-later"
+
+build: [
+  [ make "-C" "vcfloat" "-j%{jobs}%" "vcfloat2"]
+]
+install: [
+  [make "-C" "vcfloat" "-j%{jobs}%" "install" "INSTALLDIR=%{lib}%/coq/user-contrib/vcfloat"]
+]
+run-test: [
+  [make "-C" "vcfloat" "-j%{jobs}%" "tests"]
+]
+depends: [
+  "coq" {>= "9.0" & < "9.2~"}
+  "coq-flocq" {>= "4.1.4" & < "5.0"}
+  "coq-interval" {>= "4.10.0"}
+  "coq-compcert" {>= "3.16"}
+  "coq-bignums"
+]
+url {
+  src: "https://github.com/VeriNum/vcfloat/archive/refs/tags/v2.4.1.tar.gz"
+  checksum: "sha256=cfc2c132adda1d955d1ded3578c7c574d180064674de93e24e0e82e965a09f6e"
+}
+tags: [
+  "date:2026-04-06"
+  "keyword:decision procedure"
+  "keyword:floating-point arithmetic"
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "logpath:VCFloat"
+  ]
