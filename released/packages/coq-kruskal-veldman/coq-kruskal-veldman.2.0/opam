@@ -19,11 +19,11 @@ install: [
 ]
 
 depends: [
-  "coq-kruskal-trees"
-  "coq-kruskal-finite"
-  "coq-kruskal-almostfull"
-  "coq-kruskal-fan"
-  "coq-kruskal-higman" {>= "2.0"}
+  "coq-kruskal-trees"      {>= "2.0"}
+  "coq-kruskal-finite"     {>= "2.0"}
+  "coq-kruskal-almostfull" {= "2.0"}
+  "coq-kruskal-fan"        {>= "2.0"}
+  "coq-kruskal-higman"     {>= "2.0"}
 ]
 
 url {

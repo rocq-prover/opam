@@ -31,6 +31,7 @@ depends: [
   "rocq-core" { = "dev" }
   "rocq-stdlib" { = "dev" }
   "rocq-equations" { = "dev" }
+  "coq-ext-lib" { = "dev" }
 ]
 synopsis: "The utility library of Template Rocq and PCUIC"
 description: """

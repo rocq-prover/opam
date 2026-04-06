@@ -1,0 +1,23 @@
+opam-version: "2.0"
+synopsis: "A framework for smart contract verification in Rocq"
+description: """
+A framework for smart contract verification in Rocq
+"""
+maintainer: "Danil Annenkov <danil.v.annenkov@gmail.com>"
+authors: "The COBRA team"
+license: "MIT"
+homepage: "https://github.com/AU-COBRA/ConCert"
+dev-repo: "git+https://github.com/AU-COBRA/ConCert.git"
+bug-reports: "https://github.com/AU-COBRA/ConCert/issues"
+doc: "https://au-cobra.github.io/ConCert/toc.html"
+depends: [
+  "rocq-concert" {= version}
+]
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} "@doc" {with-doc} "--stop-on-first-error"]
+]
+url {
+  src: "https://github.com/AU-COBRA/ConCert/archive/refs/tags/v1.0.0.tar.gz"
+  checksum: "sha512=ab128a4dc0024ac19154dfa5bf6b16708464b4fb40b43fe26462c8ea323629e1dde569dfb63c30976d70a2741ae3d411d36315fec92c29c62a43ae97a8b793e0"
+}
