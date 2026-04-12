@@ -46,5 +46,5 @@ authors: [
 ]
 url {
   src: "https://github.com/affeldt-aist/monae/archive/0.9.2.tar.gz"
-  checksum: "sha512=f29f8975ed0c12e70d8fd878ba80afb39dbf9c879a86e1e3984a74a95ac9006dae3e4183160b789e2f7dc5a3621a4bb87c51505ff12cb8a475596e0016d821fd"
+  checksum: "sha512=c4ab455a457b2e92c3d2df72a29434a3e6e17395dadbfb291e51392dc5f7ba6b5fd90e1120fd93b47935916685f2b5ae08d8ba138e04187e2a2c3ab6c000963f"
 }
