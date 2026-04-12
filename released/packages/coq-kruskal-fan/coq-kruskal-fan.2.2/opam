@@ -27,7 +27,7 @@ depends: [
 url {
   src: "https://github.com/DmxLarchey/Kruskal-Fan/releases/download/2.2/Kruskal-Fan-2.2.tar.gz"
   checksum: [
-    "sha256:73f7c247de10f31a2343dd458ac58ecea9d297036fa2273d9372151420cf3b49"
+    "sha256=73f7c247de10f31a2343dd458ac58ecea9d297036fa2273d9372151420cf3b49"
   ]
 }
  
