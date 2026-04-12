@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "Base Coq library for manipulating Almost Full relations"
+description: """
+   This library formalizes ground results about Almost Full relations (AF) in Coq 8.14+, up to Dickson's lemma.
+"""  
+maintainer: ["Dominique Larchey-Wendling (https://github.com/DmxLarchey)"] 
+authors: "Dominique Larchey-Wendling (https://github.com/DmxLarchey)"
+license: "MPL-2.0"
+homepage: "https://github.com/DmxLarchey/Kruskal-AlmostFull/"
+bug-reports: "https://github.com/DmxLarchey/Kruskal-AlmostFull/issues"
+dev-repo: "git+https://github.com:DmxLarchey/Kruskal-AlmostFull/"
+
+build: [
+  [ make "-j%{jobs}%" "type"]
+]
+install: [
+  [make "install"]
+]
+
+depends: [
+  "rocq-core" {>= "9.2.0" & < "9.3~"}
+  "rocq-stdlib"
+  "coq-kruskal-trees" {>= "2.0"} 
+  "coq-kruskal-finite" {>= "2.0"}
+]
+
+url {
+  src: "https://github.com/DmxLarchey/Kruskal-AlmostFull/releases/download/2.2/Kruskal-AlmostFull-2.2.tar.gz"
+  checksum: [ 
+    "sha256=ef215b6dc725f79e6db40a788b61baef69469acb3c4d96dc2a808cbe2d947a9b"
+  ]
+}
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "date:2026-04-12"
+  "logpath:KruskalAfProp"
+  "logpath:KruskalAfType"
+]
