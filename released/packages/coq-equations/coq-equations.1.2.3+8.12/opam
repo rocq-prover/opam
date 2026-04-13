@@ -33,7 +33,6 @@ depends: [
   "coq" {>= "8.12.0" & < "8.13~"}
 ]
 url {
-  src:
-    "https://github.com/mattam82/Coq-Equations/archive/v1.2.3-8.12.tar.gz"
-  checksum: "sha512=c19617ef127a56916d67b2c347f21cd267b250a23988424bb1486336e784a5df7a6c85ee355eb99e148431f8d7b3534993f3fdba3aaa4769d74f8c3548fb2efa"
+  src: "https://github.com/rocq-prover/equations/archive/refs/tags/v1.2.3-8.12.tar.gz"
+  checksum: "sha512=5857c92b88fd53a7970278d846d97d07ea536fbb071b7a5b681c40f56a98470efdba4378b42fc6708ddca90d4a3358afc8481dec8c7dd9613715f011cb41d805"
 }
