@@ -35,6 +35,6 @@ depends: [
 ]
 
 url {
-  src: "https://github.com/mattam82/Coq-Equations/archive/refs/tags/v1.3-8.18.tar.gz"
-  checksum: "sha512=07d02b5a5927c4dd36716d68c600e7c02955b08bd63b8e74f2b7e39e939cdd92a46b3c51cb2db3a882d193dc3ec94c81254cac18efe5909edfd8ea5aec444666"
+  src: "https://github.com/rocq-prover/equations/archive/refs/tags/v1.3-8.18.tar.gz"
+  checksum: "sha512=3bbca56b3f08cd8b08a8a875749791ebbd65c552c4a30bebacabf35b4dca0daff2853f88e9066f1f9550cb747ec09a5279a10c443151e43618448834cd800040"
 }

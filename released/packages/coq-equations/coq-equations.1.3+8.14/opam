@@ -37,6 +37,6 @@ depopts: [
   "coq-hott" {>= "8.13" & < "8.15~"}
 ]
 url {
-  src: "https://github.com/mattam82/Coq-Equations/archive/refs/tags/v1.3-8.14.tar.gz"
-  checksum: "sha512=dabd632e5e7407d58585da6cdb94ad1dc83deb495be0f784a2e12fa637314380e91cd8fdf9b296c99b4f8185b0b0bb1fce4e0b280a82f47540204f794e1473a9"
+  src: "https://github.com/rocq-prover/equations/archive/refs/tags/v1.3-8.14.tar.gz"
+  checksum: "sha512=72a5f7e94437084718b78d4c9e685a51a3183c0ecf0470f2b440207e478921e4e4b515061d4147e55ca69f0c1bc8e2b28728c739a584f7462796eceb5b12e13f"
 }
