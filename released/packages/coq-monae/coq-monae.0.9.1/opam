@@ -14,14 +14,14 @@ in several examples of monadic equational reasoning."""
 build: [make "-j%{jobs}%"]
 install: [make "install_full"]
 depends: [
-  "coq" { (>= "8.19" & < "8.21~") }
+  "coq" { (>= "8.19" & < "9.2~") }
   "coq-mathcomp-ssreflect" { (>= "2.3.0") }
   "coq-mathcomp-fingroup" { (>= "2.3.0") }
   "coq-mathcomp-algebra" { (>= "2.3.0") }
   "coq-mathcomp-solvable" { (>= "2.3.0") }
   "coq-mathcomp-field" { (>= "2.3.0") }
   "coq-mathcomp-analysis" { (>= "1.11.0")}
-  "coq-infotheo" { >= "0.9.3"}
+  "coq-infotheo" { (>= "0.9.3" & < "0.9.7")}
   "coq-paramcoq" { >= "1.1.3" & < "1.2~" }
   "coq-hierarchy-builder" { (>= "1.8.0") }
   "coq-equations" { >= "1.3" & < "1.4~" }
@@ -47,5 +47,4 @@ authors: [
 url {
   src: "https://github.com/affeldt-aist/monae/archive/0.9.1.tar.gz"
   checksum: "sha512=5abde546b8e22ce9d0288eb45b5f095d4c019cb285a442c76d5da8bf1da5e38df89865c906083cc51e4754bc0d094c142a51d1b68e5706437a65f7a6b03cb08b"
-  
 }
