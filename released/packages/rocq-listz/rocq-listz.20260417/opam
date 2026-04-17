@@ -1,0 +1,31 @@
+
+opam-version: "2.0"
+synopsis: "A Rocq library of lists with indices in Z"
+maintainer: "François Pottier <francois.pottier@inria.fr>"
+authors: "François Pottier <francois.pottier@inria.fr>"
+homepage: "https://gitlab.inria.fr/fpottier/listz"
+dev-repo: "git+https://gitlab.inria.fr/fpottier/listz/"
+bug-reports: "https://gitlab.inria.fr/fpottier/listz/issues"
+license: "LGPL-2.1-only"
+build: [
+  [ "dune" "build" "-p" name "-j" jobs "@install" ]
+]
+tags: [
+  "date:2026-04-17"
+  "logpath:listz"
+]
+depends: [
+  "rocq-core" { (>= "9.1") }
+  "rocq-stdlib"
+  "rocq-stdpp" { (>= "1.13.0") }
+  "dune" { >= "3.21" }
+]
+x-maintenance-intent: ["(latest)"]
+url {
+  src:
+    "https://gitlab.inria.fr/fpottier/listz/-/archive/20260417/archive.tar.gz"
+  checksum: [
+    "md5=653a9ac97deabcabcb659bd10f15201e"
+    "sha512=419f32f11cc18b924a6e2b165d3b7f90c3e3abd23b76f0f2dd871ca6f1af55b9c158a652479407822fbf974280cb0463d5a07df9673de52b352bab8132cabb97"
+  ]
+}
