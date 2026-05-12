@@ -20,7 +20,8 @@ install: [
   [ make "-j%{jobs}%" "install" ]
 ]
 depends: [
-  "coq" {>= "9.0"}
+  "coq-core" {>= "9.0"}
+  "rocq-stdlib"
   "coq-flocq"
   "coq-interval"
   "coq-vcfloat" {>= "2.4.1~"}
