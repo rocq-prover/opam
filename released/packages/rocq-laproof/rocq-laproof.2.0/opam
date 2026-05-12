@@ -1,0 +1,47 @@
+opam-version: "2.0"
+synopsis: "LAProof: a library of formal proofs of accuracy and correctness for linear algebra programs"
+description: "LAProof is a package of software and Rocq proofs that verify (1) C programs for linear algebra on dense and sparse matrices correctly implement the specified floating-point algorithms; and (2) those floating-point algorithms are accurate within stated concrete bounds."
+authors: [
+  "Ariel E. Kellison"
+  "Andrew W. Appel"
+  "Mohit Tekriwal"
+  "David Bindel"
+]
+homepage: "https://github.com/VeriNum/LAProof"
+maintainer: "Ariel E. Kellison <ak2485@cornell.edu>"
+dev-repo: "git+https://github.com/VeriNum/LAProof"
+bug-reports: "https://github.com/VeriNum/LAProof/issues"
+license: "MIT"
+
+build: [
+  [ make "-j%{jobs}%" ]
+]
+install: [
+  [ make "-j%{jobs}%" "install" ]
+]
+depends: [
+  "coq-core" {>= "9.0"}
+  "rocq-stdlib"
+  "coq-flocq"
+  "coq-interval"
+  "coq-vcfloat" {>= "2.4.1~"}
+  "coq-mathcomp-ssreflect" {>= "2.4.0~"}
+  "coq-mathcomp-algebra"
+  "coq-mathcomp-analysis"
+  "coq-mathcomp-algebra-tactics"
+  "coq-mathcomp-reals-stdlib"
+  "coq-mathcomp-finmap"
+  "coq-vst" {>= "2.16~"}
+  "coq-vst-lib" {>= "2.15.1~"}
+  "coq-libvalidsdp" {>= "1.1.1"}
+]
+url {
+  src: "https://github.com/VeriNum/LAProof/archive/refs/tags/v2.0.tar.gz"
+  checksum: "sha256=5acbe4498fc0fea7f4d0a687723c954dbd287eeec0430cbc7049eeb315d44a5c"
+}
+tags: [
+  "date:2025-05-11"
+  "logpath:LAProof"
+]
+
+
