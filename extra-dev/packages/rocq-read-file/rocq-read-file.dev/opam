@@ -11,8 +11,8 @@ depends: [
   "ocaml" {>= "4.09"}
   "dune" {>= "3.8" & build}
   "ppx_optcomp" {build}
-  "coq-core" {>= "8.18"}
-  "coq-stdlib" {>= "8.18"}
+  "coq-core" {>= "8.18" | = "dev"}
+  "coq-stdlib" {>= "8.18" | = "dev"}
   "odoc" {with-doc}
 ]
 build: [
