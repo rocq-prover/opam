@@ -9,8 +9,9 @@ homepage: "https://github.com/theorem-labs/rocq-read-file"
 bug-reports: "https://github.com/theorem-labs/rocq-read-file/issues"
 depends: [
   "ocaml" {>= "4.14"}
-  "dune" {>= "3.8"}
+  "dune" {>= "3.8" & build}
   "coq-core" {>= "8.18"}
+  "coq-stdlib" {>= "8.18"}
   "odoc" {with-doc}
 ]
 build: [
