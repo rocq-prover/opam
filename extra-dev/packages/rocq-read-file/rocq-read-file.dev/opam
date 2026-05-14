@@ -8,8 +8,9 @@ license: "MIT"
 homepage: "https://github.com/theorem-labs/rocq-read-file"
 bug-reports: "https://github.com/theorem-labs/rocq-read-file/issues"
 depends: [
-  "ocaml" {>= "4.14"}
+  "ocaml" {>= "4.09"}
   "dune" {>= "3.8" & build}
+  "ppx_optcomp" {build}
   "coq-core" {>= "8.18"}
   "coq-stdlib" {>= "8.18"}
   "odoc" {with-doc}
