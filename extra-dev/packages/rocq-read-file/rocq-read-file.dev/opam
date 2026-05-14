@@ -1,0 +1,35 @@
+opam-version: "2.0"
+synopsis: "Read files from disk into Rocq primitive values"
+description:
+  "A Rocq plugin that reads binary files into Rocq-side primitive values: byte arrays, int63 arrays, or primitive strings. Auto-nests into primitive arrays when results exceed PArray.max_length."
+maintainer: ["Jason Gross <jason@theorem.dev>"]
+authors: ["Jason Gross"]
+license: "MIT"
+homepage: "https://github.com/theorem-labs/rocq-read-file"
+bug-reports: "https://github.com/theorem-labs/rocq-read-file/issues"
+depends: [
+  "ocaml" {>= "4.14"}
+  "dune" {>= "3.8" & build}
+  "ppx_optcomp" {build}
+  "coq-core" {>= "9.0" | = "dev"}
+  "rocq-stdlib" {>= "9.0" | = "dev"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/theorem-labs/rocq-read-file.git"
+url {
+  src: "git+https://github.com/theorem-labs/rocq-read-file.git"
+}
