@@ -1,0 +1,42 @@
+opam-version: "2.0"
+maintainer: "Damien Pous <Damien.Pous@ens-lyon.fr>"
+
+homepage: "https://github.com/damien-pous/categories"
+dev-repo: "git+https://github.com/damien-pous/categories.git"
+bug-reports: "https://github.com/damien-pous/categories/issues"
+license: "LGPL-3.0-or-later"
+
+synopsis: "A library for category theory"
+description: """
+Library about category theory, with hom-setoids.
+Hierarchy of structures implemented with Hierarchy Builder.
+Inference of MacLane morphisms and decision procedure for monoidal categories.
+"""
+
+build: [
+  [make "-j%{jobs}%" ]
+]
+install: [make "install"]
+depends: [
+  "rocq-core" {>= "9.1"}
+  "rocq-stdlib"
+  "rocq-partial-orders"
+]
+
+tags: [
+  "keyword:category theory"
+  "keyword:monoidal categories"
+  "keyword:MacLane's coherence theorem"
+  "keyword:string diagrams"
+  "keyword:setoid"  
+  "logpath:Categories"
+  "date:2026-05-07"
+]
+authors: [
+  "Damien Pous <Damien.Pous@ens-lyon.fr>"
+]
+
+url {
+  src: "https://github.com/damien-pous/categories/archive/refs/tags/v1.0.tar.gz"
+  checksum: "sha512=21508cdafe3860e2ed5869c276f5bb326ffd9691d9e0f027f5c74fa1cefbbc37f8d951fd2df76af2fd62bbf004c8de2ee39ee03884647c3ee3a73971e43721a0"
+}
