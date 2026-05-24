@@ -13,6 +13,7 @@ install: [make "install"]
 depends: [
   "conf-findutils" {build}
   "coq" {>= "9.0"}
+  "rocq-stdlib"
 ]
 conflict-class: [
   "coq-coqutil"
