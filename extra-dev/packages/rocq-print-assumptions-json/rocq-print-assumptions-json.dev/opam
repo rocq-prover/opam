@@ -12,7 +12,8 @@ depends: [
   "dune" {>= "3.8" & build}
   "ppx_optcomp" {build}
   "rocq-core" {>= "9.0" | = "dev"}
-  "rocq-stdlib" {with-test & (>= "9.0" | = "dev")}
+  "coq-core" {>= "9.0" | = "dev"}
+  "rocq-stdlib" {with-test}
   "odoc" {with-doc}
 ]
 build: [
