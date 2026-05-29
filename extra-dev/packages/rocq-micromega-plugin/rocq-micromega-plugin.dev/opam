@@ -18,8 +18,19 @@ depends: [
   "ppx_optcomp"
 ]
 dev-repo: "git+https://github.com/rocq-community/micromega-plugin.git"
-build: [ [make] ]
-install: [ [make "install"] ]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "etc/with-rocq-wrap.sh" {!coq-core:installed}
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+  ]
+]
 url {
   src: "git+https://github.com/rocq-community/micromega-plugin.git"
 }
