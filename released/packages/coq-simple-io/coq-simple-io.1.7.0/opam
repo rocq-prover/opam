@@ -32,5 +32,5 @@ the OCaml Pervasives module are provided. Users are free to define their own
 APIs on top of this IO type."""
 url {
   src: "https://github.com/Lysxia/coq-simple-io/archive/1.7.0.tar.gz"
-  checksum: "sha512=7c7ba52efb870763b02c1f6e25b703307463698631acba2449de05e66a9f9b4738bc852c3b3e95178752036e1c1da5339beaa5ecb669047b0f10a04737c6cfee"
+  checksum: "sha512=01d8d0850efc7b77e3d3f3a29a1c53c60102d7e74d9a0bfef72ac61108d123cf967555b6af0ef363b7b803da393743b8321190ba063615941b771055c84e82bf"
 }
