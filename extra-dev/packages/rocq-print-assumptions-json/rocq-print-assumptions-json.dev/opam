@@ -1,0 +1,36 @@
+opam-version: "2.0"
+synopsis: "Structured JSON output for Print Assumptions"
+description:
+  "A Rocq plugin providing variants of Print Assumptions that output results as JSON (compact or pretty-printed) or JSONL, for programmatic consumption."
+maintainer: ["Jason Gross <jason@theorem.dev>"]
+authors: ["Jason Gross"]
+license: "MIT"
+homepage: "https://github.com/theorem-labs/rocq-structured-output-print-assumptions"
+bug-reports: "https://github.com/theorem-labs/rocq-structured-output-print-assumptions/issues"
+depends: [
+  "ocaml" {>= "4.14"}
+  "dune" {>= "3.8" & build}
+  "ppx_optcomp" {build}
+  "rocq-core" {>= "9.0" | = "dev"}
+  "coq-core" {>= "9.0" | = "dev"}
+  "rocq-stdlib" {with-test}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/theorem-labs/rocq-structured-output-print-assumptions.git"
+url {
+  src: "git+https://github.com/theorem-labs/rocq-structured-output-print-assumptions.git"
+}
