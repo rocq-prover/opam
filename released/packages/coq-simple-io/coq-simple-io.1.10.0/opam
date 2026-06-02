@@ -35,5 +35,5 @@ the OCaml Stdlib module are provided. Users are free to define their own
 APIs on top of this IO type."""
 url {
   src: "https://github.com/Lysxia/coq-simple-io/archive/1.10.0.tar.gz"
-  checksum: "sha512=004bc44e42d03f9d936fb512191a4e547a228a7db233b1b7aa244f4d8c2d893f2fc9f263008ad72a38b82465dd56f78d92005e0aca626a99d30ad08ec7e7afd8"
+  checksum: "sha512=3038458f5680a894e5391be3f73ed7ba35a2f9d3edea05b378d94667ac142d3d1c63125b18deb1cb72a710ff2f46acc8e25e8b80bd96dd0a970c936d5d3a44ba"
 }
