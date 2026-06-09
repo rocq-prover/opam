@@ -1,10 +1,10 @@
 opam-version: "2.0"
 maintainer: "Li-yao Xia <lysxia@gmail.com>"
 authors: "Li-yao Xia"
-homepage: "https://github.com/Lysxia/coq-simple-io"
-bug-reports: "https://github.com/Lysxia/coq-simple-io/issues"
+homepage: "https://github.com/Lysxia/rocq-simple-io"
+bug-reports: "https://github.com/Lysxia/rocq-simple-io/issues"
 license: "MIT"
-dev-repo: "git+https://github.com/Lysxia/coq-simple-io.git"
+dev-repo: "git+https://github.com/Lysxia/rocq-simple-io.git"
 build: [make "build"]
 run-test: [make "test"]
 install: [make "install"]
@@ -30,6 +30,6 @@ to be extracted to OCaml. Some wrappers for the basic types and functions in
 the OCaml Pervasives module are provided. Users are free to define their own
 APIs on top of this IO type."""
 url {
-  src: "https://github.com/Lysxia/coq-simple-io/archive/1.3.0.tar.gz"
-  checksum: "sha512=bcf7746e7877c4672e509e8c80db28b93cffbb064e114cf4df4465d9be3d55274c84a7406b38eaf510deda8a2574e42f3b40c8f716841bd92557e7b59d86e7cb"
+  src: "https://github.com/Lysxia/rocq-simple-io/archive/1.3.0.tar.gz"
+  checksum: "sha256=d0498bbaa9856e4eaebc5173515a4af54f840683f52dc97c670b05267b3f4654"
 }
