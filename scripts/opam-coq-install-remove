@@ -20,6 +20,8 @@ shift # for --
 RC=0
 FAILURES=
 SUCCESSES=
+UNTESTED=
+HARDFAILURES=
 
 mkdir -p log
 
@@ -57,8 +59,8 @@ while [ ! -z "$1" ]; do
               ;;
           esac
           echo Check if $PKG_NAME_VERSION is installable
+          set +e
           if opam install "$PKG_NAME_VERSION" -y --with-test --show-action $EXTRA_OPAM_OPTION; then
-            set +e
             echo Installing $PKG_NAME_VERSION
             opam install "$PKG_NAME_VERSION" -y -v -v --with-test $EXTRA_OPAM_OPTION >> $LOG
             if [ $? != 0 ]; then
@@ -73,12 +75,18 @@ while [ ! -z "$1" ]; do
             echo
             echo Removing $PKG_NAME
             opam remove "$PKG_NAME" -y >> $LOG
-            set -e
           else
+            echo Skipping $PKG_NAME_VERSION since not installable with the current compiler
             echo Check if $PKG_NAME_VERSION is installable with another compiler
             opam install "$PKG_NAME_VERSION" -y --show-action --update-invariant
-            echo Skipping $PKG_NAME_VERSION since not installable with the current compiler
+            if [ $? != 0 ]; then
+              RC=1
+              HARDFAILURES="$HARDFAILURES $PKG_NAME_VERSION"
+            else
+              UNTESTED="$UNTESTED $PKG_NAME_VERSION"
+            fi
           fi
+          set -e
         fi
         ;;
       *)
@@ -90,6 +98,8 @@ while [ ! -z "$1" ]; do
   shift
 done
 
-echo "Packages that failed to install:$FAILURES"
 echo "Packages that succeeded to install:$SUCCESSES"
+echo "Packages that failed to install:$FAILURES"
+echo "Packages that were not compatible with the current compiler:$UNTESTED"
+echo "Packages that can never be installed:$HARDFAILURES"
 exit $RC
