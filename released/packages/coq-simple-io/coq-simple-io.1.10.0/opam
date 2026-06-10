@@ -1,10 +1,10 @@
 opam-version: "2.0"
 maintainer: "Li-yao Xia <lysxia@gmail.com>"
 authors: [ "Li-yao Xia" "Yishuai Li" ]
-homepage: "https://github.com/Lysxia/coq-simple-io"
-bug-reports: "https://github.com/Lysxia/coq-simple-io/issues"
+homepage: "https://github.com/Lysxia/rocq-simple-io"
+bug-reports: "https://github.com/Lysxia/rocq-simple-io/issues"
 license: "MIT"
-dev-repo: "git+https://github.com/Lysxia/coq-simple-io.git"
+dev-repo: "git+https://github.com/Lysxia/rocq-simple-io.git"
 build: [
   ["dune" "subst"] {dev}
   [ "dune" "build" "-p" name "-j" jobs "@install" ]
