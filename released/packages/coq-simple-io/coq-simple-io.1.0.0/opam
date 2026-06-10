@@ -12,8 +12,8 @@ build: [
 install: [make "install"]
 remove: [make "uninstall"]
 depends: [
-  "ocaml"
-  "coq"
+  "ocaml" {< "5"}
+  "coq" {>= "8.6.1" & < "8.10~"}
   "coq-ext-lib" {>= "0.10.0"}
   "ocamlbuild" {with-test & >= "0.9.0"}
 ]
