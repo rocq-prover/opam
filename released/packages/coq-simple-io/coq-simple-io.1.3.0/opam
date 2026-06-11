@@ -9,7 +9,7 @@ build: [make "build"]
 run-test: [make "test"]
 install: [make "install"]
 depends: [
-  "ocaml"
+  "ocaml" {< "5"}
   "coq" {>= "8.8" & < "8.13~"}
   "coq-ext-lib"
   "ocamlbuild" {with-test}
