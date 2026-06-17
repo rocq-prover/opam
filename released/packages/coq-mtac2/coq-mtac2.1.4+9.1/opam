@@ -19,7 +19,7 @@ install: [
   [make "install"]
 ]
 depends: [
-  "coq" {>= "9.0~"}
+  "coq" {>= "9.1"}
   "coq-unicoq" {>= "1.5" & < "2~"}
 ]
 url {
