@@ -1,0 +1,37 @@
+opam-version: "2.0"
+synopsis:
+  "High level commands to declare and evolve a hierarchy based on packed classes"
+description: """\
+Hierarchy Builder is a high level language to build hierarchies of algebraic structures and make these
+hierarchies evolve without breaking user code. The key concepts are the ones of factory, builder
+and abbreviation that let the hierarchy developer describe an actual interface for their library.
+Behind that interface the developer can provide appropriate code to ensure retro compatibility."""
+maintainer: "Enrico Tassi <enrico.tassi@inria.fr>"
+authors: ["Cyril Cohen" "Kazuhiko Sakaguchi" "Enrico Tassi"]
+license: "MIT"
+tags: "logpath:HB"
+homepage: "https://github.com/math-comp/hierarchy-builder"
+bug-reports: "https://github.com/math-comp/hierarchy-builder/issues"
+depends: [
+  "rocq-core" {(>= "9.0" & < "9.3~") | = "dev"}
+  "rocq-elpi" {>= "3" | = "dev"}
+]
+conflicts: [
+  "coq-hierarchy-builder" {< "1.9~"}
+  "coq-hierarchy-builder-shim"
+]
+build: [
+  [make "build"]
+  [make "test-suite"] {with-test & rocq-core:installed}
+]
+install: [make "install"]
+depexts: ["wdiff"] {os-family = "debian" & with-test}
+dev-repo: "git+https://github.com/math-comp/hierarchy-builder"
+url {
+  src:
+    "https://github.com/math-comp/hierarchy-builder/releases/download/v1.10.3/hierarchy-builder-1.10.3.tar.gz"
+  checksum: [
+    "md5=483fa6b055841255424923592b185dc2"
+    "sha512=d9a84616bf77215585cf1f60c53daa49de7247bc66eee8ab3808442f94bca8559189572757be94fb6a79589b46f381fdb260eefeb5e99a5d454d23447cc4b5ed"
+  ]
+}
