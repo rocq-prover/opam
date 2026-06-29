@@ -1,0 +1,63 @@
+opam-version: "2.0"
+synopsis:
+  "Support library for Sail, a language for describing the instruction semantics of processors, using stdpp bitvectors"
+description: """
+The support library for instruction-set semantics generated from Sail.
+Sail is a language for describing the instruction-set
+architecture (ISA) semantics of processors. Sail aims to provide a
+engineer-friendly, vendor-pseudocode-like language for describing
+instruction semantics. It is essentially a first-order imperative
+language, but with lightweight dependent typing for numeric types and
+bitvector lengths, which are automatically checked using Z3. It has
+been used for several papers, available from
+http://www.cl.cam.ac.uk/~pes20/sail/.
+The Sail tool can be found in main opam repository."""
+maintainer: ["Sail Devs <cl-sail-dev@lists.cam.ac.uk>"]
+authors: [
+  "Alasdair Armstrong"
+  "Thomas Bauereiss"
+  "Brian Campbell"
+  "Shaked Flur"
+  "Jonathan French"
+  "Kathy Gray"
+  "Robert Norton"
+  "Christopher Pulte"
+  "Peter Sewell"
+  "Mark Wassell"
+]
+license: "BSD-2-Clause"
+tags: [
+  "logpath:Sail"
+  "category:Computer Science/Semantics and Compilation/Semantics"
+]
+homepage: "http://www.cl.cam.ac.uk/~pes20/sail/"
+doc: "https://github.com/rems-project/sail"
+bug-reports: "https://github.com/rems-project/coq-sail/issues"
+depends: [
+  "dune" {>= "3.21"}
+  "rocq-core" {>= "9.0" & < "9.3~"}
+  "rocq-stdpp-bitvector" {>= "1.13.0" & < "1.14.0~"}
+  "odoc" {with-doc}
+]
+conflicts: [
+  "sail" {!= version}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/rems-project/coq-sail.git"
+url {
+  src: "https://github.com/rems-project/coq-sail/archive/refs/tags/0.20.2-rocq.tar.gz"
+  checksum: "sha512=e7d560904e88909fbbf53d865a790048f5a198020742a03f8982869b8c72483c600f556056826f37dc3902e17828a7266ac133dfe2f3f791b328c39bcc8f8995"
+}
