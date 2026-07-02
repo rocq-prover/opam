@@ -1,5 +1,5 @@
 opam-version: "2.0"
-maintainer: [ "Enzo Crance <ecrancemerce@gmail.com>" "Chantal Keller <ckeller@lmf.cnrs.fr>" ]
+maintainer: [ "Chantal Keller <ckeller@lmf.cnrs.fr>" "Vincent Lafeychine <vincent.lafeychine@proton.me>" ]
 authors: [ "Enzo Crance" ]
 license: "LGPL-3.0-or-later"
 homepage: "https://github.com/rocq-trakt/trakt"
@@ -9,10 +9,17 @@ doc: "https://rocq-trakt.github.io/trakt"
 build: [ make "-j%{jobs}%" ]
 install: [ make "install" ]
 depends: [
-  "coq-elpi" {>= "2.0.0"}
-  "coq" {>= "8.15~" }
+  "dune" {>= "3.21" & < "3.24"}
+  "rocq-core" {>= "9.0.0"}
+  "rocq-stdlib" {>= "9.0.0"}
+  "rocq-elpi" {>= "3.2.0"}
+  "odoc" {with-doc}
 ]
-tags: [ 
+# About the version of dune:
+# - rocq-elpi : (using coq 0.8) ; coq 0.8 exists until dune 3.23
+# - rocq-trakt : (using rocq 0.11) ; rocq 0.11 exists since dune 3.21
+# and rocq 9.0.0 is not compatible with dune 3.21 and 3.22 due to a bug in dune
+tags: [
   "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
   "category:Miscellaneous/Coq Extensions"
   "keyword:automation"
