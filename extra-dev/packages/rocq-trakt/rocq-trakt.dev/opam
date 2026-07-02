@@ -9,7 +9,7 @@ doc: "https://rocq-trakt.github.io/trakt"
 build: [ make "-j%{jobs}%" ]
 install: [ make "install" ]
 depends: [
-  "dune" {= "3.23"}
+  "dune" {>= "3.21" & < "3.24"}
   "rocq-core" {>= "9.0.0"}
   "rocq-stdlib" {>= "9.0.0"}
   "rocq-elpi" {>= "3.2.0"}
