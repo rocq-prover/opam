@@ -46,5 +46,6 @@ tags: [
 
 url {
   src: "https://github.com/vellvm/vellvm/releases/download/3.0.20260707/v3.0.20260707.tar.gz"
-  checksum: "sha256=791966d3c4ff9576b11029b427a9eea1681d0e588b2ce417942c9df6bbecc345"
+  checksum: "sha256=ab8e37b6c826d66ee12b773c5494dbd67539881b72c05a80de180c56df8b288f"
 }
+
