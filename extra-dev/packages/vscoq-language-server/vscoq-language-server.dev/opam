@@ -1,36 +1,14 @@
 opam-version: "2.0"
 name: "vscoq-language-server"
 maintainer: "Enrico Tassi <enrico.tassi@inria.fr>"
-authors: [ "Enrico Tassi" "Maxime Denes" "Romain Tetley" ]
-license: "LGPL-2.1-or-later"
-homepage: "https://github.com/coq-community/vscoq"
-bug-reports: "https://github.com/coq-community/vscoq/issues"
-dev-repo: "git+https://github.com/coq-community/vscoq"
-
-build: [
-  [ "dune" "build" "-p" "vscoq-language-server" "--display=short"] 
-]
+authors: [ "Enrico Tassi" "Maxime Dénès" "Romain Tetley" ]
+license: "MIT"
+homepage: "https://github.com/rocq-prover/vsrocq"
+bug-reports: "https://github.com/rocq-prover/vsrocq/issues"
+dev-repo: "git+https://github.com/rocq-prover/vsrocq"
 depends: [
-  "coq-core" {= "dev"}
-  "coq-stdlib" {= "dev"}
-  "yojson"
-  "ocamlfind"
-  "ppx_inline_test"
-  "ppx_assert"
-  "ppx_sexp_conv"
-  "ppx_yojson_conv" {< "v0.16.0"}
-  "ppx_deriving"
-  "ppx_import"
-  "sexplib"
-  "uri"
-  "jsonrpc" {>= "1.15"}
-  "lsp" {>= "1.15" & < "1.19"}
-  "sel" {>= "0.4.0"}
+  "vsrocq-language-server" {= version}
 ]
-url {
-  src: "git+https://github.com/coq-community/vscoq.git/#main"
-}
-synopsis: "VSCoq language server"
-description: """
-LSP based language server for Coq and its VSCoq user interface
-"""
+synopsis: "Compatibility meta package for the VsRocq language server after the Rocq renaming"
+available: arch != "arm32" & arch != "x86_32"
+x-maintenance-intent: ["(latest)"]
