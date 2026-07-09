@@ -17,8 +17,8 @@ set of modules usually bound to the Stdlib.* namespace."""
 maintainer: ["The Rocq standard library development team"]
 authors: ["The Rocq development team, INRIA, CNRS, and contributors"]
 license: "LGPL-2.1-only"
-homepage: "https://coq.inria.fr/"
-doc: "https://coq.github.io/doc/"
+homepage: "https://rocq-prover.org/"
+doc: "https://rocq-prover.org/docs"
 bug-reports: "https://github.com/coq/stdlib/issues"
 depends: [
   "rocq-runtime"
