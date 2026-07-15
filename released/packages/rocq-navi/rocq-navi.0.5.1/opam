@@ -1,0 +1,44 @@
+opam-version: "2.0"
+maintainer: "Yoshihiro Imai<y.imai@aist.go.jp>"
+
+homepage: "https://github.com/affeldt-aist/rocqnavi"
+dev-repo: "git+https://github.com/yoshihiro503/rocqnavi.git"
+bug-reports: "https://github.com/affeldt-aist/rocqnavi/issues"
+
+license: "GPL-2.0-or-later"
+synopsis: "Extension of coq2html Document Generator"
+
+description: """
+Extension of coq2html Document Generator"""
+
+build: [make]
+install: [make "BINDIR=%{bin}%" "install"]
+depends: [
+  "ocaml" {>= "4.14"}
+  "ocamlfind"
+  "dune-glob" # Parsing glob syntax like "*_unnamed_mixin_*"
+  "yojson"
+  "coq-lsp" {with-test}
+  "rocq-hierarchy-builder" {with-test}
+]
+
+tags: [
+  "category:Tools/Document Generator"
+  "keyword:document"
+  "keyword:html"
+  "logpath:"
+]
+authors: [
+  "Xavier Leroy <xavier.leroy@college-de-france.fr>"
+  "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+  "Yoshihiro Imai <y.imai@aist.go.jp>"
+]
+url {
+  src:
+    "https://github.com/affeldt-aist/rocqnavi/archive/refs/tags/rocqnavi.0.5.1.tar.gz"
+  checksum: [
+    "md5=b65d450a68f6aa2ee63d15558450228c"
+    "sha512=ee0ea16759162de3d1ad8337c67398a4b4ac5364e7b51c67647c630ae71f1450cd82d6d3a1199b0c76b0a04f64ee344bc6aee0f913b425c9c4e50e2dc941f20a"
+  ]
+}
+
