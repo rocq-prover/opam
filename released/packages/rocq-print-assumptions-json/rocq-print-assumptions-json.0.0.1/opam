@@ -12,9 +12,11 @@ bug-reports:
   "https://github.com/theorem-labs/rocq-structured-output-print-assumptions/issues"
 depends: [
   "ocaml" {>= "4.14"}
-  "dune" {>= "3.8" & build}
+  "dune" {>= "3.8" & build & < "3.24"}
   "ppx_optcomp" {build}
   "rocq-core" {>= "9.0" | = "dev"}
+  "coq-core" {>= "9.0" | = "dev"}
+  "rocq-stdlib" {with-test}
   "odoc" {with-doc}
 ]
 build: [
