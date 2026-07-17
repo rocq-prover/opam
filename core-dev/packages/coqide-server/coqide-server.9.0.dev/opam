@@ -17,7 +17,7 @@ homepage: "https://coq.inria.fr/"
 doc: "https://coq.github.io/doc/"
 bug-reports: "https://github.com/coq/coq/issues"
 depends: [
-  "dune" {>= "3.8"}
+  "dune" {>= "3.8" & < "3.24"}
   "rocq-runtime" {= version}
   "odoc" {with-doc}
 ]

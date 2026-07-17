@@ -21,7 +21,7 @@ homepage: "https://coq.inria.fr/"
 doc: "https://coq.github.io/doc/"
 bug-reports: "https://github.com/coq/coq/issues"
 depends: [
-  "dune" {>= "2.9"}
+  "dune" {>= "2.9" & < "3.24"}
   "coq-core" {= version}
 ]
 build: [
