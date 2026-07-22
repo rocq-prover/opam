@@ -41,7 +41,7 @@ tags: [
 url {
   src: "https://gitlab.inria.fr/fbesson/itauto/-/archive/9.1.0/itauto-9.1.0.tar.gz"
   checksum: [
-    "md5=b7e8d79799f32c92ffc873a90ae6fc94"
+    "md5=714fc8f827f59f4e50a9ffaeaba9af28"
     "sha512=a07143a2f94d5b004072cbc6925ca3026ace1517d3902a932e8b67acb9203848547850bdcd67801d32f486dbb2b6fd20092c32c2e10753cd9da0bd2813159007"
   ]
 }
