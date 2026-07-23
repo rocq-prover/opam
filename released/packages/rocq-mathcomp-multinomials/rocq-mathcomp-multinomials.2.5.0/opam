@@ -1,0 +1,33 @@
+opam-version: "2.0"
+maintainer: "pierre-yves@strub.nu"
+homepage: "https://github.com/math-comp/multinomials"
+bug-reports: "https://github.com/math-comp/multinomials/issues"
+dev-repo: "git+https://github.com/math-comp/multinomials.git"
+license: "CECILL-B"
+authors: ["Pierre-Yves Strub"]
+synopsis: "A Multivariate polynomial Library for the Mathematical Components Library"
+description: """
+This library provides a library for monomial algebra, for multivariate
+polynomials over ring structures and an extended theory for polynomials whose
+coefficients range over commutative rings and integral domains."""
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "rocq-core" {>= "9.0" & < "9.3~"}
+  "rocq-mathcomp-ssreflect" {(>= "2.4" & < "2.7~") | = "dev"}
+  "rocq-mathcomp-algebra"
+  "rocq-mathcomp-bigenough" {(>= "1.0" & < "1.1~") | = "dev"}
+  "rocq-mathcomp-finmap"    {(>= "2.0" & < "2.3~") | = "dev"}
+]
+conflicts: [ "coq-mathcomp-multinomials" {<= "2.4.0"} ]
+tags: [
+  "keyword:multinomials"
+  "keyword:monoid algebra"
+  "category:Mathematics/Algebra/Multinomials"
+  "category:Mathematics/Algebra/Monoid algebra"
+  "logpath:mathcomp.multinomials"
+]
+url {
+  src: "https://github.com/math-comp/multinomials/archive/2.5.0.tar.gz"
+  checksum: "sha512=46a190bf1c9ff2ca07b138e44df98bd13b8fc56d909a564be26cc8138d15f601d53dcc6c2c682d906257a9cef41a437ee3b3a5a75b4f4ebca80f3ba18c02a65e"
+}
