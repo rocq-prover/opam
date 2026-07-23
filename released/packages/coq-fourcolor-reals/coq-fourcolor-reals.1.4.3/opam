@@ -1,0 +1,39 @@
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+
+homepage: "https://github.com/coq-community/fourcolor"
+dev-repo: "git+https://github.com/coq-community/fourcolor.git"
+bug-reports: "https://github.com/coq-community/fourcolor/issues"
+license: "CECILL-B"
+
+synopsis: "Interface for real numbers used in the Four Color Theorem"
+description: """
+An axiomatization of the setoid of classical real numbers, along
+with proofs of properties such as categoricity."""
+
+build: [make "-C" "theories/reals" "-j%{jobs}%"]
+install: [make "-C" "theories/reals" "install"]
+depends: [
+  ("coq" {(>= "8.20" & < "9.2~") | (= "dev")} )
+  "coq-mathcomp-ssreflect" {(>= "2.4.0" & < "2.6~") | (= "dev")}
+  "coq-mathcomp-algebra" 
+]
+
+tags: [
+  "category:Mathematics/Real Calculus and Topology"
+  "keyword:real numbers"
+  "logpath:fourcolor.reals"
+  "date:2025-04-16"
+]
+conflicts: [
+  "coq-fourcolor" { != version }
+]
+
+authors: [
+  "Georges Gonthier"
+]
+
+url {
+  src: "https://github.com/coq-community/fourcolor/archive/refs/tags/v1.4.3.tar.gz"
+  checksum: "sha512=b92ad5076d72a161e4b95f6264e172efca6154dc6f5ee424244f0c00a1e9e36df30edb868f8080eeffd8f0a8f923383144262f9ce199a626cf0f6bdbc8111399"
+}
