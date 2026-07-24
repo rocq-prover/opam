@@ -1,0 +1,12 @@
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+version: "dev"
+
+homepage: "https://github.com/math-comp/real-closed"
+dev-repo: "git+https://github.com/math-comp/real-closed.git"
+bug-reports: "https://github.com/math-comp/real-closed/issues"
+license: "CECILL-B"
+
+depends: [ "rocq-mathcomp-real-closed" { = version } ]
+
+synopsis: "Compatibility package for rocq-mathcomp-real-closed"

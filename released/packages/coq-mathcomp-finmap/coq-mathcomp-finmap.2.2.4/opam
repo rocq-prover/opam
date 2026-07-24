@@ -1,0 +1,22 @@
+opam-version: "2.0"
+version: "dev"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://math-comp.github.io/"
+bug-reports: "https://github.com/math-comp/finmap/issues"
+dev-repo: "git+https://github.com/math-comp/finmap.git"
+license: "CECILL-B"
+
+depends: [ "rocq-mathcomp-finmap" { = version } ]
+tags: [
+  "keyword:finmap"
+  "keyword:finset"
+  "keyword:multiset"
+  "logpath:mathcomp.finmap"
+]
+authors: [
+  "Cyril Cohen"
+  "Kazuhiko Sakaguchi"
+]
+
+synopsis: "Compatibility package for rocq-mathcomp-finmap"

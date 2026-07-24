@@ -14,8 +14,8 @@ the Mathematical Components library."""
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
   "dune" {>= "3.5"}
-  "coq" {>= "8.16" & < "9.2~"}
-  "coq-mathcomp-ssreflect" {>= "2.0" & < "2.6~"}
+  "coq" {>= "8.16"}
+  "coq-mathcomp-ssreflect" {>= "2.0"}
   "coq-gaia-theory-of-sets" {= version}
   "coq-gaia-schutte" {= version}
 ]
@@ -39,6 +39,6 @@ authors: [
 ]
 
 url {
-  src: "https://github.com/coq-community/gaia/archive/v2.2.tar.gz"
-  checksum: "sha512=e025071a0e1a3aa5b9bd484913ecda39e4448a34f8d22c8eb3f7e03ce4e65012c2169bc1ce8c4410727fa8a6a4a0debfe6c3772a77b162e0adbbd1acf5a36c2d"
+  src: "https://github.com/coq-community/gaia/archive/v2.4.tar.gz"
+  checksum: "sha512=6dd168dc3269cfaba4618e4d8cd22e108103ca814658c337a917df315180653e28aa89e2a7025fa0b478c083ecb2f0fe5148d3c4b9527f1c9c5227737f66f827"
 }
