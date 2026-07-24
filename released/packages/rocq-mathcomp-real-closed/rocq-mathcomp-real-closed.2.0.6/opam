@@ -17,7 +17,7 @@ order theory of real closed field, through quantifier elimination."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "rocq-core" {>= "9.0" & < "9.3~"}
+  "rocq-core" {>= "9.0" & < "9.4~"}
   "rocq-mathcomp-ssreflect" {>= "2.4.0" & < "2.7~"}
   "rocq-mathcomp-algebra"
   "rocq-mathcomp-field"
