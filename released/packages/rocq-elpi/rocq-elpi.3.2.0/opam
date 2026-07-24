@@ -41,6 +41,9 @@ build: [
     "@doc" {with-doc}
   ]
 ]
+patches: [
+  "files/fix-coq8-build.patch"
+]
 dev-repo: "git+https://github.com/LPCIC/coq-elpi.git"
 url {
   src:
