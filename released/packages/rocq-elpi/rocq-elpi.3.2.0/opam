@@ -41,8 +41,12 @@ build: [
     "@doc" {with-doc}
   ]
 ]
+extra-files: [
+  "fix-coq8-build.patch"
+  "sha256=f937fb50ad99aa719b3c055d08585230def5aec3e2edc50d2dfbbb6578d61085"
+]
 patches: [
-  "files/fix-coq8-build.patch"
+  "fix-coq8-build.patch"
 ]
 dev-repo: "git+https://github.com/LPCIC/coq-elpi.git"
 url {
