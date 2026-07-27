@@ -11,7 +11,8 @@ license: "MIT"
 build: [make "-j%{jobs}%"]
 install: [make "-f" "Makefile.coq" "install"]
 depends: [
-  "coq" {>= "8.15.2" & < "9.1~"}
+  ("coq" {>= "8.15.2" & < "9~"}
+  |("coq-core" {>= "9" & < "9.4~"} & "rocq-stdlib"))
 ]
 tags: [
   "date:2025-08-03"
