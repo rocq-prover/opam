@@ -27,7 +27,7 @@ tags: [
 ]
 
 depends: [
-  "rocq-core" { (>= "9.0" & < "9.3~") | (= "dev") }
+  "rocq-core" { (>= "9.0" & < "9.4~") | (= "dev") }
   "rocq-stdlib"
   "rocq-stdpp" { (= "1.13.0") | (= "dev") }
 ]

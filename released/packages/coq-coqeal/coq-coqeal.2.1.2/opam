@@ -17,7 +17,7 @@ of the ForMath EU FP7 project (2009-2013). It has two parts:
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq" {(>= "9.0" & < "9.3~") | (= "dev")}
+  "coq-core" {(>= "9.0" & < "9.4~") | (= "dev")}
   "coq-bignums"
   "coq-elpi" {>= "2.5.0"}
   "coq-hierarchy-builder" {>= "1.9.0"}
