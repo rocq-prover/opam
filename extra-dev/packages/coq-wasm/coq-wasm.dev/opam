@@ -19,7 +19,8 @@ tags: [
 ]
 depends: [
   "dune" {>= "3.17"}
-  "coq" {= "dev"}
+  "rocq-core" {= "dev"}
+  "rocq-stdlib"
   "coq-compcert" {= "dev"}
   "coq-ext-lib" {= "dev"}
   "coq-mathcomp-ssreflect" {= "dev"}
