@@ -4,10 +4,9 @@ homepage: "https://github.com/thery/grobner"
 bug-reports: "https://github.com/thery/grobner/issues"
 license: "MIT"
 build: [
-  ["./configure.sh"]
   [make "-j%{jobs}%"]
-  [make "install"]
 ]
+install: [make "install"]
 remove: [
   ["rm" "-R" "%{lib}%/coq/user-contrib/mathcomp/contrib/grobner"]
   ["sh" "-c" "rmdir %{lib}%/coq/user-contrib/mathcomp/contrib || true"]
