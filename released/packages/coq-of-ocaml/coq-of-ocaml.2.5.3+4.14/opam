@@ -26,9 +26,6 @@ depends: [
 depopts: [
   "coq"
 ]
-conflicts: [
-  "coq" {< "8.11"}
-]
 patches: [
   "global-instances.patch"
 ]
