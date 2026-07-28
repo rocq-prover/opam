@@ -17,6 +17,7 @@ Beware that this still contains a few Admitted."""
 build: [make "-C" "experimental_reals" "-j%{jobs}%"]
 install: [make "-C" "experimental_reals" "install"]
 depends: [
+  "coq-mathcomp-analysis" { = version}
   "coq-mathcomp-reals" { = version}
   "coq-mathcomp-bigenough" { (>= "1.0.0") }
 ]
