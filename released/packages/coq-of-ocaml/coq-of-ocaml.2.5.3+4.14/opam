@@ -28,7 +28,6 @@ depopts: [
 ]
 conflicts: [
   "coq" {< "8.11"}
-  "coq-core"
 ]
 patches: [
   "global-instances.patch"
