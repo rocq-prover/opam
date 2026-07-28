@@ -29,6 +29,10 @@ depopts: [
 patches: [
   "global-instances.patch"
 ]
+extra-files: [
+  "global-instances.patch"
+  "sha256=0c83b6821636dca049a726a716fbfa59b1911a3e0de9cf2a81b79257cc63ef67"
+]
 tags: [
   "keyword:compilation"
   "keyword:OCaml"
