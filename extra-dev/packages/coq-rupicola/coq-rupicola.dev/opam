@@ -19,6 +19,9 @@ depends: [
   "coq" {>= "9.0~"}
   "coq-bedrock2" {= "dev"}
 ]
+conflict-class: [
+  "coq-rupicola"
+]
 dev-repo: "git+https://github.com/mit-plv/rupicola.git"
 synopsis: "Gallina to imperative code compilation, currently in design phase"
 tags: ["logpath:Rupicola"]
