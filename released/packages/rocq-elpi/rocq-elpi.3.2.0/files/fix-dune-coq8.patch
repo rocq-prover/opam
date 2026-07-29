@@ -1,0 +1,18 @@
+diff --git a/theories/dune b/theories/dune
+index 7a1e22cf..a4c4773d 100644
+--- a/theories/dune
++++ b/theories/dune
+@@ -7,9 +7,11 @@
+ (rule
+  (target elpi.v)
+  (deps
+-  (glob_files elpi.v.in))
++  (glob_files elpi.v.in)
++   %{workspace_root}/_build/install/default/lib/rocq-elpi/elpi/elpi_plugin.cmxs
++   %{workspace_root}/_build/install/default/lib/rocq-elpi/elpi/elpi_plugin.cma)
+  (action
+   (with-stdout-to %{target}
+-   (run rocq_elpi_optcomp "%{coq:version.major}.%{coq:version.minor}" %{deps}))))
++   (run rocq_elpi_optcomp "%{coq:version.major}.%{coq:version.minor}" elpi.v.in))))
+ 
+ (include_subdirs qualified)
