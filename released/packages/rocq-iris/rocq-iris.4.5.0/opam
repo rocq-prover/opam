@@ -40,7 +40,7 @@ install: ["./make-package" "iris" "install"]
 
 url {
   src:
-    "https://gitlab.mpi-sws.org/iris/iris/-/archive/iris-4.5.0.tar.gz"
+    "https://github.com/rocq-iris/iris/archive/refs/tags/iris-4.5.0.tar.gz"
   checksum:
-    "sha512=ef80fe54729b0f9471415ec32b5a78e26f73459e0ea9a2056b13a9590820a6accf878b6c414081d066b1a4cebaaf8546e61276e3c5356eceb92a1d689accabe7"
+    "sha512=f72c7fb4f3f21cbad129fc2bab1974067dfd59a947009840598c614c079f0bce472a8dc3caa2e6c877634d3f24cd2611ddc75d6981af3ebbdf277ce336282151"
 }
