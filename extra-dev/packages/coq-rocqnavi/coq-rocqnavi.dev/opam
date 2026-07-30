@@ -15,6 +15,9 @@ build: [make]
 install: [make "BINDIR=%{bin}%" "install"]
 depends: [
   "ocaml" {>= "4.14"}
+  "ocamlfind"
+  "dune-glob" # Parsing glob syntax like "*_unnamed_mixin_*"
+  "yojson"
 ]
 
 tags: [
