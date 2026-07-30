@@ -22,7 +22,7 @@ depends: [
   "conf-findutils" {build}
   "ocaml" {build & >= "4.08~"}
   "ocamlfind" {build}
-  "coq" {>= "8.16~"}
+  "coq" {>= "8.16~" | = "dev"}
   "coq-coqprime"
   "coq-rewriter"
 ]
