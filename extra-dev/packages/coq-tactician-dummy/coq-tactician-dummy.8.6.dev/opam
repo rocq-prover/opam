@@ -16,7 +16,7 @@ homepage: "https://coq-tactician.github.io"
 bug-reports: "https://github.com/coq-tactician/coq-tactician-dummy/issues"
 license: "MIT"
 depends: [
-  "dune" {>= "2.5"}
+  "dune" {>= "2.5" & < "3.24"}
   "coq" {>= "8.6.1" & < "8.17~"}
 ]
 build: [

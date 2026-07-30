@@ -17,7 +17,7 @@ depends: [
   "ocamlbuild" {with-test & >= "0.9.0"}
   "cppo" {build & >= "1.6.8"}
   "ocamlfind"
-  "dune" {>= "3.12"}
+  "dune" {>= "3.12" & < "3.24"}
 ]
 tags: [
   "logpath:SimpleIO"
