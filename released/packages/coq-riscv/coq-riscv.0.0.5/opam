@@ -13,7 +13,6 @@ install: [make "EXTERNAL_DEPENDENCIES=1" "install"]
 depends: [
   "coq" {>= "8.18~"}
   "coq-coqutil" {>= "0.0.3" & <= "0.0.6"}
-  "coq-record-update" {>= "0.3.0"}
 ]
 dev-repo: "git+https://github.com/mit-plv/riscv-coq.git"
 synopsis: "RISC-V Specification in Coq, somewhat experimental"
