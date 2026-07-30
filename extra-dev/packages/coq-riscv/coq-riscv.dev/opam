@@ -1,0 +1,23 @@
+opam-version: "2.0"
+authors: [
+  "Massachusetts Institute of Technology"
+]
+maintainer: "Jason Gross <jgross@mit.edu>"
+homepage: "https://github.com/mit-plv/riscv-coq"
+bug-reports: "https://github.com/mit-plv/riscv-coq/issues"
+license: "BSD-3-Clause"
+build: [
+  [make "-j%{jobs}%" "EXTERNAL_DEPENDENCIES=1" "all"]
+]
+install: [make "EXTERNAL_DEPENDENCIES=1" "install"]
+depends: [
+  "coq" {>= "8.18~" | = "dev"}
+  ("coq-coqutil" {>= "0.0.7" | = "dev"} | "coq-fiat-crypto-with-bedrock")
+  "coq-record-update" {>= "0.3.0" | = "dev"}
+]
+dev-repo: "git+https://github.com/mit-plv/riscv-coq.git"
+synopsis: "RISC-V Specification in Coq, somewhat experimental"
+tags: ["logpath:riscv"]
+url {
+  src: "git+https://github.com/mit-plv/riscv-coq.git#master"
+}
