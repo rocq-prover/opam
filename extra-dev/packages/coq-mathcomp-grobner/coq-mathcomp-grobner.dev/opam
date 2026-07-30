@@ -4,6 +4,7 @@ homepage: "https://github.com/thery/grobner"
 bug-reports: "https://github.com/thery/grobner/issues"
 license: "MIT"
 build: [
+  ["coq_makefile" "-f" "Make" "-o" "Makefile"]
   [make "-j%{jobs}%"]
 ]
 install: [make "install"]
@@ -50,6 +51,6 @@ idealfP
               (l : seq {mpoly R[n]}),
        reflect (ideal l p) (idealf l p)"""
 url {
-  src: "https://github.com/thery/grobner/archive/v1.0.1.zip"
-  checksum: "md5=ee88f5010096f45a5be120de58910913"
+  src: "https://github.com/thery/grobner/archive/v1.0.1.tar.gz"
+  checksum: "sha256=6bce98d769fcc3722b2067f32f402eff7488ccef8c9e79776903cefaa5d32005"
 }
