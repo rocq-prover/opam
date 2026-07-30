@@ -3,7 +3,7 @@ maintainer: "dev@clarus.me"
 homepage: "https://github.com/coq-contribs/hoare-tut"
 license: "GNU LGPL"
 build: [
-  ["coq_makefile" "-f" "Make" "-o" "Makefile"]
+  ["coq_makefile" "-f" "_CoqProject" "-o" "Makefile"]
   [make "-j%{jobs}%"]
   [make "install"]
 ]
