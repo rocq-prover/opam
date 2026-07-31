@@ -18,7 +18,7 @@ tags: [
   "logpath:Wasm"
 ]
 depends: [
-  "dune" {>= "3.17"}
+  "dune" {>= "3.17" & < "3.24"}
   "rocq-core" {= "dev"}
   "rocq-stdlib"
   "coq-compcert" {= "dev"}
