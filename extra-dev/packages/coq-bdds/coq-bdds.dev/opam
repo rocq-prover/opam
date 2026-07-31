@@ -6,8 +6,8 @@ build: [
   ["coq_makefile" "-f" "Make" "-o" "Makefile"]
   # [make "-j%{jobs}%"]
   [make]
-  [make "install"]
 ]
+install: [make "install"]
 remove: ["rm" "-R" "%{lib}%/coq/user-contrib/BDDs"]
 depends: [
   "ocaml"
