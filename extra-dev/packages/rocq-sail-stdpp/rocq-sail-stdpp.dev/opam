@@ -35,7 +35,7 @@ doc: "https://github.com/rems-project/sail"
 bug-reports: "https://github.com/rems-project/coq-sail/issues"
 depends: [
   "dune" {>= "3.21"}
-  "rocq-core" {>= "9.0"}
+  "rocq-core" {= "dev"}
   "rocq-stdpp-bitvector" {>= "1.13.0"}
   "odoc" {with-doc}
 ]
