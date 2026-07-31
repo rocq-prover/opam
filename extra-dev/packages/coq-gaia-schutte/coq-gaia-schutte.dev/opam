@@ -13,7 +13,7 @@ following the approaches of Schütte and Ackermann."""
 
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
-  "dune" {>= "2.5"}
+  "dune" {>= "2.5" & < "3.24"}
   "coq" {>= "8.16"}
   "coq-mathcomp-ssreflect" {>= "2.0.0"}
 ]

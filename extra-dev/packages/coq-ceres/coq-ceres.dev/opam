@@ -10,7 +10,7 @@ bug-reports: "https://github.com/Lysxia/coq-ceres/issues"
 authors: [ "Li-yao Xia" ]
 
 depends: [
-  "dune" {>= "2.8"}
+  "dune" {>= "2.8" & < "3.24"}
   "coq" {>= "8.8~"}
   "odoc" {with-doc}
 ]

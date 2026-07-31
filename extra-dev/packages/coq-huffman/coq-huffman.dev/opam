@@ -14,7 +14,7 @@ Codes, Proc. IRE, pp. 1098-1101, September 1952."""
 
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
-  "dune" {>= "2.5"}
+  "dune" {>= "2.5" & < "3.24"}
   "coq" {(>= "8.7" & < "8.13~") | (= "dev")}
 ]
 
