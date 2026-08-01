@@ -20,7 +20,6 @@ install: [
 ]
 
 depends: [
-  "coq" {= "dev"}
   "coq-kruskal-almostfull"
   "coq-kruskal-higman" {>= "1.2"}
   "coq-kruskal-veldman" {>= "1.2"}

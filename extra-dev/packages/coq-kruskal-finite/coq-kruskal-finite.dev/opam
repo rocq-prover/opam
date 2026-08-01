@@ -19,7 +19,7 @@ install: [
 ]
 
 depends: [
-  "coq" {= "dev"}
+  "coq" {>= "8.14"}
   "coq-kruskal-trees" {>= "1.3"} 
 ]
 

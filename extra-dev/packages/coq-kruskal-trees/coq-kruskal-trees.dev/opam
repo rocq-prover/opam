@@ -19,7 +19,7 @@ install: [
 ]
 
 depends: [
-  "coq" {= "dev"}
+  "coq" {>= "8.14"}
 ]
 
 #url { git: "https://github.com/DmxLarchey/Kruskal-Trees.git" }
