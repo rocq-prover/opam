@@ -1,0 +1,42 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "anton.a.trunov@gmail.com"
+
+homepage: "https://github.com/coq-community/bits"
+dev-repo: "git+https://github.com/coq-community/bits.git"
+bug-reports: "https://github.com/coq-community/bits/issues"
+license: "Apache-2.0"
+
+synopsis: "Coq bit vector library"
+description: """
+A formalization of bitset operations in Coq with a corresponding
+axiomatization and extraction to OCaml native integers."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {>= "8.16"}
+  "ocamlbuild" 
+  "coq-mathcomp-algebra" {>= "2.0"}
+  "coq-mathcomp-algebra-tactics"
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "keyword:bit arithmetic"
+  "keyword:bitset"
+  "keyword:bit vector"
+  "keyword:extraction"
+  "logpath:Bits"
+]
+authors: [
+  "Andrew Kennedy <akenn@microsoft.com>"
+  "Arthur Blot <arthur.blot@ens-lyon.fr>"
+  "Pierre-Évariste Dagand <pierre-evariste.dagand@lip6.fr>"
+]
+
+url {
+  src: "git+https://github.com/rocq-community/bits.git#master"
+}
