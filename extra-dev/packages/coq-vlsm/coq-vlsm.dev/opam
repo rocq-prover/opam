@@ -14,7 +14,7 @@ contains a formalization of VLSMs and their theory in the Coq proof assistant.""
 
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
-  "dune" {>= "3.5"}
+  "dune" {>= "3.5" & < "3.24"}
   "coq" {>= "8.16"}
   "coq-stdpp" {>= "1.9.0"}
   "coq-itauto"

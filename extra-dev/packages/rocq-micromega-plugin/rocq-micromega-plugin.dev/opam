@@ -12,7 +12,7 @@ tags: [
 homepage: "https://github.com/rocq-community/micromega-plugin"
 bug-reports: "https://github.com/rocq-community/micromega-plugin/issues"
 depends: [
-  "dune" {>= "3.8"}
+  "dune" {>= "3.8" & < "3.24"}
   "ocaml" {>= "4.09.0"}
   "rocq-core" {>= "9.0"}
   "ppx_optcomp"

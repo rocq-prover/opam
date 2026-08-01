@@ -14,7 +14,7 @@ and results of general topology in Coq.
 
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
-  "dune" {>= "2.5"}
+  "dune" {>= "2.5" & < "3.24"}
   "coq" {(>= "8.10" & < "8.14~") | (= "dev")}
   "coq-zorns-lemma" {= version}
 ]

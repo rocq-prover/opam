@@ -22,7 +22,7 @@ doc: "https://rocq-prover.org/docs"
 bug-reports: "https://github.com/coq/stdlib/issues"
 depends: [
   "rocq-runtime"
-  "rocq-core" {>= "9.0" | = "dev"}
+  "rocq-core" {>= "9.2" | = "dev"}
 ]
 dev-repo: "git+https://github.com/coq/stdlib.git"
 build: [

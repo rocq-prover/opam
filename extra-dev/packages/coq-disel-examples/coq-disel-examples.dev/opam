@@ -9,7 +9,7 @@ synopsis: "Example systems for Disel, a separation-style logic for compositional
 
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
-  "dune" {>= "3.5"}
+  "dune" {>= "3.5" & < "3.24"}
   "coq" {>= "8.14"}
   "coq-mathcomp-ssreflect" {>= "1.13" & < "2.0"}
   "coq-fcsl-pcm" {>= "1.7.0"}

@@ -21,7 +21,7 @@ build: [
 
 depends: [
   "ocaml" {>= "4.10"}
-  "dune" {>= "2.5"}
+  "dune" {>= "2.5" & < "3.24"}
   "coq" {>= "8.12"}
   "coq-freespec-core" {= "dev"}
   "coq-coqffi" {>= "1.0~"}
