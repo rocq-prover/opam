@@ -1,0 +1,42 @@
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://github.com/coq-community/trocq"
+dev-repo: "git+https://github.com/coq-community/trocq.git"
+bug-reports: "https://github.com/coq-community/trocq/issues"
+license: "LGPL-3.0-or-later"
+
+synopsis: "A modular parametricity plugin for proof transfer in Coq: examples"
+description: """
+Tests for applications of Trocq
+"""
+
+build: [make "-C" "examples/std" "-j%{jobs}%"]
+install: [make "-C" "examples/std"  "install"]
+depends: [
+  "coq" {>= "8.20"}
+  "coq-mathcomp-algebra"
+  "coq-trocq-std"
+]
+
+tags: [
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "category:Miscellaneous/Coq Extensions"
+  "keyword:automation"
+  "keyword:elpi"
+  "keyword:proof transfer"
+  "keyword:isomorphism"
+  "keyword:univalence"
+  "keyword:parametricity"
+  "logpath:Trocq"
+]
+authors: [
+  "Cyril Cohen"
+  "Enzo Crance"
+  "Lucie Lahaye"
+  "Assia Mahboubi"
+]
+
+url {
+  src: "git+https://github.com/coq-community/trocq.git#master"
+}
