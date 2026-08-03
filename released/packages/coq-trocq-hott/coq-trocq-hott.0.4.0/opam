@@ -1,0 +1,71 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "Enzo Crance <enzo.crance@inria.fr>"
+
+homepage: "https://github.com/coq-community/trocq"
+dev-repo: "git+https://github.com/coq-community/trocq.git"
+bug-reports: "https://github.com/coq-community/trocq/issues"
+license: "LGPL-3.0-or-later"
+
+synopsis: "A modular parametricity plugin for proof transfer in Coq"
+description: """
+Trocq is a modular parametricity plugin for Coq. It can be used to
+achieve proof transfer by both translating a user goal into another,
+related, variant, and computing a proof that proves the corresponding implication.
+
+The plugin features a hierarchy of structures on relations, whose
+instances are computed from registered user-defined proof via
+parametricity. This hierarchy ranges from structure-less relations
+to an original formulation of type equivalence. The resulting
+framework generalizes [raw
+parametricity](https://arxiv.org/abs/1209.6336), [univalent
+parametricity](https://doi.org/10.1145/3429979) and
+[CoqEAL](https://github.com/coq-community/coqeal), and includes them
+in a unified framework.
+
+The plugin computes a parametricity translation "à la carte", by
+performing a fine-grained analysis of the requires properties for a
+given proof of relatedness. In particular, it is able to prove
+implications without resorting to full-blown type equivalence,
+allowing this way to perform proof transfer without necessarily
+pulling in the univalence axiom.
+
+The plugin is implemented in Coq-Elpi and the code of the
+parametricity translation is fairly close to a pen-and-paper
+sequent-style presentation."""
+
+build: [make "-j%{jobs}%" "hott"]
+install: [make "install" "-C" "hott"]
+depends: [
+  "coq" {>= "8.20" & < "9.1"}
+  "coq-elpi" {>= "3.4.0"}
+  "coq-hott"
+]
+
+tags: [
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "category:Miscellaneous/Coq Extensions"
+  "keyword:automation"
+  "keyword:elpi"
+  "keyword:proof transfer"
+  "keyword:isomorphism"
+  "keyword:univalence"
+  "keyword:parametricity"
+  "logpath:Trocq"
+]
+authors: [
+  "Cyril Cohen"
+  "Enzo Crance"
+  "Lucie Lahaye"
+  "Assia Mahboubi"
+]
+url {
+  src:
+    "https://github.com/rocq-community/trocq/archive/refs/tags/0.4.0.tar.gz"
+  checksum: [
+    "md5=2491c4baeaf74fff4278c66c1785cd8f"
+    "sha512=ba1c2599c64854329ffc143b5162c71e05a1cd0242031ebe7bcf3dc48bf09815e0138e91bf64da67a3311d2c408a2579f7f915a7ecddd16e55ce2968efe9f443"
+  ]
+}
