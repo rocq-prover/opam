@@ -9,20 +9,26 @@ license: "Apache-2.0"
 build: [ make "-j%{jobs}%" ]
 install: [ make "install" ]
 depends: [
-  "coq" {>= "9.0"}
-  "coq-mathcomp-ssreflect" {>= "2.4.0"}
-  "coq-hierarchy-builder" {>= "1.7.0"}
-  "coq-mathcomp-algebra"
+  "rocq-core" {>= "9.2"}
+  "rocq-stdlib"
+  "rocq-mathcomp-ssreflect" {>= "2.6.0"}
+  "rocq-hierarchy-builder" {>= "1.10.0"}
+  "rocq-mathcomp-algebra" 
 ]
+
 tags: [
   "keyword:separation logic"
   "keyword:partial commutative monoid"
   "category:Computer Science/Data Types and Data Structures"
   "logpath:fcsl"
 ]
+
 authors: [
   "Aleksandar Nanevski"
+  "Anton Trunov"
+  "Alexander Gryzlov"
 ]
+
 synopsis: "Partial Commutative Monoids"
 description: """
 The PCM library provides a formalisation of Partial Commutative Monoids (PCMs),
