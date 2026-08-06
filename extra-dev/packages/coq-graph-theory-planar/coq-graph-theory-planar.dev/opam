@@ -15,7 +15,7 @@ as part of the Coq proof of the Four-Color Theorem."""
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
   "dune" {>= "3.5"}
-  "coq" {= "dev"}
+  "coq" {>= "8.19"}
   "coq-mathcomp-ssreflect" {>= "2.5.0"}
   ("coq-mathcomp-algebra" {>= "2.6.0"} | "coq-mathcomp-algebra-tactics")
   "coq-graph-theory" {= version}

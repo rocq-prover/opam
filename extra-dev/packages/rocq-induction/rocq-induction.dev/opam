@@ -9,7 +9,7 @@ bug-reports: "https://github.com/yannl35133/induction/issues"
 dev-repo: "git+https://github.com/Yann-Leray/induction.git"
 depends: [
   "dune" {>= "3.21"}
-  "rocq-runtime" {= "dev"}
+  "rocq-runtime" {>= "9.3.0"}
   "rocq-core"
   "odoc" {with-doc}
 ]

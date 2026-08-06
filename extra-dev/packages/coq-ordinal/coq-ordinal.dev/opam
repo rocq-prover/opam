@@ -12,7 +12,7 @@ authors: [
 license: "MIT"
 
 depends: [
-  "coq" {= "dev"}
+  "coq" {>= "8.9"}
 ]
 tags: [
   "date:2021-05-03"
