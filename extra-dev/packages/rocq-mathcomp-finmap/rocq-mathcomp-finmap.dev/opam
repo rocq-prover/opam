@@ -17,10 +17,8 @@ which will be used to subsume notations for finite sets, eventually."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  ("coq" {>= "8.20" & < "8.21~"}
-  | "rocq-core" {>= "9.0"})
-  ("coq-mathcomp-ssreflect" { >= "2.2" & < "2.4~" }
-  |"rocq-mathcomp-ssreflect" { >= "2.4" })
+  "rocq-core" {= "dev"}
+  "rocq-mathcomp-ssreflect" {>= "2.5.0"}
 ]
 conflicts: [ "coq-mathcomp-finmap" { != version } ]
 
