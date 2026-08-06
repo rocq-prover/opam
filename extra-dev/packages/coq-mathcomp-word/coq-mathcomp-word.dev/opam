@@ -10,7 +10,7 @@ depends: [
   "dune" {>= "2.8"}
   "coq-core" {= "dev"}
   "coq-stdlib"
-  "coq-mathcomp-ssreflect" {(>= "2.4" & < "2.7~")}
+  "coq-mathcomp-ssreflect" {(>= "2.4" & < "2.7~") | (= "dev")}
   "coq-mathcomp-algebra"
 ]
 synopsis: "Yet Another Coq Library on Machine Words"
