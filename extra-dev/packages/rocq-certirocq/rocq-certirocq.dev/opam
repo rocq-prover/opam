@@ -40,8 +40,6 @@ depends: [
   "rocq-metarocq-erasure-plugin" {= "dev"}
   "rocq-metarocq-safechecker-plugin" {= "dev"}
   "coq-ext-lib" {>= "0.12"}
-  # requires coq-wasm.dev: no released coq-wasm admits a dev rocq-core, which
-  # the dev MetaRocq plugins above force.  Blocked on rocq-prover/opam#3693.
   "coq-wasm" {= "dev"}
 ]
 
