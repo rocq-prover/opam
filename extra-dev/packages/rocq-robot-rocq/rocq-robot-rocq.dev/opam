@@ -18,16 +18,15 @@ Mathematical Components library."""
 build: [make "-j%{jobs}%" ]
 install: [make "install"]
 depends: [
-  "coq" { (>= "9.0") }
-  "coq-hierarchy-builder" { (>= "1.9.1") }
-  "coq-mathcomp-ssreflect" { (>= "2.5.0") }
-  "coq-mathcomp-fingroup" { (>= "2.5.0") }
-  "coq-mathcomp-algebra" { (>= "2.5.0") }
-  "coq-mathcomp-solvable" { (>= "2.5.0") }
-  "coq-mathcomp-field" { (>= "2.5.0") }
-  "coq-mathcomp-analysis" { (>= "1.15.0") }
-  "coq-mathcomp-real-closed" { (>= "2.0.0") }
-  "coq-mathcomp-algebra-tactics" { (>= "1.2.4") }
+  "coq" { = "dev" }
+  "rocq-hierarchy-builder" { (>= "1.10.0") }
+  "rocq-mathcomp-ssreflect" { (>= "2.6.0") }
+  "rocq-mathcomp-fingroup" { (>= "2.6.0") }
+  "rocq-mathcomp-algebra" { (>= "2.6.0") }
+  "rocq-mathcomp-solvable" { (>= "2.6.0") }
+  "rocq-mathcomp-field" { (>= "2.6.0") }
+  "rocq-mathcomp-analysis" { (>= "1.17.0") }
+  "rocq-mathcomp-real-closed" { (>= "2.0.6") }
 ]
 
 tags: [
