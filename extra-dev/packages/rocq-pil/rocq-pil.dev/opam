@@ -38,9 +38,7 @@ tags: [
   "logpath:ISL"
 ]
 
-conflicts: [
-  "coq-pil"
-]
+conflicts: [ "coq-pil" { != version } ]
 
 url {
   src: "git+https://github.com/hferee/rocq-pil.git#main"
