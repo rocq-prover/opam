@@ -13,7 +13,7 @@ authors: ["https://github.com/Deducteam/mathcomp-hollight-real-with-N/blob/main/
 license: "CeCILL-2.1"
 depends: [
   "coq-mathcomp-classical" {>= "1.8.0"}
-  "rocq-prover" {>= "9.0"}
+  "rocq-core" {= "dev"}
 ]
 build: [make "-j%{jobs}%"]
 install: [make "install"]

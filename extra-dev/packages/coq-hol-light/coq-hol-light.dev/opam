@@ -12,7 +12,7 @@ maintainer: "frederic.blanqui@inria.fr"
 authors: ["Frédéric Blanqui"]
 license: "CeCILL-2.1"
 depends: [
-  "rocq-prover" {>= "9.0"}
+  "rocq-core" {= "dev"}
   "coq-hol-light-real-with-N" {>= "2.0.0"}
   "coq-fourcolor-reals" {>= "1.4.0"}
 ]
