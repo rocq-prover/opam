@@ -17,10 +17,10 @@ depends: [
   "rocq-stdlib" {>= "9.0"}
   "rocq-bignums" {>= "9"}
   "coq-quickchick" {>= "2.0.4"}
-  "rocq-metarocq-erasure" {>= "1.5.1" & < "1.6~"}
-  "rocq-rust-extraction" {= "0.2.1"}
-  "rocq-elm-extraction" {= "0.2.1"}
-  "rocq-stdpp" {= "1.13.0"}
+  "rocq-metarocq-erasure" {>= "1.5.1"}
+  "rocq-rust-extraction" {>= "0.2.1"}
+  "rocq-elm-extraction" {>= "0.2.1"}
+  "rocq-stdpp" {>= "1.13.0"}
 ]
 
 build: [
