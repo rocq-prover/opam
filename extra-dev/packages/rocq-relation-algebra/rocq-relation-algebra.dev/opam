@@ -10,8 +10,8 @@ license: "LGPL-3.0-or-later"
 depends: [
   "ocaml"
 #TO SET BEFORE RELEASE
-  "rocq-core" {>= "9.2"}
-  "rocq-stdlib"
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
 ]
 depopts: [ "rocq-mathcomp-ssreflect" "rocq-aac-tactics" ]
 build: [
