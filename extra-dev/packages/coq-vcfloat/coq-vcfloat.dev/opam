@@ -27,7 +27,13 @@ run-test: [
   [make "-C" "vcfloat" "-j%{jobs}%" "tests" "COQEXTRAFLAGS=-native-compiler ondemand" {coq-native:installed  & coq-compcert:version < "3.13~"}]
 ]
 depends: [
-  "coq" {(>= "8.16" & < "8.19~") | = "dev"}
+  # Not a floor-or-dev menu like the rows tightened in f902bba36: the released
+  # arm is a capped interval that genuinely selects, admitting every Coq from
+  # 8.16 up to but not including 8.19.  This row exists to build vcfloat master
+  # against Rocq master, so a solver falling back to 8.18 does not degrade
+  # gracefully -- it tests something nobody asked for and reports it as the dev
+  # build.  Deleting the released arm leaves the arm that was already here.
+  "coq" {= "dev"}
   "coq-flocq" {>= "4.1.1" & < "5.0"}
   "coq-interval" {>= "4.8.0"}
   "coq-compcert" {>= "3.12"}
