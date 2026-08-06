@@ -20,7 +20,16 @@ install: [
   [ make "-j%{jobs}%" "install" ]
 ]
 depends: [
-  "coq" {>= "9.0"}
+  # Same fix as rocq-infotheo.dev in this series, one shape milder: this line was
+  # a FLOOR with no ceiling, which permits a dev prover without ever requiring
+  # one. `>= "9.0"` is satisfied by rocq-core.9.1.dev, a real package core-dev
+  # builds from a release branch, so the row could green having tested no dev.
+  # A `.dev` recipe tracking a moving branch has to require dev outright.
+  #
+  # The mathcomp floor below cannot substitute for this: no ssreflect version
+  # forces a dev prover (boot.2.6.0 is a bare floor and boot.dev's rocq-core arm
+  # is `{>= "9.0" | = "dev"}`, a menu 9.1 satisfies).
+  "coq" {= "dev"}
   "coq-flocq"
   "coq-interval"
   "coq-vcfloat" {>= "2.4.1~"}
