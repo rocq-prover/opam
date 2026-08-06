@@ -29,11 +29,11 @@ tags: [
 depends: [
   "ocaml" {>= "4.14.0"}
   "rocq-core" {= "dev"}
-  "rocq-mathcomp-ssreflect" {>= "2.4.0"}
-  "rocq-mathcomp-algebra" {>= "2.4.0"}
-  "rocq-mathcomp-field" {>= "2.4.0"}
-  "rocq-mathcomp-fingroup" {>= "2.4.0"}
-  "rocq-mathcomp-solvable" {>= "2.4.0"}
+  "rocq-mathcomp-ssreflect" {= "dev"}
+  "rocq-mathcomp-algebra" {= "dev"}
+  "rocq-mathcomp-field" {= "dev"}
+  "rocq-mathcomp-fingroup" {= "dev"}
+  "rocq-mathcomp-solvable" {= "dev"}
 ]
 build: [
   ["rocq" "makefile" "-f" "_CoqProject" "-o" "Makefile.coq"]
