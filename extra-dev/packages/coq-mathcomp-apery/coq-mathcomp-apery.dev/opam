@@ -23,12 +23,12 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
   "coq" {= "dev"}
-  "coq-mathcomp-ssreflect" {>= "2.4"}
+  "coq-mathcomp-ssreflect" {= "dev"}
   "coq-mathcomp-algebra" 
   "coq-mathcomp-field" 
   "coq-coqeal" {>= "2.1.0"}
-  "coq-mathcomp-real-closed" 
-  "coq-mathcomp-bigenough" {>= "1.0.1"}
+  "coq-mathcomp-real-closed" {= "dev"}
+  "coq-mathcomp-bigenough" {= "dev"}
   "coq-mathcomp-zify" 
   "coq-mathcomp-algebra-tactics" 
 ]

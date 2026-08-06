@@ -19,7 +19,7 @@ install: [make "install"]
 depends: [
   "coq" {= "dev"}
   "ocamlbuild" 
-  "coq-mathcomp-algebra" {>= "2.0"}
+  "coq-mathcomp-algebra" {= "dev"}
   "coq-mathcomp-algebra-tactics"
 ]
 

@@ -21,12 +21,12 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
   "rocq-core" {= "dev"}
-  "coq-mathcomp-ssreflect" {>= "2.4"}
+  "coq-mathcomp-ssreflect" {= "dev"}
   "coq-mathcomp-fingroup" 
   "coq-mathcomp-algebra" 
   "coq-mathcomp-solvable" 
   "coq-mathcomp-field" 
-  "coq-mathcomp-real-closed" 
+  "coq-mathcomp-real-closed" {= "dev"}
 ]
 
 tags: [
