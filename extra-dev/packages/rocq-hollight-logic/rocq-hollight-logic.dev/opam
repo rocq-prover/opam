@@ -18,11 +18,24 @@ depends: [
   # coq-mathcomp-classical floor implies mathcomp.boot.*, because every classical
   # version permits ssreflect 2.4.0 and that version really exists.
   #
-  # NB this floor is only correct together with the upstream source fix: #main
-  # (881963b) still addresses mathcomp.ssreflect.{choice,ssrbool} in terms.v,
-  # theorems.v and reproduce, and those paths do NOT exist at >= 2.5.0 (measured:
-  # mathcomp/ssreflect/choice.vo absent, mathcomp/boot/choice.vo present). The
-  # recipe already tracks #main, so it picks the fix up automatically once merged.
+  # NB this floor is only correct together with the upstream source fix, and this
+  # row is EXPECTED TO BE RED until Deducteam merges it: #main (881963b) still
+  # addresses mathcomp.ssreflect.{choice,ssrbool} in terms.v, theorems.v and
+  # reproduce, i.e. the sources need pre-boot paths while this floor forbids
+  # pre-boot mathcomp. Measured at dev: mathcomp/ssreflect/ holds only
+  # all_ssreflect.{v,vo,glob}, so mathcomp.ssreflect.choice has nowhere to resolve
+  # (mathcomp/boot/choice.vo is where it lives now).
+  #
+  # Expect a BUILD failure, not a solve failure. This floor does NOT make the row
+  # unsatisfiable: coq-mathcomp-classical still admits ssreflect >= 2.5.0 by two
+  # independent routes, and the >= 1.8.0 dep here reaches both.
+  #   1.14.0/1.15.0: "coq-mathcomp-ssreflect" { (>= "2.4.0" & < "2.6~") | (= "dev") }
+  #                  -- the NUMERIC arm already contains 2.5.0, nothing is killed.
+  #   1.11.0..1.13.0: numeric arm capped < "2.5~" and so killed, but each carries
+  #                  `| (= "dev")`, and dev satisfies >= "2.5.0", so that arm lives.
+  # Either way the row SOLVES and then fails while compiling: a red with a Rocq
+  # error, not a clean `not installable` skip. Someone reading the red while
+  # expecting a skip will conclude the constraint did not take. It did.
   "coq-mathcomp-ssreflect" {>= "2.5.0"}
   "coq-fourcolor-reals" {>= "1.4.0"}
   "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
