@@ -14,7 +14,7 @@ Tests for applications of Trocq
 build: [make "-C" "examples/std" "-j%{jobs}%"]
 install: [make "-C" "examples/std"  "install"]
 depends: [
-  "coq" {>= "8.20"}
+  "coq" {= "dev"}
   # NEW dependency, not a bumped bound: this recipe declared no ssreflect at all.
   # 3 of the 15 .v files under examples/std require `all_boot` (int_to_Zp.v,
   # flt3_step.v, square_and_cube_mod7.v), and examples/std is exactly what

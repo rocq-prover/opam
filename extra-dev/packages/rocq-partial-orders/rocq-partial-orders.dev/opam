@@ -18,8 +18,8 @@ build: [
 ]
 install: [make "install"]
 depends: [
-  "rocq-core" {>= "9.0"}
-  "rocq-stdlib"
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "rocq-mathcomp-ssreflect"
   "rocq-hierarchy-builder"
 ]

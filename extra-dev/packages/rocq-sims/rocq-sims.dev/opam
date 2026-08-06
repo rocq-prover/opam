@@ -14,7 +14,7 @@ homepage: "https://github.com/rocq-sims/rocq-sims"
 bug-reports: "https://github.com/rocq-sims/rocq-sims/issues"
 depends: [
   "dune" {>= "3.8"}
-  "coq" {>= "8.20"}
+  "coq" {= "dev"}
   "coq-coinduction" {>= "1.9"}
   "coq-relation-algebra" {>= "1.7"}
   "coq-ctree" {>= "2.0"}

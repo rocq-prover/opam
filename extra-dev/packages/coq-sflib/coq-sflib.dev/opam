@@ -14,8 +14,8 @@ license: "BSD-2-Clause"
 homepage: "https://github.com/snu-sf/sflib"
 bug-reports: "https://github.com/snu-sf/sflib/issues"
 depends: [
-  "coq-core" {>= "9.0"}
-  "rocq-stdlib"
+  "coq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "dune" {>= "3.8" & >= "3.8"}
   "odoc" {with-doc}
 ]

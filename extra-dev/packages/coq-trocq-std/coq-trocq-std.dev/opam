@@ -39,7 +39,7 @@ sequent-style presentation."""
 build: [make "-j%{jobs}%" "std"]
 install: [make "install" "-C" "std"]
 depends: [
-  "coq" {>= "9.0"}
+  "coq" {= "dev"}
   "coq-elpi" {>= "3.4.0"}
 ]
 

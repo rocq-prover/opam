@@ -18,8 +18,8 @@ build: [
 ]
 install: [make "install"]
 depends: [
-  "rocq-core" {>= "9.1"}
-  "rocq-stdlib"
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "rocq-partial-orders"
 ]
 

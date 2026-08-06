@@ -13,8 +13,8 @@ bug-reports: "https://github.com/AU-COBRA/ConCert/issues"
 doc: "https://au-cobra.github.io/ConCert/toc.html"
 
 depends: [
-  "rocq-core" {>= "9.1"}
-  "rocq-stdlib" {>= "9.0"}
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "rocq-bignums" {>= "9"}
   "coq-quickchick" {>= "2.0.4"}
   "rocq-metarocq-erasure" {>= "1.5.1"}

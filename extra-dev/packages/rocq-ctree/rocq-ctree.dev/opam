@@ -24,8 +24,8 @@ homepage: "https://github.com/vellvm/ctrees"
 bug-reports: "https://github.com/vellvm/ctrees/issues"
 depends: [
   "dune" {>= "3.8" & < "3.24"}
-  "rocq-core" {>= "9.0"}
-  "rocq-stdlib" {>= "9.0"}
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "coq-ext-lib" {>= "0.11.3"}
   "rocq-coinduction" {>= "1.21"}
   "rocq-relation-algebra" {>= "1.8.0"}

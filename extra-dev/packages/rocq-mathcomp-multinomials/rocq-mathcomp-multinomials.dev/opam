@@ -18,7 +18,7 @@ coefficients range over commutative rings and integral domains."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "rocq-core" {>= "9.0"}
+  "rocq-core" {= "dev"}
   "rocq-mathcomp-ssreflect" {>= "2.4"}
   "rocq-mathcomp-algebra" 
   "coq-mathcomp-bigenough" 

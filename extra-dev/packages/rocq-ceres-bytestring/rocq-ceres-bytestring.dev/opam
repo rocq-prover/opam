@@ -8,7 +8,7 @@ bug-reports:
   "https://github.com/peregrine-project/rocq-ceres-bytestring/issues"
 depends: [
   "dune" {>= "2.8"}
-  "coq" {>= "9.0~"}
+  "coq" {= "dev"}
   "rocq-metarocq-utils" {>= "1.4~"}
   "odoc" {with-doc}
 ]
