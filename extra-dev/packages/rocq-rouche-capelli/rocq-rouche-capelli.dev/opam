@@ -33,12 +33,10 @@ depends: [
   "rocq-mathcomp-algebra" {>= "2.4.0"}
   "rocq-mathcomp-field" {>= "2.4.0"}
   "rocq-mathcomp-fingroup" {>= "2.4.0"}
-  "rocq-mathcomp-finmap" {>= "2.1.0"}
   "rocq-mathcomp-solvable" {>= "2.4.0"}
-  "rocq-mathcomp-classical"
 ]
 build: [
-  ["coq_makefile" "-f" "_CoqProject" "-o" "Makefile.coq"]
+  ["rocq" "makefile" "-f" "_CoqProject" "-o" "Makefile.coq"]
   ["%{make}%" "-f" "Makefile.coq" "-j%{jobs}%"]
 ]
 install: [
