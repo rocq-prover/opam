@@ -29,8 +29,13 @@ authors: [
 license: "LGPL-3.0-or-later"
 
 depends: [
-  (("coq-core" {>= "8.20" & < "8.21~"} & "coq-stdlib") |
-    ("rocq-core" {>= "9.0" & < "9.2~"} & "rocq-stdlib"))
+  # Copied verbatim from the released 2.2.0 depends:, where both caps are
+  # correct. On a `.dev` row tracking master they are not: opam sorts `dev`
+  # above every numeric version, so `< "9.2~"` excludes it while
+  # rocq-core.9.1.dev sits inside the interval. Do not re-sync this block
+  # from 2.2.0 -- a released row bounds, a dev row pins.
+  (("coq-core" {= "dev"} & "coq-stdlib" {= "dev"}) |
+    ("rocq-core" {= "dev"} & "rocq-stdlib" {= "dev"}))
   "coq-coquelicot" {>= "3.4" & < "3.5~"}
   "rocq-num-analysis-subset" {= version}
 ]
