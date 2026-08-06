@@ -28,14 +28,14 @@ tags: [
 ]
 depends: [
   "ocaml" {>= "4.14.0"}
-  "rocq-core" {>= "9.0.0"}
-  "rocq-mathcomp-ssreflect" {= "2.4.0"}
-  "rocq-mathcomp-algebra" {= "2.4.0"}
-  "rocq-mathcomp-field" {= "2.4.0"}
-  "rocq-mathcomp-fingroup" {= "2.4.0"}
+  "rocq-core" {= "dev"}
+  "rocq-mathcomp-ssreflect" {>= "2.4.0"}
+  "rocq-mathcomp-algebra" {>= "2.4.0"}
+  "rocq-mathcomp-field" {>= "2.4.0"}
+  "rocq-mathcomp-fingroup" {>= "2.4.0"}
   "rocq-mathcomp-finmap" {>= "2.1.0"}
-  "rocq-mathcomp-solvable" {= "2.4.0"}
-  "coq-mathcomp-classical" {= "1.13.0"}
+  "rocq-mathcomp-solvable" {>= "2.4.0"}
+  "rocq-mathcomp-classical"
 ]
 build: [
   ["coq_makefile" "-f" "_CoqProject" "-o" "Makefile.coq"]
