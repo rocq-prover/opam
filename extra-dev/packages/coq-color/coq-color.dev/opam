@@ -1,5 +1,12 @@
 opam-version: "2.0"
-maintainer: "Matej Košík <matej.kosik@inria.fr>"
+maintainer: "frederic.blanqui@inria.fr"
+
+homepage: "https://github.com/fblanqui/color/"
+dev-repo: "git+https://github.com/fblanqui/color.git"
+bug-reports: "https://github.com/fblanqui/color/issues"
+license: "CeCILL-2.1"
+
+depends: [ "rocq-color" { = version } ]
 authors: [
   "Frédéric Blanqui"
   "Adam Koprowski"
@@ -16,99 +23,5 @@ authors: [
   "Lianyi Zhang"
   "Sorin Stratulat"
 ]
-license: "CeCILL"
-homepage: "http://color.inria.fr/"
-bug-reports: "color@inria.fr"
-build: [
-  [make "-j%{jobs}%"]
-]
-install: [make "-f" "rocq.mk" "install"]
-remove: ["rm" "-R" "%{lib}%/coq/user-contrib/CoLoR"]
-depends: [
-  "ocaml"
-  "coq" {= "dev"}
-  "coq-bignums" {= "dev"}
-]
-tags: [
-  "date:2017-01-11"
 
-  "logpath:CoLoR"
-
-  "category:Computer Science/Decision Procedures and Certified Algorithms/Correctness proofs of algorithms"
-  "category:Computer Science/Data Types and Data Structures"
-  "category:Computer Science/Lambda Calculi"
-  "category:Mathematics/Algebra"
-  "category:Mathematics/Combinatorics and Graph Theory"
-  "category:Mathematics/Logic/Type theory"
-  "category:Miscellaneous/Extracted Programs/Type checking unification and normalization"
-
-  "keyword:rewriting"
-  "keyword:termination"
-  "keyword:lambda calculus"
-
-  "keyword:list"
-  "keyword:multiset"
-  "keyword:polynomial"
-  "keyword:vectors"
-  "keyword:matrices"
-  "keyword:FSet"
-  "keyword:FMap"
-
-  "keyword:term"
-  "keyword:context"
-  "keyword:substitution"
-  "keyword:universal algebra"
-
-  "keyword:varyadic term"
-  "keyword:string"
-
-  "keyword:alpha-equivalence"
-  "keyword:de Bruijn indices"
-  "keyword:simple types"
-
-  "keyword:matching"
-  "keyword:unification"
-
-  "keyword:relation"
-  "keyword:ordering"
-  "keyword:quasi-ordering"
-  "keyword:lexicographic ordering"
-
-  "keyword:ring"
-  "keyword:semiring"
-
-  "keyword:well-foundedness"
-  "keyword:noetherian"
-  "keyword:finitely branching"
-  "keyword:dependent choice"
-  "keyword:infinite sequences"
-
-  "keyword:non-termination"
-  "keyword:loop"
-
-  "keyword:graph"
-  "keyword:path"
-  "keyword:transitive closure"
-  "keyword:strongly connected components"
-  "keyword:topological ordering"
-
-  "keyword:rpo"
-  "keyword:horpo"
-  "keyword:dependency pair"
-  "keyword:dependency graph"
-  "keyword:semantic labeling"
-
-  "keyword:reducibility"
-  "keyword:Girard"
-
-  "keyword:fixpoint theorem"
-  "keyword:Tarski"
-
-  "keyword:pigeon-hole principle"
-  "keyword:Ramsey theorem"
-]
-synopsis: "A library on rewriting theory and termination"
-flags: light-uninstall
-url {
-  src: "git+https://github.com/fblanqui/color.git#master"
-}
+synopsis: "Compatibility package for rocq-color"

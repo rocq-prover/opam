@@ -53,9 +53,7 @@ authors: [
   "Alessandro Bruni, IT-University of Copenhagen"
 ]
 
-conflicts: [
-  "coq-infotheo"
-]
+conflicts: [ "coq-infotheo" { != version } ]
 
 url {
   src: "git+https://github.com/affeldt-aist/infotheo.git#master"

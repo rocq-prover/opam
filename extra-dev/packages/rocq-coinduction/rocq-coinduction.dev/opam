@@ -33,9 +33,7 @@ authors: [
   "Damien Pous"
 ]
 
-conflicts: [
-  "coq-coinduction"
-]
+conflicts: [ "coq-coinduction" { != version } ]
 
 url {
   src: "git+https://github.com/damien-pous/coinduction.git#master"

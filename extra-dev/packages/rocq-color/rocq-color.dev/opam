@@ -109,9 +109,7 @@ tags: [
   "keyword:Ramsey theorem"  
 ]
 
-conflicts: [
-  "coq-color"
-]
+conflicts: [ "coq-color" { != version } ]
 
 url {
   src: "git+https://github.com/fblanqui/color.git#master"
