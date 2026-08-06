@@ -15,8 +15,8 @@ paper: A Calculational Deductive System for Linear Temporal Logic (CDS4LTL).
 build: [make "-j%{jobs}%" ]
 install: [make "install"]
 depends: [
-  "rocq-core" {>= "9.1"}
-  "rocq-stdlib" {>= "9.1"}
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
 ]
 
 tags: [
