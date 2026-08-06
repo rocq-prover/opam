@@ -33,9 +33,7 @@ authors: [
   "Assia Mahboubi"
 ]
 
-conflicts: [
-  "coq-mathcomp-real-closed"
-]
+conflicts: [ "coq-mathcomp-real-closed" { != version } ]
 
 url {
   src: "git+https://github.com/math-comp/real-closed.git#master"

@@ -55,9 +55,7 @@ It also provides the especialize tactic to ease forward reasoning by
 instantianting one, several or all premisses of a hypothesis.
 "
 
-conflicts: [
-  "coq-libhyps"
-]
+conflicts: [ "coq-libhyps" { != version } ]
 
 url {
   src: "git+https://github.com/Matafou/LibHyps.git#master"

@@ -42,9 +42,7 @@ authors: [
 # webpage
 # above updates to the opam file in rocq-opam-archive
 
-conflicts: [
-  "coq-relation-algebra"
-]
+conflicts: [ "coq-relation-algebra" { != version } ]
 
 url {
   src: "git+https://github.com/damien-pous/relation-algebra.git#master"
