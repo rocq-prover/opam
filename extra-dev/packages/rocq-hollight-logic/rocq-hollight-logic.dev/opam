@@ -40,7 +40,16 @@ depends: [
   "coq-fourcolor-reals" {>= "1.4.0"}
   "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
   "rocq-equations" {>= "1.3.1+9.0"}
-  "rocq-hollight-logic-unif" {>= "0.0.0"}
+  # Require the dev sibling, do not merely permit it. `>= "0.0.0"` also admits
+  # released rocq-hollight-logic-unif.0.0.0, whose own prover dep is the
+  # unbounded floor "rocq-prover" {>= "9.0"} -- and a floor cannot exclude dev,
+  # so that row is installable here. It is also the WRONG row: 0.0.0 caps
+  # coq-mathcomp-classical <= "1.13.0", every such classical caps ssreflect
+  # < "2.5~" in its numeric arm, so the >= "2.5.0" floor above leaves only the
+  # `| (= "dev")` arm -- i.e. 0.0.0's pre-boot sources compiled against post-boot
+  # mathcomp, which is exactly the breakage this floor exists to prevent. Only
+  # the .dev recipe carries the boot floor, so name it.
+  "rocq-hollight-logic-unif" {= "dev"}
 ]
 build: [make "-j%{jobs}%"]
 install: [make "install"]
