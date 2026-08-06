@@ -13,7 +13,7 @@ bug-reports: "https://github.com/peregrine-project/rocq-typed-extraction/issues"
 doc: "https://peregrine-project.github.io/rocq-typed-extraction/toc.html"
 
 depends: [
-  "rocq-core" {= "dev"}
+  "rocq-core" {>= "9.1"}
   "rocq-stdlib" {>= "9.0"}
   "rocq-metarocq-utils" {>= "1.5.1"}
   "rocq-metarocq-common" {>= "1.5.1"}
