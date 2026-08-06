@@ -14,6 +14,16 @@ license: "CeCILL-2.1"
 depends: [
   "rocq-core" {= "dev"}
   "coq-mathcomp-classical" {>= "1.8.0"}
+  # Same boot floor as rocq-hollight-logic-unif, and for the same reason: no
+  # coq-mathcomp-classical floor implies mathcomp.boot.*, because every classical
+  # version permits ssreflect 2.4.0 and that version really exists.
+  #
+  # NB this floor is only correct together with the upstream source fix: #main
+  # (881963b) still addresses mathcomp.ssreflect.{choice,ssrbool} in terms.v,
+  # theorems.v and reproduce, and those paths do NOT exist at >= 2.5.0 (measured:
+  # mathcomp/ssreflect/choice.vo absent, mathcomp/boot/choice.vo present). The
+  # recipe already tracks #main, so it picks the fix up automatically once merged.
+  "coq-mathcomp-ssreflect" {>= "2.5.0"}
   "coq-fourcolor-reals" {>= "1.4.0"}
   "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
   "rocq-equations" {>= "1.3.1+9.0"}
