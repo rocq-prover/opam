@@ -13,8 +13,7 @@ maintainer: "frederic.blanqui@inria.fr"
 authors: ["https://github.com/Deducteam/coq-hol-light-real-with-nat/blob/main/AUTHORS.md"]
 license: "CeCILL-2.1"
 depends: [
-  "rocq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
+  "rocq-prover" {>= "9.0"}
 ]
 build: [make "-j%{jobs}%"]
 install: [make "install"]
