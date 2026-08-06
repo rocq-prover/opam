@@ -20,7 +20,24 @@ build: [
 ]
 install: [make "install"]
 depends: [
-  "coq"
+  # This is a `.dev` recipe tracking a moving branch, so it has to REQUIRE a dev
+  # prover, not merely permit one. The line was previously a bare "coq" with no
+  # constraint at all, which permits every prover in the archive down to 8.0.dev.
+  #
+  # A floor on a dependency does not fix that: a dependency's version constrains
+  # the prover only through whatever that dependency itself declares, and no
+  # choice of ssreflect forces dev here. All three post-boot arms leave dev
+  # optional --
+  #   rocq-mathcomp-boot.2.5.0  ("coq" {>= "8.20" & < "8.21~"}
+  #                              | "rocq-core" {>= "9.0" & < "9.2~"})  capped
+  #   rocq-mathcomp-boot.2.6.0  "rocq-core" {>= "9.0"}                 floor only
+  #   rocq-mathcomp-boot.dev    ("coq" {>= "8.20" & < "8.21~"}
+  #                              | "rocq-core" {>= "9.0" | = "dev"})   a MENU
+  # -- and the last is the one that matters: `{>= "9.0" | = "dev"}` names dev as
+  # one option, and rocq-core.9.1.dev satisfies the other. So even ssreflect.dev
+  # leaves the row free to solve on 9.1 and go green having exercised no dev at
+  # all. That is the shape #52's promotion gate exists to catch.
+  "coq" {= "dev"}
   # 2.4.0 is an impossible floor for these sources: 86 of the 87 .v files open
   # with `From mathcomp Require Import all_boot`, and 45 also require all_order.
   # Those two umbrellas ship from rocq-mathcomp-boot / rocq-mathcomp-order, and
