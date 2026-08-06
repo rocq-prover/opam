@@ -20,8 +20,26 @@ build: [
 ]
 install: [make "install"]
 depends: [
-  "coq" 
-  "coq-mathcomp-ssreflect" { >= "2.4.0" }
+  "coq"
+  # 2.4.0 is an impossible floor for these sources: 86 of the 87 .v files open
+  # with `From mathcomp Require Import all_boot`, and 45 also require all_order.
+  # Those two umbrellas ship from rocq-mathcomp-boot / rocq-mathcomp-order, and
+  # released/ carries neither package below 2.5.0 -- the only version dirs are
+  # 2.5.0, 2.6.0 and dev. (mathcomp 2.4.0 does install boot/ and order/
+  # directories, so a `test -d` check passes there; both are empty.)
+  #
+  # Stating it on ssreflect is sufficient and is the whole fix: 2.5.0 pulls
+  # rocq-mathcomp-ssreflect {= version}, which pulls rocq-mathcomp-boot and
+  # rocq-mathcomp-order {= version}. Declaring boot/order here as well would add
+  # nothing. The sibling 2.4.0 floors below are likewise left alone: at 2.4.0 the
+  # core stack still locks downward (rocq-mathcomp-algebra {= version} ->
+  # fingroup -> ssreflect), so raising ssreflect raises all of them.
+  #
+  # Latent, not visible today: the solver takes the newest permitted version, so
+  # it picks 2.6.0/dev and the hole never fires. This is a pre-existing recipe
+  # bug rather than a port regression -- the constraint is not doing the work,
+  # the switch is.
+  "coq-mathcomp-ssreflect" { >= "2.5.0" }
   "coq-mathcomp-fingroup" { >= "2.4.0" }
   "coq-mathcomp-algebra" { >= "2.4.0" }
   "coq-mathcomp-solvable" { >= "2.4.0" }
