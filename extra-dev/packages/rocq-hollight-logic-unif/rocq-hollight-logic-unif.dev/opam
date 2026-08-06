@@ -12,7 +12,7 @@ maintainer: "antoine.gontard@inria.fr"
 authors: ["Antoine Gontard"]
 license: "CeCILL-2.1"
 depends: [
-  "rocq-prover" {>= "9.0"}
+  "rocq-core" {= "dev"}
   "coq-mathcomp-classical" {>= "1.14.0"}
   "coq-fourcolor-reals" {>= "1.4.2"}
   "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
