@@ -30,9 +30,7 @@ tags: [
   "logpath:SSProve"
 ]
 
-conflicts: [
-  "coq-ssprove"
-]
+conflicts: [ "coq-ssprove" { != version } ]
 
 url {
   src: "git+https://github.com/SSProve/ssprove.git#main"

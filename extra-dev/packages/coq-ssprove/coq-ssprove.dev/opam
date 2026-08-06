@@ -1,0 +1,13 @@
+opam-version: "2.0"
+maintainer: "philipp@haselwarter.org"
+
+homepage: "https://github.com/SSProve/ssprove"
+dev-repo: "git+https://github.com/SSProve/ssprove.git"
+bug-reports: "https://github.com/SSProve/ssprove/issues"
+doc: "https://SSProve.github.io/ssprove/index.html"
+license: "MIT"
+
+depends: [ "rocq-ssprove" { = version } ]
+authors: ["SSProve team"]
+
+synopsis: "Compatibility package for rocq-ssprove"
