@@ -31,7 +31,7 @@ of said algorithm.
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq" {>= "8.16"}
+  "coq" {= "dev"}
   "coq-mathcomp-ssreflect" {>= "2.0"}
   "coq-hierarchy-builder" {>= "1.6.0"}
 ]
