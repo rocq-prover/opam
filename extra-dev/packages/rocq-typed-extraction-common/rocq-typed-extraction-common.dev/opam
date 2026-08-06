@@ -14,7 +14,7 @@ doc: "https://peregrine-project.github.io/rocq-typed-extraction/toc.html"
 
 depends: [
   "rocq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
+  "rocq-stdlib" {>= "9.0"}
   "rocq-metarocq-utils" {>= "1.5.1"}
   "rocq-metarocq-common" {>= "1.5.1"}
   "rocq-metarocq-template" {>= "1.5.1"}

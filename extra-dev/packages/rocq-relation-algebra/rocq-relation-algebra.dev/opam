@@ -11,7 +11,7 @@ depends: [
   "ocaml"
 #TO SET BEFORE RELEASE
   "rocq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
+  "rocq-stdlib"
 ]
 depopts: [ "rocq-mathcomp-ssreflect" "rocq-aac-tactics" ]
 build: [

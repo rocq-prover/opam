@@ -10,7 +10,7 @@ dev-repo: "git+https://github.com/epfl-systemf/StrictOrderSolver.git"
 depends: [
   "dune" {>= "3.22"}
   "rocq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
+  "rocq-stdlib" {>= "9.0.0"}
   "odoc" {with-doc}
 ]
 build: [

@@ -16,7 +16,6 @@ license: "CECILL-2.1"
 depends: [
   "dune" {>= "3.8"}
   "rocq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
   "rocq-stdpp" {>= "1.13.0"}
   "rocq-equations" {}
 ]

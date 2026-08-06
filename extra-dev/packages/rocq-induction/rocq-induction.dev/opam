@@ -10,7 +10,7 @@ dev-repo: "git+https://github.com/Yann-Leray/induction.git"
 depends: [
   "dune" {>= "3.21"}
   "rocq-runtime" {= "dev"}
-  "rocq-core" {= "dev"}
+  "rocq-core"
   "odoc" {with-doc}
 ]
 build: [
