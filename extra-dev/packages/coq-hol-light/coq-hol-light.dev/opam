@@ -1,0 +1,61 @@
+opam-version: "2.0"
+synopsis: "HOL-Light library in Coq"
+description: """
+This library contains an automatic translation in Coq of (for the moment) some
+small part the HOL-Light library using https://github.com/Deducteam/hol2dk.
+"""
+homepage: "https://github.com/Deducteam/coq-hol-light"
+dev-repo: "git+https://github.com/Deducteam/coq-hol-light.git"
+bug-reports: "https://github.com/Deducteam/coq-hol-light/issues"
+doc: "https://github.com/Deducteam/coq-hol-light"
+maintainer: "frederic.blanqui@inria.fr"
+authors: ["Frédéric Blanqui"]
+license: "CeCILL-2.1"
+depends: [
+  "rocq-prover" {>= "9.0"}
+  "coq-hol-light-real-with-N" {>= "2.0.0"}
+  "coq-fourcolor-reals" {>= "1.4.0"}
+]
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+tags: [
+  "logpath:HOLLight"
+  "date:2025-03-13"
+  "category:Mathematics/Arithmetic and Number Theory/Miscellaneous"
+  "category:Mathematics/Real Numbers"
+  "category:Mathematics/Real Calculus and Topology"
+  "keyword:HOL-Light"
+  "keyword:list"
+  "keyword:basic set theory"
+  "keyword:arithmetic"
+  "keyword:integer"
+  "keyword:real"
+  "keyword:complex"
+  "keyword:permutation"
+  "keyword:group"
+  "keyword:matroid"
+  "keyword:binomial"
+  "keyword:topology"
+  "keyword:metric"
+  "keyword:space"
+  "keyword:analysis"
+  "keyword:homology"
+  "keyword:vector"
+  "keyword:linear"
+  "keyword:algebra"
+  "keyword:convex"
+  "keyword:path"
+  "keyword:polytope"
+  "keyword:Brouwer"
+  "keyword:degree"
+  "keyword:derivative"
+  "keyword:Clifford"
+  "keyword:integration"
+  "keyword:measure"
+  "keyword:Lebesgue"
+  "keyword:transcendental"
+]
+
+url {
+  src: "git+https://github.com/Deducteam/coq-hol-light.git#main"
+}
