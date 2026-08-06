@@ -4,9 +4,9 @@
 opam-version: "2.0"
 maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
 
-homepage: "https://github.com/affeldt-aist/coq-robot"
-dev-repo: "git+https://github.com/affeldt-aist/coq-robot.git"
-bug-reports: "https://github.com/affeldt-aist/coq-robot/issues"
+homepage: "https://github.com/affeldt-aist/robot-rocq"
+dev-repo: "git+https://github.com/affeldt-aist/robot-rocq.git"
+bug-reports: "https://github.com/affeldt-aist/robot-rocq/issues"
 license: "LGPL-2.1-or-later"
 
 synopsis: "Formal Foundations for Modeling Robot Manipulators"
@@ -41,5 +41,5 @@ authors: [
 ]
 
 url {
-  src: "git+https://github.com/affeldt-aist/coq-robot.git#master"
+  src: "git+https://github.com/affeldt-aist/robot-rocq.git#master"
 }
