@@ -8,7 +8,7 @@ homepage: "https://github.com/LPCIC/coq-elpi/apps/json/"
 bug-reports: "https://github.com/LPCIC/coq-elpi/issues"
 depends: [
   "dune" {>= "3.13"}
-  "rocq-elpi"
+  "rocq-elpi" {= "dev"}
   "yojson"
   "odoc" {with-doc}
 ]

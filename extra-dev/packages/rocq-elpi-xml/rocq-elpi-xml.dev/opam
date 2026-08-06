@@ -8,7 +8,7 @@ homepage: "https://github.com/LPCIC/coq-elpi/apps/xml/"
 bug-reports: "https://github.com/LPCIC/coq-elpi/issues"
 depends: [
   "dune" {>= "3.13"}
-  "rocq-elpi"
+  "rocq-elpi" {= "dev"}
   "xml-light"
   "odoc" {with-doc}
 ]
