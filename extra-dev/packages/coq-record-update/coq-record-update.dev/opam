@@ -19,8 +19,9 @@ simple typeclass that lists out the record fields."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
+  "coq-core" {(>= "8.17" & < "9.3") | (= "dev")}
+  ("coq-stdlib" {>= "8.17" & < "9.0"} |
+   "rocq-stdlib" {(>= "9.0" & < "9.2") | (= "dev")})
 ]
 
 tags: [

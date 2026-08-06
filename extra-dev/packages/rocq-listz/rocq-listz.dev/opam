@@ -16,7 +16,7 @@ tags: [
 ]
 depends: [
   "rocq-core" {= "dev"}
-  "rocq-stdlib" {= "dev"}
+  "rocq-stdlib"
   "rocq-stdpp" { (>= "1.13.0") }
   "dune" { >= "3.21" }
 ]

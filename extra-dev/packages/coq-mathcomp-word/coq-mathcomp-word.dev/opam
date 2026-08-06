@@ -9,7 +9,7 @@ build: [ "dune" "build" "-p" name "-j" jobs ]
 depends: [
   "dune" {>= "2.8"}
   "coq-core" {= "dev"}
-  "coq-stdlib" {= "dev"}
+  "coq-stdlib"
   "coq-mathcomp-ssreflect" {(>= "2.4" & < "2.7~")}
   "coq-mathcomp-algebra"
 ]
