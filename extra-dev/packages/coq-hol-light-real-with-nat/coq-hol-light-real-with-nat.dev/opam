@@ -1,0 +1,30 @@
+opam-version: "2.0"
+synopsis: "HOL-Light definition of real numbers using nat"
+description: """
+This library contains an automatic translation of the HOL-Light
+definition of real numbers using https://github.com/Deducteam/hol2dk
+with the HOL-Light type of natural numbers mapped to the Rocq type nat.
+"""
+homepage: "https://github.com/Deducteam/coq-hol-light-real-with-nat"
+dev-repo: "git+https://github.com/Deducteam/coq-hol-light-real-with-nat.git"
+bug-reports: "https://github.com/Deducteam/coq-hol-light-real-with-nat/issues"
+doc: "https://github.com/Deducteam/coq-hol-light-real-with-nat"
+maintainer: "frederic.blanqui@inria.fr"
+authors: ["https://github.com/Deducteam/coq-hol-light-real-with-nat/blob/main/AUTHORS.md"]
+license: "CeCILL-2.1"
+depends: [
+  "rocq-prover" {>= "9.0"}
+]
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+tags: [
+  "keyword:HOL-Light"
+  "category:Math/Arith/Misc"
+  "category:Math/Arith/Real numbers"
+  "date:2025-01-18"
+  "logpath:HOLLight_Real_With_nat"
+]
+
+url {
+  src: "git+https://github.com/Deducteam/coq-hol-light-real-with-nat.git#main"
+}
