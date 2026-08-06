@@ -1,0 +1,46 @@
+# the _real_ opam file for coq-vcfloat is at [adjusted for version number]
+# https://github.com/coq/opam-coq-archive/blob/master/released/packages/coq-vcfloat/coq-vcfloat.2.1.1/opam
+opam-version: "2.0"
+synopsis: "VCFloat: Floating Point Round-off Error Analysis"
+description: "VCFloat is a tool for Coq proofs about floating-point round-off error."
+authors: [
+  "Andrew W. Appel"
+  "Ariel E. Kellison"
+  "Tahina Ramananandro"
+  "Paul Mountcastle"
+  "Benoit Meister"
+  "Richard Lethin"
+]
+homepage: "https://verinum.org/vcfloat/"
+maintainer: "Andrew W. Appel <appel@princeton.edu>"
+dev-repo: "git+https://github.com/VeriNum/vcfloat"
+bug-reports: "https://github.com/VeriNum/vcfloat/issues"
+license: "LGPL-3.0-or-later"
+
+build: [
+  [ make "-C" "vcfloat" "-j%{jobs}%" "vcfloat2" "COQEXTRAFLAGS=-native-compiler ondemand" {coq-native:installed & coq-compcert:version < "3.13~"}]
+]
+install: [
+  [make "-C" "vcfloat" "-j%{jobs}%" "install" "INSTALLDIR=%{lib}%/coq/user-contrib/vcfloat" "COQEXTRAFLAGS=-native-compiler ondemand" {coq-native:installed  & coq-compcert:version < "3.13~"}]
+]
+run-test: [
+  [make "-C" "vcfloat" "-j%{jobs}%" "tests" "COQEXTRAFLAGS=-native-compiler ondemand" {coq-native:installed  & coq-compcert:version < "3.13~"}]
+]
+depends: [
+  "coq" {(>= "8.16" & < "8.19~") | = "dev"}
+  "coq-flocq" {>= "4.1.1" & < "5.0"}
+  "coq-interval" {>= "4.8.0"}
+  "coq-compcert" {>= "3.12"}
+  "coq-bignums"
+]
+tags: [
+  "date:2023-08-31"
+  "keyword:decision procedure"
+  "keyword:floating-point arithmetic"
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "logpath:VCFloat"
+  ]
+
+url {
+  src: "git+https://github.com/VeriNum/vcfloat.git#master"
+}
