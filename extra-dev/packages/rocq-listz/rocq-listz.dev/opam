@@ -15,8 +15,8 @@ tags: [
   "logpath:listz"
 ]
 depends: [
-  "rocq-core" { (>= "9.1") }
-  "rocq-stdlib"
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "rocq-stdpp" { (>= "1.13.0") }
   "dune" { >= "3.21" }
 ]

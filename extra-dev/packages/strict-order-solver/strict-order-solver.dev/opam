@@ -9,8 +9,8 @@ bug-reports: "https://github.com/epfl-systemf/StrictOrderSolver/issues"
 dev-repo: "git+https://github.com/epfl-systemf/StrictOrderSolver.git"
 depends: [
   "dune" {>= "3.22"}
-  "rocq-core" {>= "9.1.0"}
-  "rocq-stdlib" {>= "9.0.0"}
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
   "odoc" {with-doc}
 ]
 build: [

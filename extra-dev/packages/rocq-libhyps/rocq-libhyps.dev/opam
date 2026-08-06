@@ -29,7 +29,7 @@ install: [make "install"]
 depends: [
   "ocaml"
   "rocq-core" {= "dev"}
-  "rocq-stdlib"
+  "rocq-stdlib" {= "dev"}
 ]
 
 tags: [

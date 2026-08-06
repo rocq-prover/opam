@@ -7,7 +7,7 @@ bug-reports: "https://github.com/math-comp/analysis/issues"
 license: "CECILL-C"
 
 depends: [
-  "coq-core"
+  "coq-core" {= "dev"}
   "rocq-mathcomp-classical" {= version}
 ]
 
