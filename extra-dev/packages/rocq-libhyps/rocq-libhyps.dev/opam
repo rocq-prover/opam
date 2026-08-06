@@ -28,7 +28,7 @@ install: [make "install"]
 
 depends: [
   "ocaml"
-  "rocq-core" {= "dev"}
+  "rocq-core" { (>= "9.0" ) | ( = "dev") }
   "rocq-stdlib"
 ]
 
@@ -55,7 +55,9 @@ It also provides the especialize tactic to ease forward reasoning by
 instantianting one, several or all premisses of a hypothesis.
 "
 
-conflicts: [ "coq-libhyps" { != version } ]
+conflicts: [
+  "coq-libhyps"
+]
 
 url {
   src: "git+https://github.com/Matafou/LibHyps.git#master"

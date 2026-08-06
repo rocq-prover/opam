@@ -17,7 +17,7 @@ order theory of real closed field, through quantifier elimination."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "rocq-core" {= "dev"}
+  "rocq-core" {>= "9.0"}
   "rocq-mathcomp-ssreflect" {>= "2.4"}
   "rocq-mathcomp-algebra" 
   "rocq-mathcomp-field" 
@@ -33,7 +33,9 @@ authors: [
   "Assia Mahboubi"
 ]
 
-conflicts: [ "coq-mathcomp-real-closed" { != version } ]
+conflicts: [
+  "coq-mathcomp-real-closed"
+]
 
 url {
   src: "git+https://github.com/math-comp/real-closed.git#master"

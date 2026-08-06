@@ -39,7 +39,9 @@ authors: [
   "Fabian Kunze"
 ]
 
-conflicts: [ "coq-aac-tactics" { != version } ]
+conflicts: [
+  "coq-aac-tactics"
+]
 
 url {
   src: "git+https://github.com/rocq-community/aac-tactics.git#master"
