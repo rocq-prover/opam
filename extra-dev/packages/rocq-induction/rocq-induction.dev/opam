@@ -1,0 +1,34 @@
+opam-version: "2.0"
+synopsis: "A better induction tactic for Rocq"
+description: "A better induction tactic for Rocq."
+maintainer: ["Yann Leray <yannl35133@gmail.com>"]
+authors: ["Yann Leray <yannl35133@gmail.com>"]
+license: "LGPL-2.1-only"
+homepage: "https://github.com/yannl35133/induction"
+bug-reports: "https://github.com/yannl35133/induction/issues"
+dev-repo: "git+https://github.com/Yann-Leray/induction.git"
+depends: [
+  "dune" {>= "3.21"}
+  "rocq-runtime" {>= "9.3.0"}
+  "rocq-core"
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+x-maintenance-intent: ["(any)"]
+
+url {
+  src: "git+https://github.com/Yann-Leray/induction.git#master"
+}

@@ -1,0 +1,33 @@
+name: "coq-tlc"
+opam-version: "2.0"
+maintainer: "arthur.chargueraud@inria.fr"
+
+homepage: "https://github.com/charguer/tlc"
+dev-repo: "git+https://github.com/charguer/tlc.git"
+bug-reports: "https://github.com/charguer/tlc/issues"
+license: "MIT"
+
+synopsis: "TLC: A Library for Classical Coq"
+description: """
+Provides an alternative to the core of the Coq standard library, using classic definitions.
+"""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" { >= "8.18" }
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "date:DATEDASH"
+  "keyword:classical logic"
+  "logpath:TLC"
+]
+authors: [
+  "Arthur Charguéraud"
+]
+
+url {
+  src: "git+https://github.com/charguer/tlc.git#master"
+}

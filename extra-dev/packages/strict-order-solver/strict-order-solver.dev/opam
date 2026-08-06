@@ -1,0 +1,34 @@
+opam-version: "2.0"
+synopsis:
+  "Complete solver for strict orders (transitive+irreflexive relations) for Rocq"
+maintainer: ["Marcin Wojnarowski"]
+authors: ["Kacper Korban" "Dario Halilovic" "Marcin Wojnarowski"]
+license: "MIT"
+homepage: "https://github.com/epfl-systemf/StrictOrderSolver"
+bug-reports: "https://github.com/epfl-systemf/StrictOrderSolver/issues"
+dev-repo: "git+https://github.com/epfl-systemf/StrictOrderSolver.git"
+depends: [
+  "dune" {>= "3.22"}
+  "rocq-core" {>= "9.1.0"}
+  "rocq-stdlib" {>= "9.0.0"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+x-maintenance-intent: ["(latest)"]
+
+url {
+  src: "git+https://github.com/epfl-systemf/StrictOrderSolver.git#main"
+}
