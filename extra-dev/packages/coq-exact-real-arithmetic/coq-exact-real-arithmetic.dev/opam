@@ -6,7 +6,7 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
   "ocaml"
-  "coq" {>= "8.10"}
+  "coq" {= "dev"}
 ]
 tags: [
   "keyword: correctness"

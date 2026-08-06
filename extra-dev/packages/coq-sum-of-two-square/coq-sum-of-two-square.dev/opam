@@ -29,7 +29,7 @@ Laurent Thery thery@sophia.inria.fr"""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq" 
+  "coq" {= "dev"}
 ]
 
 tags: [
