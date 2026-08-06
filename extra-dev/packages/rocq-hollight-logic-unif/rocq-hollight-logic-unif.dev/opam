@@ -21,7 +21,12 @@ depends: [
   # has to be stated on ssreflect directly.
   "coq-mathcomp-ssreflect" {>= "2.5.0"}
   "coq-fourcolor-reals" {>= "1.4.2"}
-  "rocq-mathcomp-hollight-real-with-N" {>= "0.0.0"}
+  # Require the dev row, do not merely permit it. `>= "0.0.0"` is a floor that
+  # every version satisfies, and released rocq-mathcomp-hollight-real-with-N.0.0.0
+  # depends on nothing tighter than "rocq-prover" {>= "9.0"} -- a floor cannot
+  # exclude dev, so that row is genuinely selectable here, not merely
+  # lower-sorting. Only the .dev recipe tracks master alongside this one.
+  "rocq-mathcomp-hollight-real-with-N" {= "dev"}
   "rocq-equations" {>= "1.3.1+9.0"}
 ]
 build: [make "-j%{jobs}%"]
