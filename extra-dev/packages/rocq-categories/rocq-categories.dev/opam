@@ -20,7 +20,7 @@ install: [make "install"]
 depends: [
   "rocq-core" {= "dev"}
   "rocq-stdlib" {= "dev"}
-  "rocq-partial-orders"
+  "rocq-partial-orders" {= "dev"}
 ]
 
 tags: [
