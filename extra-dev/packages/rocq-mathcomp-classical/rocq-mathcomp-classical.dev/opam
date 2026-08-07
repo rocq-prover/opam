@@ -1,0 +1,62 @@
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+
+homepage: "https://github.com/math-comp/analysis"
+dev-repo: "git+https://github.com/math-comp/analysis.git"
+bug-reports: "https://github.com/math-comp/analysis/issues"
+license: "CECILL-C"
+
+synopsis: "A library for classical logic for mathematical components"
+description: """
+This repository contains a library for classical logic for
+the Coq proof-assistant and using the Mathematical Components library."""
+
+build: [make "-C" "classical" "-j%{jobs}%"]
+install: [make "-C" "classical" "install"]
+depends: [
+  "rocq-core" {= "dev"}
+  # Pinned rather than a menu on purpose: rocq-mathcomp-boot 2.6.0 declares
+  # "rocq-core" {>= "9.0"} with no upper bound, so the dev prover above does
+  # not on its own exclude released mathcomp. Pinning the library propagates
+  # through the {= version} locks to order, finite-group and boot.
+  "rocq-mathcomp-algebra" {= "dev"}
+  # Left unconstrained on purpose, not by oversight: every published finmap
+  # permits a dev ssreflect, and the algebra pin above already forces boot to
+  # dev, so finmap cannot select a released mathcomp here.
+  "rocq-mathcomp-finmap"
+  # This floor never binds. The lowest published rocq-hierarchy-builder is
+  # 1.9.0, and rocq-mathcomp-boot requires >= 1.9.0 in any case.
+  "rocq-hierarchy-builder" { (>= "1.8.0") }
+]
+
+conflicts: [ "coq-mathcomp-classical" { < "1.16~" } ]
+
+tags: [
+  "category:Mathematics/Logic/Classical logic"
+  "keyword:classical logic"
+  "keyword:logic"
+  "keyword:sets"
+  "keyword:set theory"
+  "keyword:function"
+  "keyword:cardinal"
+  "keyword:filter"
+  "logpath:mathcomp.classical"
+]
+authors: [
+  "Reynald Affeldt"
+  "Alessandro Bruni"
+  "Yves Bertot"
+  "Cyril Cohen"
+  "Marie Kerjean"
+  "Assia Mahboubi"
+  "Damien Rouhling"
+  "Pierre Roux"
+  "Kazuhiko Sakaguchi"
+  "Zachary Stone"
+  "Pierre-Yves Strub"
+  "Laurent Théry"
+]
+
+url {
+  src: "git+https://github.com/math-comp/analysis.git#master"
+}

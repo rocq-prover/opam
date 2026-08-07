@@ -1,0 +1,45 @@
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://github.com/math-comp/real-closed"
+dev-repo: "git+https://github.com/math-comp/real-closed.git"
+bug-reports: "https://github.com/math-comp/real-closed/issues"
+license: "CECILL-B"
+
+synopsis: "Mathematical Components Library on real closed fields"
+description: """
+This library contains definitions and theorems about real closed
+fields, with a construction of the real closure and the algebraic
+closure (including a proof of the fundamental theorem of
+algebra). It also contains a proof of decidability of the first
+order theory of real closed field, through quantifier elimination."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "rocq-core" {= "dev"}
+  # 3 of the 10 .v files require `all_boot`, all under theories/ (polyrcf.v,
+  # qe_rcf_th.v, realalg.v), which `build: [make]` compiles. That umbrella ships
+  # from rocq-mathcomp-boot, and no mathcomp below 2.5.0 carries it -- so 2.4 was
+  # an impossible floor. The bare algebra/field deps below cannot lift it: their
+  # own dependency on ssreflect is {= version}, which locks downward.
+  "rocq-mathcomp-ssreflect" {>= "2.5.0"}
+  "rocq-mathcomp-algebra"
+  "rocq-mathcomp-field" 
+  "rocq-mathcomp-bigenough" {>= "1.0.0"}
+]
+
+tags: [
+  "keyword:real closed field"
+  "logpath:mathcomp.real_closed"
+]
+authors: [
+  "Cyril Cohen"
+  "Assia Mahboubi"
+]
+
+conflicts: [ "coq-mathcomp-real-closed" { != version } ]
+
+url {
+  src: "git+https://github.com/math-comp/real-closed.git#master"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+synopsis: "HOL-Light definition of real numbers using N"
+description: """
+This library contains an automatic translation of the HOL-Light
+definition of real numbers using https://github.com/Deducteam/hol2dk
+with the HOL-Light type of natural numbers mapped to the Rocq type N.
+"""
+homepage: "https://github.com/Deducteam/coq-hol-light-real-with-N"
+dev-repo: "git+https://github.com/Deducteam/coq-hol-light-real-with-N.git"
+bug-reports: "https://github.com/Deducteam/coq-hol-light-real-with-N/issues"
+doc: "https://github.com/Deducteam/coq-hol-light-real-with-N"
+maintainer: "frederic.blanqui@inria.fr"
+authors: ["https://github.com/Deducteam/coq-hol-light-real-with-N/blob/main/AUTHORS.md"]
+license: "CeCILL-2.1"
+depends: [
+  "rocq-core" {= "dev"}
+  "rocq-stdlib" {= "dev"}
+]
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+tags: [
+  "logpath:HOLLight_Real_With_N"
+  "date:2025-07-11"
+  "category:Mathematics/Arithmetic and Number Theory/Miscellaneous"
+  "category:Mathematics/Real Numbers"
+  "keyword:HOL-Light"
+]
+
+url {
+  src: "git+https://github.com/Deducteam/coq-hol-light-real-with-N.git#main"
+}

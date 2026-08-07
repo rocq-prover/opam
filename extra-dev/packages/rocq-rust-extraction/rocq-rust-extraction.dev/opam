@@ -1,0 +1,36 @@
+opam-version: "2.0"
+name: "rocq-rust-extraction"
+synopsis: "Rocq extraction to Rust"
+description: """
+A framework for extracting Rocq programs to Rust
+"""
+maintainer: "Danil Annenkov <danil.v.annenkov@gmail.com>"
+authors: "The COBRA team"
+license: "MIT"
+homepage: "https://github.com/peregrine-project/rocq-typed-extraction"
+dev-repo: "git+https://github.com/peregrine-project/rocq-typed-extraction.git"
+bug-reports: "https://github.com/peregrine-project/rocq-typed-extraction/issues"
+doc: "https://peregrine-project.github.io/rocq-typed-extraction/toc.html"
+
+depends: [
+  "rocq-typed-extraction-common" {= version}
+]
+
+build: [
+  ["bash" "./configure.sh"]
+  [make "-j" "%{jobs}%" "-C" "rust"]
+]
+
+install: [
+  [make "-C" "rust" "install"]
+]
+
+tags: [
+  "keyword:rust"
+  "keyword:extraction"
+  "logpath:TypedExtraction"
+]
+
+url {
+  src: "git+https://github.com/peregrine-project/rocq-typed-extraction.git#master"
+}

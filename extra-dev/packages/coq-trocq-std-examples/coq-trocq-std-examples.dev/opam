@@ -1,0 +1,50 @@
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://github.com/coq-community/trocq"
+dev-repo: "git+https://github.com/coq-community/trocq.git"
+bug-reports: "https://github.com/coq-community/trocq/issues"
+license: "LGPL-3.0-or-later"
+
+synopsis: "A modular parametricity plugin for proof transfer in Coq: examples"
+description: """
+Tests for applications of Trocq
+"""
+
+build: [make "-C" "examples/std" "-j%{jobs}%"]
+install: [make "-C" "examples/std"  "install"]
+depends: [
+  "coq" {>= "8.20"}
+  # NEW dependency, not a bumped bound: this recipe declared no ssreflect at all.
+  # 3 of the 15 .v files under examples/std require `all_boot` (int_to_Zp.v,
+  # flt3_step.v, square_and_cube_mod7.v), and examples/std is exactly what
+  # `build: [make -C examples/std]` compiles. `all_boot` ships from
+  # rocq-mathcomp-boot, which exists only at 2.5.0 and above. The bare
+  # coq-mathcomp-algebra below cannot express this: it reaches ssreflect through
+  # its own {= version} lock, which pins downward rather than lifting a floor.
+  "coq-mathcomp-ssreflect" {>= "2.5.0"}
+  "coq-mathcomp-algebra"
+  "coq-trocq-std"
+]
+
+tags: [
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "category:Miscellaneous/Coq Extensions"
+  "keyword:automation"
+  "keyword:elpi"
+  "keyword:proof transfer"
+  "keyword:isomorphism"
+  "keyword:univalence"
+  "keyword:parametricity"
+  "logpath:Trocq"
+]
+authors: [
+  "Cyril Cohen"
+  "Enzo Crance"
+  "Lucie Lahaye"
+  "Assia Mahboubi"
+]
+
+url {
+  src: "git+https://github.com/coq-community/trocq.git#master"
+}

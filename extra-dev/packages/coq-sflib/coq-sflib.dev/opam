@@ -1,0 +1,40 @@
+opam-version: "2.0"
+synopsis: "A collection of useful Rocq lemmas and tactics"
+description:
+  "This package provides useful Rocq lemmas and tactics for proof automation and rewriting."
+maintainer: ["yeji.han@sf.snu.ac.kr"]
+authors: [
+  "Jeehoon Kang <jeehoon.kang@kaist.ac.kr>"
+  "Minki Cho <minki.cho@sf.snu.ac.kr>"
+  "Jaehyung Lee <jaehyung.lee@sf.snu.ac.kr>"
+  "Yeji Han <yeji.han@sf.snu.ac.kr>"
+  "Gil Hur <gil.hur@sf.snu.ac.kr>"
+]
+license: "BSD-2-Clause"
+homepage: "https://github.com/snu-sf/sflib"
+bug-reports: "https://github.com/snu-sf/sflib/issues"
+depends: [
+  "coq-core" {>= "9.0"}
+  "rocq-stdlib"
+  "dune" {>= "3.8" & >= "3.8"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/snu-sf/sflib.git"
+
+url {
+  src: "git+https://github.com/snu-sf/sflib.git#master"
+}

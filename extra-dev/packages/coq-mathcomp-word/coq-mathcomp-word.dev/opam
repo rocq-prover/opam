@@ -1,0 +1,31 @@
+opam-version: "2.0"
+maintainer: "pierre-yves@strub.nu"
+homepage: "https://github.com/jasmin-lang/coqword"
+bug-reports: "https://github.com/jasmin-lang/coqword/issues"
+dev-repo: "git+https://github.com/jasmin-lang/coqword.git"
+license: "MIT"
+authors: ["Pierre-Yves Strub"]
+build: [ "dune" "build" "-p" name "-j" jobs ]
+depends: [
+  "dune" {>= "2.8"}
+  "coq-core" {= "dev"}
+  "coq-stdlib"
+  # Pinned rather than a menu on purpose. The old range admitted 2.4.0, 2.5.0
+  # and 2.6.0, and a range is excluded only if every member is: 2.4.0 and
+  # 2.5.0 are capped below a dev prover, but 2.6.0 reaches
+  # rocq-mathcomp-boot.2.6.0, which declares "rocq-core" {>= "9.0"} with no
+  # upper bound. So the dev prover above did not on its own exclude released
+  # mathcomp; the top of the range decided it.
+  "coq-mathcomp-ssreflect" {= "dev"}
+  # Left unconstrained on purpose, not by oversight. The pin above closes it:
+  # algebra 1.6 to 2.3.0 reach ssreflect through coq-mathcomp-fingroup
+  # {= version}, and 2.4.0 onwards are shims over rocq-mathcomp-algebra, whose
+  # {= version} locks on order and finite-group land on the same boot.
+  "coq-mathcomp-algebra"
+]
+synopsis: "Yet Another Coq Library on Machine Words"
+description: "Yet Another Coq Library on Machine Words"
+
+url {
+  src: "git+https://github.com/jasmin-lang/coqword.git#main"
+}
