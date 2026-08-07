@@ -33,7 +33,7 @@ depends: [
   "coq" {>= "8.8" | = "dev"}
   "menhir" {>= "20190626" | = "dev"}
   "ocaml" {>= "4.05.0"}
-  "coq-flocq" {>= "3.1.0" & < "4.0.0"} | "coq-flocq3" {= "dev"}
+  "coq-flocq" {>= "4.0.0" | = "dev"}
   "coq-menhirlib" {>= "20190626" | = "dev"}
 ]
 synopsis: "The CompCert C compiler (32 bit)"
@@ -61,5 +61,5 @@ url {
 }
 extra-files: [
   "0001-Allow-dev-version-of-Menhir.patch"
-  "sha512=76f4222174fe2ff396ccef236b249a5094f4258459c3d74a074e714ddab7da6ea22d66a264386202988e16e6e5713c7ef06c043751890369e0c35c5915e2c832"
+  "sha512=eae45478750f5a43e861b18d92f0641285db5c5ad4d4efbbedccfac07279629a2437f146f72b9846642a57ddc5575ba070680956f40e3093988f10e696a75853"
 ]
