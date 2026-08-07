@@ -17,7 +17,7 @@ Theorem, useful for proving termination."""
 build: ["dune" "build" "-p" name "-j" jobs]
 depends: [
   "dune" {>= "3.5"}
-  "coq" {>= "8.11"}
+  "coq" {= "dev"}
 ]
 
 tags: [

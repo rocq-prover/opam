@@ -22,8 +22,8 @@ into games of complete information, i.e., without any uncertainty."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq" {(>= "8.16")}
-  "coq-mathcomp-algebra" {>= "2.0"}
+  "coq" {= "dev"}
+  "coq-mathcomp-algebra" {= "dev"}
 ]
 
 tags: [

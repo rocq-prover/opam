@@ -12,7 +12,7 @@ doc: "https://inqwire.github.io/QuantumLib/toc.html"
 bug-reports: "https://github.com/inQWIRE/QuantumLib/issues"
 depends: [
   "dune" {>= "2.8"}
-  "coq" {>= "8.16"}
+  "coq" {= "dev"}
   "odoc" {with-doc}
 ]
 build: [
