@@ -39,8 +39,8 @@ sequent-style presentation."""
 build: [make "-j%{jobs}%" "hott"]
 install: [make "install" "-C" "hott"]
 depends: [
-  "coq" {>= "8.20" & < "9.1"}
-  "coq-elpi" {>= "3.4.0"}
+  "coq" {>= "9.0" & < "9.3"}
+  "coq-elpi" {>= "3.5.0"}
   "coq-hott"
 ]
 

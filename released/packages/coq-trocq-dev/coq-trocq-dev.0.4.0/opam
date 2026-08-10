@@ -36,7 +36,7 @@ sequent-style presentation."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq" {>= "8.20" & < "9.2"}
+  "coq" {>= "9.0" & < "9.3"}
   "coq-elpi" {>= "3.5.0"}
   "coq-hott"
   "coq-mathcomp-algebra"
