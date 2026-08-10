@@ -1,0 +1,21 @@
+opam-version: "2.0"
+maintainer: "gaetan.gilbert@skyskimmer.net"
+authors: [ "Gaëtan Gilbert" ]
+license: "LGPL-2.1-only"
+homepage: "https://github.com/coq-community/rocq-lean-import"
+bug-reports: "https://github.com/coq-community/rocq-lean-import/issues"
+dev-repo: "git+https://github.com/coq-community/rocq-lean-import.git"
+
+depends: [
+  "rocq-lean-import" {= version}
+]
+
+synopsis: "Compatibility package for rocq-lean-import"
+description: """
+This package installs no files of its own. It exists so that packages and
+users still asking for coq-lean-import get rocq-lean-import, which is where
+the plugin now lives.
+
+Note: this package deliberately does not declare the conflict-class that
+rocq-lean-import declares, since it depends on rocq-lean-import rather than
+installing anything itself."""

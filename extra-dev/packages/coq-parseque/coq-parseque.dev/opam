@@ -1,0 +1,17 @@
+opam-version: "2.0"
+maintainer: ["G. Allais" "W. Meier"]
+authors: ["G. Allais"]
+license: "MIT"
+homepage: "https://github.com/rocq-community/parseque"
+bug-reports: "https://github.com/rocq-community/parseque/issues"
+dev-repo: "git+https://github.com/rocq-community/parseque.git"
+
+depends: [
+  "rocq-parseque" {= version}
+]
+
+synopsis: "Compatibility package for rocq-parseque"
+description: """
+This package installs no files of its own. It exists so that packages and
+users still asking for coq-parseque get rocq-parseque, which is where the
+library now lives."""

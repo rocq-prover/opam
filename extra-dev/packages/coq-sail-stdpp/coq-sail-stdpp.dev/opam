@@ -1,0 +1,29 @@
+opam-version: "2.0"
+maintainer: ["Sail Devs <cl-sail-dev@lists.cam.ac.uk>"]
+authors: [
+  "Alasdair Armstrong"
+  "Thomas Bauereiss"
+  "Brian Campbell"
+  "Shaked Flur"
+  "Jonathan French"
+  "Kathy Gray"
+  "Robert Norton"
+  "Christopher Pulte"
+  "Peter Sewell"
+  "Mark Wassell"
+]
+license: "BSD-2-Clause"
+homepage: "http://www.cl.cam.ac.uk/~pes20/sail/"
+doc: "https://github.com/rems-project/sail"
+bug-reports: "https://github.com/rems-project/coq-sail/issues"
+dev-repo: "git+https://github.com/rems-project/coq-sail.git"
+
+depends: [
+  "rocq-sail-stdpp" {= version}
+]
+
+synopsis: "Compatibility package for rocq-sail-stdpp"
+description: """
+This package installs no files of its own. It exists so that packages and
+users still asking for coq-sail-stdpp get rocq-sail-stdpp, which is where
+the library now lives."""

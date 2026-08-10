@@ -1,0 +1,18 @@
+opam-version: "2.0"
+maintainer: [ "Chantal Keller <ckeller@lmf.cnrs.fr>" "Vincent Lafeychine <vincent.lafeychine@proton.me>" ]
+authors: [ "Enzo Crance" ]
+license: "LGPL-3.0-or-later"
+homepage: "https://github.com/rocq-trakt/trakt"
+doc: "https://rocq-trakt.github.io/trakt"
+bug-reports: "https://github.com/rocq-trakt/trakt/issues"
+dev-repo: "git+https://github.com/rocq-trakt/trakt.git"
+
+depends: [
+  "rocq-trakt" {= version}
+]
+
+synopsis: "Compatibility package for rocq-trakt"
+description: """
+This package installs no files of its own. It exists so that packages and
+users still asking for coq-trakt get rocq-trakt, which is where the library
+now lives."""
