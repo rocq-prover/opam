@@ -1,0 +1,28 @@
+opam-version: "2.0"
+maintainer: "Björn Brandenburg <bbb@mpi-sws.org>"
+authors: [
+  "Felipe Cerqueira"
+  "Sergey Bozhko"
+  "Björn Brandenburg"
+  "Pierre Roux"
+  "Kimaya Bedarkar"
+  "Marco Maida"
+  "Athul Raj Kollareth"
+  "Sophie Quinton"
+  "Maxime Lesourd"
+]
+license: "BSD-2-Clause"
+homepage: "https://prosa.mpi-sws.org/"
+doc: "https://prosa.mpi-sws.org/releases/v0.6/spec/with-proofs/toc.html"
+bug-reports: "https://gitlab.mpi-sws.org/RT-PROOFS/rt-proofs/issues"
+dev-repo: "git+https://gitlab.mpi-sws.org/RT-PROOFS/rt-proofs.git"
+
+depends: [
+  "rocq-prosa" {= version}
+]
+
+synopsis: "Compatibility package for rocq-prosa"
+description: """
+This package installs no files of its own. It exists so that packages and
+users still asking for coq-prosa get rocq-prosa, which is where the library
+now lives."""
