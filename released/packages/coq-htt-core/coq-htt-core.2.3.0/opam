@@ -30,12 +30,13 @@ that HTT implements Separation logic as a shallow embedding in Rocq."""
 build: [make "-C" "htt" "-j%{jobs}%"]
 install: [make "-C" "htt" "install"]
 depends: [
-  "rocq-core" {>= "9.2"}
-  "rocq-stdlib"
-  "rocq-mathcomp-ssreflect" {>= "2.6.0"}
-  "rocq-hierarchy-builder" {>= "1.10.0"}
+  "rocq-core" {>= "9.2" & < "9.3~"}
+  "rocq-stdlib" 
+  "rocq-mathcomp-ssreflect" {>= "2.6.0" & < "2.7~"}
+  "rocq-hierarchy-builder" {>= "1.10.0" & < "1.11~"}
   "rocq-mathcomp-algebra" 
-  "coq-fcsl-pcm" {>= "2.3.0"}
+  "rocq-mathcomp-fingroup" 
+  "coq-fcsl-pcm" {>= "2.3.0" & < "2.4~"}
 ]
 
 tags: [
@@ -53,6 +54,8 @@ authors: [
 ]
 
 url {
-  src: "git+https://github.com/imdea-software/htt.git#master"
+  src: "https://github.com/imdea-software/htt/archive/refs/tags/v2.3.0.tar.gz"
+  checksum: "sha256=1ef7519e249664c7bd4a06af2dea0a4783c515b0fbd6b5098f1bcd674d91e0bf"
 }
+
 
