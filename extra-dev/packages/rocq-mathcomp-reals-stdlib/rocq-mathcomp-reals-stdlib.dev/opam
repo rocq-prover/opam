@@ -19,7 +19,7 @@ depends: [
   "rocq-mathcomp-reals" { = version}
 ]
 
-conflicts: [ "coq-mathcomp-reals-stdlib" { < "1.16~" } ]
+conflicts: [ "coq-mathcomp-reals-stdlib" { != version } ]
 
 tags: [
   "category:Mathematics/Real Numbers"

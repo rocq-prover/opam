@@ -21,7 +21,7 @@ depends: [
   "rocq-mathcomp-bigenough" { (>= "1.0.0") }
 ]
 
-conflicts: [ "coq-mathcomp-experimental-reals" { < "1.16~" } ]
+conflicts: [ "coq-mathcomp-experimental-reals" { != version } ]
 
 tags: [
   "category:Mathematics/Real Numbers"

@@ -15,7 +15,7 @@ depends: [
   "rocq-elpi" {>= "2.4" | = "dev"}
 ]
 conflicts: [
-  "coq-hierarchy-builder" {< "1.9~"}
+  "coq-hierarchy-builder" { != version }
   "coq-hierarchy-builder-shim"
 ]
 depexts: [
