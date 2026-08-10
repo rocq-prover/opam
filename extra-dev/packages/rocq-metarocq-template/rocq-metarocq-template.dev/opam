@@ -29,6 +29,7 @@ install: [
 depends: [
   "rocq-metarocq-common" {= version}
 ]
+conflicts: [ "coq-metacoq-template" { != version } ]
 synopsis: "A quoting and unquoting library for Rocq in Rocq"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

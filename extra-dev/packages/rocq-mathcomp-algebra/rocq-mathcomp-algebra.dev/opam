@@ -14,6 +14,7 @@ depends: [
   "rocq-mathcomp-finite-group" { = version }
   "rocq-micromega-plugin" { >= "1.0.0" }
 ]
+conflicts: [ "coq-mathcomp-algebra" { != version } ]
 
 tags: [
   "keyword:small scale reflection"

@@ -39,6 +39,7 @@ depends: [
   "rocq-stdpp-bitvector" {>= "1.13.0"}
   "odoc" {with-doc}
 ]
+conflicts: [ "coq-sail-stdpp" { != version } ]
 build: [
   ["dune" "subst"] {dev}
   [

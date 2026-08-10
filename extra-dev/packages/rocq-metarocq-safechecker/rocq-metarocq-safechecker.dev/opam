@@ -29,6 +29,7 @@ install: [
 depends: [
   "rocq-metarocq-pcuic" {= version}
 ]
+conflicts: [ "coq-metacoq-safechecker" { != version } ]
 synopsis: "Implementation and verification of safe conversion and typechecking algorithms for Rocq"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

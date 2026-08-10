@@ -25,6 +25,7 @@ depends: [
   "rocq-metarocq-translations" {= version}
   "rocq-metarocq-quotation" {= version}
 ]
+conflicts: [ "coq-metacoq" { != version } ]
 build: [
   ["bash" "./configure.sh" ] {with-test}
   [make "-C" "examples" ] {with-test}

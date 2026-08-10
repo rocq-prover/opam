@@ -15,6 +15,7 @@ depends: [
   "rocq-elpi" {>= "3.2.0"}
   "odoc" {with-doc}
 ]
+conflicts: [ "coq-trakt" { != version } ]
 # About the version of dune:
 # - rocq-elpi : (using coq 0.8) ; coq 0.8 exists until dune 3.23
 # - rocq-trakt : (using rocq 0.11) ; rocq 0.11 exists since dune 3.21

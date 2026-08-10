@@ -13,6 +13,7 @@ depends: [
   "rocq-mathcomp-boot" { = version }
   "rocq-mathcomp-order" { = version }
 ]
+conflicts: [ "coq-mathcomp-ssreflect" { != version } ]
 
 authors: [ "The Mathematical Components team" ]
 

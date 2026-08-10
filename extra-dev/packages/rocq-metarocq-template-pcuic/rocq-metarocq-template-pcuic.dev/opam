@@ -30,6 +30,7 @@ depends: [
   "rocq-metarocq-template" {= version}
   "rocq-metarocq-pcuic" {= version}
 ]
+conflicts: [ "coq-metacoq-template-pcuic" { != version } ]
 synopsis: "Translations between Template Rocq and PCUIC and proofs of correctness"
 description: """
 """

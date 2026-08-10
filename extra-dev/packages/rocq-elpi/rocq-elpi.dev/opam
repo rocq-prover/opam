@@ -24,6 +24,7 @@ depends: [
   "odoc" {with-doc}
   "rocq-stdlib" {with-doc}
 ]
+conflicts: [ "coq-elpi" { != version } ]
 build: [
   ["dune" "subst"] {dev}
   [
