@@ -10,6 +10,7 @@ license: "CECILL-B"
 build: [ make "-C" "group_representation" "-j" "%{jobs}%" ]
 install: [ make "-C" "group_representation" "install" ]
 depends: [ "rocq-mathcomp-field" { = version } ]
+conflicts: [ "coq-mathcomp-character" { != version } ]
 
 tags: [
   "keyword:small scale reflection"

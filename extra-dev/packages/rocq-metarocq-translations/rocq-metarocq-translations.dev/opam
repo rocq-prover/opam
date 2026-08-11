@@ -29,6 +29,7 @@ install: [
 depends: [
   "rocq-metarocq-template" {= version}
 ]
+conflicts: [ "coq-metacoq-translations" { != version } ]
 synopsis: "Translations built on top of MetaRocq"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

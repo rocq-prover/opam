@@ -10,6 +10,7 @@ license: "CECILL-B"
 build: [ make "-C" "order" "-j" "%{jobs}%" ]
 install: [ make "-C" "order" "install" ]
 depends: [ "rocq-mathcomp-boot" { = version } ]
+conflicts: [ "coq-mathcomp-order" { != version } ]
 
 tags: [
   "keyword:small scale reflection"

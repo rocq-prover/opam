@@ -26,6 +26,7 @@ depends: [
   "ocaml-lsp-server" {with-dev-setup}
   "odoc" {with-doc}
 ]
+conflicts: [ "coq-equations" { != version } ]
 build: [
   ["dune" "subst"] {dev}
   [

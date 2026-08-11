@@ -29,6 +29,7 @@ install: [
 depends: [
   "rocq-metarocq-utils" {= version}
 ]
+conflicts: [ "coq-metacoq-common" { != version } ]
 synopsis: "The common library of Template Rocq and PCUIC"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

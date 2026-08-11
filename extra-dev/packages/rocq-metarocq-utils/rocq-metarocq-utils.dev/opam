@@ -33,6 +33,7 @@ depends: [
   "rocq-equations" { = "dev" }
   "coq-ext-lib" { = "dev" }
 ]
+conflicts: [ "coq-metacoq-utils" { != version } ]
 synopsis: "The utility library of Template Rocq and PCUIC"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

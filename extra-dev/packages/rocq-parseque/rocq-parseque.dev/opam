@@ -17,6 +17,7 @@ depends: [
   "rocq-core"
   "rocq-stdlib"
 ]
+conflicts: [ "coq-parseque" { != version } ]
 
 tags: [
   "category:Computer Science/Data Types and Data Structures"

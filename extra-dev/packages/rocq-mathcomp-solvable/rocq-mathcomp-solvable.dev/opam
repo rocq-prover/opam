@@ -10,6 +10,7 @@ license: "CECILL-B"
 build: [ make "-C" "solvable" "-j" "%{jobs}%" ]
 install: [ make "-C" "solvable"  "install" ]
 depends: [ "rocq-mathcomp-algebra" { = version } ]
+conflicts: [ "coq-mathcomp-solvable" { != version } ]
 
 tags: [
   "keyword:small scale reflection"

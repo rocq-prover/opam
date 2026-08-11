@@ -21,6 +21,7 @@ depends: [
   "rocq-core" {= "dev"}
   "rocq-stdlib"
 ]
+conflicts: [ "coq-bignums" { != version } ]
 
 tags: [
   "category:Miscellaneous/Coq Extensions"

@@ -30,6 +30,7 @@ depends: [
   "rocq-metarocq-template-pcuic" {= version}
   "rocq-metarocq-safechecker" {= version}
 ]
+conflicts: [ "coq-metacoq-safechecker-plugin" { != version } ]
 synopsis: "Implementation and verification of an erasure procedure for Rocq"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

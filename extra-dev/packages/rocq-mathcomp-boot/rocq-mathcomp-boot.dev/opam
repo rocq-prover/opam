@@ -16,6 +16,7 @@ depends: [
   "elpi" {>= "1.17.0"}
   "rocq-hierarchy-builder" {>= "1.9.0"}
 ]
+conflicts: [ "coq-mathcomp-boot" { != version } ]
 
 tags: [
   "keyword:small scale reflection"

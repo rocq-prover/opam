@@ -31,6 +31,7 @@ depends: [
   "rocq-metarocq-pcuic" {= version}
   "rocq-metarocq-template-pcuic" {= version}
 ]
+conflicts: [ "coq-metacoq-quotation" { != version } ]
 synopsis: "Gallina quotation functions for Template Rocq"
 description: """
 MetaRocq is a meta-programming framework for Rocq.

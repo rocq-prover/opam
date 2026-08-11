@@ -10,6 +10,7 @@ license: "CECILL-B"
 build: [ make "-C" "finite_group" "-j" "%{jobs}%" ]
 install: [ make "-C" "finite_group" "install" ]
 depends: [ "rocq-mathcomp-boot" { = version } ]
+conflicts: [ "coq-mathcomp-fingroup" { != version } ]
 
 tags: [
   "keyword:small scale reflection"
