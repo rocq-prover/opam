@@ -43,5 +43,5 @@ tags: [
 ]
 
 url {
-  src: "git+https://github.com/impermeable/coq-waterproof.git#main"
+  src: "git+https://github.com/impermeable/coq-waterproof.git#coq-master"
 }
