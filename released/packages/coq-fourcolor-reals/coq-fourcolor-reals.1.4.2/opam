@@ -23,7 +23,7 @@ tags: [
   "category:Mathematics/Real Calculus and Topology"
   "keyword:real numbers"
   "logpath:fourcolor.reals"
-  "date:2025-04-16"
+  "date:2025-10-14"
 ]
 conflicts: [
   "coq-fourcolor" { != version }
