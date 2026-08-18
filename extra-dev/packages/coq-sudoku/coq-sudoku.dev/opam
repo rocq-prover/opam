@@ -1,0 +1,36 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+
+homepage: "https://github.com/coq-community/sudoku"
+dev-repo: "git+https://github.com/coq-community/sudoku.git"
+bug-reports: "https://github.com/coq-community/sudoku/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Sudoku solver certified in Coq"
+description: """
+A formalisation of Sudoku in Coq. It implements a naive
+Davis-Putnam procedure to solve Sudokus."""
+
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "dune" {>= "2.5"}
+  "coq" {= "dev"}
+]
+
+tags: [
+  "category:Miscellaneous/Logical Puzzles and Entertainment"
+  "keyword:puzzles"
+  "keyword:Davis-Putnam"
+  "keyword:sudoku"
+  "logpath:Sudoku"
+]
+authors: [
+  "Laurent Théry"
+]
+
+url {
+  src: "git+https://github.com/rocq-community/sudoku.git#master"
+}
