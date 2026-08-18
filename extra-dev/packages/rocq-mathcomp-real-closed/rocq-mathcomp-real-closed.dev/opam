@@ -18,8 +18,13 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
   "rocq-core" {= "dev"}
-  "rocq-mathcomp-ssreflect" {>= "2.4"}
-  "rocq-mathcomp-algebra" 
+  # 3 of the 10 .v files require `all_boot`, all under theories/ (polyrcf.v,
+  # qe_rcf_th.v, realalg.v), which `build: [make]` compiles. That umbrella ships
+  # from rocq-mathcomp-boot, and no mathcomp below 2.5.0 carries it -- so 2.4 was
+  # an impossible floor. The bare algebra/field deps below cannot lift it: their
+  # own dependency on ssreflect is {= version}, which locks downward.
+  "rocq-mathcomp-ssreflect" {>= "2.5.0"}
+  "rocq-mathcomp-algebra"
   "rocq-mathcomp-field" 
   "rocq-mathcomp-bigenough" {>= "1.0.0"}
 ]

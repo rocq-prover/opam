@@ -15,8 +15,17 @@ build: [make "-C" "classical" "-j%{jobs}%"]
 install: [make "-C" "classical" "install"]
 depends: [
   "rocq-core" {= "dev"}
-  "rocq-mathcomp-algebra" { (>= "2.6.0" & < "2.7~") }
+  # Pinned rather than a menu on purpose: rocq-mathcomp-boot 2.6.0 declares
+  # "rocq-core" {>= "9.0"} with no upper bound, so the dev prover above does
+  # not on its own exclude released mathcomp. Pinning the library propagates
+  # through the {= version} locks to order, finite-group and boot.
+  "rocq-mathcomp-algebra" {= "dev"}
+  # Left unconstrained on purpose, not by oversight: every published finmap
+  # permits a dev ssreflect, and the algebra pin above already forces boot to
+  # dev, so finmap cannot select a released mathcomp here.
   "rocq-mathcomp-finmap"
+  # This floor never binds. The lowest published rocq-hierarchy-builder is
+  # 1.9.0, and rocq-mathcomp-boot requires >= 1.9.0 in any case.
   "rocq-hierarchy-builder" { (>= "1.8.0") }
 ]
 

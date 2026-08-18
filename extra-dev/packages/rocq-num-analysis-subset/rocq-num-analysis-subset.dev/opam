@@ -1,0 +1,62 @@
+opam-version: "2.0"
+
+name: "rocq-num-analysis-subset"
+synopsis: "Subsets for numerical analysis in Rocq"
+description: """
+This library provides support about subsets, functions, homogeneous binary
+relations, and finite families. It is based on classical logic.
+Some complements about logic and natural numbers are also provided.
+"""
+
+homepage: "https://lipn.univ-paris13.fr/rocq-num-analysis/"
+dev-repo: "git+https://depot.lipn.univ-paris13.fr/mayero/rocq-num-analysis.git"
+bug-reports: "https://lipn.univ-paris13.fr/rocq-num-analysis/issues"
+doc: "https://lipn.univ-paris13.fr/rocqdoc-num-analysis/2.2/"
+maintainer: "MILC project <milc@inria.fr>"
+authors: [
+  "Sylvie Boldo"
+  "François Clément"
+  "Vincent Martin"
+  "Micaela Mayero"
+  "Florian Faissole"
+  "Houda Mouhcine"
+  "Louise Leclerc"
+  "Stéphane Aubry"
+]
+license: "LGPL-3.0-or-later"
+
+depends: [
+  # Copied verbatim from the released 2.2.0 depends:, where both caps are
+  # correct. On a `.dev` row tracking master they are not: opam sorts `dev`
+  # above every numeric version, so `< "9.2~"` excludes it while
+  # rocq-core.9.1.dev sits inside the interval. Do not re-sync this block
+  # from 2.2.0 -- a released row bounds, a dev row pins.
+  (("coq-core" {= "dev"} & "coq-stdlib" {= "dev"}) |
+    ("rocq-core" {= "dev"} & "rocq-stdlib" {= "dev"}))
+  "coq-mathcomp-ssreflect" {>= "2.3" & < "2.6~"}
+  "coq-mathcomp-classical" {>= "1.8" & < "1.15~"}
+]
+
+build: [ make "-C" "Subset" "-j%{jobs}%" ]
+install: [ make "-C" "Subset" "install" ]
+remove: [ make "-C" "Subset" "uninstall" ]
+
+tags: [
+  "category:Mathematics/Logic/Set theory"
+
+  "date:2026-03"
+
+  "logpath:NumAnalysis.Requisite"
+  "logpath:NumAnalysis.Logic"
+  "logpath:NumAnalysis.Numbers"
+  "logpath:NumAnalysis.Subsets"
+
+  "keyword:subset"
+  "keyword:function"
+  "keyword:homogeneous binary relation"
+  "keyword:operation on finite families"
+]
+
+url {
+  src: "git+https://depot.lipn.univ-paris13.fr/mayero/rocq-num-analysis.git#master"
+}

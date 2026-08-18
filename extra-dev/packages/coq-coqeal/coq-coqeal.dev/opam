@@ -17,11 +17,16 @@ of the ForMath EU FP7 project (2009-2013). It has two parts:
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq" {(>= "8.20" & < "9.1~") | (= "dev")}
+  "coq" {= "dev"}
   "coq-bignums"
   "coq-elpi" {>= "2.4.1" | = "dev"}
   "coq-hierarchy-builder" {>= "1.4.0"}
-  "coq-mathcomp-ssreflect" {>= "2.3"}
+  # 6 of the 52 .v files require `all_boot`, all of them under theory/, which
+  # `build: [make]` compiles. That umbrella ships from rocq-mathcomp-boot, and no
+  # mathcomp below 2.5.0 carries it -- so 2.3 was an impossible floor. The bare
+  # coq-mathcomp-algebra below does not close the hole on its own; it only reaches
+  # ssreflect through algebra's own {= version} lock, which at 2.4.0 locks downward.
+  "coq-mathcomp-ssreflect" {>= "2.5.0"}
   "coq-mathcomp-algebra"
   "coq-mathcomp-multinomials" {>= "2.0"}
   "coq-mathcomp-real-closed" {>= "2.0"}
