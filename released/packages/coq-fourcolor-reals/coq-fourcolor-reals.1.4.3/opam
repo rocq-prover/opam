@@ -14,8 +14,9 @@ with proofs of properties such as categoricity."""
 build: [make "-C" "theories/reals" "-j%{jobs}%"]
 install: [make "-C" "theories/reals" "install"]
 depends: [
-  ("coq" {(>= "8.20" & < "9.2~") | (= "dev")} )
-  "coq-mathcomp-ssreflect" {(>= "2.4.0" & < "2.6~") | (= "dev")}
+  ("coq" {>= "8.20" & < "8.21~"}
+  | "rocq-core" { >= "9.0" & < "9.4~" })
+  "coq-mathcomp-ssreflect" { >= "2.5.0" & < "2.7~" }
   "coq-mathcomp-algebra" 
 ]
 
@@ -23,7 +24,7 @@ tags: [
   "category:Mathematics/Real Calculus and Topology"
   "keyword:real numbers"
   "logpath:fourcolor.reals"
-  "date:2025-04-16"
+  "date:2026-07-17"
 ]
 conflicts: [
   "coq-fourcolor" { != version }
