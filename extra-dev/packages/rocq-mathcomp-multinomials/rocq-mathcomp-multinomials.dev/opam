@@ -24,7 +24,7 @@ depends: [
   "coq-mathcomp-bigenough" 
   "coq-mathcomp-finmap" 
 ]
-conflicts: [ "coq-mathcomp-multinomials" {<= "2.4.0"} ]
+conflicts: [ "coq-mathcomp-multinomials" { != version } ]
 
 tags: [
   "category:Mathematics/Algebra/Multinomials"

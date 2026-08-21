@@ -21,7 +21,7 @@ depends: [
   "rocq-navi" {= "0.5.1" & with-doc}
 ]
 
-conflicts: [ "coq-mathcomp-analysis" { < "1.16~" } ]
+conflicts: [ "coq-mathcomp-analysis" { != version } ]
 
 tags: [
   "category:Mathematics/Real Calculus and Topology"

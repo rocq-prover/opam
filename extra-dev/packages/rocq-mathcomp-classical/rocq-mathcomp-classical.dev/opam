@@ -20,7 +20,7 @@ depends: [
   "rocq-hierarchy-builder" { (>= "1.8.0") }
 ]
 
-conflicts: [ "coq-mathcomp-classical" { < "1.16~" } ]
+conflicts: [ "coq-mathcomp-classical" { != version } ]
 
 tags: [
   "category:Mathematics/Logic/Classical logic"
