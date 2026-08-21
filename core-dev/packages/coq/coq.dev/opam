@@ -10,6 +10,6 @@ depends: [
   "dune" {>= "3.8"}
   "coq-core" {= version}
   "coq-stdlib"
-  "coqide-server" {= version}
+  "rocqide-server" {= version}
 ]
 dev-repo: "git+https://github.com/rocq-prover/rocq.git"
