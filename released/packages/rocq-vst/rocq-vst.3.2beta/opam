@@ -38,6 +38,7 @@ run-test: [
 depends: [
   "ocaml"
   "rocq-vst-ora" { = "1.2" | = "~dev"}
+  "coq-core"
   "coq-compcert" {>= "3.16" & < "3.18~"}
   "coq-vst-zlist" {= "2.13" | = "dev"}
   "coq-flocq" {>= "4.2.0" & < "5~"}
