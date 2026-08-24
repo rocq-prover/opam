@@ -1,0 +1,19 @@
+opam-version: "2.0"
+maintainer: "Yannick Zakowski"
+
+homepage: "https://github.com/vellvm/ctrees"
+dev-repo: "git+https://github.com/vellvm/ctrees.git"
+bug-reports: "https://github.com/vellvm/ctrees/issues"
+license: "MIT"
+
+depends: [ "rocq-ctree" {= version} ]
+
+authors: [
+  "Nicolas Chappe"
+  "Paul He"
+  "Ludovic Henrio"
+  "Yannick Zakowski"
+  "Steve Zdancewic"
+]
+
+synopsis: "Compatibility package for rocq-ctree"

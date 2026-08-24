@@ -1,0 +1,45 @@
+opam-version: "2.0"
+synopsis: "Rocq library for Propositional Intuitionistic Logic & Pitts Interpolation Library"
+
+homepage: "https://github.com/hferee/rocq-pil"
+dev-repo: "git+https://github.com/hferee/rocq-pil.git"
+bug-reports: "https://github.com/hferee/rocq-pil/issues"
+doc: "https://hferee.github.io/UIML"
+maintainer: "feree@irif.fr"
+authors: [
+  "Hugo Férée"
+  "Sam van Gool"
+  "Yago Iglesias Vasquez"
+]
+license: "CECILL-2.1"
+
+depends: [
+  "dune" {>= "3.8"}
+  "rocq-core" {= "dev"}
+  "rocq-stdpp" {>= "1.13.0"}
+  "rocq-equations" {}
+]
+
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+tags: [
+  "date:2025-02-14"
+  "keyword:intuitionistic logic"
+  "keyword:proof theory"
+  "keyword:propositional quantifiers"
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "category:Mathematics/Logic/Foundations"
+  "category:Mathematics/Logic/Modal logic"
+  "logpath:ISL"
+]
+
+conflicts: [ "coq-pil" { != version } ]
+
+url {
+  src: "git+https://github.com/hferee/rocq-pil.git#main"
+}

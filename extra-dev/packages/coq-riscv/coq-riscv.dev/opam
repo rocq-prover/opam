@@ -11,9 +11,16 @@ build: [
 ]
 install: [make "EXTERNAL_DEPENDENCIES=1" "install"]
 depends: [
-  "coq" {>= "8.18~" | = "dev"}
-  ("coq-coqutil" {>= "0.0.7" | = "dev"} | "coq-fiat-crypto-with-bedrock")
-  "coq-record-update" {>= "0.3.0" | = "dev"}
+  "coq" {= "dev"}
+  # Upstream's disjunction, kept as a disjunction: riscv-coq builds against
+  # coqutil, or against coq-fiat-crypto-with-bedrock, which vendors it.  Both
+  # arms are pinned rather than only the first.  The second pin is redundant
+  # today -- coq-fiat-crypto-with-bedrock publishes no version but .dev in this
+  # archive -- and is written anyway so that publishing a released one later
+  # cannot quietly reintroduce a released dependency on a row whose whole
+  # purpose is to track master.
+  ("coq-coqutil" {= "dev"} | "coq-fiat-crypto-with-bedrock" {= "dev"})
+  "coq-record-update" {= "dev"}
 ]
 dev-repo: "git+https://github.com/mit-plv/riscv-coq.git"
 synopsis: "RISC-V Specification in Coq, somewhat experimental"

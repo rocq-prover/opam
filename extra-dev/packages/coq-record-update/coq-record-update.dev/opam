@@ -19,7 +19,13 @@ simple typeclass that lists out the record fields."""
 build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
-  "coq-core" {(>= "8.17" & < "9.3") | (= "dev")}
+  # The `meta.yml` header above describes tchajed/coq-record-update's own
+  # generated opam file, not this one -- this row is absent at upstream/master
+  # and was added by bf05c0086, so nothing regenerates it.  Keep `coq-core`
+  # rather than `rocq-core`: the build is a coq_makefile Makefile that calls
+  # coqc, and at dev those binaries live in coq-core, whose whole synopsis is
+  # "compatibility binaries ... like coqc coqtop".
+  "coq-core" {= "dev"}
   ("coq-stdlib" {>= "8.17" & < "9.0"} |
    "rocq-stdlib" {(>= "9.0" & < "9.2") | (= "dev")})
 ]

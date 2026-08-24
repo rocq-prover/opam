@@ -9,26 +9,59 @@ dev-repo: "git+https://github.com/validsdp/validsdp.git"
 bug-reports: "https://github.com/validsdp/validsdp/issues"
 license: "LGPL-2.1-or-later"
 
+# Resynced from upstream's own opam file on validsdp master (a8caf102,
+# coq-validsdp.opam), which is maintained and which this row had drifted years
+# behind. The previous build: ran `./autogen.sh && ./configure` first; upstream
+# deleted autoconf, nothing matching autogen/configure/*.ac/*.am exists on
+# master, and running that step verbatim gives rc=127 `./autogen.sh: not found`.
+# That is why this row has never compiled a .v file.
 build: [
-  ["sh" "-c" "./autogen.sh && ./configure"]
   [make "-j%{jobs}%"]
 ]
+run-test: [make "-j%{jobs}%" "test"]
 install: [make "install"]
 
 depends: [
+  # ocaml/ocamlfind stay: unlike libvalidsdp, this package builds an OCaml
+  # plugin (plugins/soswitness). conf-autoconf goes with the deleted step above.
   "ocaml"
-  "coq" {>= "8.14"}
+  # Upstream writes this as a menu, `{((>= "9.0" & < "9.2~") | (= "dev"))}`,
+  # which permits a dev prover without ever requiring one -- the shape #59 fixed
+  # on rocq-infotheo.dev and rocq-laproof.dev. A .dev row tracking master has to
+  # require dev outright.
+  #
+  # Keep the package name `coq`; do NOT rename it to `rocq-core`. validsdp's
+  # Makefile builds via `$(COQBIN)coq_makefile` with COQBIN derived from
+  # `which coqc`, and rocq-core ships neither binary -- they live in coq-core,
+  # whose synopsis is "Compatibility binaries for Coq after the Rocq renaming".
+  # The chain coq.dev -> coq-core {= version} -> rocq-runtime {= version} pins
+  # rocq master exactly as rocq-core {= "dev"} would, while keeping the binaries
+  # the build actually invokes.
+  "coq" {= "dev"}
   "coq-bignums"
   "coq-flocq" {>= "3.3.0"}
+  # Upstream caps this `& < "5~"`. That cap is NOT carried here: opam versions
+  # order `dev` above every numeric version, so an upper bound is the one thing
+  # that can exclude dev, and `< "5~"` would forbid coq-interval.dev outright.
+  # A bare floor permits both a released interval and the dev one.
   "coq-interval" {>= "4.0.0"}
-  "coq-mathcomp-field" {>= "1.13"}
+  # Upstream: `{(>= "2.3" & < "2.5~") | (= "dev")}` -- a menu whose numeric arm
+  # is the one the solver actually takes (#38/#48). Pinned to dev here, matching
+  # what #58 did to rocq-mathcomp-classical.dev. coq-mathcomp-field.dev is a
+  # pure compat shim, `depends: ["rocq-mathcomp-field" {= version}]`, so this
+  # resolves to rocq-mathcomp-field.dev -- which is what the source port was
+  # measured against.
+  "coq-mathcomp-field" {= "dev"}
+  # New upstream dependency.
+  "coq-mathcomp-reals-stdlib" {>= "1.8.0"}
   "coq-libvalidsdp" {= "dev"}
-  "coq-mathcomp-multinomials" {>= "1.2"}
-  "coq-coqeal" {>= "1.1.0"}
-  "coq-paramcoq" {>= "1.1.0"}
-  "osdp" {>= "1.0"}
+  "coq-mathcomp-multinomials" {>= "2.0"}
+  "coq-coqeal" {>= "2.1"}
+  # coq-paramcoq dropped: absent from upstream's depends: list. (Why it is no
+  # longer needed is not established here -- only that upstream stopped
+  # declaring it.)
+  "osdp" {>= "1.1.1"}
   "ocamlfind" {build}
-  "conf-autoconf" {build}
 ]
 synopsis: "ValidSDP"
 description: """

@@ -1,0 +1,95 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+
+homepage: "https://github.com/affeldt-aist/infotheo"
+dev-repo: "git+https://github.com/affeldt-aist/infotheo.git"
+bug-reports: "https://github.com/affeldt-aist/infotheo/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Discrete probabilities and information theory for Rocq"
+description: """
+Infotheo is a Rocq library for reasoning about discrete probabilities,
+information theory, and linear error-correcting codes."""
+
+build: [
+  [make "-j%{jobs}%" ]
+  [make "-C" "extraction" "tests"] {with-test}
+]
+install: [make "install"]
+depends: [
+  # This is a `.dev` recipe tracking a moving branch, so it has to REQUIRE a dev
+  # prover, not merely permit one. The line was previously a bare "coq" with no
+  # constraint at all, which permits every prover in the archive down to 8.0.dev.
+  #
+  # A floor on a dependency does not fix that: a dependency's version constrains
+  # the prover only through whatever that dependency itself declares, and no
+  # choice of ssreflect forces dev here. All three post-boot arms leave dev
+  # optional --
+  #   rocq-mathcomp-boot.2.5.0  ("coq" {>= "8.20" & < "8.21~"}
+  #                              | "rocq-core" {>= "9.0" & < "9.2~"})  capped
+  #   rocq-mathcomp-boot.2.6.0  "rocq-core" {>= "9.0"}                 floor only
+  #   rocq-mathcomp-boot.dev    ("coq" {>= "8.20" & < "8.21~"}
+  #                              | "rocq-core" {>= "9.0" | = "dev"})   a MENU
+  # -- and the last is the one that matters: `{>= "9.0" | = "dev"}` names dev as
+  # one option, and rocq-core.9.1.dev satisfies the other. So even ssreflect.dev
+  # leaves the row free to solve on 9.1 and go green having exercised no dev at
+  # all. That is the shape #52's promotion gate exists to catch.
+  "coq" {= "dev"}
+  # 2.4.0 is an impossible floor for these sources: 86 of the 87 .v files open
+  # with `From mathcomp Require Import all_boot`, and 45 also require all_order.
+  # Those two umbrellas ship from rocq-mathcomp-boot / rocq-mathcomp-order, and
+  # released/ carries neither package below 2.5.0 -- the only version dirs are
+  # 2.5.0, 2.6.0 and dev. (mathcomp 2.4.0 does install boot/ and order/
+  # directories, so a `test -d` check passes there; both are empty.)
+  #
+  # Stating it on ssreflect is sufficient and is the whole fix: 2.5.0 pulls
+  # rocq-mathcomp-ssreflect {= version}, which pulls rocq-mathcomp-boot and
+  # rocq-mathcomp-order {= version}. Declaring boot/order here as well would add
+  # nothing. The sibling 2.4.0 floors below are likewise left alone: at 2.4.0 the
+  # core stack still locks downward (rocq-mathcomp-algebra {= version} ->
+  # fingroup -> ssreflect), so raising ssreflect raises all of them.
+  #
+  # Latent, not visible today: the solver takes the newest permitted version, so
+  # it picks 2.6.0/dev and the hole never fires. This is a pre-existing recipe
+  # bug rather than a port regression -- the constraint is not doing the work,
+  # the switch is.
+  "coq-mathcomp-ssreflect" { >= "2.5.0" }
+  "coq-mathcomp-fingroup" { >= "2.4.0" }
+  "coq-mathcomp-algebra" { >= "2.4.0" }
+  "coq-mathcomp-solvable" { >= "2.4.0" }
+  "coq-mathcomp-field" { (>= "2.4.0") }
+  "coq-mathcomp-analysis" { (>= "1.12.0") }
+  "coq-mathcomp-reals-stdlib" { (>= "1.12.0") }
+  "coq-hierarchy-builder" { (>= "1.10.0") }
+  "rocq-elpi" { (>= "3.0.0") }
+  "coq-mathcomp-algebra-tactics" { (>= "1.2.6") }
+  "coq-interval" { >= "4.10.0"}
+]
+
+tags: [
+  "keyword:information theory"
+  "keyword:probability"
+  "keyword:error-correcting codes"
+  "keyword:convexity"
+  "logpath:infotheo"
+]
+authors: [
+  "Reynald Affeldt, AIST"
+  "Manabu Hagiwara, Chiba U. (previously AIST)"
+  "Jonas Senizergues, ENS Cachan (internship at AIST)"
+  "Jacques Garrigue, Nagoya U."
+  "Kazuhiko Sakaguchi, Tsukuba U."
+  "Taku Asai, Nagoya U. (M2)"
+  "Takafumi Saikawa, Nagoya U."
+  "Naruomi Obata, Titech (M2)"
+  "Alessandro Bruni, IT-University of Copenhagen"
+]
+
+conflicts: [ "coq-infotheo" { != version } ]
+
+url {
+  src: "git+https://github.com/affeldt-aist/infotheo.git#master"
+}

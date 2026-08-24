@@ -1,0 +1,22 @@
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+
+homepage: "https://github.com/affeldt-aist/infotheo"
+dev-repo: "git+https://github.com/affeldt-aist/infotheo.git"
+bug-reports: "https://github.com/affeldt-aist/infotheo/issues"
+license: "LGPL-2.1-or-later"
+
+depends: [ "rocq-infotheo" { = version } ]
+authors: [
+  "Reynald Affeldt, AIST"
+  "Manabu Hagiwara, Chiba U. (previously AIST)"
+  "Jonas Senizergues, ENS Cachan (internship at AIST)"
+  "Jacques Garrigue, Nagoya U."
+  "Kazuhiko Sakaguchi, Tsukuba U."
+  "Taku Asai, Nagoya U. (M2)"
+  "Takafumi Saikawa, Nagoya U."
+  "Naruomi Obata, Titech (M2)"
+  "Alessandro Bruni, IT-University of Copenhagen"
+]
+
+synopsis: "Compatibility package for rocq-infotheo"
