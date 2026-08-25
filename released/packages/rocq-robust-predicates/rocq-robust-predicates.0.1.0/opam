@@ -1,0 +1,83 @@
+opam-version: "2.0"
+synopsis: "Machine-checked robust binary64 geometric predicates, sound vs. exact arithmetic"
+description: """
+A small, self-contained Rocq library of formally verified robust geometric
+predicates for binary64 (IEEE-754 double) coordinates, extracted from the
+NetTopologySuite.Proofs corpus.
+
+It provides, with `Qed`-closed soundness proofs against exact arithmetic:
+
+  - exact sign of the 2D orientation determinant (orient2d) via an
+    error-free expansion (TwoSum / Dekker / fast-expansion-sum), proven to
+    match the sign of the real determinant `cross_R_BP`;
+  - a Stage-D adaptive decoder (fast floating-point filter with an exact
+    expansion fallback) and its soundness theorem;
+  - robust segment-intersection predicates;
+  - integer-coordinate determinant overflow bounds (0 axioms) for the
+    int-safe regime.
+
+The library sits on top of Flocq (the IEEE-754 substrate) and complements,
+rather than competes with, the geometry libraries in the ecosystem: GeoCoq is
+synthetic/axiomatic (no coordinates or floats), while this package is the
+analytic + floating-point-robustness layer. It also ships machine-checked
+counterexamples showing where the textbook strong-nonoverlap postcondition of
+Shewchuk's Theorem 13 is FALSE as stated under a half-ulp predicate, so the
+top-level orientation soundness is stated honestly (the strong-nonoverlap
+headline appears as an explicit, type-visible hypothesis where it is needed).
+
+Provenance: github.com/grootstebozewolf/NetTopologySuite.Proofs (assembled via
+the package MANIFEST). Every theorem ends in `Qed`; the only axioms are the
+standard classical-reals + functional-extensionality used throughout the
+corpus (see `make`'s `Print Assumptions` output).
+"""
+maintainer: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/issues"
+authors: ["NetTopologySuite.Proofs contributors"]
+license: "BSD-3-Clause"
+homepage: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs"
+bug-reports: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/issues"
+dev-repo: "git+https://github.com/grootstebozewolf/NetTopologySuite.Proofs.git"
+
+depends: [
+  "ocaml"
+  "rocq-core" {>= "9.2" & < "9.3~"}
+  "rocq-stdlib"
+  # Flocq has no rocq-* release yet, so this package necessarily depends on a
+  # coq-* one.  The archive's ideal is that a rocq-* package depends only on
+  # rocq-* packages, so that CI can prove it builds without the compatibility
+  # binaries from coq-core; upstream guidance is that the rule is not
+  # universally followed, so the name follows the development.
+  #
+  # The >= 4.2.2 floor is not merely "the version we tested": 4.2.2 is the
+  # release that implements the Rocq standard library, so it is the first Flocq
+  # that is Rocq-native in substance despite carrying a coq-* name.  Anything
+  # older would pull the Coq compat layer back in and defeat the point of the
+  # rocq-* naming.
+  "coq-flocq" {>= "4.2.2" & < "4.3~"}
+]
+
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "category:Mathematics/Real Calculus and Topology"
+  "keyword:robust predicates"
+  "keyword:computational geometry"
+  "keyword:orientation"
+  "keyword:floating point"
+  "keyword:Flocq"
+  "logpath:NTS.Proofs"
+  "date:2026-08-24"
+]
+
+url {
+  src:
+    "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/releases/download/rocq-robust-predicates-v0.1.0/rocq-robust-predicates.tar.gz"
+  checksum: [
+    "sha512=a162cd4e47485bd9e765aa846707e7b7a052ba9d60b97d8dc8a1b5b9e98167d68e9ca6e6e5f78589c1484dd478212aaf9f68bbabfb0084a7ce393d7785c7989e"
+  ]
+}
