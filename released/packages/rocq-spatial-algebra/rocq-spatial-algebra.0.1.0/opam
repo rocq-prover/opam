@@ -1,0 +1,64 @@
+opam-version: "2.0"
+synopsis: "DE-9IM intersection-matrix algebra and integer orientation-determinant bounds (axiom-free)"
+description: """
+A tiny, dependency-free Rocq library of spatial-relation algebra, extracted
+from the NetTopologySuite.Proofs corpus.
+
+Two independent modules, both `Qed`-closed with NO axioms ("Closed under the
+global context") and depending only on Rocq's Stdlib:
+
+  - `DE9IM`: the DE-9IM (Dimensionally Extended 9-Intersection Model) algebra
+    used by OGC/SQL-MM spatial predicates -- dimension values, intersection
+    matrices, named relation patterns (disjoint, intersects, contains, within,
+    covers, ...), pattern matching, and the transpose laws relating a relation
+    to its converse.
+
+  - `RelateIntDetBound`: the 2D orientation determinant over integer
+    coordinates together with proven magnitude/overflow bounds, used to
+    certify the safe-coordinate regime for robust orientation predicates.
+
+Both modules are foundational and self-contained: zero intra-corpus
+dependencies, no Flocq, no classical reals. Useful to any project doing
+formal GIS / spatial-relation reasoning or robust-predicate overflow analysis.
+
+Provenance: github.com/grootstebozewolf/NetTopologySuite.Proofs (assembled via
+the package MANIFEST).
+"""
+maintainer: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/issues"
+authors: ["NetTopologySuite.Proofs contributors"]
+license: "BSD-3-Clause"
+homepage: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs"
+bug-reports: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/issues"
+dev-repo: "git+https://github.com/grootstebozewolf/NetTopologySuite.Proofs.git"
+
+depends: [
+  "ocaml"
+  "rocq-core" {>= "9.2" & < "9.3~"}
+  "rocq-stdlib"
+]
+
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "keyword:DE-9IM"
+  "keyword:spatial relations"
+  "keyword:GIS"
+  "keyword:intersection matrix"
+  "keyword:orientation determinant"
+  "logpath:NTS.Proofs"
+  "date:2026-08-24"
+]
+
+url {
+  src:
+    "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/releases/download/rocq-spatial-algebra-v0.1.0/rocq-spatial-algebra.tar.gz"
+  checksum: [
+    "sha512=d3629d6975e37f81d729a265b3da47022efa9282bb88eaeb71bc3fb17a29bb4307e6f482531ff87c2242462ae7145ca95d21b1b2c97f0f8412d50e5ca29079df"
+  ]
+}
