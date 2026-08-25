@@ -41,17 +41,9 @@ depends: [
   "ocaml"
   "rocq-core" {>= "9.2" & < "9.3~"}
   "rocq-stdlib"
-  # Flocq has no rocq-* release yet, so this package necessarily depends on a
-  # coq-* one.  The archive's ideal is that a rocq-* package depends only on
-  # rocq-* packages, so that CI can prove it builds without the compatibility
-  # binaries from coq-core; upstream guidance is that the rule is not
-  # universally followed, so the name follows the development.
-  #
-  # The >= 4.2.2 floor is not merely "the version we tested": 4.2.2 is the
-  # release that implements the Rocq standard library, so it is the first Flocq
-  # that is Rocq-native in substance despite carrying a coq-* name.  Anything
-  # older would pull the Coq compat layer back in and defeat the point of the
-  # rocq-* naming.
+  # Flocq has no rocq-* release yet. 4.2.2 is the first Flocq implementing
+  # the Rocq standard library, so the dependency is Rocq-native in substance
+  # even though its package name is still coq-*.
   "coq-flocq" {>= "4.2.2" & < "4.3~"}
 ]
 
