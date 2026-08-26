@@ -3,28 +3,33 @@ From: Michael Soegtrop <7895506+MSoegtropIMC@users.noreply.github.com>
 Date: Sun, 27 Dec 2020 15:18:54 +0100
 Subject: [PATCH] Allow dev version of Menhir
 
+`menhir --version` prints "menhir, version unreleased" for builds from the
+upstream git repository, which is what an opam pin on menhir's git repo gives
+you.  The version-extraction sed only matches digits, so such a version falls
+through to the catch-all case and configure reports "Testing Menhir... NOT
+FOUND".  Recognise "unreleased" and treat it as recent enough, still checking
+that the Menhir API library can be located.
+
+Regenerated with one line of context so that the hunks no longer depend on the
+value of MENHIR_REQUIRED, which is what made the previous revision of this
+patch stop applying when upstream bumped it from 20190626 to 20200624.
 ---
- configure | 14 +++++++++++++-
- 1 file changed, 13 insertions(+), 1 deletion(-)
+ configure | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
 
 diff --git a/configure b/configure
-index 7cbb9d7d..4c494379 100755
 --- a/configure
 +++ b/configure
-@@ -556,7 +556,7 @@ fi
- 
- MENHIR_REQUIRED=20190626
+@@ -618,3 +618,3 @@ MENHIR_REQUIRED=20200624
  echo "Testing Menhir... " | tr -d '\n'
 -menhir_ver=$(menhir --version 2>/dev/null | sed -n -e 's/^.*version \([0-9]*\).*$/\1/p')
 +menhir_ver=$(menhir --version 2>/dev/null | sed -n -E -e 's/^.*version (unreleased|[0-9]*).*$/\1/p')
  case "$menhir_ver" in
-   20[0-9][0-9][0-9][0-9][0-9][0-9])
-       if test "$menhir_ver" -ge $MENHIR_REQUIRED; then
-@@ -576,6 +576,18 @@ case "$menhir_ver" in
-           echo "Error: CompCert requires a version greater or equal to $MENHIR_REQUIRED."
-           missingtools=true
+@@ -638,2 +638,16 @@ case "$menhir_ver" in
        fi;;
 +  unreleased)
++      # Development ("unreleased") builds of Menhir, e.g. an opam pin on the
++      # upstream git repository.  Assume they are recent enough.
 +      echo "version $menhir_ver -- acceptable!"
 +      menhir_dir=$(ocamlfind query menhirLib 2>/dev/null) || \
 +      menhir_dir=$(menhir --suggest-menhirLib) || \
@@ -37,8 +42,5 @@ index 7cbb9d7d..4c494379 100755
 +          missingtools=true
 +      fi;;
    *)
-         echo "NOT FOUND"
-         echo "Error: make sure Menhir version $MENHIR_REQUIRED or later is installed."
--- 
+--
 2.29.2
-
