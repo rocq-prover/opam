@@ -1,0 +1,36 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+
+homepage: "https://github.com/coq-community/stalmarck"
+dev-repo: "git+https://github.com/coq-community/stalmarck.git"
+bug-reports: "https://github.com/coq-community/stalmarck/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Verified implementation of Stålmarck's algorithm for proving tautologies in Coq"
+description: """
+A two-level approach to prove tautologies using Stålmarck's
+algorithm in Coq."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {= "dev"}
+]
+
+tags: [
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Decision procedures"
+  "keyword:boolean formula"
+  "keyword:tautology checker"
+  "logpath:Stalmarck.Algorithm"
+]
+authors: [
+  "Pierre Letouzey"
+  "Laurent Théry"
+]
+
+url {
+  src: "git+https://github.com/rocq-community/stalmarck.git#master"
+}

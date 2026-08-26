@@ -1,0 +1,51 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "assia.mahboubi@inria.fr"
+
+homepage: "https://github.com/coq-community/apery"
+dev-repo: "git+https://github.com/coq-community/apery.git"
+bug-reports: "https://github.com/coq-community/apery/issues"
+license: "CECILL-C"
+
+synopsis: "A formally verified proof in Coq, by computer algebra, that ζ(3) is irrational"
+description: """
+This project contains a formal proof that the real number ζ(3),
+also known as Apéry's constant, is irrational. It follows roughly
+Apéry's original sketch of a proof. However, the recurrence
+relations constituting the crux of the proof have been guessed by a
+computer algebra program (in this case in Maple/Algolib). These
+relations are formally checked a posteriori, so that Coq's kernel
+remains the sole trusted code base."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {= "dev"}
+  "coq-mathcomp-ssreflect" {= "dev"}
+  "coq-mathcomp-algebra" 
+  "coq-mathcomp-field" 
+  "coq-coqeal" {>= "2.1.0"}
+  "coq-mathcomp-real-closed" {= "dev"}
+  "coq-mathcomp-bigenough" {= "dev"}
+  "coq-mathcomp-zify" 
+  "coq-mathcomp-algebra-tactics" 
+]
+
+tags: [
+  "category:Mathematics/Arithmetic and Number Theory/Number theory"
+  "keyword:apery recurrence"
+  "keyword:irrationality"
+  "keyword:creative telescoping"
+  "logpath:mathcomp.apery"
+]
+authors: [
+  "Frédéric Chyzak"
+  "Assia Mahboubi"
+  "Thomas Sibut-Pinote"
+]
+
+url {
+  src: "git+https://github.com/rocq-community/apery.git#master"
+}

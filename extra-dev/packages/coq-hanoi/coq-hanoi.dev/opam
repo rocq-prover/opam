@@ -1,0 +1,59 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "thery@sophia.inria.fr"
+
+homepage: "https://github.com/thery/hanoi"
+dev-repo: "git+https://github.com/thery/hanoi.git"
+bug-reports: "https://github.com/thery/hanoi/issues"
+license: "MIT"
+
+synopsis: "Hanoi tower in Rocq"
+description: """
+Hanoi tower in Rocq
+
+
+| File                              |  Content                                 | 
+| --------------------------------- | -----------------------------------------| 
+| [extra](./extra.v)                | Extra theorems from the standard library |
+| [gdist](./gdist.v)                | Distance in a graph                      |
+| [ghanoi](./ghanoi.v)              | General Hanoi framework                  |
+| [ghanoi3](./ghanoi3.v)            | General Hanoi framework with 3 pegs      |
+| [lhanoi3](./lhanoi3.v)            | Linear Hanoi tower with 3 pegs           |
+| [rhanoi3](./rhanoi3.v)            | Regular Hanoi tower with 3 pegs          |
+| [triangular](./triangular.v)      | Theorems about triangular numbers        |
+| [phi](./phi.v)                    | Theorems about the Φ function            |
+| [psi](./psi.v)                    | Theorems about the Ψ function            |
+| [ghanoi4](./ghanoi4.v)            | General Hanoi framework with 4 pegs      |
+| [rhanoi4](./rhanoi4.v)            | Regular Hanoi tower with 4 pegs          |
+| [star](./star.v)                  | Some maths for the shanoi                |
+| [shanoi](./shanoi.v)              | Hanoi tower in star                      |
+| [shanoi4](./shanoi4.v)            | Hanoi tower with 4 pegs in star          |
+
+A note about this development is available 
+[here](https://hal.inria.fr/hal-02903548).
+
+An interactive version of the library is available 
+[here](https://thery.github.io/hanoi/index.html)."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {= "dev"}
+  "rocq-mathcomp-ssreflect" {(>= "2.5.0")}
+  "rocq-mathcomp-algebra" {(>= "2.5.0")}
+  "coq-mathcomp-finmap" {(>= "2.2.2")}
+]
+
+tags: [
+  "keyword:hanoi tower"
+  "logpath:hanoi"
+]
+authors: [
+  "Laurent Théry"
+]
+
+url {
+  src: "git+https://github.com/thery/hanoi.git#master"
+}
