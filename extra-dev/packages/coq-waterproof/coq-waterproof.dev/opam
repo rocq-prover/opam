@@ -1,0 +1,47 @@
+opam-version: "2.0"
+name: "coq-waterproof"
+maintainer: "Jim Portegies <j.w.portegies@tue.nl>"
+authors: [
+  "Jelle Wemmenhove"
+  "Pim Otte"
+  "Balthazar Pathiachvili"
+  "Dick Arends"
+  "Cosmin Manea"
+  "Lulof Pirée"
+  "Adrian Vrămuleţ"
+  "Tudor Voicu"
+  "Jim Portegies <j.w.portegies@tue.nl>"
+]
+
+synopsis: "Coq proofs in a style that resembles non-mechanized mathematical proofs"
+description: """
+The Waterproof plugin for the Coq proof assistant allows you to write Coq proofs in a style that resembles handwritten mathematical proofs, designed to help university students with learning how to prove mathematical statements.
+"""
+
+license: "LGPL-3.0-or-later"
+homepage: "https://github.com/impermeable/coq-waterproof"
+dev-repo: "git+https://github.com/impermeable/coq-waterproof.git"
+bug-reports: "https://github.com/impermeable/coq-waterproof/issues"
+
+depends: [
+  "ocaml" {>= "4.09.0"}
+  "coq" {= "dev"}
+  "dune" {>= "3.8" & < "3.24"}
+]
+
+build: [
+  ["dune" "build" "-p" name "-j" jobs "@install"]
+]
+
+available: (arch != "s390x") & (arch != "ppc64")
+
+tags: [
+  "keyword:mathematics education"
+  "category:Mathematics/Education"
+  "date:2023-11-04"
+  "logpath:Waterproof"
+]
+
+url {
+  src: "git+https://github.com/impermeable/coq-waterproof.git#coq-master"
+}

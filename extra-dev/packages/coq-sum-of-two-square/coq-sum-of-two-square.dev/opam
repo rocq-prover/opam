@@ -1,0 +1,45 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "thery@sophia.inria.fr"
+
+homepage: "https://github.com/rocq-archive/sum-of-two-square"
+dev-repo: "git+https://github.com/rocq-archive/sum-of-two-square.git"
+bug-reports: "https://github.com/rocq-archive/sum-of-two-square/issues"
+license: "MIT"
+
+synopsis: "when a number n can be written as the sum of two square numbers"
+description: """
+
+This directory contains the proof that a number n can be written as the 
+sum of two square numbers if and only if each prime factor $p$ of $n$ 
+that is equal to 3 modulo 4 has its exponent in the decomposition of n
+that is even.
+
+A note on the development is available at [here](https://inria.hal.science/hal-05025371)
+
+
+To build the directory, type
+
+  make all
+
+Laurent Thery thery@sophia.inria.fr"""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {= "dev"}
+]
+
+tags: [
+  "keyword:sum two square"
+  "logpath:SumOfTwoSquare"
+]
+authors: [
+  "Laurent Théry"
+]
+
+url {
+  src: "git+https://github.com/rocq-archive/sum-of-two-square.git#master"
+}
