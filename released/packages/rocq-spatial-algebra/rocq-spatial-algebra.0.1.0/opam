@@ -24,7 +24,7 @@ formal GIS / spatial-relation reasoning or robust-predicate overflow analysis.
 Provenance: github.com/grootstebozewolf/NetTopologySuite.Proofs (assembled via
 the package MANIFEST).
 """
-maintainer: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/issues"
+maintainer: "Jeroen Bloemscheer <jeroen.bloemscheer@merkator.com>"
 authors: ["NetTopologySuite.Proofs contributors"]
 license: "BSD-3-Clause"
 homepage: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs"
@@ -32,7 +32,6 @@ bug-reports: "https://github.com/grootstebozewolf/NetTopologySuite.Proofs/issues
 dev-repo: "git+https://github.com/grootstebozewolf/NetTopologySuite.Proofs.git"
 
 depends: [
-  "ocaml"
   "rocq-core" {>= "9.2" & < "9.3~"}
   "rocq-stdlib"
 ]
