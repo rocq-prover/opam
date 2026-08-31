@@ -15,7 +15,7 @@ build: [make "-C" "classical" "-j%{jobs}%"]
 install: [make "-C" "classical" "install"]
 depends: [
   "rocq-core" {= "dev"}
-  "rocq-mathcomp-algebra" { (>= "2.6.0" & < "2.7~") }
+  "rocq-mathcomp-algebra" { (>= "2.6.0") }
   "rocq-mathcomp-finmap"
   "rocq-hierarchy-builder" { (>= "1.8.0") }
 ]
