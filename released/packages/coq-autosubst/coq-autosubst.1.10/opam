@@ -1,0 +1,42 @@
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+
+homepage: "https://github.com/coq-community/autosubst"
+dev-repo: "git+https://github.com/coq-community/autosubst.git"
+bug-reports: "https://github.com/coq-community/autosubst/issues"
+license: "MIT"
+
+synopsis: "Coq library for parallel de Bruijn substitutions"
+description: """
+Autosubst is a library for the Coq proof assistant which
+provides automation for formalizing syntactic theories with
+variable binders. Given an inductive definition of syntactic
+objects in de Bruijn representation augmented with binding
+annotations, Autosubst synthesizes the parallel substitution
+operation and automatically proves the basic lemmas about
+substitutions."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+    "rocq-core"
+    "rocq-stdlib"
+]
+
+tags: [
+  "category:Computer Science/Lambda Calculi"
+  "keyword:abstract syntax"
+  "keyword:binders"
+  "keyword:de Bruijn indices"
+  "keyword:substitution"
+  "logpath:Autosubst"
+]
+authors: [
+  "Steven Schäfer"
+  "Tobias Tebbi"
+]
+
+url {
+  src: "https://github.com/coq-community/autosubst/archive/v1.10.tar.gz"
+  checksum: "sha512=b0ecc6c9d5428af775741809531e86aaa50038b416a05914da4694d89a0581bceb79c7231352a0b2dfc10c76ae1ac0630b9ee4a19600d53e490fda00caf73052"
+}
