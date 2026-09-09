@@ -17,6 +17,7 @@ build: [make "-j%{jobs}%"]
 install: [make "install"]
 depends: [
   "rocq-core" { (>= "9.1" & < "9.4~") | (= "dev") }
+  "rocq-stdlib" { (>= "9.1" & < "9.3~") }
   "rocq-hierarchy-builder" { (>= "1.10.0") }
   "rocq-mathcomp-ssreflect" { (>= "2.6.0") }
   "rocq-mathcomp-fingroup" { (>= "2.6.0") }
