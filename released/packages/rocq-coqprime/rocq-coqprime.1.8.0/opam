@@ -1,0 +1,24 @@
+opam-version: "2.0"
+maintainer: "thery@sophia.inria.fr"
+homepage: "https://github.com/thery/coqprime"
+bug-reports: "https://github.com/thery/coqprime/issues"
+dev-repo: "git+https://github.com/thery/coqprime.git"
+license: "LGPL-2.1-only"
+authors: ["Laurent Théry"]
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+depends: [
+  "ocaml"
+  "rocq-core" {>= "9.2.0" & < "9.3.0~"}
+  "rocq-stdlib"
+  "rocq-bignums"
+]
+synopsis: "Certifying prime numbers in Rocq"
+url {
+  src: "https://github.com/thery/coqprime/archive/refs/tags/v9.2.tar.gz"
+  checksum: "sha256=e5590e5690ca1bc0836b0a2d93199594033a302a95a6c914fe352090b92eff23"
+}
