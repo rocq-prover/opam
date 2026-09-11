@@ -1,0 +1,45 @@
+opam-version: "2.0"
+synopsis: "A function definition package for Rocq"
+description:
+  "Equations is a function definition plugin for Rocq, that allows the definition of functions by dependent pattern-matching and well-founded, mutual or nested structural recursion and compiles them into core terms. It automatically derives the clauses equations, the graph of the function and its associated elimination principle."
+maintainer: ["Matthieu Sozeau <matthieu.sozeau@inria.fr>"]
+authors: [
+  "Matthieu Sozeau <matthieu.sozeau@inria.fr>"
+  "Cyprien Mangin <cyprien.mangin@m4x.org>"
+]
+license: "LGPL-2.1-only"
+tags: [
+  "keyword:dependent pattern-matching"
+  "keyword:functional elimination"
+  "category:Miscellaneous/Coq Extensions"
+  "logpath:Equations"
+]
+homepage: "https://mattam82.github.io/Coq-Equations"
+bug-reports: "https://github.com/mattam82/Coq-Equations/issues"
+depends: [
+  "dune" {>= "3.13"}
+  "ocaml" {>= "4.10.0"}
+  "rocq-core" {>= "9.3~" & < "9.4~"}
+  "rocq-stdlib" {>= "9.2.0~"}
+  "ocaml-lsp-server" {with-dev-setup}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/mattam82/Coq-Equations.git"
+url {
+  src: "https://github.com/mattam82/Coq-Equations/archive/refs/tags/v1.3.2-9.3.tar.gz"
+  checksum: "sha512=e007377a5cafaad39442fcccdf796bb88a5746505a8fe781e13271b6cce174a0cefe4f22c8f4b1ecf9945450d3554f44f5819c535892b05f0511758ab05d6d68"
+}
