@@ -17,6 +17,7 @@ depends: [
   "rocq-stdlib"
   "rocq-bignums"
 ]
+conflicts: [ "coq-coqprime" { != version } ]
 synopsis: "Certifying prime numbers in Rocq"
 url {
   src: "https://github.com/thery/coqprime/archive/refs/tags/v9.2.tar.gz"
