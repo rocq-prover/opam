@@ -21,5 +21,5 @@ conflicts: [ "coq-coqprime" { != version } ]
 synopsis: "Certifying prime numbers in Rocq"
 url {
   src: "https://github.com/thery/coqprime/archive/refs/tags/v9.2u.tar.gz"
-  checksum: "9a2ab4f67e25705219346fb118a3e43fca749a5932ae2996dae8620c541453f3"
+  checksum: "sha256=9a2ab4f67e25705219346fb118a3e43fca749a5932ae2996dae8620c541453f3"
 }
