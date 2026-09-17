@@ -33,7 +33,7 @@ tags: [
 ]
 
 depends: [
-  ("coq" {>= "8.15" & < "8.21~"}
+  ("coq" {>= "8.18" & < "8.21~"}
   | "coq-stdlib" {= "9.0.0"})
 ]
 
@@ -42,7 +42,7 @@ install: ["./make-package" "stdpp" "install"]
 
 url {
   src:
-    "https://gitlab.mpi-sws.org/iris/stdpp/-/archive/coq-stdpp-1.12.0.tar.gz"
+    "https://github.com/rocq-iris/stdpp/archive/refs/tags/coq-stdpp-1.12.0.tar.gz"
   checksum:
-    "sha512=8669bbf7e34775d101ddd10f2d868c1ec66ea3575ae73cbca8fd5abdad3f819bd1b3eb0636d2991a555733b2c91e6babd4cf246d7aef90c33612fa826abf4c64"
+    "sha512=f469658baca3f9fa7d52f97c2e7f9d157cf195c3ac3cda0cec64c089a596f1e31e97b1702fe63ac1aeb5823f60caa86d54210acea3a781e6f27021dff03c73c3"
 }
