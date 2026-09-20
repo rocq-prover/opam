@@ -1,0 +1,50 @@
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+version: "dev"
+
+homepage: "https://github.com/affeldt-aist/infotheo"
+dev-repo: "git+https://github.com/affeldt-aist/infotheo.git"
+bug-reports: "https://github.com/affeldt-aist/infotheo/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Discrete probabilities and information theory for Rocq"
+description: """
+Infotheo is a Rocq library for reasoning about discrete probabilities,
+information theory, and linear error-correcting codes."""
+
+build: [
+  [make "-j%{jobs}%" ]
+  [make "-C" "extraction" "tests"] {with-test}
+]
+install: [make "install"]
+depends: [
+  "rocq-core" { (>= "9.1.1" & < "9.4~") }
+  "rocq-mathcomp-algebra" { (>= "2.6.0") }
+  "rocq-mathcomp-analysis" { (>= "1.18.0") }
+  "rocq-mathcomp-reals-stdlib" { (>= "1.18.0") }
+  "coq-interval" { >= "4.11.5"}
+]
+
+tags: [
+  "keyword:information theory"
+  "keyword:probability"
+  "keyword:error-correcting codes"
+  "keyword:convexity"
+  "logpath:infotheo"
+  "date:2026-09-20"
+]
+authors: [
+  "Reynald Affeldt, AIST"
+  "Manabu Hagiwara, Chiba U. (previously AIST)"
+  "Jonas Senizergues, ENS Cachan (internship at AIST)"
+  "Jacques Garrigue, Nagoya U."
+  "Kazuhiko Sakaguchi, Tsukuba U."
+  "Taku Asai, Nagoya U. (M2)"
+  "Takafumi Saikawa, Nagoya U."
+  "Naruomi Obata, Titech (M2)"
+  "Alessandro Bruni, IT-University of Copenhagen"
+]
+url {
+  src: "https://github.com/affeldt-aist/infotheo/archive/0.9.8.tar.gz"
+  checksum: "sha512=3e07630736014b6087d660d014b2e6a3440e7d3d13ef058fd532b137d8faffc67f80f826780e6e5dc9995502d60d1f97ef10eb2f2df6bc1f013720f88d520be1"
+}
