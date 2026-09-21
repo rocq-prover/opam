@@ -10,6 +10,7 @@ depends: [
   "rocq-stdlib"
 ]
 depopts: [ "rocq-mathcomp-ssreflect" "rocq-aac-tactics" ]
+conflicts: [ "rocq-mathcomp-ssreflect" { >= "2.6" } ]
 build: [
   ["sh" "-exc" "./configure --%{rocq-mathcomp-ssreflect:enable}%-ssr --%{rocq-aac-tactics:enable}%-aac"]
   [make "-j%{jobs}%"]
