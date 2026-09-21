@@ -20,7 +20,7 @@ install: [make "install"]
 depends: [
   "rocq-core" {>= "9.2"}
   "rocq-stdlib"
-  "rocq-mathcomp-ssreflect"
+  "rocq-mathcomp-boot"
   "rocq-hierarchy-builder"
 ]
 
