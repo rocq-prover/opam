@@ -10,7 +10,7 @@ depends: [
   "rocq-stdlib"
 ]
 depopts: [ "rocq-mathcomp-boot" "rocq-aac-tactics" ]
-conflicts: [ "rocq-mathcomp-boot" { >= "2.6" } ]
+conflicts: [ "rocq-mathcomp-boot" { < "2.6" } ]
 build: [
   ["sh" "-exc" "./configure --%{rocq-mathcomp-boot:enable}%-ssr --%{rocq-aac-tactics:enable}%-aac"]
   [make "-j%{jobs}%"]
@@ -34,6 +34,6 @@ authors: [
 ]
 url {
   src:
-    "https://github.com/damien-pous/relation-algebra/archive/refs/tags/v1.9.0.tar.gz"
-    checksum: "sha512=237392871f22e702fbdd899ecea970f4c8693cb2fe5356fae0c31720476dd03aebff83fed0838726d83d5cb4065df039f88965f98da822dd532cfa3e83dc4f4a"
+    "https://github.com/damien-pous/relation-algebra/archive/refs/tags/v1.9.1.tar.gz"
+    checksum: "sha512=25b5655b79c8c9a2a0b222b6412933aa93038b212353d5ab03ec76f6340aeb1e6ebb45d0233dadb468013d3b5284be66c6c290ee80b05ae8f3f5554b0d40f917"
 }
