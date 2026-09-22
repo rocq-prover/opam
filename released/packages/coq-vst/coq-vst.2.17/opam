@@ -46,5 +46,5 @@ tags: [
 ]
 url {
   src: "https://github.com/PrincetonUniversity/VST/archive/refs/tags/v2.17.tar.gz"
-  checksum: "31574bf1c1f30120dc3b1d2174391a9dce8f3cfffdcd7e2c3ea5fb9fbeddef09"
+  checksum: "sha256=31574bf1c1f30120dc3b1d2174391a9dce8f3cfffdcd7e2c3ea5fb9fbeddef09"
 }
