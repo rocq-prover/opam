@@ -12,10 +12,12 @@ build: [
 install: ["./remake" "install"]
 depends: [
   "ocaml"
-  ("coq" {>= "8.12" & < "8.17~"} | ("coq-core" {!= "8.19.0"} & "coq-stdlib"))
+  ("coq" {>= "8.13.1" & < "8.17~"} |
+    ("coq-core" {!= "8.19.0" & < "9.3~"} &
+      ("coq-stdlib" | "rocq-stdlib")))
   "coq-bignums"
   "coq-flocq" {>= "3.2"}
-  "coq-mathcomp-ssreflect" {>= "1.12"}
+  "coq-mathcomp-ssreflect" {>= "1.12" & < "2.6~"}
   "coq-coquelicot" {>= "3.1"}
   "conf-autoconf" {build & dev}
   ("conf-g++" {build} | "conf-clang" {build})

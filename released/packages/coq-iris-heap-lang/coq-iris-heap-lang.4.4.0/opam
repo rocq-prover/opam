@@ -25,7 +25,7 @@ install: ["./make-package" "iris_heap_lang" "install"]
 
 url {
   src:
-    "https://gitlab.mpi-sws.org/iris/iris/-/archive/iris-4.4.0.tar.gz"
+    "https://github.com/rocq-iris/iris/archive/refs/tags/iris-4.4.0.tar.gz"
   checksum:
-    "sha512=434d58b823ec73cdb2b8d98cb9a34c8e24fbe50914cf3eaa8e1aeacce67cee875138b53d29d8cadd3a46baa816eee9d228e15365bed9c56adbaa6afba3dfbd8d"
+    "sha512=9218ac91a209a0e1d5065770fda169ef61c6cf0df0bbe9e481965c8c07ee0cd9c922b3a1703b9684f3582cfb4a1bc87493f4d4bae60301d32cc1b01a91924f66"
 }
