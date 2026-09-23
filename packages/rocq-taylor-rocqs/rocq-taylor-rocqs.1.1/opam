@@ -1,0 +1,47 @@
+opam-version: "2.0"
+synopsis: "A Taylor-series solver for analytic ODEs, verified in Rocq"
+description: """
+A Rocq formalization of a constructive Taylor-series method for multivariate
+analytic ordinary differential equations: the solver, its correctness proof,
+and two back ends for running it - exact reals (Cauchy reals) and floating
+point intervals built on CoqInterval.
+
+Installs the library under the logical directory TR, together with a small
+plugin that streams a computed trajectory to the plotting scripts shipped with
+the sources.
+"""
+maintainer: "Holger Thies <info@holgerthies.com>"
+authors: "Holger Thies"
+license: "MIT"
+homepage: "https://github.com/holgerthies/taylor_rocqs"
+bug-reports: "https://github.com/holgerthies/taylor_rocqs/issues"
+dev-repo: "git+https://github.com/holgerthies/taylor_rocqs.git"
+
+depends: [
+  "rocq-core" {>= "9.2" & < "9.3~"}
+  "rocq-stdlib" {>= "9.2" & < "9.3~"}
+  "coq-interval" {>= "4.11"}
+]
+
+build: [
+  ["rocq" "makefile" "-f" "_CoqProject" "-generate-meta-for-package" "plot_plugin" "-o" "Makefile"]
+  [make "-j%{jobs}%"]
+]
+install: [make "install"]
+
+tags: [
+  "keyword:ordinary differential equations"
+  "keyword:analytic functions"
+  "keyword:Taylor series"
+  "keyword:exact real arithmetic"
+  "keyword:interval arithmetic"
+  "logpath:TR"
+]
+url {
+  src:
+    "https://github.com/holgerthies/taylor_rocqs/archive/refs/tags/v1.1.tar.gz"
+  checksum: [
+    "md5=3fc7f0cf9b439b2d5de62391e3cee8aa"
+    "sha512=4c0d60aa72386a8dfdf801220f270dd20657ab0a2e8c432506fa0e1c443ded7af7b566ded65f844bcd74ee74197e6028323c77bba309c108aaa842c079c5d187"
+  ]
+}
