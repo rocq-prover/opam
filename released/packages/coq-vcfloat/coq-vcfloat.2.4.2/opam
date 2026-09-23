@@ -16,7 +16,8 @@ bug-reports: "https://github.com/VeriNum/vcfloat/issues"
 license: "LGPL-3.0-or-later"
 
 build: [
-  [ make "-C" "vcfloat" "-j%{jobs}%" "vcfloat2"]
+  [ make "-C" "vcfloat" "depend"
+    make "-C" "vcfloat" "-j%{jobs}%" "vcfloat2"]
 ]
 install: [
   [make "-C" "vcfloat" "-j%{jobs}%" "install" "INSTALLDIR=%{lib}%/coq/user-contrib/vcfloat"]
@@ -25,7 +26,8 @@ run-test: [
   [make "-C" "vcfloat" "-j%{jobs}%" "tests"]
 ]
 depends: [
-  "coq" {>= "9.0" & < "9.3~"}
+  "coq-core" {>= "9.0" & < "9.3~"}
+  "rocq-stdlib"
   "coq-flocq" {>= "4.1.4" & < "5.0"}
   "coq-interval" {>= "4.11.5"}
   "coq-compcert" {>= "3.18"}
@@ -33,7 +35,7 @@ depends: [
 ]
 url {
   src: "https://github.com/VeriNum/vcfloat/archive/refs/tags/v2.4.2.tar.gz"
-  checksum: "sha256=af89503de048a7c0b4c391776433250f90fb7c352b5d0ae044f16a8b31aef250"
+  checksum: "sha256=b11903380b9cece655c72ba50818a58b4a57b1cb2db0bedda04a5238347e326b"
 }
 tags: [
   "date:2026-09-22"
