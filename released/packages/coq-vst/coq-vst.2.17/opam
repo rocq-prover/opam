@@ -34,7 +34,7 @@ run-test: [
 depends: [
   "ocaml"
   "coq" {>= "9.0" & < "9.4~"}
-  "coq-compcert" {>= "3.16" & < "3.18~"}
+  "coq-compcert" {>= "3.18" & < "3.19~"}
   "coq-vst-zlist" {= "2.13"}
   "coq-flocq" {>= "4.2.0" & < "5~"}
 ]
@@ -42,9 +42,9 @@ tags: [
   "category:Computer Science/Semantics and Compilation/Semantics"
   "keyword:C"
   "logpath:VST"
-  "date:2025-11-13"
+  "date:2026-09-22"
 ]
 url {
-  src: "https://github.com/PrincetonUniversity/VST/archive/refs/tags/v2.16.tar.gz"
-  checksum: "sha256=1757388e23a0f44147b4a0b7e771b91b0bf5f99ecd0f33c7e07c4f7bf5a39f70"
+  src: "https://github.com/PrincetonUniversity/VST/archive/refs/tags/v2.17.tar.gz"
+  checksum: "sha256=31574bf1c1f30120dc3b1d2174391a9dce8f3cfffdcd7e2c3ea5fb9fbeddef09"
 }
