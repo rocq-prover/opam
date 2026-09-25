@@ -25,9 +25,9 @@ run-test: [
   [make "-C" "vcfloat" "-j%{jobs}%" "tests"]
 ]
 depends: [
-  "coq" {>= "9.0" & < "9.2~"}
+  "coq" {>= "9.0" & < "9.3"}
   "coq-flocq" {>= "4.1.4" & < "5.0"}
-  "coq-interval" {>= "4.10.0"}
+  "coq-interval" {>= "4.10.0" & < "4.11.5"}
   "coq-compcert" {>= "3.16"}
   "coq-bignums"
 ]
