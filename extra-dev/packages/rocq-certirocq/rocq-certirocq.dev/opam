@@ -1,0 +1,49 @@
+opam-version: "2.0"
+maintainer: "The CertiRocq Team"
+homepage: "https://certirocq.org/"
+dev-repo: "git+https://github.com/CertiRocq/certirocq"
+bug-reports: "https://github.com/CertiRocq/certirocq/issues"
+authors: ["Andrew Appel"
+          "Yannick Forster"
+          "Anvay Grover"
+          "Joomy Korkut"
+          "John Li"
+          "Zoe Paraskevopoulou"
+          "Matthieu Sozeau"
+          "Matthew Weaver"
+          "Abhishek Anand"
+          "Greg Morrisett"
+          "Randy Pollack"
+          "Olivier Savary Belanger"
+  ]
+license: "MIT"
+build: [
+  ["bash" "./configure.sh"]
+  [make "all"]
+  [make "plugins"]
+  [make "bootstrap"]
+]
+install: [
+  [make "install"]
+]
+depends: [
+  "ocaml" {>= "4.13"}
+  "conf-clang"
+  "conf-python-3" {build}
+  "stdlib-shims"
+  "rocq-core" {>= "9.1"}
+  "rocq-stdlib" {>= "9.1"}
+  # coq-core is needed for coq_makefile, which the CertiRocq Makefiles call
+  "coq-core" {>= "9.1"}
+  "coq-compcert" {>= "3.17"}
+  "rocq-equations" {>= "1.3.1+9.1"}
+  "rocq-metarocq-erasure-plugin" {= "dev"}
+  "rocq-metarocq-safechecker-plugin" {= "dev"}
+  "coq-ext-lib" {>= "0.12"}
+  "coq-wasm" {= "dev"}
+]
+
+synopsis: "A Verified Compiler for Gallina, Written in Gallina "
+url {
+  src: "git+https://github.com/CertiRocq/certirocq.git#main"
+}
