@@ -36,6 +36,7 @@ depends: [
   "coq-core" {>= "9.0" & < "9.4~"}
   "rocq-stdlib"
   "coq" {>= "9.0" & < "9.4~"}
+  "coq-copmcert" {>= "3.18" & < "3.19~"}
   "coq-vst-zlist" {= "2.13"}
   "coq-flocq" {>= "4.2.0" & < "5~"}
 ]

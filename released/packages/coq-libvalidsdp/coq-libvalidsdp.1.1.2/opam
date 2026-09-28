@@ -21,8 +21,7 @@ depends: [
   "coq-coquelicot" {>= "3.0"}
   "coq-interval" {>= "4.0.0" & < "5~"}
   "coq-mathcomp-field" {>= "2.3" & < "2.7~"}
-  ("coq-mathcomp-reals-stdlib" {>= "1.8.0"}
-      | "rocq-mathcomp-reals-stdlib")
+  "coq-mathcomp-reals-stdlib" {>= "1.8.0"}
 ]
 synopsis: "LibValidSDP"
 description: """
