@@ -1,0 +1,49 @@
+opam-version: "2.0"
+version: "0.1.1"
+synopsis: "Spivak-style real calculus with checked differentiation and integration tactics"
+description: """
+A reusable calculus library for Rocq, with auto_limit, auto_cont, auto_diff and
+auto_int. SymPy generates candidate antiderivatives; Rocq checks their derivatives
+and the obligations of the fundamental theorem of calculus. This initial package
+includes the dependencies of Lib.Tactics and bridges to Stdlib and Coquelicot
+over Stdlib reals.
+"""
+maintainer: "https://github.com/Sterling1111/rocq-spivak/issues"
+authors: "Sterling Jeppson"
+license: "MIT"
+homepage: "https://github.com/Sterling1111/rocq-spivak"
+doc: "https://github.com/Sterling1111/rocq-spivak#automation"
+bug-reports: "https://github.com/Sterling1111/rocq-spivak/issues"
+dev-repo: "git+https://github.com/Sterling1111/rocq-spivak.git"
+depends: [
+  "ocaml" {>= "4.14.1"}
+  "ocamlfind"
+  "zarith" {>= "1.13" & < "2"}
+  "rocq-core" {= "9.1.1"}
+  "rocq-stdlib" {= "9.1.0"}
+  "coq-interval" {= "4.11.4"}
+  "coq-coquelicot" {= "3.4.4"}
+  "coq-flocq" {= "4.2.2"}
+  "conf-python3-sympy" {= "1"}
+]
+build: [
+  ["rocq" "makefile" "-f" "_CoqProject.opam" "-o" "Makefile.opam"]
+  [make "-f" "Makefile.opam" "-j%{jobs}%" "BUILD_PLOTS=no"]
+  [make "-f" "Makefile.opam" "check-compat" "BUILD_PLOTS=no"] {with-test}
+]
+install: [
+  [make "-f" "Makefile.opam" "install"
+    "COQLIBINSTALL=%{lib}%/coq/user-contrib"
+    "COQPLUGININSTALL=%{lib}%"]
+]
+tags: [
+  "keyword:calculus"
+  "keyword:tactics"
+  "category:Mathematics/Real Calculus and Topology"
+  "logpath:Lib"
+  "date:2026-10-03"
+]
+url {
+  src: "https://github.com/Sterling1111/rocq-spivak/releases/download/0.1.1/rocq-spivak-0.1.1.tar.gz"
+  checksum: "sha256=c522d5853782be8b866c623476b4b7d03c60d7f87ac68240001d432abb2e8922"
+}
