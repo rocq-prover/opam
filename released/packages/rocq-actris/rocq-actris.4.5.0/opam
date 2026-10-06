@@ -24,8 +24,8 @@ conflicts: [
   "coq-iris-heap-lang"
 ]
 
-build: ["make" "-j%{jobs}%"]
-install: ["make"  "install"]
+build: [make "-j%{jobs}%"]
+install: [make  "install"]
 
 url {
   src:
