@@ -7,8 +7,6 @@ including textbook exercises, Dedekind-cut reals, linear algebra, and calculus
 tactics. SymPy generates candidate antiderivatives; Rocq checks their derivatives
 and the obligations of the fundamental theorem of calculus. Completed proofs
 and unfinished exercises ending in Abort are included; Abort creates no theorem.
-The complete source snapshot, scripts, plots, and documentation are also installed
-under share/rocq-spivak.
 """
 maintainer: "https://github.com/Sterling1111/rocq-spivak/issues"
 authors: "Sterling Jeppson"
@@ -47,7 +45,6 @@ install: [
   [make "-f" "Makefile.opam" "install"
     "COQLIBINSTALL=%{lib}%/coq/user-contrib"
     "COQPLUGININSTALL=%{lib}%"]
-  ["sh" "packaging/install-sources.sh" "%{share}%/rocq-spivak"]
 ]
 tags: [
   "keyword:calculus"
