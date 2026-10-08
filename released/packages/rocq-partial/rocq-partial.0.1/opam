@@ -1,0 +1,45 @@
+opam-version: "2.0"
+synopsis: "A Rocq library for extractable partial functions"
+description: """
+Rocq-partial provides a `partial` monad for representing partiality in Rocq.
+Resulting programs can be composed, reasoned about, and extracted. General
+recursion is supported through a recursion monad whose graph and domain are
+used to define the partial function."""
+maintainer: "Théo Winterhalter <theo.winterhalter@inria.fr>"
+authors: [
+  "Théo Winterhalter <theo.winterhalter@inria.fr>"
+  "Meven Lennon-Bertand <meven.lennon-bertrand@inria.fr>"
+  "Kenji Maillard <kenji@maillard.blue>"
+]
+license: "MIT"
+homepage: "https://github.com/TheoWinterhalter/rocq-partial"
+dev-repo: "git+https://github.com/TheoWinterhalter/rocq-partial.git"
+bug-reports: "https://github.com/TheoWinterhalter/rocq-partial/issues"
+
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+depends: [
+  "rocq-core" {>= "9.2"}
+  "rocq-stdlib" {>= "9.0"}
+  "rocq-equations" {>= "1.3.1"}
+]
+
+tags: [
+  "category:Computer Science/Semantics and Compilation/Semantics"
+  "keyword:partial functions"
+  "keyword:general recursion"
+  "keyword:monad"
+  "keyword:extraction"
+  "logpath:Partial"
+  "date:2026-10-08"
+]
+
+url {
+  src: "https://github.com/TheoWinterhalter/rocq-partial/archive/refs/tags/v0.1.tar.gz"
+  checksum: "sha256=7287ca40ae901006d2cc154e306b2376e15dcd33c1aecd7c317e17debd3a2c1d"
+}
