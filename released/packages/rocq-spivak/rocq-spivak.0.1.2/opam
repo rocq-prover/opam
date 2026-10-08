@@ -1,0 +1,63 @@
+opam-version: "2.0"
+version: "0.1.2"
+synopsis: "Spivak calculus, textbook exercises, real analysis, and checked tactics"
+description: """
+The full rocq-spivak development: all Lib, Calculus, ATTAM, and Backprop modules,
+including textbook exercises, Dedekind-cut reals, linear algebra, and calculus
+tactics. SymPy generates candidate antiderivatives; Rocq checks their derivatives
+and the obligations of the fundamental theorem of calculus. Completed proofs
+and unfinished exercises ending in Abort are included; Abort creates no theorem.
+"""
+maintainer: "https://github.com/Sterling1111/rocq-spivak/issues"
+authors: "Sterling Jeppson"
+license: "MIT"
+homepage: "https://github.com/Sterling1111/rocq-spivak"
+doc: "https://github.com/Sterling1111/rocq-spivak#automation"
+bug-reports: "https://github.com/Sterling1111/rocq-spivak/issues"
+dev-repo: "git+https://github.com/Sterling1111/rocq-spivak.git"
+depends: [
+  "ocaml" {>= "4.14.1"}
+  "ocamlfind"
+  "zarith" {>= "1.13" & < "2"}
+  "rocq-core" {= "9.1.1"}
+  "rocq-stdlib" {= "9.1.0"}
+  "coq-interval" {= "4.11.4"}
+  "coq-coquelicot" {= "3.4.4"}
+  "coq-flocq" {= "4.2.2"}
+  "conf-python3-sympy" {= "1"}
+  "conf-g++" {build}
+  "conf-pkg-config" {build}
+  "conf-boost" {build}
+]
+depexts: [
+  ["libeigen3-dev"] {os-family = "debian" | os-family = "ubuntu"}
+  ["eigen3-devel"] {os-family = "fedora" | os-family = "suse" | os-family = "opensuse"}
+  ["eigen"] {os-distribution = "arch" | os-distribution = "homebrew"}
+  ["eigen-dev"] {os-distribution = "alpine"}
+]
+build: [
+  ["python3" "packaging/check-manifest.py"]
+  ["rocq" "makefile" "-f" "_CoqProject.opam" "-o" "Makefile.opam"]
+  [make "-f" "Makefile.opam" "-j%{jobs}%" "BUILD_PLOTS=no"]
+  [make "-f" "Makefile.opam" "check-compat" "check-induction" "check-package" "BUILD_PLOTS=no"] {with-test}
+]
+install: [
+  [make "-f" "Makefile.opam" "install"
+    "COQLIBINSTALL=%{lib}%/coq/user-contrib"
+    "COQPLUGININSTALL=%{lib}%"]
+]
+tags: [
+  "keyword:calculus"
+  "keyword:tactics"
+  "category:Mathematics/Real Calculus and Topology"
+  "logpath:Lib"
+  "logpath:Calculus"
+  "logpath:ATTAM"
+  "logpath:Backprop"
+  "date:2026-10-03"
+]
+
+url {
+  src: "https://github.com/Sterling1111/rocq-spivak/releases/download/0.1.2/rocq-spivak-0.1.2.tar.gz"
+  checksum: "sha256=35b85600371fbe58b9c25cb2e872725649c10b26323ae41ed798db098c19b1c2"
+}
