@@ -61,5 +61,5 @@ install: [
 
 url {
   src: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz/archive/refs/tags/v1.0.0.tar.gz"
-  checksum: ["sha256=12c0b3a46445521f2122042cc40524b8e77bb8389cbbfd25d171fc8634e9038d"]
+  checksum: ["sha256=324774d4fbf666a5ff6e919ff4971dcd3715eb711f599dd64ccb52eebce39e2c"]
 }
