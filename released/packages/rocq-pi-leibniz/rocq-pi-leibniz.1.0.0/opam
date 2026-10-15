@@ -2,7 +2,7 @@ opam-version: "2.0"
 name: "rocq-pi-leibniz"
 version: "1.0.0"
 synopsis:
-  "Constructive pi for the Rocq constructive Cauchy reals — premise-free separation from every rational with extractable witnesses"
+  "Constructive pi for the Rocq constructive Cauchy reals with premise-free rational separation"
 description: """
 A constructive pi for the constructive Cauchy reals of the Rocq standard
 library ([ConstructiveCauchyReals]), realized by the alternating Leibniz
