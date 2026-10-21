@@ -35,7 +35,7 @@ Rocq 9.2 / 9.3 / master Nix bundles; 180/180 checks passed at the
 submitted head), as an integral part of the standard-library tree.
 """
 maintainer: "hy7pc8gfmf-dotcom <168888@live.cn>"
-authors: ["Wang Baojun <168888@live.cn>" "Zhou Zhinong <zrm2000@126.com>" "Zeng Baiyuan <3052633793@qq.com>" "Gao Xuefeng" "Zu Guangzhao <624547595@qq.com>" "Xia Wanlan <xiawanlan33@163.com>"]
+authors: ["Wang Baojun <168888@live.cn>" "Zu Guangzhao <624547595@qq.com>" "Xia Wanlan <xiawanlan33@163.com>" "Zeng Baiyuan <3052633793@qq.com>" "Zhou Zhinong <zrm2000@126.com>" "Gao Xuefeng <6666666@live.cn>"]
 license: "LGPL-2.1"
 homepage: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz"
 doc: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz#readme"
