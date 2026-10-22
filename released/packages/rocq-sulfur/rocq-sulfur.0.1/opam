@@ -26,7 +26,8 @@ homepage: "https://github.com/TheoWinterhalter/rocq-sulfur"
 bug-reports: "https://github.com/TheoWinterhalter/rocq-sulfur/issues"
 depends: [
   "dune" {>= "3.21"}
-  "rocq-prover" {>= "9.3.0" & < "9.4~"}
+  "rocq-core" {>= "9.3.0" & < "9.4~"}
+  "rocq-stdlib"
   "rocq-equations"
   "odoc" {with-doc}
 ]
