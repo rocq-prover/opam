@@ -5,7 +5,7 @@ description: """
 Sulfur generates, from a signature, the syntax of a language with binders
 together with renaming, substitution, and a tactic (ssimpl) that normalises
 terms and substitutions."""
-maintainer: ["Théo Winterhalter (theo.winterhalter@inria.fr)"]
+maintainer: ["Théo Winterhalter <theo.winterhalter@inria.fr>"]
 authors: [
   "Mathis Bouverot-Dupuis, Thiago Felicissimo, Théa Hervier, Kenji Maillard, Kathrin Stark, Théo Winterhalter"
 ]
