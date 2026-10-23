@@ -5,7 +5,7 @@ Installs rocq-linux-process-semantics-core (the model and the statements),
 rocq-linux-process-semantics-common (the proof library) and
 rocq-linux-process-semantics-examples (the example proofs).
 """
-maintainer: "Tej Chajed <tej@theorem.dev>"
+maintainer: "Jason Gross <jason@theorem.dev>"
 authors: ["Tej Chajed"]
 license: "MIT"
 homepage: "https://github.com/theorem-labs/rocq-linux-process-semantics"

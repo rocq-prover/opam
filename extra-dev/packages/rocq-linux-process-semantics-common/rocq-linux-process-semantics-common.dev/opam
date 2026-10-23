@@ -7,7 +7,7 @@ statements of rocq-linux-process-semantics-core about RISC-V binaries.
 Most of it was written by the OSS-Fuzz proof collaborators. The header of
 each file says where it came from.
 """
-maintainer: "Theorem Labs"
+maintainer: "Jason Gross <jason@theorem.dev>"
 authors: ["The OSS-Fuzz proof collaborators" "Theorem Labs"]
 license: "MIT"
 homepage: "https://github.com/theorem-labs/rocq-linux-process-semantics"
@@ -15,14 +15,12 @@ bug-reports: "https://github.com/theorem-labs/rocq-linux-process-semantics/issue
 dev-repo: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git"
 depends: [
   "dune" {>= "3.23"}
-  "rocq-core" {(>= "9.2" & < "9.3") | (= "dev")}
+  "rocq-core" {>= "9.2"}
   "rocq-stdlib" {>= "9.0"}
   "rocq-stdpp" {>= "1.13.0"}
   "rocq-stdpp-bitvector" {>= "1.13.0"}
   "coq-flocq" {>= "4.2"}
-  # rocq-read-file 0.0.2 does not build with dune 3.24 or later (which
-  # Rocq 9.3 and later select); 0.0.3 does.
-  ("rocq-read-file" {>= "0.0.3"} | ("rocq-read-file" {= "0.0.2"} & "dune" {< "3.24"}))
+  "rocq-read-file" {>= "0.0.2"}
   "rocq-linux-process-semantics-core" {= version}
 ]
 build: [
