@@ -10,7 +10,7 @@ synopsis: "Yet Another Coq Library on Machine Words"
 
 build: [ "dune" "build" "-p" name "-j" jobs ]
 depends: [
-  "dune" {>= "2.8"}
+  "dune" {>= "2.8" & < "3.24"}
   "coq" {>= "8.16"}
   "coq-mathcomp-ssreflect" {(>= "2.0" & < "2.6~")}
   "coq-mathcomp-algebra"
