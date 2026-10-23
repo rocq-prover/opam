@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "Example proofs for rocq-linux-process-semantics"
+description: """
+The Rocq theory LinuxProcessSemantics.Examples: a complete proof that two
+small RISC-V Linux binaries (a C build and a Zig build of the same
+program) are observably equivalent, and worked instances of the
+patch-classifier and input-measure statements.
+"""
+maintainer: "Tej Chajed <tej@theorem.dev>"
+authors: ["Tej Chajed"]
+license: "MIT"
+homepage: "https://github.com/theorem-labs/rocq-linux-process-semantics"
+bug-reports: "https://github.com/theorem-labs/rocq-linux-process-semantics/issues"
+dev-repo: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git"
+depends: [
+  "dune" {>= "3.23"}
+  "rocq-core" {(>= "9.2" & < "9.3") | (= "dev")}
+  "rocq-stdlib" {>= "9.0"}
+  "rocq-stdpp" {>= "1.13.0"}
+  "coq-flocq" {>= "4.2"}
+  # rocq-read-file 0.0.2 does not build with dune 3.24 or later (which
+  # Rocq 9.3 and later select); 0.0.3 does.
+  ("rocq-read-file" {>= "0.0.3"} | ("rocq-read-file" {= "0.0.2"} & "dune" {< "3.24"}))
+  "rocq-linux-process-semantics-core" {= version}
+  "rocq-linux-process-semantics-common" {= version}
+]
+# The build runs tools/gen_fd_lemmas.py and tools/gen_checker.py.
+depexts: [
+  ["python3"] {os-family = "debian"}
+  ["python3"] {os-family = "fedora"}
+  ["python3"] {os-family = "suse"}
+  ["python3"] {os-family = "alpine"}
+  ["python"] {os-family = "arch"}
+  ["python"] {os = "macos" & os-distribution = "homebrew"}
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+url {
+  src: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git#main"
+}
