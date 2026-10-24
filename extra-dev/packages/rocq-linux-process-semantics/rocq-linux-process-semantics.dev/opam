@@ -1,0 +1,21 @@
+opam-version: "2.0"
+synopsis: "A Rocq model of a Linux process that runs a RISC-V binary (all packages)"
+description: """
+Installs rocq-linux-process-semantics-core (the model and the statements),
+rocq-linux-process-semantics-common (the proof library) and
+rocq-linux-process-semantics-examples (the example proofs).
+"""
+maintainer: "Jason Gross <jason@theorem.dev>"
+authors: ["Tej Chajed"]
+license: "MIT"
+homepage: "https://github.com/theorem-labs/rocq-linux-process-semantics"
+bug-reports: "https://github.com/theorem-labs/rocq-linux-process-semantics/issues"
+dev-repo: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git"
+depends: [
+  "rocq-linux-process-semantics-core" {= version}
+  "rocq-linux-process-semantics-common" {= version}
+  "rocq-linux-process-semantics-examples" {= version}
+]
+url {
+  src: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git#main"
+}
