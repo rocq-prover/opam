@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "Ltac2 APIs in OCaml"
+
+maintainer: ["Dario Halilovic"]
+authors: ["Dario Halilovic" "Pierre-Marie Pédrot"]
+
+license: "LGPL-2.1-only"
+homepage: "https://github.com/epfl-systemf/mltac2"
+dev-repo: "git+https://github.com/epfl-systemf/mltac2.git"
+bug-reports: "https://github.com/epfl-systemf/mltac2/issues"
+
+depends: [
+  "ocaml" {>= "4.14"}
+  "coq-core" {>= "9.0"}
+  "dune" {>= "3.17" & < "3.24"}
+  "ppx_optcomp"
+  "odoc" {with-doc}
+]
+
+build: [
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+
+
+
+url {
+  src: "https://github.com/epfl-systemf/mltac2/archive/refs/tags/1.0.0.tar.gz"
+  checksum: "sha512=091306756c50ae95d1e1dcb44634953b4787650c8f5bfe5628fa0c82a926a0e1839c305709d23b323508ea8a09979a2d92a603cb921f881aa8f55d8bbd5fb2cd"
+}

@@ -1,0 +1,42 @@
+opam-version: "2.0"
+synopsis: "A Rocq model of a Linux process that runs a RISC-V binary"
+description: """
+The Rocq theory LinuxProcessSemantics: a model of a Linux process that runs
+an RV64GC binary (LinuxProcessSem, Riscv), and the statements that proofs
+about such binaries are checked against (EquivalenceDefinition): observable
+equivalence of two binaries, termination, and patch classifiers.
+Also installs two helper tools, elf-snapshot and gen-fd-lemmas
+(Python 3, standard library only).
+"""
+maintainer: "Jason Gross <jason@theorem.dev>"
+authors: ["Tej Chajed"]
+license: "MIT"
+homepage: "https://github.com/theorem-labs/rocq-linux-process-semantics"
+bug-reports: "https://github.com/theorem-labs/rocq-linux-process-semantics/issues"
+dev-repo: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git"
+depends: [
+  # 3.23 is the first dune that supports (using rocq 0.13).
+  "dune" {>= "3.23"}
+  "rocq-core" {>= "9.2"}
+  "rocq-stdlib" {>= "9.0"}
+  "rocq-stdpp" {>= "1.13.0"}
+  "rocq-stdpp-bitvector" {>= "1.13.0"}
+  # Flocq gives the IEEE rounding that the floating-point semantics
+  # (theories/Riscv/Fpu.v) uses.
+  "coq-flocq" {>= "4.2"}
+  "rocq-read-file" {>= "0.0.2"}
+]
+depexts: [
+  ["python3"] {os-family = "debian"}
+  ["python3"] {os-family = "fedora"}
+  ["python3"] {os-family = "suse"}
+  ["python3"] {os-family = "alpine"}
+  ["python"] {os-family = "arch"}
+  ["python"] {os = "macos" & os-distribution = "homebrew"}
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+url {
+  src: "git+https://github.com/theorem-labs/rocq-linux-process-semantics.git#main"
+}

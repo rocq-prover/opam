@@ -1,0 +1,38 @@
+opam-version: "2.0"
+synopsis: "PPX syntax extensions for quoting Rocq terms in OCaml"
+
+maintainer: ["Dario Halilovic"]
+authors: ["Dario Halilovic"]
+
+license: "LGPL-2.1-only"
+homepage: "https://github.com/epfl-systemf/ppx_rocq"
+dev-repo: "git+https://github.com/epfl-systemf/ppx_rocq.git"
+bug-reports: "https://github.com/epfl-systemf/ppx_rocq/issues"
+
+depends: [
+  "ocaml" {>= "4.14"}
+  "coq-core" {>= "9.0"}
+  "dune" {>= "3.17" & < "3.24"}
+  "ppxlib"
+  "ppx_optcomp"
+  "odoc" {with-doc}
+]
+
+build: [
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+
+url {
+  src: "https://github.com/epfl-systemf/ppx_rocq/archive/refs/tags/1.0.0.tar.gz"
+  checksum: "sha512=60ef48e9e17f63c9952fbe1b1389c83a842041b19fd8c7828a1a10048d8ef66e2bc94f3f87f8e01ca8b60ff4b1732ea9248a48c4d33a8a3bd89ad40b7cd37ccb"
+}
