@@ -1,0 +1,98 @@
+opam-version: "2.0"
+maintainer: "b.a.w.spitters@gmail.com"
+
+homepage: "https://github.com/rocq-community/corn"
+dev-repo: "git+https://github.com/rocq-community/corn.git"
+bug-reports: "https://github.com/rocq-community/corn/issues"
+license: "GPL-2.0"
+
+synopsis: "The Coq Constructive Repository at Nijmegen"
+description: """
+CoRN includes the following parts:
+
+- Algebraic Hierarchy
+
+  An axiomatic formalization of the most common algebraic
+  structures, including setoids, monoids, groups, rings,
+  fields, ordered fields, rings of polynomials, real and
+  complex numbers
+
+- Model of the Real Numbers
+
+  Construction of a concrete real number structure
+  satisfying the previously defined axioms
+
+- Fundamental Theorem of Algebra
+
+  A proof that every non-constant polynomial on the complex
+  plane has at least one root
+
+- Real Calculus
+
+  A collection of elementary results on real analysis,
+  including continuity, differentiability, integration,
+  Taylor's theorem and the Fundamental Theorem of Calculus
+
+- Exact Real Computation
+
+  Fast verified computation inside Coq. This includes: real numbers, functions,
+  integrals, graphs of functions, differential equations.
+"""
+
+build: [
+  ["./configure.sh"]
+  [make "-j%{jobs}%"]
+]
+install: [make "install"]
+depends: [
+  ("coq" {>= "8.19" & < "8.21~"}
+  | "coq-core" {(>= "9.0" & < "9.3~") | (= "dev")})
+  ("coq-math-classes" {>= "8.8.1"} | "rocq-math-classes")
+  ("coq-elpi" {>= "1.18.0"} | "rocq-elpi")
+  "coq-bignums"
+]
+
+tags: [
+  "category:Mathematics/Algebra"
+  "category:Mathematics/Real Calculus and Topology"
+  "category:Mathematics/Exact Real computation"
+  "keyword:constructive mathematics"
+  "keyword:algebra"
+  "keyword:real calculus"
+  "keyword:real numbers"
+  "keyword:Fundamental Theorem of Algebra"
+  "logpath:CoRN"
+]
+authors: [
+  "Evgeny Makarov"
+  "Robbert Krebbers"
+  "Eelis van der Weegen"
+  "Bas Spitters"
+  "Jelle Herold"
+  "Russell O'Connor"
+  "Cezary Kaliszyk"
+  "Dan Synek"
+  "Luís Cruz-Filipe"
+  "Milad Niqui"
+  "Iris Loeb"
+  "Herman Geuvers"
+  "Randy Pollack"
+  "Freek Wiedijk"
+  "Jan Zwanenburg"
+  "Dimitri Hendriks"
+  "Henk Barendregt"
+  "Mariusz Giero"
+  "Rik van Ginneken"
+  "Dimitri Hendriks"
+  "Sébastien Hinderer"
+  "Bart Kirkels"
+  "Pierre Letouzey"
+  "Lionel Mamane"
+  "Nickolay Shmyrev"
+  "Vincent Semeria"
+]
+
+url {
+  src: "https://github.com/rocq-community/corn/archive/refs/tags/9.2.0.tar.gz"
+  checksum: "sha512=5bd3168b936a39cf5869f4090ed0688c40a1db3ba0129b4d3b58d30787c80f8ea61c95e7222517e734ab2b389833a8a51c995e9d1ab386570bdb52787750e5b3"
+}
