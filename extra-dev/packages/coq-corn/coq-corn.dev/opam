@@ -1,7 +1,6 @@
 opam-version: "2.0"
 maintainer: "b.a.w.spitters@gmail.com"
-homepage: "http://corn.cs.ru.nl/"
-doc: "http://corn.cs.ru.nl/"
+homepage: "http://github.com/rocq-community/corn"
 license: "GPL 2"
 build: [
   ["./configure.sh"]
@@ -10,10 +9,10 @@ build: [
 install: [make "install"]
 remove: ["rm" "-R" "%{lib}%/coq/user-contrib/CoRN"]
 depends: [
-  "ocaml"
-  "coq" {= "dev"}
-  "coq-elpi" {= "dev"}
-  "coq-math-classes" {= "dev"}
+  "coq-core" {= "dev"}
+  "rocq-elpi" {= "dev"}
+  "rocq-math-classes" {= "dev"}
+  "coq-bignums"
 ]
 tags: [ "keyword:constructive mathematics" "keyword:algebra" "keyword:real calculus" "keyword:real numbers" "keyword:fundamental theorem of algebra" "category:Mathematics/Algebra" "category:Mathematics/Real Calculus and Topology" ]
 authors: [ "Iris Loeb <>" "Rik van Ginneken <>" "Randy Pollack <>" "Mariusz Giero <>" "Dan Synek <>" "Lionel Mamane <>" "Luís Cruz-Filipe <>" "Milad Niqui <>" "Pierre Letouzey <>" "Herman Geuvers <>" "Freek Wiedijk <>" "Henk Barendregt <>" "Dimitri Hendriks <>" "Bart Kirkels <>" "Russell O'Connor <>" "Bas Spitters <>" "Sébastien Hinderer <>" "Nickolay V. Shmyrev <>" "Jan Zwanenburg <>" ]
@@ -47,5 +46,5 @@ including continuity, differentiability, integration,
 Taylor's theorem and the Fundamental Theorem of Calculus"""
 flags: light-uninstall
 url {
-  src: "git+https://github.com/c-corn/corn.git#master"
+  src: "git+https://github.com/rocq-community/corn.git#master"
 }
