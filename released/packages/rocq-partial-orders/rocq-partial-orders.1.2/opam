@@ -1,0 +1,44 @@
+opam-version: "2.0"
+maintainer: "Damien Pous <Damien.Pous@ens-lyon.fr>"
+
+homepage: "https://github.com/damien-pous/partial-orders"
+dev-repo: "git+https://github.com/damien-pous/partial-orders.git"
+bug-reports: "https://github.com/damien-pous/partial-orders/issues"
+license: "LGPL-3.0-or-later"
+
+synopsis: "A library for setoids, partial orders, complete lattices and related structures"
+description: """
+Library about partial orders with more or less infimas and suprema (semi-lattices, lattices, complete partial orders, complete lattices). Duality, fixpoint theorems (BourbakiWitt, Pataraia), instances (notably, various function spaces), adjunctions/Galois connections.
+Hierarchy of structures implemented with Hierarchy Builder.
+Based on setoids from the beginning, as a convenient way to obtain axiom-free quotients.
+"""
+
+build: [
+  [make "-j%{jobs}%" ]
+]
+install: [make "install"]
+depends: [
+  "rocq-core" {>= "9.3"}
+  "rocq-stdlib"
+  "rocq-mathcomp-boot"
+  "rocq-hierarchy-builder"
+]
+
+tags: [
+  "keyword:partial order"
+  "keyword:setoid"
+  "keyword:lattice"
+  "keyword:CPO"
+  "keyword:Pataraia"
+  "keyword:BourbakiWitt"
+  "logpath:PartialOrders"
+  "date:2026-11-01"
+]
+authors: [
+  "Damien Pous <Damien.Pous@ens-lyon.fr>"
+]
+
+url {
+  src: "https://github.com/damien-pous/partial-orders/archive/refs/tags/v1.2.tar.gz"
+  checksum: "sha512=2d80b242a42747299c494f3a79a4895c43b0026b40eb9cd317a4d12437d38264008ba353f30e926b7c7a5421063bb0106960260db2b053d561c6218c7edfbfae"
+}
