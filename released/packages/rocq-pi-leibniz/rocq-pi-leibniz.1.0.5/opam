@@ -1,0 +1,66 @@
+opam-version: "2.0"
+name: "rocq-pi-leibniz"
+version: "1.0.5"
+synopsis:
+  "Constructive pi for the Rocq constructive Cauchy reals — premise-free separation from every rational with extractable witnesses"
+description: """
+A constructive pi for the constructive Cauchy reals of the Rocq standard
+library ([ConstructiveCauchyReals]), realized by the alternating Leibniz
+series, with the strong irrationality separation theorem
+
+  Theorem pi_leibniz_strong_irrational_prop :
+    forall a b : Q, b <> 0 -> CReal_appart pi_leibniz (inject_Q (a / b)).
+
+together with its premise-free companion
+
+  Theorem pi_leibniz_appart_all_Q :
+    forall q : Q, CReal_appart pi_leibniz (inject_Q q).
+
+v1.0.5 adds two significant contributions:
+
+  - Sqrt2UniformStrongIrrational: Bishop's uniform constructive lower
+    bound 1/(3b²) for √2, carried by a sigT Set-level witness with four
+    witness-value assertions; extraction audit clean on both faces.
+
+  - PiMu0Cos: the μ₀-cos window-family modulus piece, providing pointwise
+    separation-window search for 22/7 and 355/113 with a transparent
+    decider (mu0cos_sep_dec) and smoke assertions.
+
+pi is apart, in the sense of [CReal_appart], from every embedded rational
+constant; the apartness witness comes with an explicit positive margin and
+an explicit convergence modulus for the realizer.  Every witness is
+explicitly constructed and the statements are [Set]-valued throughout.
+Both main statements are premise-free and closed under the global context.
+The content modules compile green on Rocq 9.3.0.
+"""
+maintainer: "hy7pc8gfmf-dotcom <168888@live.cn>"
+authors: ["Wang Baojun <168888@live.cn>" "Zu Guangzhao <624547595@qq.com>" "Xia Wanlan <xiawanlan33@163.com>" "Zeng Baiyuan <3052633793@qq.com>" "Zhou Zhinong <zrm2000@126.com>" "Gao Xuefeng <6666666@live.cn>"]
+license: "LGPL-2.1"
+homepage: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz"
+doc: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz#readme"
+bug-reports: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz/issues"
+dev-repo: "git+https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz.git"
+tags: [
+  "keyword:pi"
+  "keyword:constructive reals"
+  "keyword:irrationality"
+  "keyword:uniform bound"
+  "keyword:mu0-cos"
+  "date:2026-11-09"
+  "logpath:pi_leibniz"
+]
+depends: [
+  "rocq-prover" {>= "9.1"}
+  "rocq-stdlib" {>= "9.1"}
+]
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+url {
+  src: "https://github.com/hy7pc8gfmf-dotcom/rocq-pi-leibniz/archive/refs/tags/v1.0.5.tar.gz"
+  checksum: ["sha256=9edf0627d24d1a1d53f1e63a83dba309286213965710a6923cb43110512e5b11"]
+}
