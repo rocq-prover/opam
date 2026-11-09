@@ -50,8 +50,8 @@ tags: [
   "logpath:pi_leibniz"
 ]
 depends: [
-  "rocq-prover" {>= "9.3"}
-  "rocq-stdlib" {>= "9.3"}
+  "rocq-prover" {>= "9.1"}
+  "rocq-stdlib" {>= "9.1"}
 ]
 build: [
   [make "-j%{jobs}%"]
