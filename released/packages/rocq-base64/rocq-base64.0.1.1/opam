@@ -1,0 +1,43 @@
+opam-version: "2.0"
+synopsis: "Verified base64 encoding and decoding in Rocq"
+description: """
+Base64 encoding and decoding in Rocq, following RFC 4648.
+
+Supported string types are `list byte`, the standard library's `String`
+and `PrimString`, and MetaRocq's `bytestring`.
+"""
+maintainer: ["Wolfgang Meier"]
+authors: ["Wolfgang Meier"]
+license: "MIT"
+homepage: "https://github.com/womeier/rocq-base64"
+bug-reports: "https://github.com/womeier/rocq-base64/issues"
+dev-repo: "git+https://github.com/womeier/rocq-base64.git"
+
+build: [
+  [make "-j%{jobs}%"]
+]
+
+install: [
+  [make "install"]
+]
+
+depends: [
+  "rocq-core" {>= "9.0" & < "9.4~"}
+  "rocq-stdlib" {>= "9.0"}
+  "rocq-metarocq-utils" {>= "1.4"}
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "keyword:base64"
+  "keyword:strings"
+  "keyword:bytes"
+  "keyword:metarocq"
+  "date:2026-11-06"
+  "logpath:Base64"
+]
+
+url {
+  src: "https://github.com/womeier/rocq-base64/archive/refs/tags/v0.1.1.tar.gz"
+  checksum: "sha256=dc6fb98abf7dbcbc54ad3f6ce7d2bf76703881e6d6354cd1fec2814d31458044"
+}
