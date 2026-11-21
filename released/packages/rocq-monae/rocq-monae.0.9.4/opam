@@ -1,0 +1,49 @@
+opam-version: "2.0"
+maintainer: "Reynald Affeldt <reynald.affeldt@aist.go.jp>"
+
+homepage: "https://github.com/affeldt-aist/monae"
+dev-repo: "git+https://github.com/affeldt-aist/monae.git"
+bug-reports: "https://github.com/affeldt-aist/monae/issues"
+license: "LGPL-2.1-or-later"
+
+synopsis: "Monads and equational reasoning in Rocq"
+description: """
+This Rocq library contains a hierarchy of monads with their laws used
+in several examples of monadic equational reasoning."""
+
+build: [
+  [make "-j%{jobs}%"]
+  [make "-C" "impredicative_set"]
+]
+install: [make "install_full"]
+depends: [
+  "rocq-core" { (>= "9.1" & < "9.4~") }
+  "rocq-mathcomp-analysis" { >= "1.19.0" }
+  "rocq-infotheo" { >= "0.9.9" }
+  "rocq-elpi" { >= "3.5.0" }
+  "rocq-hierarchy-builder" { >= "1.10" }
+  "rocq-equations" { >= "1.3" & < "1.4~" }
+  "rocq-mathcomp-zify" { >= "1.7~"}
+]
+
+tags: [
+  "keyword:monae"
+  "keyword:effects"
+  "keyword:probability"
+  "keyword:nondeterminism"
+  "logpath:monae"
+  "date:2026-11-22"
+]
+authors: [
+  "Reynald Affeldt"
+  "David Nowak"
+  "Takafumi Saikawa"
+  "Jacques Garrigue"
+  "Ayumu Saito"
+  "Celestine Sauvage"
+  "Kazunari Tanaka"
+]
+url {
+  src: "https://github.com/affeldt-aist/monae/archive/0.9.4.tar.gz"
+  checksum: "sha512=859e164ee89bd536792704abe69b5ba649f3917173aac0cb98de4d8207c11ef007aeba49c121fcab3275f5824d13e14ef6d13d407a2014715f67408212b08a49"
+}
