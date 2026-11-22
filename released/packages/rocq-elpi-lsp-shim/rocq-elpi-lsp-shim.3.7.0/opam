@@ -21,9 +21,8 @@ build: [
     name
     "-j"
     jobs
-    "@install"
-    "@runtest" {with-test}
-    "@doc" {with-doc}
+    "%{name}%.install"
+    "@shim/runtest" {with-test}
   ]
 ]
 dev-repo: "git+https://github.com/LPCIC/coq-elpi.git"
