@@ -14,7 +14,7 @@ homepage: "https://github.com/math-comp/hierarchy-builder"
 bug-reports: "https://github.com/math-comp/hierarchy-builder/issues"
 depends: [
   "rocq-core" {(>= "9.0" & < "9.4~") | = "dev"}
-  "rocq-elpi" {>= "3" | = "dev"}
+  "rocq-elpi" {>= "3" & < "3.7~"}
 ]
 conflicts: [
   "coq-hierarchy-builder" {< "1.9~"}
