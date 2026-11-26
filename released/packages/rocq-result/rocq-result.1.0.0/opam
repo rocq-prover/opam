@@ -1,0 +1,35 @@
+opam-version: "2.0"
+synopsis: "A result type for Rocq"
+description: """
+A result type with Ok and Error constructors.
+"""
+
+maintainer: "Yoshihiro Imai <y.imai@proof-ninja.co.jp>"
+authors: [
+  "Yoshihiro Imai <y.imai@proof-ninja.co.jp>"
+  "ymoymoon"
+  ]
+license: "MIT"
+
+homepage:    "https://github.com/proof-ninja/rocq-result"
+bug-reports: "https://github.com/proof-ninja/rocq-result/issues"
+dev-repo:    "git+https://github.com/proof-ninja/rocq-result.git"
+
+depends: [
+  "rocq-core" {>= "9.1"}
+]
+build: [
+  ["./configure.sh"]
+  [make "-j" jobs]
+]
+install: [
+  [make "install" "COQLIBINSTALL=%{lib}%/coq/user-contrib"]
+]
+url {
+  src:
+    "https://github.com/proof-ninja/rocq-result/archive/refs/tags/1.0.0.tar.gz"
+  checksum: [
+    "md5=82da5279d60f8864c9824a368ed0466e"
+    "sha512=126525993a598afd3dd77924a388171e638835e021591d02cdb61a2ccaed52ea7a847f3461c8c6b74bfbc18f3303535f54d9af33dd1199ee91d4701d081a6568"
+  ]
+}
