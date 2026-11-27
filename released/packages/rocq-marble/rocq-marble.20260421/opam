@@ -15,7 +15,7 @@ tags: [
   "logpath:marble"
 ]
 depends: [
-  "rocq-core" { (>= "9.1") }
+  "rocq-core" { (>= "9.1" & < "9.3") }
   "rocq-stdlib" { (>= "9.1") }
   "rocq-equations"
   "rocq-stdpp" { (>= "1.13.0")}
