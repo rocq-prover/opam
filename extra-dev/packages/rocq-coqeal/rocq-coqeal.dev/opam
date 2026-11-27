@@ -1,0 +1,55 @@
+opam-version: "2.0"
+maintainer: "Cyril Cohen <cyril.cohen@inria.fr>"
+
+homepage: "https://github.com/rocq-community/coqeal"
+dev-repo: "git+https://github.com/rocq-community/coqeal.git"
+bug-reports: "https://github.com/rocq-community/coqeal/issues"
+license: "MIT"
+
+synopsis: "CoqEAL - The Coq Effective Algebra Library"
+description: """
+This Coq library contains a subset of the work that was developed in the context
+of the ForMath EU FP7 project (2009-2013). It has two parts:
+- theory, which contains developments in algebra including normal forms of matrices,
+  and optimized algorithms on MathComp data structures.
+- refinements, which is a framework to ease change of data representations during a proof."""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "rocq-core" {>= "9.0"}
+  "rocq-bignums"
+  "rocq-elpi"
+  "rocq-hierarchy-builder"
+  "rocq-mathcomp-boot" {>= "2.5"}
+  "rocq-mathcomp-order"
+  "rocq-mathcomp-algebra"
+  "rocq-mathcomp-multinomials"
+  "rocq-mathcomp-real-closed"
+]
+
+tags: [
+  "category:Computer Science/Decision Procedures and Certified Algorithms/Correctness proofs of algorithms"
+  "keyword:effective algebra"
+  "keyword:elementary divisor rings"
+  "keyword:Smith normal form"
+  "keyword:mathematical components"
+  "keyword:Bareiss"
+  "keyword:Karatsuba multiplication"
+  "keyword:refinements"
+  "logpath:CoqEAL"
+]
+authors: [
+  "Guillaume Cano"
+  "Cyril Cohen"
+  "Maxime Dénès"
+  "Érik Martin-Dorel"
+  "Anders Mörtberg"
+  "Damien Rouhling"
+  "Pierre Roux"
+  "Vincent Siles"
+]
+
+url {
+  src: "git+https://github.com/rocq-community/coqeal.git#master"
+}

@@ -1,0 +1,45 @@
+opam-version: "2.0"
+synopsis: "Rocq mechanisation of SMT-LIB"
+description:
+  "A mechanisation of the logical semantics of version 2.7 of the SMT-LIB standard"
+maintainer: ["Shiva Tamil Kumaran" "Andreas Lööw"]
+authors: ["Shiva Tamil Kumaran" "Andreas Lööw" "Philippa Gardner"]
+license: "MIT"
+tags: [
+  "date:2026-10-28"
+  "logpath:SMTLIB"
+  "category:Computer Science/Semantics and Compilation/Semantics"
+  "keyword:SMT-LIB"
+  "keyword:SMT"
+]
+homepage: "https://github.com/shiva-tk/rocq-smt-lib"
+bug-reports: "https://github.com/shiva-tk/rocq-smt-lib/issues"
+depends: [
+  "dune" {>= "3.13"}
+  "rocq-core" {>= "9.0" & < "9.3~"}
+  "rocq-stdlib" {>= "9.0" & < "9.3~"}
+  "rocq-stdpp" {>= "1.13.0"}
+  "coq-hammer-tactics" {>= "1.3.2"}
+  "rocq-equations" {>= "1.3.1"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/shiva-tk/rocq-smt-lib.git"
+url {
+  src: "https://github.com/shiva-tk/rocq-smt-lib/archive/refs/tags/v1.0.tar.gz"
+  checksum:
+    "sha512=e4e56b9ac0b9afbdf125817ccbbbe6c5a979e5ae9b83bc67ea1b82a9b120881759119d200e588ad0c8394de38192e03141cda48e3a88e68165cfbebca6918044"
+}
